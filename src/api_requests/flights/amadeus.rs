@@ -149,7 +149,7 @@ pub async fn flights_between(
     Ok(flights)
 }
 
-pub async fn seats_available(
+pub async fn flight_seats_available(
     flight_offer_id: &str,
 ) -> Result<serde_json::Value, Box<dyn std::error::Error + Send + Sync>> {
     let client_id = env::var("AMADEUS_API_KEY")?;

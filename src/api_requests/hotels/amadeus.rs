@@ -1,7 +1,7 @@
 use reqwest::header::AUTHORIZATION;
 use serde::Deserialize;
 use serde_json::Value;
-use std::env;
+use std::{env, ops::Range};
 
 use crate::utils::{Date, IataCode, get_bearer_token};
 
@@ -24,7 +24,7 @@ pub async fn hotels_in_city(
     check_in_date: Date,
     adults: u8,
     currency_code: &str,
-    budget: f32,
+    rating: Range<u8>,
 ) -> Result<Value, Box<dyn std::error::Error + Send + Sync>> {
     let client_id = env::var("AMADEUS_API_KEY")?;
     let client_secret = env::var("AMADEUS_API_SECRET")?;
@@ -36,7 +36,10 @@ pub async fn hotels_in_city(
     let resp = client
         .get(HOTEL_LIST_URL)
         .header(AUTHORIZATION, format!("Bearer {}", token))
-        .query(&[("cityCode", city_code.to_string())])
+        .query(&[
+            ("cityCode", city_code.to_string()),
+            ("ratings", rating.map(|v| v.to_string()).collect::<Vec<String>>().join(",")),
+        ])
         .send()
         .await?;
 
@@ -87,10 +90,9 @@ pub async fn hotels_in_city(
 async fn hotels_in_city_test() {
     let city_code = IataCode::new("DEL".to_string()).unwrap();
     let check_in_date = Date::new(2026, 1, 26).unwrap();
-    let budget = 10000.0;
     let currency = "INR";
 
-    let result = hotels_in_city(city_code, check_in_date, 2, currency, budget).await;
+    let result = hotels_in_city(city_code, check_in_date, 2, currency, 3..5).await;
 
     match result {
         Ok(hotels) => {

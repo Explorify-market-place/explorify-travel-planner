@@ -1,4 +1,8 @@
+use gemini_client_api::gemini::ask::Gemini;
+use gemini_client_api::gemini::types::request::ThinkingConfig;
+use gemini_client_api::gemini::types::sessions::Session;
 use serde::{Deserialize, Serialize};
+use serde_json::json;
 use std::fmt::Display;
 use std::sync::LazyLock;
 use std::time::{Duration, Instant};

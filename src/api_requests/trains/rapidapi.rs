@@ -160,7 +160,7 @@ struct SeatAvailabilityResponse {
     data: Vec<AvailabilityDetail>,
 }
 
-pub async fn seats_available(
+pub async fn train_seats_available(
     train_number: &str,
     from_station: Station,
     to_station: Station,
