@@ -3,7 +3,7 @@ use serde::Deserialize;
 use serde_json::Value;
 use std::env;
 
-use crate::utils::{Date, IataCode, generate_bearer_token};
+use crate::utils::{Date, IataCode, get_bearer_token};
 
 const BASE_URL: &str = "https://test.api.amadeus.com/v3/shopping/hotel-offers";
 const HOTEL_LIST_URL: &str =
@@ -29,7 +29,7 @@ pub async fn hotels_in_city(
     let client_id = env::var("AMADEUS_API_KEY")?;
     let client_secret = env::var("AMADEUS_API_SECRET")?;
 
-    let token = generate_bearer_token(&client_id, &client_secret).await?;
+    let token = get_bearer_token(&client_id, &client_secret).await?;
     let client = reqwest::Client::new();
 
     // 1. Get hotels by city

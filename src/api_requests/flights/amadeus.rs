@@ -2,7 +2,7 @@ use reqwest::header::AUTHORIZATION;
 use serde::{Deserialize, Serialize};
 use std::env;
 
-use crate::utils::{Currency, Date, IataCode, generate_bearer_token};
+use crate::utils::{Currency, Date, IataCode, get_bearer_token};
 
 const BASE_URL: &str = "https://test.api.amadeus.com/v2/shopping/flight-offers";
 
@@ -85,7 +85,7 @@ pub async fn flights_between(
     let client_id = env::var("AMADEUS_API_KEY")?;
     let client_secret = env::var("AMADEUS_API_SECRET")?;
 
-    let token = generate_bearer_token(&client_id, &client_secret).await?;
+    let token = get_bearer_token(&client_id, &client_secret).await?;
 
     let client = reqwest::Client::new();
     let resp = client
@@ -155,7 +155,7 @@ pub async fn seats_available(
     let client_id = env::var("AMADEUS_API_KEY")?;
     let client_secret = env::var("AMADEUS_API_SECRET")?;
 
-    let token = generate_bearer_token(&client_id, &client_secret).await?;
+    let token = get_bearer_token(&client_id, &client_secret).await?;
 
     let client = reqwest::Client::new();
     let resp = client

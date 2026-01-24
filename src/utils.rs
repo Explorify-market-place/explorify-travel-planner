@@ -1,5 +1,8 @@
 use serde::{Deserialize, Serialize};
 use std::fmt::Display;
+use std::sync::LazyLock;
+use std::time::{Duration, Instant};
+use tokio::sync::RwLock;
 
 const AUTH_URL: &str = "https://test.api.amadeus.com/v1/security/oauth2/token";
 
@@ -134,33 +137,61 @@ impl Display for IataCode {
     }
 }
 
-#[derive(Deserialize)]
+#[derive(Deserialize, Clone)]
 struct OAuthTokenResponse {
     access_token: String,
     token_type: String,
     expires_in: u64,
 }
 
-pub async fn generate_bearer_token(
+struct TokenCache {
+    token: OAuthTokenResponse,
+    expiry: Instant,
+}
+
+static TOKEN_STORAGE: LazyLock<RwLock<Option<TokenCache>>> = LazyLock::new(|| RwLock::new(None));
+
+pub async fn get_bearer_token(
     client_id: &str,
     client_secret: &str,
 ) -> Result<String, Box<dyn std::error::Error + Send + Sync>> {
-    let client = reqwest::Client::new();
+    {
+        let cache = TOKEN_STORAGE.read().await;
+        if let Some(ref entry) = *cache {
+            // Buffer of 30s to prevent race conditions near expiry
+            if entry.expiry > Instant::now() + Duration::from_secs(30) {
+                return Ok(entry.token.access_token.clone());
+            }
+        }
+    }
+
+    let mut cache = TOKEN_STORAGE.write().await;
+
+    if let Some(ref entry) = *cache {
+        if entry.expiry > Instant::now() + Duration::from_secs(30) {
+            return Ok(entry.token.access_token.clone());
+        }
+    }
+
     let params = [
         ("grant_type", "client_credentials"),
         ("client_id", client_id),
         ("client_secret", client_secret),
     ];
 
-    let resp = client.post(AUTH_URL).form(&params).send().await?;
+    let resp = reqwest::Client::new()
+        .post(AUTH_URL)
+        .form(&params)
+        .send()
+        .await?
+        .error_for_status()?;
 
-    if !resp.status().is_success() {
-        return Err(format!("Amadeus Auth error: {}", resp.status()).into());
-    }
+    let token: OAuthTokenResponse = resp.json().await?;
 
-    let body: OAuthTokenResponse = resp.json().await?;
-    if body.token_type.to_lowercase() != "bearer" {
-        return Err("Unexpected token type from Amadeus".into());
-    }
-    Ok(body.access_token)
+    *cache = Some(TokenCache {
+        token: token.clone(),
+        expiry: Instant::now() + Duration::from_secs(token.expires_in),
+    });
+
+    Ok(token.access_token)
 }
