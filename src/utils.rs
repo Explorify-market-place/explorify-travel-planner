@@ -3,7 +3,7 @@ use std::fmt::Display;
 
 const AUTH_URL: &str = "https://test.api.amadeus.com/v1/security/oauth2/token";
 
-#[derive(Serialize)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Date {
     year: u16,
     month: u8,
@@ -21,6 +21,14 @@ impl Date {
     }
     pub fn to_yyyy_mm_dd(&self) -> String {
         format!("{:04}-{:02}-{:02}", self.year, self.month, self.day)
+    }
+    pub fn to_amadeus_dd_mm_yy(&self) -> String {
+        let months = [
+            "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC",
+        ];
+        let month_str = months[(self.month - 1) as usize];
+        let year_short = self.year % 100;
+        format!("{:02}{}{:02}", self.day, month_str, year_short)
     }
     pub fn from_yyyy_mm_dd(date: &str) -> Result<Self, Box<dyn std::error::Error + Send + Sync>> {
         let mut num = date.split('-');
@@ -45,7 +53,7 @@ impl Date {
     }
 }
 
-#[derive(Serialize)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Time {
     hour: u8,
     minute: u8,
@@ -94,10 +102,11 @@ impl Time {
     }
 }
 
-#[derive(Serialize)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub enum Currency {
     Inr(f32),
     Usd(f32),
+    Eur(f32),
 }
 impl Currency {
     pub fn parse_currency(
@@ -108,13 +117,14 @@ impl Currency {
         let cur = match code.to_uppercase().as_str() {
             "USD" => Self::Usd(amount),
             "INR" => Self::Inr(amount),
+            "EUR" => Self::Eur(amount),
             _ => return Err(format!("Unsupported currency: {}", code).into()),
         };
         Ok(cur)
     }
 }
 
-#[derive(Clone)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct IataCode(String);
 impl IataCode {
     pub fn new(code: String) -> Result<Self, String> {
@@ -125,6 +135,7 @@ impl IataCode {
         }
     }
 }
+
 impl Display for IataCode {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "{}", self.0)

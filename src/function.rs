@@ -1,10 +1,9 @@
 use crate::{
     api_requests::{
-        flights::amadeus::flights_between,
-        hotels::amadeus::hotels_in_city,
-        site_seen::{self, get_site_seeing},
+        flights::amadeus::flights_between, hotels::amadeus::hotels_in_city,
+        site_seen::get_site_seeing,
     },
-    utils::{Currency, Date, IataCode},
+    utils::{Date, IataCode},
 };
 use gemini_client_api::gemini::{
     ask::Gemini,
@@ -71,12 +70,18 @@ pub async fn plan_tour(
     let flights = flights_between(
         source_itata,
         destination_itata.clone(),
-        least_departure,
+        least_departure.clone(),
         adult_count,
         currency_code,
     );
     let site_seeing = get_site_seeing(destination);
-    let hotels = hotels_in_city(destination_itata, adult_count, currency_code, budget);
+    let hotels = hotels_in_city(
+        destination_itata,
+        least_departure.clone(),
+        adult_count,
+        currency_code,
+        budget,
+    );
     let (flights, site_seeing, hotels) = join!(flights, site_seeing, hotels);
 
     let ai = Gemini::new(
@@ -112,7 +117,7 @@ pub async fn plan_tour(
 async fn plan_test() {
     // Load environment variables from .env file for tests
     dotenv::dotenv().ok();
-    
+
     dbg!(
         plan_tour(
             "Ranchi",

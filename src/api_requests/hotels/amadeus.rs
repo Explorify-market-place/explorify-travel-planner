@@ -1,144 +1,235 @@
-use reqwest::header::{AUTHORIZATION, CONTENT_TYPE};
+use reqwest::header::AUTHORIZATION;
 use serde::{Deserialize, Serialize};
-use std::env;
+use serde_json::Value;
+use std::{env, error::Error};
 
 use crate::{
     api_requests::site_seen::get_place_image_url,
-    utils::{Currency, IataCode, generate_bearer_token},
+    utils::{Currency, Date, IataCode, generate_bearer_token},
 };
 
 const BASE_URL: &str = "https://test.api.amadeus.com/v3/shopping/hotel-offers";
+const HOTEL_LIST_URL: &str =
+    "https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city";
 
-#[derive(Serialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Hotel {
+    pub name: String,
+    pub hotel_id: String,
+    pub price: Option<Currency>,
+    pub image_url: Option<String>,
+    pub description: Option<String>,
+    pub address: Option<String>,
+    pub latitude: Option<f64>,
+    pub longitude: Option<f64>,
+}
+
+#[derive(Deserialize)]
+struct AmadeusHotelListResponse {
+    data: Vec<AmadeusHotelReference>,
+}
+
+#[derive(Deserialize)]
+struct AmadeusHotelReference {
+    #[serde(rename = "hotelId")]
+    hotel_id: String,
     name: String,
-    latitude: f64,
-    longitude: f64,
-    address: String,
-    price: Currency,
-    image_url: String,
-}
-
-#[derive(Deserialize)]
-struct HotelOffersResponse {
-    data: Vec<HotelItem>,
-}
-
-#[derive(Deserialize)]
-struct HotelItem {
-    hotel: HotelInfo,
-    offers: Vec<HotelOffer>,
-}
-
-#[derive(Deserialize)]
-struct HotelInfo {
-    name: String,
+    address: Option<AmadeusAddress>,
     latitude: Option<f64>,
     longitude: Option<f64>,
-    address: Option<Address>,
 }
 
 #[derive(Deserialize)]
-struct Address {
+struct AmadeusAddress {
+    #[serde(rename = "lines")]
     lines: Option<Vec<String>>,
-    cityName: Option<String>,
-    countryCode: Option<String>,
+    #[serde(rename = "cityName")]
+    city_name: Option<String>,
 }
 
 #[derive(Deserialize)]
-struct HotelOffer {
-    price: OfferPrice,
+struct AmadeusHotelOffersResponse {
+    data: Vec<AmadeusHotelOffer>,
 }
 
 #[derive(Deserialize)]
-struct OfferPrice {
+struct AmadeusHotelOffer {
+    hotel: AmadeusHotelReference,
+    offers: Vec<AmadeusOffer>,
+}
+
+#[derive(Deserialize)]
+struct AmadeusOffer {
+    price: AmadeusPrice,
+}
+
+#[derive(Deserialize)]
+struct AmadeusPrice {
     currency: String,
     total: String,
 }
 
 pub async fn hotels_in_city(
     city_code: IataCode,
+    check_in_date: Date,
+    adults: u8,
     currency_code: &str,
-    max_total: f32,
+    budget: f32,
 ) -> Result<Vec<Hotel>, Box<dyn std::error::Error + Send + Sync>> {
-    let bearer_token = generate_bearer_token(
-        &env::var("AMADEUS_API_KEY").unwrap(),
-        &env::var("AMADEUS_API_SECRET").unwrap(),
-    )
-    .await?;
+    let client_id = env::var("AMADEUS_API_KEY")?;
+    let client_secret = env::var("AMADEUS_API_SECRET")?;
 
-    // Basic query by city; Amadeus supports more params like dates which can be added later
-    let url = format!(
-        "{BASE_URL}?cityCode={city_code}&currencyCode={currency_code}"
-    );
-
+    let token = generate_bearer_token(&client_id, &client_secret).await?;
     let client = reqwest::Client::new();
+
+    // 1. Get hotels by city
     let resp = client
-        .get(&url)
-        .header(AUTHORIZATION, format!("Bearer {}", bearer_token))
-        .header(CONTENT_TYPE, "application/json")
+        .get(HOTEL_LIST_URL)
+        .header(AUTHORIZATION, format!("Bearer {}", token))
+        .query(&[("cityCode", city_code.to_string())])
         .send()
         .await?;
 
     if !resp.status().is_success() {
-        return Err(format!(
-            "Amadeus hotels API error: {}\nMessage: {}",
-            resp.status(),
-            resp.text().await?
-        )
-        .into());
+        let status = resp.status();
+        let error_text = resp.text().await?;
+        return Err(format!("Amadeus Hotel List error: {} - {}", status, error_text).into());
     }
 
-    let payload: HotelOffersResponse = resp.json().await?;
+    let list_response: AmadeusHotelListResponse = resp.json().await?;
+    let hotel_ids: Vec<String> = list_response
+        .data
+        .iter()
+        .take(10)
+        .map(|h| h.hotel_id.clone())
+        .collect();
 
-    let mut hotels: Vec<Hotel> = Vec::new();
-    for item in payload.data.into_iter() {
-        if item.offers.is_empty() {
-            continue;
+    if hotel_ids.is_empty() {
+        return Ok(vec![]);
+    }
+
+    // 2. Get offers for those hotels
+    let resp = client
+        .get(BASE_URL)
+        .header(AUTHORIZATION, format!("Bearer {}", token))
+        .query(&[
+            ("hotelIds", hotel_ids.join(",")),
+            ("checkInDate", check_in_date.to_amadeus_dd_mm_yy()),
+            ("adults", adults.to_string()),
+            ("currency", currency_code.to_string()),
+        ])
+        .send()
+        .await?;
+
+    if !resp.status().is_success() {
+        if resp.status() == 404 {
+            return Ok(vec![]);
         }
-        // Pick the first offer for pricing comparison
-        let offer = &item.offers[0];
-        let numeric_total: f32 = match offer.price.total.parse() {
-            Ok(v) => v,
-            Err(_) => continue,
+        let status = resp.status();
+        let error_text = resp.text().await?;
+        return Err(format!("Amadeus Hotel Offers error: {} - {}", status, error_text).into());
+    }
+
+    let offers_response: AmadeusHotelOffersResponse = resp.json().await?;
+
+    let mut hotels = Vec::new();
+    for offer in offers_response.data {
+        let price_val = offer.offers.get(0).map(|o| &o.price);
+        let currency = if let Some(p) = price_val {
+            Currency::parse_currency(&p.currency, &p.total).ok()
+        } else {
+            None
         };
 
-        if numeric_total > max_total {
-            continue;
+        // Filter by budget if price is available
+        if let Some(ref c) = currency {
+            let amount = match c {
+                Currency::Inr(a) => *a,
+                Currency::Usd(a) => *a,
+                Currency::Eur(a) => *a,
+            };
+            if amount > budget {
+                continue;
+            }
         }
 
-        let price = Currency::parse_currency(&offer.price.currency, &offer.price.total)?;
+        let image_url =
+            get_place_image_url(&format!("{} hotel in {}", &offer.hotel.name, city_code))
+                .await
+                .ok();
 
-        let address_line = item
-            .hotel
-            .address
-            .as_ref()
-            .map(|addr| {
-                let mut parts: Vec<String> = Vec::new();
-                if let Some(lines) = &addr.lines {
-                    if !lines.is_empty() {
-                        parts.push(lines.join(", "));
-                    }
-                }
-                if let Some(city) = &addr.cityName {
-                    parts.push(city.to_string());
-                }
-                if let Some(cc) = &addr.countryCode {
-                    parts.push(cc.to_string());
-                }
-                parts.join(", ")
-            })
-            .unwrap_or_else(|| "".to_string());
+        let hotel = Hotel {
+            name: offer.hotel.name,
+            hotel_id: offer.hotel.hotel_id,
+            price: currency,
+            image_url,
+            description: None,
+            address: offer
+                .hotel
+                .address
+                .map(|a| a.lines.unwrap_or_default().join(", ")),
+            latitude: offer.hotel.latitude,
+            longitude: offer.hotel.longitude,
+        };
 
-        hotels.push(Hotel {
-            name: item.hotel.name,
-            latitude: item.hotel.latitude.unwrap_or(0.0),
-            longitude: item.hotel.longitude.unwrap_or(0.0),
-            image_url: get_place_image_url(&address_line).await?,
-            address: address_line,
-            price,
-        });
+        hotels.push(hotel);
     }
 
     Ok(hotels)
+}
+
+pub async fn hotel_details(
+    hotel_id: &str,
+    check_in_date: Date,
+) -> Result<Value, Box<dyn Error + Send + Sync>> {
+    let client_id = env::var("AMADEUS_API_KEY")?;
+    let client_secret = env::var("AMADEUS_API_SECRET")?;
+
+    let token = generate_bearer_token(&client_id, &client_secret).await?;
+    let client = reqwest::Client::new();
+
+    let resp = client
+        .get(BASE_URL)
+        .header(AUTHORIZATION, format!("Bearer {}", token))
+        .query(&[
+            ("hotelIds", hotel_id.to_string()),
+            ("checkInDate", check_in_date.to_amadeus_dd_mm_yy()),
+        ])
+        .send()
+        .await?;
+
+    if !resp.status().is_success() {
+        let status = resp.status();
+        let error_text = resp.text().await?;
+        return Err(format!("Amadeus Hotel Details error: {} - {}", status, error_text).into());
+    }
+
+    let json: Value = resp.json().await?;
+    Ok(json)
+}
+
+#[tokio::test]
+async fn hotels_in_city_test() {
+    dotenv::dotenv().ok();
+    if std::env::var("AMADEUS_API_KEY").is_err() || std::env::var("AMADEUS_API_SECRET").is_err() {
+        println!("Skipping integration test: Amadeus credentials not found in env");
+        return;
+    }
+
+    let city_code = IataCode::new("DEL".to_string()).unwrap();
+    let check_in_date = Date::new(2025, 10, 4).unwrap();
+    let budget = 10000.0;
+    let currency = "INR";
+
+    let result = hotels_in_city(city_code, check_in_date, 2, currency, budget).await;
+
+    match result {
+        Ok(hotels) => {
+            dbg!(&hotels);
+            assert!(!hotels.is_empty());
+        }
+        Err(e) => {
+            panic!("Error fetching hotels: {}", e);
+        }
+    }
 }

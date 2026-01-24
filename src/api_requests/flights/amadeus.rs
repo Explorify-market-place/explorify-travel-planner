@@ -1,50 +1,77 @@
-use reqwest::header::{AUTHORIZATION, CONTENT_TYPE};
+use reqwest::header::AUTHORIZATION;
 use serde::{Deserialize, Serialize};
 use std::env;
 
-use crate::utils::{generate_bearer_token, Currency, Date, IataCode, Time};
+use crate::utils::{Currency, Date, IataCode, generate_bearer_token};
 
 const BASE_URL: &str = "https://test.api.amadeus.com/v2/shopping/flight-offers";
 
-#[derive(Serialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Flight {
-    arrival_date: Date,
-    departure_date: Date,
-    arrival_time: Time,
-    departure_time: Time,
-    price: Currency,
+    pub id: String,
+    pub price: Currency,
+    pub itineraries: Vec<Itinerary>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct Itinerary {
+    pub duration: String,
+    pub segments: Vec<Segment>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct Segment {
+    pub departure: Endpoint,
+    pub arrival: Endpoint,
+    pub carrier_code: String,
+    pub number: String,
+    pub duration: String,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct Endpoint {
+    pub iata_code: String,
+    pub at: String,
 }
 
 #[derive(Deserialize)]
-struct FlightOffersResponse {
-    data: Vec<Offer>,
+struct AmadeusFlightResponse {
+    data: Vec<AmadeusFlightOffer>,
 }
 
 #[derive(Deserialize)]
-struct Offer {
-    price: OfferPrice,
-    itineraries: Vec<Itinerary>,
+struct AmadeusFlightOffer {
+    id: String,
+    price: AmadeusPrice,
+    itineraries: Vec<AmadeusItinerary>,
 }
 
 #[derive(Deserialize)]
-struct OfferPrice {
+struct AmadeusPrice {
     currency: String,
     total: String,
 }
 
 #[derive(Deserialize)]
-struct Itinerary {
-    segments: Vec<Segment>,
+struct AmadeusItinerary {
+    duration: String,
+    segments: Vec<AmadeusSegment>,
 }
 
 #[derive(Deserialize)]
-struct Segment {
-    departure: Endpoint,
-    arrival: Endpoint,
+#[serde(rename_all = "camelCase")]
+struct AmadeusSegment {
+    departure: AmadeusEndpoint,
+    arrival: AmadeusEndpoint,
+    carrier_code: String,
+    number: String,
+    duration: String,
 }
 
 #[derive(Deserialize)]
-struct Endpoint {
+#[serde(rename_all = "camelCase")]
+struct AmadeusEndpoint {
+    iata_code: String,
     at: String,
 }
 
@@ -55,75 +82,114 @@ pub async fn flights_between(
     adult_count: u8,
     currency_code: &str,
 ) -> Result<Vec<Flight>, Box<dyn std::error::Error + Send + Sync>> {
-    let bearer_token = generate_bearer_token(
-        &env::var("AMADEUS_API_KEY").unwrap(),
-        &env::var("AMADEUS_API_SECRET").unwrap(),
-    )
-    .await?;
-    let departure = least_departure.to_yyyy_mm_dd();
-    let url = format!(
-        "{BASE_URL}?originLocationCode={source}&destinationLocationCode={destination}&departureDate={departure}&adults={adult_count}&currencyCode={currency_code}"
-    );
+    let client_id = env::var("AMADEUS_API_KEY")?;
+    let client_secret = env::var("AMADEUS_API_SECRET")?;
+
+    let token = generate_bearer_token(&client_id, &client_secret).await?;
 
     let client = reqwest::Client::new();
     let resp = client
-        .get(&url)
-        .header(AUTHORIZATION, format!("Bearer {}", bearer_token))
-        .header(CONTENT_TYPE, "application/json")
+        .get(BASE_URL)
+        .header(AUTHORIZATION, format!("Bearer {}", token))
+        .query(&[
+            ("originLocationCode", source.to_string()),
+            ("destinationLocationCode", destination.to_string()),
+            ("departureDate", least_departure.to_yyyy_mm_dd()),
+            ("adults", adult_count.to_string()),
+            ("currencyCode", currency_code.to_string()),
+            ("max", "10".to_string()),
+        ])
         .send()
         .await?;
 
     if !resp.status().is_success() {
-        return Err(format!(
-            "Amadeus flights API error: {}\nMessage: {}",
-            resp.status(),
-            resp.text().await?
-        )
-        .into());
+        let error_text = resp.text().await?;
+        return Err(format!("Amadeus API error: {}", error_text).into());
     }
 
-    let payload: FlightOffersResponse = resp.json().await?;
+    let response: AmadeusFlightResponse = resp.json().await?;
 
-    let mut flights: Vec<Flight> = Vec::new();
-    for offer in payload.data.into_iter() {
-        if offer.itineraries.is_empty() {
-            continue;
-        }
-        let first_itin = &offer.itineraries[0];
-        if first_itin.segments.is_empty() {
-            continue;
-        }
-        let first_seg = &first_itin.segments[0];
-        let last_seg = &first_itin.segments[first_itin.segments.len() - 1];
-
-        let (dep_date, dep_time) = split_iso_datetime(&first_seg.departure.at)?;
-        let (arr_date, arr_time) = split_iso_datetime(&last_seg.arrival.at)?;
-
-        let price = Currency::parse_currency(currency_code, &offer.price.total)?;
-
-        flights.push(Flight {
-            arrival_date: arr_date,
-            departure_date: dep_date,
-            arrival_time: arr_time,
-            departure_time: dep_time,
-            price,
-        });
-    }
+    let flights = response
+        .data
+        .into_iter()
+        .map(|offer| {
+            let currency = Currency::parse_currency(&offer.price.currency, &offer.price.total)
+                .unwrap_or(Currency::Usd(0.0));
+            Flight {
+                id: offer.id,
+                price: currency,
+                itineraries: offer
+                    .itineraries
+                    .into_iter()
+                    .map(|iti| Itinerary {
+                        duration: iti.duration,
+                        segments: iti
+                            .segments
+                            .into_iter()
+                            .map(|seg| Segment {
+                                departure: Endpoint {
+                                    iata_code: seg.departure.iata_code,
+                                    at: seg.departure.at,
+                                },
+                                arrival: Endpoint {
+                                    iata_code: seg.arrival.iata_code,
+                                    at: seg.arrival.at,
+                                },
+                                carrier_code: seg.carrier_code,
+                                number: seg.number,
+                                duration: seg.duration,
+                            })
+                            .collect(),
+                    })
+                    .collect(),
+            }
+        })
+        .collect();
 
     Ok(flights)
 }
 
-fn split_iso_datetime(iso: &str) -> Result<(Date, Time), Box<dyn std::error::Error + Send + Sync>> {
-    // Expect formats like "YYYY-MM-DDTHH:MM:SS" or with timezone suffix; take first 19 chars
-    let trimmed = if iso.len() >= 19 { &iso[0..19] } else { iso };
-    let mut parts = trimmed.split('T');
-    let date_str = parts
-        .next()
-        .ok_or_else(|| "Invalid datetime: missing date".to_string())?;
-    let time_str = parts
-        .next()
-        .ok_or_else(|| "Invalid datetime: missing time".to_string())?;
-    let date = Date::from_yyyy_mm_dd(date_str)?;
-    let time = Time::from_hh_mm_ss(time_str)?;
-    Ok((date, time))
+pub async fn seats_available(
+    flight_offer_id: &str,
+) -> Result<serde_json::Value, Box<dyn std::error::Error + Send + Sync>> {
+    let client_id = env::var("AMADEUS_API_KEY")?;
+    let client_secret = env::var("AMADEUS_API_SECRET")?;
+
+    let token = generate_bearer_token(&client_id, &client_secret).await?;
+
+    let client = reqwest::Client::new();
+    let resp = client
+        .get("https://test.api.amadeus.com/v1/shopping/seatmaps")
+        .header(AUTHORIZATION, format!("Bearer {}", token))
+        .query(&[("flight-offerId", flight_offer_id)])
+        .send()
+        .await?;
+
+    if !resp.status().is_success() {
+        let error_text = resp.text().await?;
+        return Err(format!("Amadeus API error: {}", error_text).into());
+    }
+
+    let response: serde_json::Value = resp.json().await?;
+    Ok(response)
+}
+
+#[tokio::test]
+async fn flights_between_integration_test() {
+    if std::env::var("AMADEUS_API_KEY").is_err()
+        || std::env::var("AMADEUS_API_SECRET").is_err()
+    {
+        println!("Skipping integration test: Amadeus credentials not found in env");
+        return;
+    }
+
+    let source = IataCode::new("JFK".to_string()).unwrap();
+    let destination = IataCode::new("LAX".to_string()).unwrap();
+    let departure_date = Date::new(2026, 1, 25).unwrap();
+    let adult_count = 1;
+    let currency = "USD";
+
+    let result = flights_between(source, destination, departure_date, adult_count, currency).await;
+
+    dbg!(result.unwrap());
 }
