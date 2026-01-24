@@ -121,13 +121,22 @@ pub static FUNCTION_SCHEMAS: LazyLock<Vec<Value>> = LazyLock::new(|| {
         }),
         json!({
             "name": "get_about_place",
-            "description": "Get detailed information about a specific location or point of interest using Google Places.",
+            "description": "Get detailed information about a specific location or point of interest using Google Places API (New).",
             "parameters": {
                 "type": "object",
                 "properties": {
-                    "location": { "type": "string", "description": "The name of the place to search for (e.g., 'Eiffel Tower', 'Manali')" }
+                    "query": { "type": "string", "description": "The name of the place to search for (e.g., 'Eiffel Tower', 'Manali')" },
+                    "max_results": { "type": "integer", "description": "Maximum number of results to return (1-20).", "default": 10 },
+                    "fields": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": ["id", "displayName", "formattedAddress", "location", "rating", "userRatingCount", "priceLevel", "types", "websiteUri", "regularOpeningHours", "editorialSummary", "photos", "internationalPhoneNumber", "reviews"]
+                        },
+                        "description": "Specific fields to include in the response. If empty, returns basic fields (id, displayName, formattedAddress)."
+                    }
                 },
-                "required": ["location"]
+                "required": ["query", "fields", "max_results"]
             }
         }),
     ]
@@ -146,4 +155,4 @@ Tools at your disposal:
 - flights_between && flight_seats_available: For air travel options in https://test.api.amadeus.com/v2/shopping/flight-offers api response format.
 - trains_between & train_seats_available: For rail travel options in https://irctc1.p.rapidapi.com/api/v1/checkSeatAvailability api response format.
 - hotels_in_city: Get all hotels in a city and their details in https://api.amadeus.com/v3/shopping/hotel-offers api response format.
-- get_about_place: Get details about a place in https://maps.googleapis.com/maps/api/place/textsearch/json api response format."#;
+- get_about_place: Get details about a place in https://places.googleapis.com/v1/places:searchText api response format."#;
