@@ -22,14 +22,6 @@ impl Date {
     pub fn to_yyyy_mm_dd(&self) -> String {
         format!("{:04}-{:02}-{:02}", self.year, self.month, self.day)
     }
-    pub fn to_amadeus_dd_mm_yy(&self) -> String {
-        let months = [
-            "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC",
-        ];
-        let month_str = months[(self.month - 1) as usize];
-        let year_short = self.year % 100;
-        format!("{:02}{}{:02}", self.day, month_str, year_short)
-    }
     pub fn from_yyyy_mm_dd(date: &str) -> Result<Self, Box<dyn std::error::Error + Send + Sync>> {
         let mut num = date.split('-');
         let year: u16 = num
