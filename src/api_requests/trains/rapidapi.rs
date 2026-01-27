@@ -1,11 +1,18 @@
 use crate::utils::Date;
+use gemini_client_api::gemini::utils::{GeminiSchema, gemini_function};
 use reqwest::header::{HeaderMap, HeaderValue};
 use serde::{Deserialize, Serialize};
+use serde_json::json;
 use std::env;
 use std::fmt::Display;
 
 #[derive(Clone, Serialize, Deserialize, Debug)]
 pub struct Station(String);
+impl GeminiSchema for Station {
+    fn gemini_schema() -> serde_json::Value {
+        json!({"type": "STRING"})
+    }
+}
 
 impl Station {
     pub fn new(code: String) -> Result<Self, String> {
@@ -53,9 +60,12 @@ fn get_headers() -> HeaderMap {
     );
     headers
 }
-
+#[gemini_function]
+/// Search for trains running between two stations on a specific date.
 pub async fn trains_between(
+    ///Source station code (e.g., 'NDLS')
     source: Station,
+    ///Destination station code (e.g., 'BCT')
     destination: Station,
     date: Date,
 ) -> Result<Vec<Train>, Box<dyn std::error::Error + Send + Sync>> {
@@ -118,8 +128,11 @@ struct TrainDetailsData {
     station_list: Vec<StationArrival>,
 }
 
+#[gemini_function]
+///Get full details of a train including its route and station stops.
 pub async fn train_details(
-    train_number: &str,
+    ///Train number (e.g., '12002')
+    train_number: String,
 ) -> Result<TrainDetails, Box<dyn std::error::Error + Send + Sync>> {
     let url = format!(
         "https://irctc1.p.rapidapi.com/api/v1/getTrainDetails?trainNo={}",
@@ -196,11 +209,13 @@ pub async fn train_seats_available(
 
 #[tokio::test]
 async fn trains_between_structure_test() {
-    dbg!(trains_between(
-        Station::new("NDLS".into()).unwrap(),
-        Station::new("BCT".into()).unwrap(),
-        Date::new(2026, 1, 23).unwrap(),
-    )
-    .await
-    .unwrap());
+    dbg!(
+        trains_between(
+            Station::new("NDLS".into()).unwrap(),
+            Station::new("BCT".into()).unwrap(),
+            Date::new(2026, 1, 23).unwrap(),
+        )
+        .await
+        .unwrap()
+    );
 }

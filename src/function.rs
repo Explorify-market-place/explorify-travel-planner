@@ -7,12 +7,11 @@ use crate::constants::{FUNCTION_SCHEMAS, TRAVEL_PLANNER_SYS_PROMPT};
 
 pub async fn plan_tour(
     session: Session,
-) -> Result<String, Box<dyn std::error::Error + Send + Sync>> {
+) -> Result<Session, Box<dyn std::error::Error + Send + Sync>> {
     let ai = Gemini::new(
         std::env::var("GEMINI_API_KEY").unwrap(),
         "gemini-3-flash-preview",
         Some(TRAVEL_PLANNER_SYS_PROMPT.into()),
-    )
-    .set_tools(vec![Tool::functionDeclarations(FUNCTION_SCHEMAS.clone())]);
+    );
     todo!()
 }

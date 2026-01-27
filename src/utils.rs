@@ -1,6 +1,7 @@
 use gemini_client_api::gemini::ask::Gemini;
 use gemini_client_api::gemini::types::request::ThinkingConfig;
 use gemini_client_api::gemini::types::sessions::Session;
+use gemini_client_api::gemini::utils::{GeminiSchema, gemini_function, gemini_schema};
 use serde::{Deserialize, Serialize};
 use serde_json::json;
 use std::fmt::Display;
@@ -11,6 +12,7 @@ use tokio::sync::RwLock;
 const AUTH_URL: &str = "https://test.api.amadeus.com/v1/security/oauth2/token";
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
+#[gemini_schema]
 pub struct Date {
     year: u16,
     month: u8,
