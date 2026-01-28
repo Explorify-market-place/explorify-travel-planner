@@ -1,9 +1,8 @@
+use crate::utils::{Currency, Date, IataCode, get_bearer_token};
+use gemini_client_api::gemini::utils::{GeminiSchema, gemini_function};
 use reqwest::header::AUTHORIZATION;
 use serde::{Deserialize, Serialize};
 use std::env;
-
-use gemini_client_api::gemini::utils::{gemini_function, GeminiSchema};
-use crate::utils::{Currency, Date, IataCode, get_bearer_token};
 
 const BASE_URL: &str = "https://test.api.amadeus.com/v2/shopping/flight-offers";
 
@@ -186,9 +185,7 @@ pub async fn flight_seats_available(
 
 #[tokio::test]
 async fn flights_between_integration_test() {
-    if std::env::var("AMADEUS_API_KEY").is_err()
-        || std::env::var("AMADEUS_API_SECRET").is_err()
-    {
+    if std::env::var("AMADEUS_API_KEY").is_err() || std::env::var("AMADEUS_API_SECRET").is_err() {
         println!("Skipping integration test: Amadeus credentials not found in env");
         return;
     }

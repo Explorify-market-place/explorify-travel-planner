@@ -4,15 +4,21 @@ mod function;
 mod utils;
 
 use crate::function::handle_request;
-use gemini_client_api::{futures::StreamExt, gemini::types::request::Role};
+use gemini_client_api::{futures::StreamExt, gemini::types::sessions::Session};
 use lambda_runtime::{
     LambdaEvent, service_fn,
     streaming::{Body, Response, channel},
     tracing,
 };
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
+use serde_json::from_str;
 
 const CHUNK_SEPERATOR: &str = "\n";
+
+#[derive(Serialize, Deserialize)]
+pub struct ApiRequest {
+    pub session: Session,
+}
 
 #[derive(Deserialize)]
 struct EventBody {
@@ -23,9 +29,10 @@ async fn stream_handler(
     event: LambdaEvent<EventBody>,
 ) -> Result<Response<Body>, lambda_runtime::Error> {
     let (mut tx, rx) = channel();
+    let mut request: ApiRequest = from_str(&event.payload.body)?;
     tokio::spawn(async move {
         loop {
-            let response = handle_request(&event.payload.body).await;
+            let response = handle_request(request.session).await;
             match response {
                 Ok(mut response_stream) => {
                     while let Some(gemini_response) = response_stream.next().await {
@@ -33,7 +40,7 @@ async fn stream_handler(
                             Ok(data) => {
                                 let response =
                                     serde_json::to_string(data.get_chat().parts()).unwrap();
-                                print!("{response}");
+                                println!("{response}");
                                 let chunk = format!("{response}{CHUNK_SEPERATOR}").into();
                                 tx.send_data(chunk).await.unwrap();
                             }
@@ -42,21 +49,21 @@ async fn stream_handler(
                             }
                         }
                     }
-                    if *response_stream
+                    if !response_stream
                         .get_session()
                         .get_last_chat()
                         .unwrap()
-                        .role()
-                        != Role::Function
+                        .has_function_call()
                     {
                         println!("Response streaming completed.");
                         break;
                     } else {
-                        println!("Resolving function calls.")
+                        println!("Resolving function calls.");
+                        request.session = response_stream.get_session_owned();
                     }
                 }
-                Err(e) => {
-                    eprintln!("ERROR: handle_request failed:\n{e}");
+                Err((session, e)) => {
+                    eprintln!("ERROR: handle_request failed:\n{e}\n{:?}", session);
                     tx.send_data(e.to_string().into()).await.unwrap();
                     break;
                 }
@@ -78,13 +85,13 @@ async fn main() -> Result<(), lambda_runtime::Error> {
 
 #[tokio::test]
 async fn stream_handler_test() {
-    use crate::function::ApiRequest;
     use gemini_client_api::futures::StreamExt;
     use gemini_client_api::gemini::types::sessions::Session;
     use serde_json::to_string;
 
     let mut session = Session::new(10);
-    session.ask_string("I want to travel to goa from ranchi");
+    session.ask_string(r#"I want to travel to goa from ranchi
+I'm planning a 7-day trip for 2 adults starting on February 15th. I prefer a flight (IXR to GOI/GOX) to save time for coding. I’m looking for a mid-range hotel near North Goa with good Wi-Fi. My budget is roughly ₹60,000 for the whole trip."#);
     let body = to_string(&ApiRequest { session }).unwrap();
 
     let response = stream_handler(LambdaEvent {
@@ -94,16 +101,5 @@ async fn stream_handler_test() {
     .await
     .unwrap();
     let mut stream = response.stream;
-
-    // EXPLICITLY CONSUME THE STREAM
-    // This waits until 'tx' is dropped or closed in your spawn block
-    while let Some(chunk) = stream.next().await {
-        match chunk {
-            Ok(bytes) => {
-                let s = String::from_utf8_lossy(&bytes);
-                println!("Received chunk: {}", s);
-            }
-            Err(e) => panic!("Stream error: {:?}", e),
-        }
-    }
+    while let Some(_) = stream.next().await {}
 }

@@ -4,8 +4,9 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+chrono = "0.4.43"
 dotenv = "0.15.0"
-gemini-client-api = "6.3.8"
+gemini-client-api = "6.4.0"
 lambda_runtime = "1.0.2"
 reqwest = { version = "0.13", features = ["json", "form", "query"] }
 serde = { version = "1.0", features = ["derive"] }

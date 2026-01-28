@@ -5,6 +5,7 @@ use std::fmt::Display;
 use std::sync::LazyLock;
 use std::time::{Duration, Instant};
 use tokio::sync::RwLock;
+use chrono::{DateTime, FixedOffset, Utc};
 
 const AUTH_URL: &str = "https://test.api.amadeus.com/v1/security/oauth2/token";
 
@@ -48,6 +49,12 @@ impl Date {
         } else {
             Err("Too many parameters in data".into())
         }
+    }
+    pub fn now() -> String {
+        let utc_now: DateTime<Utc> = Utc::now();
+        let ist_offset = FixedOffset::east_opt(5 * 3600 + 30 * 60).unwrap();
+        let ist_now = utc_now.with_timezone(&ist_offset);
+        ist_now.format("%a %b %e %H:%M:%S %Z %Y").to_string()
     }
 }
 

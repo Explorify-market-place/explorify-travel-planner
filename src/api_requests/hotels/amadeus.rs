@@ -20,8 +20,8 @@ struct AmadeusHotelReference {
 }
 
 #[gemini_schema]
-#[derive(Deserialize)]
-struct Rating {
+#[derive(Debug, Deserialize)]
+pub struct Rating {
     start: u8,
     end: u8,
 }
