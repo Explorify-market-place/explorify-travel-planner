@@ -2,6 +2,7 @@ use reqwest::header::AUTHORIZATION;
 use serde::{Deserialize, Serialize};
 use std::env;
 
+use gemini_client_api::gemini::utils::{gemini_function, GeminiSchema};
 use crate::utils::{Currency, Date, IataCode, get_bearer_token};
 
 const BASE_URL: &str = "https://test.api.amadeus.com/v2/shopping/flight-offers";
@@ -75,12 +76,18 @@ struct AmadeusEndpoint {
     at: String,
 }
 
+#[gemini_function]
+///Search for flight offers between two cities on a specific date.
 pub async fn flights_between(
+    ///IATA origin city code (e.g., 'JFK')
     source: IataCode,
+    ///IATA destination city code (e.g., 'LAX')
     destination: IataCode,
     least_departure: Date,
+    ///Number of adult passengers
     adult_count: u8,
-    currency_code: &str,
+    ///3-letter currency code (e.g., 'USD')
+    currency_code: String,
 ) -> Result<Vec<Flight>, Box<dyn std::error::Error + Send + Sync>> {
     let client_id = env::var("AMADEUS_API_KEY")?;
     let client_secret = env::var("AMADEUS_API_SECRET")?;
@@ -149,8 +156,11 @@ pub async fn flights_between(
     Ok(flights)
 }
 
+#[gemini_function]
+///Retrieve seat maps and availability for a specific flight offer ID.
 pub async fn flight_seats_available(
-    flight_offer_id: &str,
+    ///The unique ID of the flight offer
+    flight_offer_id: String,
 ) -> Result<serde_json::Value, Box<dyn std::error::Error + Send + Sync>> {
     let client_id = env::var("AMADEUS_API_KEY")?;
     let client_secret = env::var("AMADEUS_API_SECRET")?;
@@ -187,7 +197,7 @@ async fn flights_between_integration_test() {
     let destination = IataCode::new("LAX".to_string()).unwrap();
     let departure_date = Date::new(2026, 1, 25).unwrap();
     let adult_count = 1;
-    let currency = "USD";
+    let currency = "USD".to_string();
 
     let result = flights_between(source, destination, departure_date, adult_count, currency).await;
 

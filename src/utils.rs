@@ -1,7 +1,4 @@
-use gemini_client_api::gemini::ask::Gemini;
-use gemini_client_api::gemini::types::request::ThinkingConfig;
-use gemini_client_api::gemini::types::sessions::Session;
-use gemini_client_api::gemini::utils::{GeminiSchema, gemini_function, gemini_schema};
+use gemini_client_api::gemini::utils::{GeminiSchema, gemini_schema};
 use serde::{Deserialize, Serialize};
 use serde_json::json;
 use std::fmt::Display;
@@ -127,6 +124,11 @@ impl Currency {
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct IataCode(String);
+impl GeminiSchema for IataCode {
+    fn gemini_schema() -> serde_json::Value {
+        json!({"type":"String"})
+    }
+}
 impl IataCode {
     pub fn new(code: String) -> Result<Self, String> {
         if code.len() <= 3 && code.chars().all(|c| c.is_ascii_uppercase()) {

@@ -173,13 +173,17 @@ struct SeatAvailabilityResponse {
     data: Vec<AvailabilityDetail>,
 }
 
+#[gemini_function]
+///Check seat availability and status for a specific train and class.
 pub async fn train_seats_available(
-    train_number: &str,
+    train_number: String,
     from_station: Station,
     to_station: Station,
     date: Date,
-    class: &str,
-    quota: &str,
+    ///Class code (e.g., '2A', '3A', 'SL')
+    class: String,
+    ///Quota code (e.g., 'GN', 'TQ')
+    quota: String,
 ) -> Result<SeatAvailability, Box<dyn std::error::Error + Send + Sync>> {
     let url = format!(
         "https://irctc1.p.rapidapi.com/api/v1/checkSeatAvailability?classCode={}&quotaCode={}&trainNo={}&dateOfJourney={}&fromStationCode={}&toStationCode={}",

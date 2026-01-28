@@ -1,8 +1,10 @@
+use gemini_client_api::gemini::utils::{GeminiSchema, gemini_function, gemini_schema};
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
+#[gemini_schema]
 pub enum PlaceField {
     Id,
     DisplayName,
@@ -46,9 +48,14 @@ struct TextSearchResponse {
     places: Option<Vec<Value>>,
 }
 
+#[gemini_function]
+///Get detailed information about a specific location or point of interest using Google Places API (New).
 pub async fn get_about_place(
-    query: &str,
+    ///The name of the place to search for (e.g., 'Eiffel Tower', 'Manali')
+    query: String,
+    ///Maximum number of results to return (1-20).
     max_results: u8,
+    ///Specific fields to include in the response. If empty, returns basic fields (id, displayName, formattedAddress).
     fields: Vec<PlaceField>,
 ) -> Result<Vec<Value>, Box<dyn std::error::Error + Send + Sync>> {
     let api_key = std::env::var("GOOGLE_MAPS_API_KEY")?;
@@ -76,12 +83,7 @@ pub async fn get_about_place(
         "maxResultCount": max_results,
     });
 
-    let resp = client
-        .post(url)
-        .headers(headers)
-        .json(&body)
-        .send()
-        .await?;
+    let resp = client.post(url).headers(headers).json(&body).send().await?;
 
     if !resp.status().is_success() {
         let error_text = resp.text().await?;
@@ -93,11 +95,13 @@ pub async fn get_about_place(
 }
 #[tokio::test]
 async fn get_about_place_test() {
-    dbg!(get_about_place(
-        "Kashmir, manali",
-        1,
-        vec![PlaceField::DisplayName, PlaceField::FormattedAddress]
-    )
-    .await
-    .unwrap());
+    dbg!(
+        get_about_place(
+            "Kashmir, manali".into(),
+            1,
+            vec![PlaceField::DisplayName, PlaceField::FormattedAddress]
+        )
+        .await
+        .unwrap()
+    );
 }

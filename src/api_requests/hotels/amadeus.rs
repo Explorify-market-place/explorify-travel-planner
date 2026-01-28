@@ -1,9 +1,9 @@
+use crate::utils::{Date, IataCode, get_bearer_token};
+use gemini_client_api::gemini::utils::{GeminiSchema, gemini_function, gemini_schema};
 use reqwest::header::AUTHORIZATION;
 use serde::Deserialize;
 use serde_json::Value;
-use std::{env, ops::Range};
-
-use crate::utils::{Date, IataCode, get_bearer_token};
+use std::env;
 
 const BASE_URL: &str = "https://test.api.amadeus.com/v3/shopping/hotel-offers";
 const HOTEL_LIST_URL: &str =
@@ -19,12 +19,24 @@ struct AmadeusHotelReference {
     hotel_id: String,
 }
 
+#[gemini_schema]
+#[derive(Deserialize)]
+struct Rating {
+    start: u8,
+    end: u8,
+}
+
+#[gemini_function]
+///Find hotel offers in a city by IATA code with check-in date and budget constraints.
 pub async fn hotels_in_city(
     city_code: IataCode,
     check_in_date: Date,
+    ///Number of adult guests
     adults: u8,
-    currency_code: &str,
-    rating: Range<u8>,
+    ///3-letter currency code (e.g., 'INR')
+    currency_code: String,
+    ///Rating range of hotels
+    rating: Rating,
 ) -> Result<Value, Box<dyn std::error::Error + Send + Sync>> {
     let client_id = env::var("AMADEUS_API_KEY")?;
     let client_secret = env::var("AMADEUS_API_SECRET")?;
@@ -38,7 +50,13 @@ pub async fn hotels_in_city(
         .header(AUTHORIZATION, format!("Bearer {}", token))
         .query(&[
             ("cityCode", city_code.to_string()),
-            ("ratings", rating.map(|v| v.to_string()).collect::<Vec<String>>().join(",")),
+            (
+                "ratings",
+                (rating.start..rating.end)
+                    .map(|v| v.to_string())
+                    .collect::<Vec<String>>()
+                    .join(","),
+            ),
         ])
         .send()
         .await?;
@@ -92,7 +110,14 @@ async fn hotels_in_city_test() {
     let check_in_date = Date::new(2026, 1, 26).unwrap();
     let currency = "INR";
 
-    let result = hotels_in_city(city_code, check_in_date, 2, currency, 3..5).await;
+    let result = hotels_in_city(
+        city_code,
+        check_in_date,
+        2,
+        currency.into(),
+        Rating { start: 3, end: 5 },
+    )
+    .await;
 
     match result {
         Ok(hotels) => {

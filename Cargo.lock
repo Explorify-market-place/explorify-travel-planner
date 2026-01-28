@@ -335,9 +335,9 @@ dependencies = [
 
 [[package]]
 name = "gemini-client-api"
-version = "6.3.1"
+version = "6.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b8167c7a9da20ab6939536ac9e6fcfda0c058f7b08e043f170e703a7f3cf861c"
+checksum = "77cbe3367b5870cadae7a39470c068b07c966eeb595c7378afa8183688387826"
 dependencies = [
  "base64",
  "bytes",
