@@ -10,7 +10,11 @@ use crate::{
 use gemini_client_api::gemini::{
     ask::Gemini,
     error::GeminiResponseError,
-    types::{request::Tool, response::GeminiResponseStream, sessions::Session},
+    types::{
+        request::{Role, Tool},
+        response::GeminiResponseStream,
+        sessions::Session,
+    },
     utils::{GeminiSchema, execute_function_calls},
 };
 
@@ -48,6 +52,14 @@ async fn plan_tour(
                     serde_json::json!({"Error":e}),
                 )
                 .unwrap();
+        }
+    }
+    if let Some(chat) = session.get_last_chat() {
+        if *chat.role() == Role::Function {
+            println!(
+                "FunctionResponse:\n{}",
+                serde_json::to_string(chat.parts()).unwrap()
+            )
         }
     }
     ai.ask_as_stream(session).await
