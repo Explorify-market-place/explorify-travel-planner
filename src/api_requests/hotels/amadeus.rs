@@ -37,6 +37,8 @@ pub async fn hotels_in_city(
     currency_code: String,
     ///Rating range of hotels
     rating: Rating,
+    ///Number of hotels to see hotels
+    hotels_count: u8,
 ) -> Result<Value, Box<dyn std::error::Error + Send + Sync>> {
     let client_id = env::var("AMADEUS_API_KEY")?;
     let client_secret = env::var("AMADEUS_API_SECRET")?;
@@ -52,7 +54,7 @@ pub async fn hotels_in_city(
             ("cityCode", city_code.to_string()),
             (
                 "ratings",
-                (rating.start..rating.end)
+                (rating.start..=rating.end)
                     .map(|v| v.to_string())
                     .collect::<Vec<String>>()
                     .join(","),
@@ -71,7 +73,7 @@ pub async fn hotels_in_city(
     let hotel_ids: Vec<String> = list_response
         .data
         .iter()
-        .take(10)
+        .take(hotels_count.into())
         .map(|h| h.hotel_id.clone())
         .collect();
 
@@ -107,7 +109,7 @@ pub async fn hotels_in_city(
 #[tokio::test]
 async fn hotels_in_city_test() {
     let city_code = IataCode::new("DEL".to_string()).unwrap();
-    let check_in_date = Date::new(2026, 1, 26).unwrap();
+    let check_in_date = Date::new(2026, 1, 30).unwrap();
     let currency = "INR";
 
     let result = hotels_in_city(
@@ -115,7 +117,8 @@ async fn hotels_in_city_test() {
         check_in_date,
         2,
         currency.into(),
-        Rating { start: 3, end: 5 },
+        Rating { start: 1, end: 5 },
+        20,
     )
     .await;
 

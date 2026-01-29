@@ -184,7 +184,7 @@ pub async fn flight_seats_available(
 }
 
 #[tokio::test]
-async fn flights_between_integration_test() {
+async fn flights_between_test() {
     if std::env::var("AMADEUS_API_KEY").is_err() || std::env::var("AMADEUS_API_SECRET").is_err() {
         println!("Skipping integration test: Amadeus credentials not found in env");
         return;

@@ -212,7 +212,7 @@ pub async fn train_seats_available(
 }
 
 #[tokio::test]
-async fn trains_between_structure_test() {
+async fn trains_between_test() {
     dbg!(
         trains_between(
             Station::new("NDLS".into()).unwrap(),
