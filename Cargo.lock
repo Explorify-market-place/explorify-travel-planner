@@ -385,9 +385,9 @@ dependencies = [
 
 [[package]]
 name = "gemini-client-api"
-version = "6.4.0"
+version = "7.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2af225e39d12d4be359dd60573dcdb6b0e74b3f9df2914fa9b88f448ac7e7437"
+checksum = "c5e1193ce4e06292d4d86cf044524fd8edebf63c3ad604b60267141738824ba8"
 dependencies = [
  "base64",
  "bytes",
@@ -401,14 +401,15 @@ dependencies = [
  "reqwest",
  "serde",
  "serde_json",
+ "thiserror 2.0.18",
  "tokio",
 ]
 
 [[package]]
 name = "gemini-proc-macros"
-version = "0.5.0"
+version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4427f26315028e5a09d2dd4637af956aba8eb6c8528905b9e2c2de47f94d01c7"
+checksum = "ef4a7c6f6d45ce07ea79f8a714db1c2f78fa8d99cc130cba5f7b68849415fcfb"
 dependencies = [
  "proc-macro2",
  "quote",

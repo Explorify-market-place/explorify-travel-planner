@@ -1,7 +1,8 @@
+use crate::api_requests::flights;
 use crate::utils::{Date, IataCode};
 use gemini_client_api::gemini::utils::{GeminiSchema, gemini_function, gemini_schema};
 use serde::{Deserialize, Serialize};
-use serde_json::{Value, from_value, to_string, to_value};
+use serde_json::{Value, to_value};
 use std::error::Error;
 use std::{env, mem};
 
@@ -18,6 +19,44 @@ pub enum TravelClass {
     First,
 }
 
+const TOKEN_PREFIX: &str = "TOKEN_";
+fn update_token_map(map: &mut Vec<String>, token: String) -> String {
+    let placeholder = format!("{TOKEN_PREFIX}{}", map.len());
+    map.push(token);
+    placeholder
+}
+
+fn resolve_token<'a>(
+    map: &'a Vec<String>,
+    placeholder: &str,
+) -> Result<&'a String, Box<dyn std::error::Error>> {
+    let idx: usize = placeholder[TOKEN_PREFIX.len()..]
+        .parse()
+        .map_err(|_| "Invalid token provided")?;
+    map.get(idx).ok_or("Invalid token provided".into())
+}
+
+fn clean_and_replace_tokens(
+    val: &mut Value,
+) -> Result<Vec<String>, Box<dyn std::error::Error + Send + Sync>> {
+    let mut token_map = Vec::new();
+    for itinerary in val
+        .as_array_mut()
+        .ok_or("Invalid response. Itinerary not found")?
+    {
+        let obj_ref = itinerary
+            .as_object_mut()
+            .ok_or("Invalid response. Itinerary not found")?;
+        obj_ref.remove("airline_logo");
+        obj_ref.remove("carbon_emissions");
+        if let Some(booking_token) = obj_ref.get_mut("booking_token") {
+            let small_token = update_token_map(&mut token_map, booking_token.to_string());
+            obj_ref.insert("booking_token".into(), small_token.into());
+        }
+    }
+    Ok(token_map)
+}
+
 #[gemini_function]
 ///returns flight between two station at a given time.
 pub async fn flights_between(
@@ -26,7 +65,7 @@ pub async fn flights_between(
     date: Date,
     travel_class: TravelClass,
     adults: u8,
-) -> Result<Value, Box<dyn Error + Send + Sync>> {
+) -> Result<(Value, Vec<String>), Box<dyn Error + Send + Sync>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
 
@@ -59,21 +98,20 @@ pub async fn flights_between(
 
     let mut val: Value = resp.json().await?;
 
-    if let Some(top_flights) = val["data"]["itineraries"]["topFlights"].as_array_mut() {
-        top_flights.iter_mut().for_each(|flight| {
-            if let Some(obj) = flight.as_object_mut() {
-                obj.remove("carbon_emissions");
-            }
-        });
-    }
-    let flights = val
+    // Extract topFlights and clean them
+    let top_flights = val
         .pointer_mut("/data/itineraries/topFlights")
-        .map(mem::take)
-        .ok_or("Path not found")?;
-    Ok(flights)
+        .ok_or("Path not found: /data/itineraries/topFlights")?;
+
+    let token_map = clean_and_replace_tokens(top_flights)?;
+
+    Ok((mem::take(top_flights), token_map))
 }
 
-pub async fn get_booking_details(booking_token: String) -> Result<Vec<Value>, Box<dyn Error>> {
+#[gemini_function]
+pub async fn get_booking_details(
+    booking_token: String,
+) -> Result<(Vec<Value>, Vec<String>), Box<dyn Error>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
     let url = format!("{BASE_URL}/api/v1/getBookingDetails");
@@ -94,7 +132,22 @@ pub async fn get_booking_details(booking_token: String) -> Result<Vec<Value>, Bo
         return Err(format!("Booking Link Error: {}", response.status()).into());
     }
     let mut val: Value = response.json().await?;
-    Ok(mem::take(val["data"].as_array_mut().ok_or("data not found")?))
+    let data = val["data"].as_array_mut().ok_or("data not found")?;
+
+    //Updating response with placeholder tokens
+    let mut token_map = Vec::new();
+    for flights in data.iter_mut() {
+        let flights = flights
+            .as_object_mut()
+            .ok_or("Invalid response format. Data don't have objects")?;
+
+        if let Some(booking_token) = flights.get_mut("token") {
+            let small_token = update_token_map(&mut token_map, booking_token.to_string());
+            flights.insert("token".into(), small_token.into());
+        }
+    }
+
+    Ok((mem::take(data), token_map))
 }
 
 #[gemini_function]
@@ -128,7 +181,7 @@ pub async fn get_booking_link(token: String) -> Result<String, Box<dyn Error + S
 #[tokio::test]
 async fn flights_between_test() {
     println!(
-        "{}",
+        "{:?}",
         flights_between(
             IataCode::new("LAX".into()).unwrap(),
             IataCode::new("JFK".into()).unwrap(),

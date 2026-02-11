@@ -1,3 +1,5 @@
+use std::result;
+
 use crate::{
     api_requests::{
         flights::{flights_between, get_booking_link},
@@ -44,16 +46,7 @@ async fn plan_tour(
         trains_between,
         get_about_place,
     );
-    for i in 0..tools.len() {
-        if let Some(Err(e)) = &results[i] {
-            session
-                .add_function_response(
-                    flights_between::name(&tools[i]).unwrap(),
-                    serde_json::json!({"Error":e}),
-                )
-                .unwrap();
-        }
-    }
+    dbg!(results);
     if let Some(chat) = session.get_last_chat() {
         if *chat.role() == Role::Function {
             println!(
