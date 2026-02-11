@@ -1,6 +1,6 @@
 use crate::{
     api_requests::{
-        flights::{flight_seats_available, flights_between},
+        flights::{flights_between, get_booking_link},
         hotels::hotels_in_city,
         site_seen::get_about_place,
         trains::{train_seats_available, trains_between},
@@ -24,7 +24,7 @@ async fn plan_tour(
     let tools = vec![
         hotels_in_city::gemini_schema(),
         flights_between::gemini_schema(),
-        flight_seats_available::gemini_schema(),
+        get_booking_link::gemini_schema(),
         trains_between::gemini_schema(),
         train_seats_available::gemini_schema(),
         get_about_place::gemini_schema(),
@@ -39,10 +39,10 @@ async fn plan_tour(
         session,
         hotels_in_city,
         flights_between,
-        flight_seats_available,
+        get_booking_link,
         train_seats_available,
         trains_between,
-        get_about_place
+        get_about_place,
     );
     for i in 0..tools.len() {
         if let Some(Err(e)) = &results[i] {

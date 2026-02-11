@@ -1,3 +1,4 @@
+use chrono::{DateTime, FixedOffset, Utc};
 use gemini_client_api::gemini::utils::{GeminiSchema, gemini_schema};
 use serde::{Deserialize, Serialize};
 use serde_json::json;
@@ -5,7 +6,6 @@ use std::fmt::Display;
 use std::sync::LazyLock;
 use std::time::{Duration, Instant};
 use tokio::sync::RwLock;
-use chrono::{DateTime, FixedOffset, Utc};
 
 const AUTH_URL: &str = "https://test.api.amadeus.com/v1/security/oauth2/token";
 
@@ -145,7 +145,6 @@ impl IataCode {
         }
     }
 }
-
 impl Display for IataCode {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "{}", self.0)
