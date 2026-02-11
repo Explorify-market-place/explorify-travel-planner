@@ -1,9 +1,9 @@
 use crate::{
     api_requests::{
-        flights::amadeus::{flight_seats_available, flights_between},
-        hotels::amadeus::hotels_in_city,
+        flights::{flight_seats_available, flights_between},
+        hotels::hotels_in_city,
         site_seen::get_about_place,
-        trains::rapidapi::{train_seats_available, trains_between},
+        trains::{train_seats_available, trains_between},
     },
     constants::TRAVEL_PLANNER_SYS_PROMPT,
 };
