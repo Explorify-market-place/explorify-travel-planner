@@ -38,7 +38,7 @@ async fn plan_tour(
     )
     .set_tools(vec![Tool::FunctionDeclarations(tools)]);
 
-    let results = execute_function_calls!(
+    let _ = execute_function_calls!(
         session,
         hotels_in_city,
         flight_booking_link,
@@ -46,7 +46,6 @@ async fn plan_tour(
         trains_between,
         get_about_place,
     );
-    println!("Function call response: {results:?}");
     execute_calls(&mut session, token_map).await;
 
     if let Some(chat) = session.get_last_chat() {

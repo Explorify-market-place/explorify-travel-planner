@@ -236,14 +236,8 @@ fn update_session(
     result: Result<Value, Box<dyn Error + Send + Sync>>,
 ) {
     let response = match result {
-        Ok(val) => {
-            println!("Function call {name} response:\n{val}");
-            val
-        }
-        Err(e) => {
-            println!("Function call {name} failed:\n{e}");
-            serde_json::json!({"Error":e.to_string()})
-        }
+        Ok(val) => val,
+        Err(e) => serde_json::json!({"Error":e.to_string()}),
     };
     session.add_function_response(name, response).unwrap();
 }
