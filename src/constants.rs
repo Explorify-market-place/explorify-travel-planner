@@ -19,7 +19,6 @@ Tools at your disposal:
 - flight_booking_details: Use the flights_between booking_token to get flight tokens, representing different booking website.
 - flight_booking_link: Use token in flight_booking_details response to get the deep URL. Note tokens will looke like TOKEN_0.
 - trains_between & train_seats_available: For rail travel options in https://irctc1.p.rapidapi.com/api/v1/checkSeatAvailability api response format.
-- hotels_in_city: Get all hotels in a city and their details in https://api.amadeus.com/v3/shopping/hotel-offers api response format.
 - get_about_place: Get details about a place in https://places.googleapis.com/v1/places:searchText api response format."#,
         Date::now()
     )
