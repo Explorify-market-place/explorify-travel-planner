@@ -18,6 +18,7 @@ const CHUNK_SEPERATOR: &str = "\n";
 #[derive(Serialize, Deserialize)]
 pub struct ApiRequest {
     pub session: Session,
+    pub token_map:Vec<String>
 }
 
 #[derive(Deserialize)]
@@ -32,7 +33,7 @@ async fn stream_handler(
     let mut request: ApiRequest = from_str(&event.payload.body)?;
     tokio::spawn(async move {
         loop {
-            let response = handle_request(request.session).await;
+            let response = handle_request(request.session, &mut request.token_map).await;
             match response {
                 Ok(mut response_stream) => {
                     while let Some(gemini_response) = response_stream.next().await {
@@ -92,7 +93,7 @@ async fn stream_handler_test() {
     let mut session = Session::new(20);
     session.ask(r#"I want to travel to goa from ranchi
 I'm planning a 7-day trip for 2 adults starting on February 15th. I prefer a train to save money. I’m looking for a mid-range hotel near North Goa with good Wi-Fi. My budget is roughly ₹50,000 for the whole trip."#);
-    let body = to_string(&ApiRequest { session }).unwrap();
+    let body = to_string(&ApiRequest { session, token_map:Vec::new() }).unwrap();
 
     let response = stream_handler(LambdaEvent {
         payload: EventBody { body },

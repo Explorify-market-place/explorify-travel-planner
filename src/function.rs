@@ -1,6 +1,6 @@
 use crate::{
     api_requests::{
-        flights::{flights_between, get_booking_link},
+        flights::{execute_call, flights_between, get_booking_link},
         hotels::hotels_in_city,
         site_seen::get_about_place,
         trains::{train_seats_available, trains_between},
@@ -20,6 +20,7 @@ use gemini_client_api::gemini::{
 
 async fn plan_tour(
     mut session: Session,
+    token_map: &mut Vec<String>,
 ) -> Result<GeminiResponseStream, (Session, GeminiResponseError)> {
     let tools = vec![
         hotels_in_city::gemini_schema(),
@@ -35,16 +36,19 @@ async fn plan_tour(
         Some(TRAVEL_PLANNER_SYS_PROMPT.to_string().into()),
     )
     .set_tools(vec![Tool::FunctionDeclarations(tools.clone())]);
+
+    let last_chat = session.get_last_chat().unwrap().clone();
     let results = execute_function_calls!(
         session,
         hotels_in_city,
-        flights_between,
         get_booking_link,
         train_seats_available,
         trains_between,
         get_about_place,
     );
     println!("Function call response: {results:?}");
+    execute_call(&last_chat, &mut session, token_map).await;
+
     if let Some(chat) = session.get_last_chat() {
         if *chat.role() == Role::Function {
             println!(
@@ -58,6 +62,7 @@ async fn plan_tour(
 
 pub async fn handle_request(
     session: Session,
+    token_map: &mut Vec<String>,
 ) -> Result<GeminiResponseStream, (Session, GeminiResponseError)> {
-    plan_tour(session).await
+    plan_tour(session, token_map).await
 }

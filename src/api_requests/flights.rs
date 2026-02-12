@@ -30,14 +30,16 @@ fn update_token_map(map: &mut Vec<String>, token: String) -> String {
 fn resolve_token<'a>(
     map: &'a Vec<String>,
     placeholder: &str,
-) -> Result<&'a String, Box<dyn std::error::Error>> {
+) -> Result<&'a String, Box<dyn std::error::Error + Send + Sync>> {
     let idx: usize = placeholder[TOKEN_PREFIX.len()..]
         .parse()
         .map_err(|_| "Invalid token provided")?;
     map.get(idx).ok_or("Invalid token provided".into())
 }
 
-fn clean_and_replace_tokens(val: &mut Value) -> Result<Vec<String>, Box<dyn std::error::Error>> {
+fn clean_and_replace_tokens(
+    val: &mut Value,
+) -> Result<Vec<String>, Box<dyn std::error::Error + Send + Sync>> {
     let mut token_map = Vec::new();
     for itinerary in val
         .as_array_mut()
@@ -64,7 +66,7 @@ pub async fn flights_between(
     date: Date,
     travel_class: TravelClass,
     adults: u8,
-) -> Result<(Value, Vec<String>), Box<dyn Error>> {
+) -> Result<(Value, Vec<String>), Box<dyn Error + Send + Sync>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
 
@@ -110,7 +112,7 @@ pub async fn flights_between(
 #[gemini_function]
 pub async fn get_booking_details(
     booking_token: String,
-) -> Result<(Vec<Value>, Vec<String>), Box<dyn Error>> {
+) -> Result<(Vec<Value>, Vec<String>), Box<dyn Error + Send + Sync>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
     let url = format!("{BASE_URL}/api/v1/getBookingDetails");
@@ -151,7 +153,7 @@ pub async fn get_booking_details(
 
 #[gemini_function]
 ///returns booking link for a given booking_token
-pub async fn get_booking_link(token: String) -> Result<String, Box<dyn Error>> {
+pub async fn get_booking_link(token: String) -> Result<String, Box<dyn Error + Send + Sync>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
 
@@ -181,20 +183,22 @@ pub async fn get_booking_link(token: String) -> Result<String, Box<dyn Error>> {
 async fn update_session<F, Fut>(name: &str, session: &mut Session, callback: F)
 where
     F: FnOnce() -> Fut,
-    Fut: Future<Output = Result<Value, Box<dyn Error>>>,
+    Fut: Future<Output = Result<Value, Box<dyn Error + Send + Sync>>>,
 {
     let response = match callback().await {
-        Ok(val) => val,
-        Err(e) => serde_json::json!({"Error":e.to_string()}),
+        Ok(val) => {
+            println!("Function call {name} response:\n{val}");
+            val
+        }
+        Err(e) => {
+            println!("Function call {name} failed:\n{e}");
+            serde_json::json!({"Error":e.to_string()})
+        }
     };
     session.add_function_response(name, response).unwrap();
 }
 
-pub async fn execute_call(
-    last_chat: &Chat,
-    session: &mut Session,
-    token_map: &mut Vec<String>,
-) -> Result<(), Box<dyn Error>> {
+pub async fn execute_call(last_chat: &Chat, session: &mut Session, token_map: &mut Vec<String>) {
     for part in last_chat.parts() {
         if let PartType::FunctionCall(call) = part.data() {
             let args = call.args().as_ref().unwrap();
@@ -241,7 +245,6 @@ pub async fn execute_call(
             }
         }
     }
-    Ok(())
 }
 
 #[tokio::test]
