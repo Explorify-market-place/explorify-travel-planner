@@ -1,5 +1,6 @@
-use crate::api_requests::flights;
 use crate::utils::{Date, IataCode};
+use gemini_client_api::gemini::types::request::{Chat, PartType};
+use gemini_client_api::gemini::types::sessions::Session;
 use gemini_client_api::gemini::utils::{GeminiSchema, gemini_function, gemini_schema};
 use serde::{Deserialize, Serialize};
 use serde_json::{Value, to_value};
@@ -36,9 +37,7 @@ fn resolve_token<'a>(
     map.get(idx).ok_or("Invalid token provided".into())
 }
 
-fn clean_and_replace_tokens(
-    val: &mut Value,
-) -> Result<Vec<String>, Box<dyn std::error::Error + Send + Sync>> {
+fn clean_and_replace_tokens(val: &mut Value) -> Result<Vec<String>, Box<dyn std::error::Error>> {
     let mut token_map = Vec::new();
     for itinerary in val
         .as_array_mut()
@@ -65,7 +64,7 @@ pub async fn flights_between(
     date: Date,
     travel_class: TravelClass,
     adults: u8,
-) -> Result<(Value, Vec<String>), Box<dyn Error + Send + Sync>> {
+) -> Result<(Value, Vec<String>), Box<dyn Error>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
 
@@ -152,7 +151,7 @@ pub async fn get_booking_details(
 
 #[gemini_function]
 ///returns booking link for a given booking_token
-pub async fn get_booking_link(token: String) -> Result<String, Box<dyn Error + Send + Sync>> {
+pub async fn get_booking_link(token: String) -> Result<String, Box<dyn Error>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
 
@@ -178,6 +177,73 @@ pub async fn get_booking_link(token: String) -> Result<String, Box<dyn Error + S
         Err(val.to_string().into())
     }
 }
+
+async fn update_session<F, Fut>(name: &str, session: &mut Session, callback: F)
+where
+    F: FnOnce() -> Fut,
+    Fut: Future<Output = Result<Value, Box<dyn Error>>>,
+{
+    let response = match callback().await {
+        Ok(val) => val,
+        Err(e) => serde_json::json!({"Error":e.to_string()}),
+    };
+    session.add_function_response(name, response).unwrap();
+}
+
+pub async fn execute_call(
+    last_chat: &Chat,
+    session: &mut Session,
+    token_map: &mut Vec<String>,
+) -> Result<(), Box<dyn Error>> {
+    for part in last_chat.parts() {
+        if let PartType::FunctionCall(call) = part.data() {
+            let args = call.args().as_ref().unwrap();
+            if call.name() == "flights_between" {
+                flights_between::execute_with_closure(
+                    args,
+                    async |origin, destination, date, travel_class, adults| {
+                        update_session(call.name(), session, async || {
+                            let (response, new_tokens) =
+                                flights_between(origin, destination, date, travel_class, adults)
+                                    .await?;
+                            token_map.extend(new_tokens);
+                            Ok(response)
+                        })
+                        .await;
+                    },
+                )
+                .expect("Wrong agrument format from gemini")
+                .await;
+            } else if call.name() == "get_booking_details" {
+                get_booking_details::execute_with_closure(args, async |booking_token| {
+                    update_session(call.name(), session, async || {
+                        let (response, new_tokens) =
+                            get_booking_details(resolve_token(token_map, &booking_token)?.clone())
+                                .await?;
+                        token_map.extend(new_tokens);
+                        Ok(to_value(response).unwrap())
+                    })
+                    .await;
+                })
+                .expect("Wrong agrument format from gemini")
+                .await;
+            } else if call.name() == "get_booking_link" {
+                get_booking_link::execute_with_closure(args, async |token| {
+                    update_session(call.name(), session, async || {
+                        Ok(get_booking_link(resolve_token(token_map, &token)?.clone())
+                            .await?
+                            .into())
+                    })
+                    .await;
+                })
+                .expect("Wrong agrument format from gemini")
+                .await;
+            }
+        }
+    }
+    Ok(())
+}
+
 #[tokio::test]
 async fn flights_between_test() {
     println!(

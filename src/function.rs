@@ -1,5 +1,3 @@
-use std::result;
-
 use crate::{
     api_requests::{
         flights::{flights_between, get_booking_link},
@@ -46,7 +44,7 @@ async fn plan_tour(
         trains_between,
         get_about_place,
     );
-    dbg!(results);
+    println!("Function call response: {results:?}");
     if let Some(chat) = session.get_last_chat() {
         if *chat.role() == Role::Function {
             println!(
