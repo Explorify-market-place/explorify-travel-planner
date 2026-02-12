@@ -1,0 +1,371 @@
+{
+  "status": true,
+  "message": "Success",
+  "timestamp": 1770912246490,
+  "data": {
+    "itineraries": {
+      "topFlights": [
+        {
+          "departure_time": "15-02-2026 11:05 PM",
+          "arrival_time": "16-02-2026 09:00 AM",
+          "duration": {
+            "raw": 595,
+            "text": "9 hr 55 min"
+          },
+          "flights": [
+            {
+              "departure_airport": {
+                "airport_name": "Goa Dabolim International Airport",
+                "airport_code": "GOI",
+                "time": "2026-2-15 23:05"
+              },
+              "arrival_airport": {
+                "airport_name": "Rajiv Gandhi International Airport",
+                "airport_code": "HYD",
+                "time": "2026-2-16 00:15"
+              },
+              "duration": {
+                "raw": 70,
+                "text": "1 hr 10 min"
+              },
+              "airline": "IndiGo",
+              "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+              "flight_number": "6E 985",
+              "aircraft": "Airbus A321neo",
+              "seat": "Below average legroom",
+              "legroom": "28 in",
+              "extensions": [
+                "Below average legroom (28 in)",
+                "Emissions estimate: 98 kg CO2e"
+              ]
+            },
+            {
+              "departure_airport": {
+                "airport_name": "Rajiv Gandhi International Airport",
+                "airport_code": "HYD",
+                "time": "2026-2-16 07:10"
+              },
+              "arrival_airport": {
+                "airport_name": "Birsa Munda Airport, Ranchi",
+                "airport_code": "IXR",
+                "time": "2026-2-16 09:00"
+              },
+              "duration": {
+                "raw": 110,
+                "text": "1 hr 50 min"
+              },
+              "airline": "IndiGo",
+              "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+              "flight_number": "6E 421",
+              "aircraft": "Airbus A321neo",
+              "seat": "Below average legroom",
+              "legroom": "28 in",
+              "extensions": [
+                "Below average legroom (28 in)",
+                "Emissions estimate: 149 kg CO2e"
+              ]
+            }
+          ],
+          "delay": {
+            "values": false,
+            "text": 0
+          },
+          "self_transfer": false,
+          "layovers": [
+            {
+              "airport_code": "HYD",
+              "airport_name": "Rajiv Gandhi International Airport",
+              "duration_label": "6 hr 55 min",
+              "duration": 415,
+              "city": "Hyderabad"
+            }
+          ],
+          "bags": {
+            "carry_on": 2,
+            "checked": null
+          },
+          "carbon_emissions": {
+            "difference_percent": -27,
+            "CO2e": 247000,
+            "typical_for_this_route": 339000,
+            "higher": -92000
+          },
+          "price": 321,
+          "stops": 0,
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+          "booking_token": "W1syLDEsWyIyIiwwLDAsMF0sWyJDalJJYzIxSlQxWmlkRlphYlZGQlEwMUZaVUZDUnkwdExTMHRMUzB0Y0dwaWJXNHhPVUZCUVVGQlIyMU9MV1pKVEUweVRFbEJFZ3MyUlRrNE5YdzJSVFF5TVJvTENKcjZBUkFDR2dOVlUwUTRIWENhK2dFPSJdXSxbIjIwMjYtMDItMTUiLCJHT0kiLCJJWFIiLFtbIkdPSSIsIjIwMjYtMDItMTUiLCJIWUQiLCI2RSIsIjk4NSJdLFsiSFlEIiwiMjAyNi0wMi0xNiIsIklYUiIsIjZFIiwiNDIxIl1dXV0="
+        },
+        {
+          "departure_time": "15-02-2026 03:15 AM",
+          "arrival_time": "15-02-2026 08:25 AM",
+          "duration": {
+            "raw": 310,
+            "text": "5 hr 10 min"
+          },
+          "flights": [
+            {
+              "departure_airport": {
+                "airport_name": "Goa Dabolim International Airport",
+                "airport_code": "GOI",
+                "time": "2026-2-15 03:15"
+              },
+              "arrival_airport": {
+                "airport_name": "Pune International Airport",
+                "airport_code": "PNQ",
+                "time": "2026-2-15 04:20"
+              },
+              "duration": {
+                "raw": 65,
+                "text": "1 hr 5 min"
+              },
+              "airline": "IndiGo",
+              "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+              "flight_number": "6E 920",
+              "aircraft": "Airbus A320",
+              "seat": "Below average legroom",
+              "legroom": "28 in",
+              "extensions": [
+                "Below average legroom (28 in)",
+                "Emissions estimate: 100 kg CO2e"
+              ]
+            },
+            {
+              "departure_airport": {
+                "airport_name": "Pune International Airport",
+                "airport_code": "PNQ",
+                "time": "2026-2-15 06:20"
+              },
+              "arrival_airport": {
+                "airport_name": "Birsa Munda Airport, Ranchi",
+                "airport_code": "IXR",
+                "time": "2026-2-15 08:25"
+              },
+              "duration": {
+                "raw": 125,
+                "text": "2 hr 5 min"
+              },
+              "airline": "IndiGo",
+              "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+              "flight_number": "6E 6484",
+              "aircraft": "Airbus A321neo",
+              "seat": "Below average legroom",
+              "legroom": "28 in",
+              "extensions": [
+                "Below average legroom (28 in)",
+                "Emissions estimate: 185 kg CO2e"
+              ]
+            }
+          ],
+          "delay": {
+            "values": false,
+            "text": 0
+          },
+          "self_transfer": false,
+          "layovers": [
+            {
+              "airport_code": "PNQ",
+              "airport_name": "Pune International Airport",
+              "duration_label": "2 hr 0 min",
+              "duration": 120,
+              "city": "Pune"
+            }
+          ],
+          "bags": {
+            "carry_on": 2,
+            "checked": null
+          },
+          "carbon_emissions": {
+            "difference_percent": -16,
+            "CO2e": 285000,
+            "typical_for_this_route": 339000,
+            "higher": -54000
+          },
+          "price": 337,
+          "stops": 0,
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+          "booking_token": "W1syLDEsWyIyIiwwLDAsMF0sWyJDalJJYzIxSlQxWmlkRlphYlZGQlEwMUZaVUZDUnkwdExTMHRMUzB0Y0dwaWJXNHhPVUZCUVVGQlIyMU9MV1pKVEUweVRFbEJFZ3cyUlRreU1IdzJSVFkwT0RRYUN3anpoZ0lRQWhvRFZWTkVPQjF3ODRZQyJdXSxbIjIwMjYtMDItMTUiLCJHT0kiLCJJWFIiLFtbIkdPSSIsIjIwMjYtMDItMTUiLCJQTlEiLCI2RSIsIjkyMCJdLFsiUE5RIiwiMjAyNi0wMi0xNSIsIklYUiIsIjZFIiwiNjQ4NCJdXV1d"
+        },
+        {
+          "departure_time": "15-02-2026 02:25 PM",
+          "arrival_time": "15-02-2026 07:20 PM",
+          "duration": {
+            "raw": 295,
+            "text": "4 hr 55 min"
+          },
+          "flights": [
+            {
+              "departure_airport": {
+                "airport_name": "Goa Dabolim International Airport",
+                "airport_code": "GOI",
+                "time": "2026-2-15 14:25"
+              },
+              "arrival_airport": {
+                "airport_name": "Rajiv Gandhi International Airport",
+                "airport_code": "HYD",
+                "time": "2026-2-15 15:30"
+              },
+              "duration": {
+                "raw": 65,
+                "text": "1 hr 5 min"
+              },
+              "airline": "IndiGo",
+              "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+              "flight_number": "6E 712",
+              "aircraft": "Airbus A321neo",
+              "seat": "Below average legroom",
+              "legroom": "28 in",
+              "extensions": [
+                "Below average legroom (28 in)",
+                "Emissions estimate: 98 kg CO2e"
+              ]
+            },
+            {
+              "departure_airport": {
+                "airport_name": "Rajiv Gandhi International Airport",
+                "airport_code": "HYD",
+                "time": "2026-2-15 17:40"
+              },
+              "arrival_airport": {
+                "airport_name": "Birsa Munda Airport, Ranchi",
+                "airport_code": "IXR",
+                "time": "2026-2-15 19:20"
+              },
+              "duration": {
+                "raw": 100,
+                "text": "1 hr 40 min"
+              },
+              "airline": "IndiGo",
+              "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+              "flight_number": "6E 186",
+              "aircraft": "Airbus A321neo",
+              "seat": "Below average legroom",
+              "legroom": "28 in",
+              "extensions": [
+                "Below average legroom (28 in)",
+                "Emissions estimate: 149 kg CO2e"
+              ]
+            }
+          ],
+          "delay": {
+            "values": false,
+            "text": 0
+          },
+          "self_transfer": false,
+          "layovers": [
+            {
+              "airport_code": "HYD",
+              "airport_name": "Rajiv Gandhi International Airport",
+              "duration_label": "2 hr 10 min",
+              "duration": 130,
+              "city": "Hyderabad"
+            }
+          ],
+          "bags": {
+            "carry_on": 2,
+            "checked": null
+          },
+          "carbon_emissions": {
+            "difference_percent": -27,
+            "CO2e": 247000,
+            "typical_for_this_route": 339000,
+            "higher": -92000
+          },
+          "price": 376,
+          "stops": 0,
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+          "booking_token": "W1syLDEsWyIyIiwwLDAsMF0sWyJDalJJYzIxSlQxWmlkRlphYlZGQlEwMUZaVUZDUnkwdExTMHRMUzB0Y0dwaWJXNHhPVUZCUVVGQlIyMU9MV1pKVEUweVRFbEJFZ3MyUlRjeE1udzJSVEU0TmhvTENNbWxBaEFDR2dOVlUwUTRIWERKcFFJPSJdXSxbIjIwMjYtMDItMTUiLCJHT0kiLCJJWFIiLFtbIkdPSSIsIjIwMjYtMDItMTUiLCJIWUQiLCI2RSIsIjcxMiJdLFsiSFlEIiwiMjAyNi0wMi0xNSIsIklYUiIsIjZFIiwiMTg2Il1dXV0="
+        },
+        {
+          "departure_time": "15-02-2026 05:30 PM",
+          "arrival_time": "16-02-2026 08:15 AM",
+          "duration": {
+            "raw": 885,
+            "text": "14 hr 45 min"
+          },
+          "flights": [
+            {
+              "departure_airport": {
+                "airport_name": "Goa Dabolim International Airport",
+                "airport_code": "GOI",
+                "time": "2026-2-15 17:30"
+              },
+              "arrival_airport": {
+                "airport_name": "Chhatrapati Shivaji Maharaj International Airport Mumbai",
+                "airport_code": "BOM",
+                "time": "2026-2-15 18:55"
+              },
+              "duration": {
+                "raw": 85,
+                "text": "1 hr 25 min"
+              },
+              "airline": "Air India",
+              "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+              "flight_number": "AI 2746",
+              "aircraft": "Airbus A319",
+              "seat": "Average legroom",
+              "legroom": "31 in",
+              "extensions": [
+                "Average legroom (31 in)",
+                "Stream media to your device",
+                "Emissions estimate: 149 kg CO2e"
+              ]
+            },
+            {
+              "departure_airport": {
+                "airport_name": "Chhatrapati Shivaji Maharaj International Airport Mumbai",
+                "airport_code": "BOM",
+                "time": "2026-2-16 05:55"
+              },
+              "arrival_airport": {
+                "airport_name": "Birsa Munda Airport, Ranchi",
+                "airport_code": "IXR",
+                "time": "2026-2-16 08:15"
+              },
+              "duration": {
+                "raw": 140,
+                "text": "2 hr 20 min"
+              },
+              "airline": "Air India Express",
+              "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/IX.png",
+              "flight_number": "IX 1237",
+              "aircraft": "Boeing 737",
+              "legroom": "N/A",
+              "extensions": [
+                null,
+                "Emissions estimate: 229 kg CO2e"
+              ]
+            }
+          ],
+          "delay": {
+            "values": false,
+            "text": 0
+          },
+          "self_transfer": false,
+          "layovers": [
+            {
+              "airport_code": "BOM",
+              "airport_name": "Chhatrapati Shivaji Maharaj International Airport Mumbai",
+              "duration_label": "11 hr 0 min",
+              "duration": 660,
+              "city": "Mumbai"
+            }
+          ],
+          "bags": {
+            "carry_on": 2,
+            "checked": null
+          },
+          "carbon_emissions": {
+            "difference_percent": 12,
+            "CO2e": 378000,
+            "typical_for_this_route": 339000,
+            "higher": 39000
+          },
+          "price": 431,
+          "stops": 0,
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/multi.png",
+          "booking_token": "W1syLDEsWyIyIiwwLDAsMF0sWyJDalJJYzIxSlQxWmlkRlphYlZGQlEwMUZaVUZDUnkwdExTMHRMUzB0Y0dwaWJXNHhPVUZCUVVGQlIyMU9MV1pKVEUweVRFbEJFZzFCU1RJM05EWjhTVmd4TWpNM0dnc0lodEFDRUFJYUExVlRSRGdkY0liUUFnPT0iXV0sWyIyMDI2LTAyLTE1IiwiR09JIiwiSVhSIixbWyJHT0kiLCIyMDI2LTAyLTE1IiwiQk9NIiwiQUkiLCIyNzQ2Il0sWyJCT00iLCIyMDI2LTAyLTE2IiwiSVhSIiwiSVgiLCIxMjM3Il1dXV0="
+        }
+      ]
+    }
+  }
+}

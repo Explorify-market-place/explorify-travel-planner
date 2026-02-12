@@ -45,13 +45,23 @@ fn clean_and_replace_tokens(
         .as_array_mut()
         .ok_or("Invalid response. Itinerary not found")?
     {
+        for flight in itinerary["flights"]
+            .as_array_mut()
+            .ok_or("Invalid response. Flights not found")?
+        {
+            flight
+                .as_object_mut()
+                .ok_or("Invalid response. flight is not an object")?
+                .remove("airline_logo");
+        }
         let obj_ref = itinerary
             .as_object_mut()
             .ok_or("Invalid response. Itinerary not found")?;
         obj_ref.remove("airline_logo");
         obj_ref.remove("carbon_emissions");
         if let Some(booking_token) = obj_ref.get_mut("booking_token") {
-            let small_token = update_token_map(&mut token_map, booking_token.as_str().unwrap().to_string());
+            let small_token =
+                update_token_map(&mut token_map, booking_token.as_str().unwrap().to_string());
             obj_ref.insert("booking_token".into(), small_token.into());
         }
     }
@@ -69,10 +79,10 @@ pub async fn flights_between(
 ) -> Result<(Value, Vec<String>), Box<dyn Error + Send + Sync>> {
     #[cfg(test)]
     {
-        let mut val: Value = serde_json::from_str(include_str!("../../google-flights.json"))?;
+        let mut val: Value = serde_json::from_str(include_str!("../../searchFlights.json"))?;
         let top_flights = val
-            .pointer_mut("")
-            .ok_or("Path not found: /")?;
+            .pointer_mut("/data/itineraries/topFlights")
+            .ok_or("Path not found: /data/itineraries/topFlights")?;
         let token_map = clean_and_replace_tokens(top_flights)?;
         return Ok((mem::take(top_flights), token_map));
     }
@@ -136,7 +146,8 @@ pub async fn flight_booking_details(
                 .as_object_mut()
                 .ok_or("Invalid response format. Data don't have objects")?;
             if let Some(booking_token) = flights.get_mut("token") {
-                let small_token = update_token_map(&mut token_map, booking_token.as_str().unwrap().to_string());
+                let small_token =
+                    update_token_map(&mut token_map, booking_token.as_str().unwrap().to_string());
                 flights.insert("token".into(), small_token.into());
             }
         }
@@ -173,7 +184,8 @@ pub async fn flight_booking_details(
             .ok_or("Invalid response format. Data don't have objects")?;
 
         if let Some(booking_token) = flights.get_mut("token") {
-            let small_token = update_token_map(&mut token_map, booking_token.as_str().unwrap().to_string());
+            let small_token =
+                update_token_map(&mut token_map, booking_token.as_str().unwrap().to_string());
             flights.insert("token".into(), small_token.into());
         }
     }
@@ -185,7 +197,8 @@ pub async fn flight_booking_details(
 ///returns flight booking link for a given booking_token
 pub async fn flight_booking_link(
     ///Provided by get_booking_details eg. TOKEN_0
-    token: String) -> Result<String, Box<dyn Error + Send + Sync>> {
+    token: String,
+) -> Result<String, Box<dyn Error + Send + Sync>> {
     #[cfg(test)]
     {
         return Ok("https://www.google.com/flights?mock_link".to_string());
@@ -305,7 +318,6 @@ pub async fn execute_calls(session: &mut Session, token_map: &mut Vec<String>) {
     }
 }
 
-
 #[tokio::test]
 async fn execute_calls_test() {
     use gemini_client_api::gemini::types::request::FunctionCall;
@@ -334,9 +346,12 @@ async fn execute_calls_test() {
     assert_eq!(session.get_history_length(), 2);
     let last_chat = session.get_last_chat().unwrap();
     assert_eq!(*last_chat.role(), Role::Function);
-    
+
     // Verify token_map is populated
-    assert!(!token_map.is_empty(), "Token map should be populated after flights_between");
+    assert!(
+        !token_map.is_empty(),
+        "Token map should be populated after flights_between"
+    );
     let first_token_placeholder = "TOKEN_0";
     println!("Token map size: {}", token_map.len());
 
@@ -354,13 +369,13 @@ async fn execute_calls_test() {
 
     // Verify session has response
     assert_eq!(session.get_history_length(), 4);
-    
+
     // 3. Test get_booking_link call via execute_calls
     // After get_booking_details, we should have more tokens in the map
     // The details response (from details.json) has tokens that get replaced by placeholders
     // Let's assume there's at least one new token added.
     let second_token_placeholder = format!("{TOKEN_PREFIX}{}", token_map.len() - 1);
-    
+
     let call_link = FunctionCall::new(
         "get_booking_link".to_string(),
         Some(json!({
@@ -378,7 +393,10 @@ async fn execute_calls_test() {
     if let PartType::FunctionResponse(resp) = last_response {
         assert_eq!(resp.name(), "get_booking_link");
         // add_function_response wraps non-object responses in a {"result": ...} object
-        assert_eq!(resp.response(), &json!({"result": "https://www.google.com/flights?mock_link"}));
+        assert_eq!(
+            resp.response(),
+            &json!({"result": "https://www.google.com/flights?mock_link"})
+        );
     } else {
         panic!("Expected FunctionResponse");
     }
