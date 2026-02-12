@@ -46,7 +46,8 @@ async fn stream_handler(
                                 tx.send_data(chunk).await.unwrap();
                             }
                             Err(error) => {
-                                eprintln!("ERROR: Did not send stream due to error:\n{error}")
+                                eprintln!("ERROR: Did not send stream due to error:\n{error:?}");
+                                break;
                             }
                         }
                     }
@@ -92,7 +93,7 @@ async fn stream_handler_test() {
 
     let mut session = Session::new(20);
     session.ask(r#"I want to travel to goa from ranchi
-I'm planning a 7-day trip for 2 adults starting on February 15th. I prefer a train to save money. I’m looking for a mid-range hotel near North Goa with good Wi-Fi. My budget is roughly ₹50,000 for the whole trip."#);
+I'm planning a 7-day trip for 2 adults starting on February 15th. I prefer a flight to save time for coding. I’m looking for a mid-range hotel near North Goa with good Wi-Fi. My budget is roughly ₹50,000 for the whole trip."#);
     let body = to_string(&ApiRequest { session, token_map:Vec::new() }).unwrap();
 
     let response = stream_handler(LambdaEvent {

@@ -6,7 +6,7 @@
       "carry_on": 1,
       "checked": 0
     },
-    "booking_token": "W1syLDEsWyIxIiwwLDAsMF0sWyJDalJJYzI5RlJWRlZURmxCVmxGQlFtOVZNMEZDUnkwdExTMHRMUzB0TFc5NVkydHRNa0ZCUVV GQlIyMU5TVGd3U25aMVdsZEJFZ1ZCUVRFeE9Cb0xDTW45QVJBQUdnTkpUbEk0SFhDQm1BST0iXV0sWyIyMDI2LTAyLTEyIiwiTEFYIiwiSkZLIixbWyJMQVgiLCIyMDI2LTA yLTEyIiwiSkZLIiwiQUEiLCIxMTgiXV1dXQ==",
+    "booking_token": "W1syLDEsWyIxIiwwLDAsMF0sWyJDalJJYzI5RlJWRlZURmxCVmxGQlFtOVZNMEZDUnkwdExTMHRMUzB0TFc5NVkydHRNa0ZCUVVGQlIyMU5TVGd3U25aMVdsZEJFZ1ZCUVRFeE9Cb0xDTW45QVJBQUdnTkpUbEk0SFhDQm1BST0iXV0sWyIyMDI2LTAyLTEyIiwiTEFYIiwiSkZLIixbWyJMQVgiLCIyMDI2LTAyLTEyIiwiSkZLIiwiQUEiLCIxMTgiXV1dXQ==",
     "delay": {
       "text": 0,
       "values": false
@@ -20,16 +20,16 @@
       {
         "aircraft": "Airbus A321neo",
         "airline": "American",
-        "airline_logo": "https://www.gstatic.com/flights /airline_logos/70px/AA.png",
+        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
         "arrival_airport": {
           "airport_code": "JFK",
           "airport_name": "John F. Kennedy International Airport",
-          "time": "2 026-2-12 14:30"
+          "time": "2026-2-12 14:30"
         },
         "departure_airport": {
           "airport_code": "LAX",
           "airport_name": "Los Angeles International Airport",
-          "time": "2026-2-12 06:1 0"
+          "time": "2026-2-12 06:10"
         },
         "duration": {
           "raw": 320,
@@ -38,126 +38,18 @@
         "extensions": [
           "Average legroom (31 in)",
           "In-seat power & USB outlets",
-          "On-demand vid eo",
+          "On-demand video",
           "Free Wi-Fi",
           "Wi-Fi for a fee",
           "Emissions estimate: 333 kg CO2e"
         ],
         "flight_number": "AA 118",
         "legroom": "31 in",
-        "seat": "Average leg room"
-      }
-    ],
-    "layovers": null,
-    "price": 32457,
-    "self_transfer": false,
-    "stops": 0
-  },
-  {
-    "airline_logo": "https://www.gstatic.com/flights/airline_logo s/70px/DL.png",
-    "arrival_time": "12-02-2026 05:39 PM",
-    "bags": {
-      "carry_on": 1,
-      "checked": 0
-    },
-    "booking_token": "W1syLDEsWyIxIiwwLDAsMF0sWyJDa lJJYzI5RlJWRlZURmxCVmxGQlFtOVZNMEZDUnkwdExTMHRMUzB0TFc5NVkydHRNa0ZCUVVGQlIyMU5TVGd3U25aMVdsZEJFZ1ZFVERrMU9Cb0xDTW45QVJBQUdnTkpUbEk0S FhDQm1BST0iXV0sWyIyMDI2LTAyLTEyIiwiTEFYIiwiSkZLIixbWyJMQVgiLCIyMDI2LTAyLTEyIiwiSkZLIiwiREwiLCI5NTgiXV1dXQ==",
-    "delay": {
-      "text": 0,
-      "valu es": false
-    },
-    "departure_time": "12-02-2026 09:05 AM",
-    "duration": {
-      "raw": 334,
-      "text": "5 hr 34 min"
-    },
-    "flights": [
-      {
-        "aircraft": "Airbus A330",
-        " airline": "Delta",
-        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
-        "arrival_airport": {
-          "airport_code": "JFK",
-          "airport_name": "John F. Kennedy International Airport",
-          "time": "2026-2-12 17:39"
-        },
-        "departure_airport": {
-          "airport_code": "LAX",
-          "airport_ name": "Los Angeles International Airport",
-          "time": "2026-2-12 09:05"
-        },
-        "duration": {
-          "raw": 334,
-          "text": "5 hr 34 min"
-        },
-        "extensions": [
-          "Avera ge legroom (31 in)",
-          "In-seat power & USB outlets",
-          "On-demand video",
-          "Free Wi-Fi",
-          "Wi-Fi for a fee",
-          "Emissions estimate: 309 kg CO2e"
-        ],
-        "flight_number": "DL 958",
-        "legroom": "31 in",
         "seat": "Average legroom"
       }
     ],
     "layovers": null,
     "price": 32457,
-    "self_transfer": false,
-    "stops": 0
-  },
-  {
-    "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
-    "arrival_time": "12-02-2026 08:53 PM",
-    "bags": {
-      "carry_o n": 1,
-      "checked": 0
-    },
-    "booking_token": "W1syLDEsWyIxIiwwLDAsMF0sWyJDalJJYzI5RlJWRlZURmxCVmxGQlFtOVZNMEZDUnkwdExTMHRMUzB0TFc5NVkydHRNa0ZCU VVGQlIyMU5TVGd3U25aMVdsZEJFZ1ZDTmpVeU5Cb0xDTkw5QVJBQUdnTkpUbEk0SFhDS21BST0iXV0sWyIyMDI2LTAyLTEyIiwiTEFYIiwiSkZLIixbWyJMQVgiLCIyMDI2L TAyLTEyIiwiSkZLIiwiQjYiLCI1MjQiXV1dXQ==",
-    "delay": {
-      "text": 0,
-      "values": false
-    },
-    "departure_time": "12-02-2026 12:40 PM",
-    "duration": {
-      "raw": 313,
-      "text": "5 hr 13 min"
-    },
-    "flights": [
-      {
-        "aircraft": "Airbus A321neo",
-        "airline": "JetBlue",
-        "airline_logo": "https://www.gstatic.com/flight s/airline_logos/70px/B6.png",
-        "arrival_airport": {
-          "airport_code": "JFK",
-          "airport_name": "John F. Kennedy International Airport",
-          "time": " 2026-2-12 20:53"
-        },
-        "departure_airport": {
-          "airport_code": "LAX",
-          "airport_name": "Los Angeles International Airport",
-          "time": "2026-2-12 12: 40"
-        },
-        "duration": {
-          "raw": 313,
-          "text": "5 hr 13 min"
-        },
-        "extensions": [
-          "Above average legroom (32 in)",
-          "In-seat power & USB outlets",
-          "On-dem and video",
-          "Free Wi-Fi",
-          "Wi-Fi for a fee",
-          "Emissions estimate: 414 kg CO2e"
-        ],
-        "flight_number": "B6 524",
-        "legroom": "32 in",
-        "seat": "Abov e average legroom"
-      }
-    ],
-    "layovers": null,
-    "price": 32466,
     "self_transfer": false,
     "stops": 0
   }
