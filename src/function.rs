@@ -1,6 +1,6 @@
 use crate::{
     api_requests::{
-        flights::{execute_call, flights_between, get_booking_link},
+        flights::{execute_calls, flights_between, get_booking_link},
         hotels::hotels_in_city,
         site_seen::get_about_place,
         trains::{train_seats_available, trains_between},
@@ -35,9 +35,8 @@ async fn plan_tour(
         "gemini-3-flash-preview",
         Some(TRAVEL_PLANNER_SYS_PROMPT.to_string().into()),
     )
-    .set_tools(vec![Tool::FunctionDeclarations(tools.clone())]);
+    .set_tools(vec![Tool::FunctionDeclarations(tools)]);
 
-    let last_chat = session.get_last_chat().unwrap().clone();
     let results = execute_function_calls!(
         session,
         hotels_in_city,
@@ -47,7 +46,7 @@ async fn plan_tour(
         get_about_place,
     );
     println!("Function call response: {results:?}");
-    execute_call(&last_chat, &mut session, token_map).await;
+    execute_calls(&mut session, token_map).await;
 
     if let Some(chat) = session.get_last_chat() {
         if *chat.role() == Role::Function {

@@ -386,6 +386,8 @@ dependencies = [
 [[package]]
 name = "gemini-client-api"
 version = "7.2.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a849a518bfe25d3ebd8bbbc1c623a46b57c9c04e27ffa0b9cea305b3965fcf99"
 dependencies = [
  "base64",
  "bytes",
@@ -406,6 +408,8 @@ dependencies = [
 [[package]]
 name = "gemini-proc-macros"
 version = "1.0.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4d6eda3ae2a19339dd59c0557e489853b6807ad5386e5cbe48519d210a56a515"
 dependencies = [
  "proc-macro2",
  "quote",

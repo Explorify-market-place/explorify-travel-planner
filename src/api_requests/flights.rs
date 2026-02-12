@@ -1,5 +1,5 @@
 use crate::utils::{Date, IataCode};
-use gemini_client_api::gemini::types::request::{Chat, PartType};
+use gemini_client_api::gemini::types::request::{PartType, Role};
 use gemini_client_api::gemini::types::sessions::Session;
 use gemini_client_api::gemini::utils::{GeminiSchema, gemini_function, gemini_schema};
 use serde::{Deserialize, Serialize};
@@ -180,12 +180,12 @@ pub async fn get_booking_link(token: String) -> Result<String, Box<dyn Error + S
     }
 }
 
-async fn update_session<F, Fut>(name: &str, session: &mut Session, callback: F)
-where
-    F: FnOnce() -> Fut,
-    Fut: Future<Output = Result<Value, Box<dyn Error + Send + Sync>>>,
-{
-    let response = match callback().await {
+fn update_session(
+    name: String,
+    session: &mut Session,
+    result: Result<Value, Box<dyn Error + Send + Sync>>,
+) {
+    let response = match result {
         Ok(val) => {
             println!("Function call {name} response:\n{val}");
             val
@@ -198,52 +198,73 @@ where
     session.add_function_response(name, response).unwrap();
 }
 
-pub async fn execute_call(last_chat: &Chat, session: &mut Session, token_map: &mut Vec<String>) {
+pub async fn execute_calls(session: &mut Session, token_map: &mut Vec<String>) {
+    let mut results = Vec::new();
+    let last_chat = if *session.get_last_chat().unwrap().role() == Role::Function {
+        session.get_previous_chat(2).unwrap()
+    } else {
+        session.get_last_chat().unwrap()
+    };
     for part in last_chat.parts() {
         if let PartType::FunctionCall(call) = part.data() {
             let args = call.args().as_ref().unwrap();
             if call.name() == "flights_between" {
-                flights_between::execute_with_closure(
+                results.push((call.name().to_string(),flights_between::execute_with_closure(
                     args,
-                    async |origin, destination, date, travel_class, adults| {
-                        update_session(call.name(), session, async || {
-                            let (response, new_tokens) =
-                                flights_between(origin, destination, date, travel_class, adults)
-                                    .await?;
-                            token_map.extend(new_tokens);
-                            Ok(response)
-                        })
-                        .await;
+                    async |origin,
+                           destination,
+                           date,
+                           travel_class,
+                           adults|
+                           -> Result<Value, Box<dyn Error + Send + Sync>> {
+                        let (response, new_tokens) =
+                            flights_between(origin, destination, date, travel_class, adults)
+                                .await?;
+                        token_map.extend(new_tokens);
+                        Ok(response)
                     },
                 )
                 .expect("Wrong agrument format from gemini")
-                .await;
+                .await)
+                );
             } else if call.name() == "get_booking_details" {
-                get_booking_details::execute_with_closure(args, async |booking_token| {
-                    update_session(call.name(), session, async || {
-                        let (response, new_tokens) =
-                            get_booking_details(resolve_token(token_map, &booking_token)?.clone())
-                                .await?;
-                        token_map.extend(new_tokens);
-                        Ok(to_value(response).unwrap())
-                    })
-                    .await;
-                })
-                .expect("Wrong agrument format from gemini")
-                .await;
+                results.push((
+                    call.name().to_string(),
+                    get_booking_details::execute_with_closure(
+                        args,
+                        async |booking_token| -> Result<Value, Box<dyn Error + Send + Sync>> {
+                            let (response, new_tokens) = get_booking_details(
+                                resolve_token(token_map, &booking_token)?.to_string(),
+                            )
+                            .await?;
+                            token_map.extend(new_tokens);
+                            Ok(to_value(response).unwrap())
+                        },
+                    )
+                    .expect("Wrong agrument format from gemini")
+                    .await,
+                ));
             } else if call.name() == "get_booking_link" {
-                get_booking_link::execute_with_closure(args, async |token| {
-                    update_session(call.name(), session, async || {
-                        Ok(get_booking_link(resolve_token(token_map, &token)?.clone())
-                            .await?
-                            .into())
-                    })
-                    .await;
-                })
-                .expect("Wrong agrument format from gemini")
-                .await;
+                results.push((
+                    call.name().to_string(),
+                    get_booking_link::execute_with_closure(
+                        args,
+                        async |token| -> Result<Value, Box<dyn Error + Send + Sync>> {
+                            Ok(
+                                get_booking_link(resolve_token(token_map, &token)?.to_string())
+                                    .await?
+                                    .into(),
+                            )
+                        },
+                    )
+                    .expect("Wrong agrument format from gemini")
+                    .await,
+                ));
             }
         }
+    }
+    for (function_name, result) in results {
+        update_session(function_name, session, result);
     }
 }
 
