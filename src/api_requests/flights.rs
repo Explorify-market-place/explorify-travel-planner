@@ -39,8 +39,8 @@ fn resolve_token<'a>(
 
 fn clean_and_replace_tokens(
     val: &mut Value,
-) -> Result<Vec<String>, Box<dyn std::error::Error + Send + Sync>> {
-    let mut token_map = Vec::new();
+    token_map: &mut Vec<String>,
+) -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     for itinerary in val
         .as_array_mut()
         .ok_or("Invalid response. Itinerary not found")?
@@ -61,11 +61,11 @@ fn clean_and_replace_tokens(
         obj_ref.remove("carbon_emissions");
         if let Some(booking_token) = obj_ref.get_mut("booking_token") {
             let small_token =
-                update_token_map(&mut token_map, booking_token.as_str().unwrap().to_string());
+                update_token_map(token_map, booking_token.as_str().unwrap().to_string());
             obj_ref.insert("booking_token".into(), small_token.into());
         }
     }
-    Ok(token_map)
+    Ok(())
 }
 
 #[gemini_function]
@@ -76,7 +76,17 @@ pub async fn flights_between(
     date: Date,
     travel_class: TravelClass,
     adults: u8,
-) -> Result<(Value, Vec<String>), Box<dyn Error + Send + Sync>> {
+) -> Result<Value, Box<dyn Error + Send + Sync>> {
+    todo!()
+}
+async fn between(
+    origin: IataCode,
+    destination: IataCode,
+    date: Date,
+    travel_class: TravelClass,
+    adults: u8,
+    token_map: &mut Vec<String>,
+) -> Result<Value, Box<dyn Error + Send + Sync>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
 
@@ -110,24 +120,34 @@ pub async fn flights_between(
     let mut val: Value = resp.json().await?;
 
     // Extract topFlights and clean them
-    let top_flights = val
+    let mut top_flights = val
         .pointer_mut("/data/itineraries/topFlights")
-        .ok_or("Path not found: /data/itineraries/topFlights")?;
-    if let Some(true) = top_flights.as_array().and_then(|e| Some(e.len() != 0)) {
-        let token_map = clean_and_replace_tokens(top_flights)?;
-        Ok((mem::take(top_flights), token_map))
-    } else {
-        Err("API out of service. Try again later".into())
-    }
+        .ok_or("Field not found: /data/itineraries/topFlights")?;
+    match top_flights.as_array().and_then(|e| Some(e.len() != 0)) {
+        Some(true) => {}
+        _ => {
+            top_flights = val
+                .pointer_mut("/data/itineraries/otherFlights")
+                .ok_or("Field not found: /data/itineraries/otherFlights")?;
+        }
+    };
+    clean_and_replace_tokens(top_flights, token_map)?;
+    Ok(mem::take(top_flights))
 }
 
 #[gemini_function]
 ///Get flight booking details and booking link(You will recieve a token which should be passed to
-///get_booking_link()) from different platforms
+///flight_booking_link() from different platforms
 pub async fn flight_booking_details(
     ///Provided by flights_between eg. TOKEN_0
     booking_token: String,
 ) -> Result<(Vec<Value>, Vec<String>), Box<dyn Error + Send + Sync>> {
+    todo!()
+}
+async fn booking_details(
+    booking_token: String,
+    token_map: &mut Vec<String>,
+) -> Result<Vec<Value>, Box<dyn Error + Send + Sync>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
     let url = format!("{BASE_URL}/api/v1/getBookingDetails");
@@ -151,7 +171,6 @@ pub async fn flight_booking_details(
     let data = val["data"].as_array_mut().ok_or("data not found")?;
 
     //Updating response with placeholder tokens
-    let mut token_map = Vec::new();
     for flights in data.iter_mut() {
         let flights = flights
             .as_object_mut()
@@ -159,18 +178,18 @@ pub async fn flight_booking_details(
 
         if let Some(booking_token) = flights.get_mut("token") {
             let small_token =
-                update_token_map(&mut token_map, booking_token.as_str().unwrap().to_string());
+                update_token_map(token_map, booking_token.as_str().unwrap().to_string());
             flights.insert("token".into(), small_token.into());
         }
     }
 
-    Ok((mem::take(data), token_map))
+    Ok(mem::take(data))
 }
 
 #[gemini_function]
 ///returns flight booking link for a given booking_token
 pub async fn flight_booking_link(
-    ///Provided by get_booking_details eg. TOKEN_0
+    ///Provided by flight_booking_details eg. TOKEN_0
     token: String,
 ) -> Result<String, Box<dyn Error + Send + Sync>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
@@ -230,10 +249,9 @@ pub async fn execute_calls(session: &mut Session, token_map: &mut Vec<String>) {
                            travel_class,
                            adults|
                            -> Result<Value, Box<dyn Error + Send + Sync>> {
-                        let (response, new_tokens) =
-                            flights_between(origin, destination, date, travel_class, adults)
+                        let response =
+                            between(origin, destination, date, travel_class, adults, token_map)
                                 .await?;
-                        token_map.extend(new_tokens);
                         Ok(response)
                     },
                 )
@@ -246,11 +264,11 @@ pub async fn execute_calls(session: &mut Session, token_map: &mut Vec<String>) {
                     flight_booking_details::execute_with_closure(
                         args,
                         async |booking_token| -> Result<Value, Box<dyn Error + Send + Sync>> {
-                            let (response, new_tokens) = flight_booking_details(
+                            let response = booking_details(
                                 resolve_token(token_map, &booking_token)?.to_string(),
+                                token_map,
                             )
                             .await?;
-                            token_map.extend(new_tokens);
                             Ok(to_value(response).unwrap())
                         },
                     )
@@ -293,9 +311,9 @@ async fn execute_calls_test() {
     let call = FunctionCall::new(
         "flights_between".to_string(),
         Some(json!({
-            "origin": "LAX",
-            "destination": "JFK",
-            "date": Date::new_now(),
+            "origin": "GOI",
+            "destination": "IXR",
+            "date": Date::new(2026, 2, 14).unwrap(),
             "travel_class": "ECONOMY",
             "adults": 1
         })),
@@ -318,43 +336,43 @@ async fn execute_calls_test() {
     let first_token_placeholder = "TOKEN_0";
     println!("Token map size: {}", token_map.len());
 
-    // 2. Test get_booking_details call via execute_calls
+    // 2. Test flight_booking_details call via execute_calls
     let call_details = FunctionCall::new(
-        "get_booking_details".to_string(),
+        "flight_booking_details".to_string(),
         Some(json!({
             "booking_token": first_token_placeholder
         })),
     );
     session.reply_parts(vec![call_details.into()]);
 
-    println!("Executing get_booking_details via execute_calls...");
+    println!("Executing flight_booking_details via execute_calls...");
     execute_calls(&mut session, &mut token_map).await;
 
     // Verify session has response
-    assert_eq!(session.get_history_length(), 4);
+    assert_eq!(session.get_history_length(), 4, "{session:?}");
 
-    // 3. Test get_booking_link call via execute_calls
-    // After get_booking_details, we should have more tokens in the map
+    // 3. Test flight_booking_link call via execute_calls
+    // After flight_booking_details, we should have more tokens in the map
     // The details response (from details.json) has tokens that get replaced by placeholders
     // Let's assume there's at least one new token added.
     let second_token_placeholder = format!("{TOKEN_PREFIX}{}", token_map.len() - 1);
 
     let call_link = FunctionCall::new(
-        "get_booking_link".to_string(),
+        "flight_booking_link".to_string(),
         Some(json!({
             "token": second_token_placeholder
         })),
     );
     session.reply_parts(vec![call_link.into()]);
 
-    println!("Executing get_booking_link via execute_calls...");
+    println!("Executing flight_booking_link via execute_calls...");
     execute_calls(&mut session, &mut token_map).await;
 
     // Verify session has response
     assert_eq!(session.get_history_length(), 6);
     let last_response = session.get_last_chat().unwrap().parts()[0].data();
     if let PartType::FunctionResponse(resp) = last_response {
-        assert_eq!(resp.name(), "get_booking_link");
+        assert_eq!(resp.name(), "flight_booking_link");
         // add_function_response wraps non-object responses in a {"result": ...} object
         assert!(
             resp.response()["result"]

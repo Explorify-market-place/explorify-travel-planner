@@ -1,0 +1,1219 @@
+[{"functionCall":{"name":"flights_between","args":{"adults":2,"date":{"day":15,"month":2,"year":2026},"destination":"GOI","origin":"
+IXR","travel_class":"ECONOMY"}},"thoughtSignature":"EqsICqgIAb4+9vv0TpmtZi/N/PdqSJBLLzWE3Rbet9i0W4PAa/Mwc5ayUJiKsv5GNJq/4PNrS202YbjT
+SGvKCqHhcAPE7jU2eIJM99sEyjPRqF3P1niqv4t+4j6VDa3BqcC0z5LBQ01cktdwSk4ObxDrNwMQBC8khGcDCpZUKfTpnSsOw2WkweaiFi3l3KhuedboB5IwThNVr+WuQ6Jn
+hFpWsSb1TUlrWfpJtJuSYpkHzyfgIxUx2jKe30upT880gzcYV47C1l1+MUg3IF2PIOGF7GnrhKUHx/OwXIApsComIkkGP5/cwloXNO8hti+OhTr5rFwm8qsoJXk5XIlWbcT6
+Sg/E+Xm9q2oAEep7b3pd4Bqs3h205rp8hbh3qegx1xlPvhmOn3YdNzpAELOtku15XrbSq7SFhXcj4DRPh6ejgQRq93eeBItOIv1gFT6mAbbv/Yem8IBzeiVKra7+Q5JbNvFA
+U3/lSC9z4Ij81v7jaN8klp7VORERR10xAocaDrqXVI2W4rYLg3kRzJK7PHWZUtzzU6q9hyOYWdV/T1hi0zhX1upvpGuH2+E8am72FSerx05/WbQq7n5chrfX4Vpb/pT1qQiz
+3dBiyoU+HJCaQP7kxu+o4c0qH0M4lTUWkECNuU4qpboB30jKXTVsxm17/RTdaYCFL5TjV8OXhFArsEApfWqkRYq+lpdOGfPnqogVE7idAL06zubhtou9DwwiVr++sTK0v/Hc
+0rqTqgJWGlwEDJulJQO+1TmxINU8JPWdrVit+VRKsZyn73anpj9a5TN0hQqz77uQQNlZH26plS9APv+OXPwoO6e5TVIFFJkBlTaMLpkxNhtTx+n/ffELX5j6PD8cMIQsAZ88
+SY7JLLXN2b5oX2xLgDN8ZX7vzo6PI5FPtLQjGG4RCQqudrmLoZqSCAFjr8xjEflTXYMFZhNFbaCuQ4mDVwjNw6RkO0IEkB5PHGfyamLUoszPuvuHm2usE4fG6TUpQqWkbIJq
+YIEFq3ILBYsw/gf6bDokdAwjeVdbJ3upt1LE4sAS16gv5O0QeKL/VkAmcu/Ks6apfEjFvc4HJdKpXJ1cula1UkQtwDngPZMOuCMO9AAFtdjzIAoVIJhG7cqaNlv2HABBleeB
+qTFlzadEATlqECdGIs6yHdJPPjvh7wzw1uutvjwHdo2k3A33bowVupIvo0DCRdq8HpeWkP0ksNzzN3ZRAOm7HBQaOPTm4AWzXAzS+Xf1gyUYzS3Y5VqFIIFj9KgWao2PS6Mh
+jLmd7aKWZ5PW18QvJqzyivCs32ErgFrW4uU63SopYdA/BmX/NR24/ewLHbQmIVJHZuOyBYgUPCSIEKdArGTiwoylUIK7orEcvFPfFC+NYx2fXaEaLSGqeMwpabOBj/tCuBmy
+e9dMw7xyc8tND8pLOszjIJMavjI="}]
+[{"functionCall":{"name":"flights_between","args":{"adults":2,"date":{"day":22,"month":2,"year":2026},"destination":"IXR","origin":"
+GOI","travel_class":"ECONOMY"}}}]
+[{"functionCall":{"name":"get_about_place","args":{"fields":["DisplayName","FormattedAddress","Rating","UserRatingCount","PriceLevel
+","Photos","EditorialSummary"],"max_results":5,"query":"mid-range hotels in North Goa with good Wi-Fi"}}}]
+[{"functionCall":{"name":"get_about_place","args":{"fields":["DisplayName","FormattedAddress","Rating","Photos","EditorialSummary"],
+"max_results":8,"query":"top tourist attractions in North Goa"}}}]
+[{"text":""}]
+Resolving function calls.
+FunctionResponse:
+[{"functionResponse":{"name":"get_about_place","response":{"result":[{"displayName":{"languageCode":"en","text":"Hard Rock Hotel Goa
+"},"editorialSummary":{"languageCode":"en","text":"Stylish quarters in a trendy hotel with an outdoor pool, a spa & a restaurant, pl
+us live music."},"formattedAddress":"370/14, Bishop Alex Dias Rd, Porba Vaddo, Bardez, Calangute, Goa 403516, India","photos":[{"aut
+horAttributions":[{"displayName":"Hard Rock Hotel Goa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVkBd1cyelR8qdYL9BpmbAd
+wXyDLQWEseOPzTRyU-5MjhWMNGg=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/109351669500262874906"}],"flagContentUri":"h
+ttps://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipPSphtskKbRpXdROO2IAZlnc_d0E
+u7_AgAyq1zb&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipPSphtskKbRpXdROO2IAZlnc_d0Eu7_Ag
+Ayq1zb!2e10!4m2!3m1!1s0x3bbfea0a0893ed77:0x4f53c73c693c9e31","heightPx":2659,"name":"places/ChIJd-2TCArqvzsRMZ48aTzHU08/photos/AcnlK
+N3b-nybxmwLeufGD5MF5JtNbfpIHWK0tC1jDfpCYsGvbEBXsfHcmD4P6Dbw7eaB1v-TmCPHISfhi-TSItfk-NsM1r8Z8f6x71kW-jlQfu5cxQ14Tst2M99gvHAWAY8VWfHoj
+6cWjeSaumLZ7q8HwSHMZtN2wXt88G5uP-AJGAxhv_ayihwNYN88nKNLnA-bZYze1c7Mtcno2WJICKSCHT6enLBk5E__ZQsYpMy-G34yLTSKBPbmhwF2K70-v2FOEdwdGF6jB
+1G380B857qYchx-klWtqmzb64-KPHPNo56r6g","widthPx":4000},{"authorAttributions":[{"displayName":"Stanislav Kovalenko","photoUri":"https
+://lh3.googleusercontent.com/a-/ALV-UjUlKJJ4nR9p0YFOhV-sLh6nojt0Kh3tXTSV5HMnQqx31G1nLgJNfA=s100-p-k-no-mo","uri":"https://maps.googl
+e.com/maps/contrib/105582121299906249915"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places
+.places_api&image_key=!1e10!2sCIHM0ogKEICAgID-4_SCVA&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2
+!1sCIHM0ogKEICAgID-4_SCVA!2e10!4m2!3m1!1s0x3bbfea0a0893ed77:0x4f53c73c693c9e31","heightPx":3000,"name":"places/ChIJd-2TCArqvzsRMZ48a
+TzHU08/photos/AcnlKN1kNc43Hofg70N56PR0sRGe2Gy2lshkSwAMdmieG6G3t_bOmN_uMuHJEyOVjErkQd-ZbllQxxRKhLzxF9guBUPCRNh03b4HsFs6Pufpi8T7wz9xyy
+FZJISF5J2I19fiWLa5f4uuocmzUuPYOfj8swHmxGgB0-SJRZRk-t7JgRIc_o5gj4km6Iq8nYCFYIKzGUVWLKa13CLBvSXdy-o_exSwE-3J9DynW7rIXKq05LkgUq6ubmw6dh
+dWublwTFKgVmY20XcTvSkX_0R32qWHxa9jDGK6E7i6-YnwDFg2JAMFizM1zmALmGsLtQjsopNCe65cczS1w1A-KESGcY4Rx3y0u9XqAOP6Fk7hKLHx2hrsQ3TQJfF0H1hvGj
+59zhkWHzc9zyCVS0uj3OFKhhEqnW03hPUqUWKlwzPWT9q1KB7eRA","widthPx":4000},{"authorAttributions":[{"displayName":"Sahib Singh","photoUri"
+:"https://lh3.googleusercontent.com/a/ACg8ocLhxbBnaMpoEluRAZdY6dZUnwzOltjB9D7laeUIdwo_Zhv6LA=s100-p-k-no-mo","uri":"https://maps.goo
+gle.com/maps/contrib/110815889681519911931"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_plac
+es.places_api&image_key=!1e10!2sCIHM0ogKEICAgIC254W0oAE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!
+3m2!1sCIHM0ogKEICAgIC254W0oAE!2e10!4m2!3m1!1s0x3bbfea0a0893ed77:0x4f53c73c693c9e31","heightPx":3024,"name":"places/ChIJd-2TCArqvzsRM
+Z48aTzHU08/photos/AcnlKN0_F1QE7RP7o7L3teYBuJEPm5LeTnynzgYayEW12UnLzIh2JMU84TvgpMWLpmXs6jjHOTs-XQah9AMzeb4KYaZxcLhuj44sPSP0U9t1aMnrwy
+xOMybcFZlEoF_YSlPHHuXrMSgbgEXTqoRTQjj5Xkj619KbzD-I1nJXxP8CGQJp_BUR8wy93DQeJlwdKgQWD_2Kmtayp_lZPD7E169QjHfXeydYe5I68bBau3-zMPVv1AF8k7
+Cao22b7C7IF-QdASror5g7HszEzjToBRJG4EOUHmtt2oW3Qz3-plomgVZjNZY2Ys1IB__ct3aZxN3idaSyZmzpxfrBKa8nYXwKd4BiqIWjdFKenEyfE1teeIpiVexLbZEUNW
+71u6In2-PtcAdfOxXJgLttR8XiQO4aJOAlo_aDQeeyXLOy2CFwVE-TFdqi","widthPx":4032},{"authorAttributions":[{"displayName":"Rupam Phukan","ph
+otoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVtmUBCRyeLhpS1EfdiCDX0xOByqI3wiijiob3NoKivP3JAXFo81w=s100-p-k-no-mo","uri":"http
+s://maps.google.com/maps/contrib/111775605506381704841"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=m
+aps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDy1LWi6wE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//da
+ta=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDy1LWi6wE!2e10!4m2!3m1!1s0x3bbfea0a0893ed77:0x4f53c73c693c9e31","heightPx":3024,"name":"places/ChIJd
+-2TCArqvzsRMZ48aTzHU08/photos/AcnlKN2mK2OlYMbKyGkurvYcLnnQyVYjq6ov-uOLqZDVYuLUK06oGKHw0_Z_XdUQDRM8cHpPj-j-QOWWuspyV-p43FQod7SH8qDtO8
+0UAsv5x_0aUcEsACjdeYMFExO0BkhS8V8pLo2c7fBKR7zCJ6iv_VOal2Ij269zKcqT4qZtcPd2PC1y-yRH2S2evCszAZz_lq3vB-6gXWsu9zmQazP0Vras_9q8FHU6ecZw4a
+__rEnkJZ3Gjv4Ne6Z8vPzpFwGCWJ736cokThIFWGChhnoScUHNwgKT7mexYpwze27GTj8o-562i3sz_eeAJ_aMryHXEsOvWcUB6PV3bhGRwVM_93gWw9cGtihe1dOjy5QKru
+EikyAsXZXzCiFRelM8WYDIrEG8gxbjUkB4dVpNRFHEZOqQcy8ppNBvt0AxOiVomOaKROMg","widthPx":4032},{"authorAttributions":[{"displayName":"Hard 
+Rock Hotel Goa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVkBd1cyelR8qdYL9BpmbAdwXyDLQWEseOPzTRyU-5MjhWMNGg=s100-p-k-no
+-mo","uri":"https://maps.google.com/maps/contrib/109351669500262874906"}],"flagContentUri":"https://www.google.com/local/imagery/rep
+ort/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipMFHKkb-AA3NbZE92L0w0hL0kn6DYP_Zh_sl9M6&hl=en-US","googleMapsUri":"
+https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipMFHKkb-AA3NbZE92L0w0hL0kn6DYP_Zh_sl9M6!2e10!4m2!3m1!1s0x3bbfea0a0893ed7
+7:0x4f53c73c693c9e31","heightPx":2667,"name":"places/ChIJd-2TCArqvzsRMZ48aTzHU08/photos/AcnlKN2vNNkx1rtjBwk-dw5snjtmbNfF7Eh5pjbYgIDF
+QMvmhIyduoTAS-j491BCI7glHET-Fd90tJj9YHwaLgpt0qcfd4qaKR0JkyGllM6f7Wl7n0MRtTVa0__ue_08GL5gY9rcRyB9oFfDVZ0D8W1c7d60eO-gIY_95ng2ECoaZEEr
+DiwmPBEtEBBXTx2GxE-kgofRI5nNi6kUxcJHPfmzy6MLbBb1ZCz67YmbqCYiAv-tUlg98kWNIMLE5FKbz_uoegc-_omrSnglXnF5RFtxmLk6osw1iGj_h3QKUgVSAo4Crw",
+"widthPx":4000},{"authorAttributions":[{"displayName":"Hard Rock Hotel Goa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjW
+Trk365EB5c4duDD6qF_d82AX12_m7-sKMKvH8RmNdhpNl4DY=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/107529174646214428543"}
+],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipMQkgG1
+iMnkjZ4g1vnxz5dpZijbCJDWDbXpPQB5&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipMQkgG1iMnkj
+Z4g1vnxz5dpZijbCJDWDbXpPQB5!2e10!4m2!3m1!1s0x3bbfea0a0893ed77:0x4f53c73c693c9e31","heightPx":1366,"name":"places/ChIJd-2TCArqvzsRMZ4
+8aTzHU08/photos/AcnlKN1aAkf3Z1vohxuskgKLAXRvdCfEoPI3r6bCEQ_st8yBAHMY8QC1dlAImkp-qu79V2gKhoA63Zts0BBjtz2xf3Cn2RB-Re5_YvliHUNPqVFc6mrh
+P5BuTumE_AEPdIRmi9QrkXbHBJgGwKi3bwK13B7RfZGL5MXa9KqLEQXm3HgUVKMqRxgS9e9niIIHU-DbSFxUT850Fuq8skfpleQjD_O6oGmEaP6LRlkiL3QQ7hFwumerJLq9
+PZg__UFLlIpUhqRpV3lWAtvBBZcFDEmb-jKKKaLfnDdZNg5IbRsG8X1dnA","widthPx":2048},{"authorAttributions":[{"displayName":"Hard Rock Hotel G
+oa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVkBd1cyelR8qdYL9BpmbAdwXyDLQWEseOPzTRyU-5MjhWMNGg=s100-p-k-no-mo","uri":"
+https://maps.google.com/maps/contrib/109351669500262874906"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_clie
+nt=maps_api_places.places_api&image_key=!1e10!2sAF1QipNfcd_slYFrDhXOIaU-XpbHSDu15FCaCmWjmYgB&hl=en-US","googleMapsUri":"https://www.
+google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipNfcd_slYFrDhXOIaU-XpbHSDu15FCaCmWjmYgB!2e10!4m2!3m1!1s0x3bbfea0a0893ed77:0x4f53c73c
+693c9e31","heightPx":677,"name":"places/ChIJd-2TCArqvzsRMZ48aTzHU08/photos/AcnlKN1Y0IgSTrS6hhrFIXllAy8zpVK9pEpBfQBcEJuNkEZ44sUhCpXdk
+Qm_iUSmWaqtNgwPNVkpVlb3d27QvqKxOu2OayNSW21aFEjH-MCi2uCoepu2pEepnxgYPj8tO0noYVZhvJh5ebYO71E2Zg6ceEZN-quh-uA4s_keGomDuvBK3E_gXvxXJs4Z9
+33e7hcGwVQQaEXhktFeutzSqST3K-InhAepwQex5qfuHoncXK_x6PbSm-GDYt__e2XbXQB9WNoIJmnn-2Z2X5XBYwVvrnJKmH9ZqbZtkwsxD2-1CE2ZQg","widthPx":102
+4},{"authorAttributions":[{"displayName":"Sidharth Agarwal","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVOjEwVDkDLzxTrRJj
+gja29wtdBFeYl4gJr3ODc5D1vxvgDuMZB4g=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/109646711108668240553"}],"flagConten
+tUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgID64-OiowE&h
+l=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID64-OiowE!2e10!4m2!3m1!1s0x3bbfea0a08
+93ed77:0x4f53c73c693c9e31","heightPx":4032,"name":"places/ChIJd-2TCArqvzsRMZ48aTzHU08/photos/AcnlKN01veXYACnkzWcqoFu6XDiR1AIxnb6zv6n
+ZSLOFHEHQCn0U0YPBQold8zc4_O845LSxyWXssVzOy4vZYal-WyqQ5cwiMijwGYNiN563NH-4zaSa_iaD5MZ5-lj5iskOq6CX-oYezCLL5MClzoVBsxXEzQYDHvsvrsLTC-r
+tt6jR3uMAwdrsTuPQaPU5zPdBQEP4mJhcNK9iI0hxGwNMBKVV_kHcdpCkLlcIBlBpSbixXqrVOvVYOsWwgJ0MUXSxsZZJuZ7pd-YcAnmtu0kQYKUT4sqpBCfAtJswuUQsNvz
+YSrqdDmPX5tSG4k8JKzrUaY0bAKegqo1GwBm02JFjeQH0hkfYdb_OT4TDZTabFjR3_Ls1RMl4Tq49qztfzaWCfjSd1Q3pigo9fLKdZBRQGIZ2Aq0OrI-ffzLSi20ARGgpLXZ
+q","widthPx":3024},{"authorAttributions":[{"displayName":"D","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVhY2m37M4QSVKZbR
+IVsd5NduWyCw6ggxLPw5e6ldhDo2GnpHVl=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/117400342805957912804"}],"flagContent
+Uri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIABIhDE8MSkcqCLzhSK0Dsy71
+GY&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhDE8MSkcqCLzhSK0Dsy71GY!2e10!4m2!3m1!1s0x3
+bbfea0a0893ed77:0x4f53c73c693c9e31","heightPx":4032,"name":"places/ChIJd-2TCArqvzsRMZ48aTzHU08/photos/AcnlKN2sOHXsmJf24FqU_O8j8eNI7A
+NSteKByCQ7gaEDirR7vpFsXHnIAETI8b4SnXh0D-VlvRu2vzDGDj9zC27nGOa1YK8fWHioFVruFaTseR6icJI7FDVoFqBolpxPcSQGqAh5YSm1z2BhPlZ-0mVhfTGB4-LJoi
+d01ZQF5hu6mPx9M-zJgVLXr9oN3je5g6cagEIS81xDCGmzLhTKNjIB0mTbxEmSg5AhEo52znT3D7ImFvnUxHbuD2pZzENIE8izr4zMFqZHM9Yb0BGEESIxPLH3JgY9auhEje
+9Qi30EZJimRD46qvWlD2NrzYILCuuWGesoH2GaNsD3hpOaOC0adFk1MPezu0u97GXbjSRBzJ2bkyngfTlru3PNgKPtrj2g6zzVxyT6HbdaeUDqMNZ-28oy-Nm9LzDHSp6qXD
+b_VrX7QM9pJrYsM_5pzZ--znGY","widthPx":3024},{"authorAttributions":[{"displayName":"Jay Haria","photoUri":"https://lh3.googleusercont
+ent.com/a/ACg8ocLMimVXwz_zzc5qZ56JCvkIO9izxSUGDjFr2v05wjW5m8metm52=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/10732
+9807281145866407"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1
+e10!2sCIHM0ogKEICAgID49Z-Pag&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID49Z-Pa
+g!2e10!4m2!3m1!1s0x3bbfea0a0893ed77:0x4f53c73c693c9e31","heightPx":3456,"name":"places/ChIJd-2TCArqvzsRMZ48aTzHU08/photos/AcnlKN0FgE
+Bk1NLU8jKi1_vGTkqDVh94d08gGhLk5S5AfJI6qP8pvlDAmq5sHH2qYHtkHxonNWbupZCCfPZSi9WDjQOENECOnar_5RHzdxpPahPcOZlc8NuD1g9GQ3FBcMRSPfA9ws8751
+hYPg-SXqMoMaKtS_8-XhwPbfsjHSMmKT9b5ATIW1iD9AP27Qve2Wkk8zHW_Lm9LDgQ1Gjt5qZAeZQoXazSJiFy4nhO_DkCyNA8dYnYIjaqRzDpuo_q_ePJFd05AxfYwVwLuQ
+wiz5emh3oK9gdaKeuQll71yn81uCyzMDZmLHLPHLgWDn3pYpmunBJOFlFxKPxu1W40eUUO3WMdSe-T4qTiqRbnoDLZHRg8Jabgsr7YK9HxCislxwKmpp5tsUH-SyNC0flHDf
+HJ5IhaI-k9EFvpUvvQNUtvzK8FzQ","widthPx":4608}],"rating":4.6,"userRatingCount":13456},{"displayName":{"languageCode":"en","text":"La 
+Estoria, Goa - IHCL SeleQtions"},"editorialSummary":{"languageCode":"en","text":"Casual rooms & suites in a relaxed hotel featuring 
+a cosy restaurant, an outdoor pool & a spa."},"formattedAddress":"Bammon Vaddo, Candolim, Goa 403515, India","photos":[{"authorAttri
+butions":[{"displayName":"La Estoria, Goa - IHCL SeleQtions","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjW0Y7xeYwdAWpB4IN
+XYG0BbYJrdIJyyO6DuFH000a9hoYbN2ISm=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/108868926249766538256"}],"flagContent
+Uri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipNNySuapPwS-KDA-3JaYO
+J0uR4PgszuJTXP6tDN&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipNNySuapPwS-KDA-3JaYOJ0uR4
+PgszuJTXP6tDN!2e10!4m2!3m1!1s0x3bbfc1a2987c341b:0xc0aeef08b7834503","heightPx":1080,"name":"places/ChIJGzR8mKLBvzsRA0WDtwjvrsA/photo
+s/AcnlKN2m_ujSnjmO0vz20PEcVebDcRS7FvkEYUliidNs1lu_8Rz-QUWuzJrk_pZzTjosHQb_fQuIrD1HG98jSt4OWPEe-DvP8a3m-3yDw_JotpfB4hZws7tdQyjt4nwkzy
+fbKF64MyJRHjIbyNYKYU7-Vf97JI7sdkZxDoLWluMvz4qxFcwnnUa1sMOn7thJ00fXfcitjvOtu-bPmENkg3G2GcDhi_D8BQZw0iqrXoPIP4uPXR871VCWzi4AEdNYa1gZqR
+8uu7kUhtThGg_xFw10AyKgWSDg6HfUIp6DMuscjUKqOQ","widthPx":1619},{"authorAttributions":[{"displayName":"La Estoria, Goa - IHCL SeleQtio
+ns","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjW0Y7xeYwdAWpB4INXYG0BbYJrdIJyyO6DuFH000a9hoYbN2ISm=s100-p-k-no-mo","uri":
+"https://maps.google.com/maps/contrib/108868926249766538256"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_cli
+ent=maps_api_places.places_api&image_key=!1e10!2sAF1QipMjjXwbva514sVQTDTnTocZ4E2z6xH7brteNHyn&hl=en-US","googleMapsUri":"https://www
+.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipMjjXwbva514sVQTDTnTocZ4E2z6xH7brteNHyn!2e10!4m2!3m1!1s0x3bbfc1a2987c341b:0xc0aeef0
+8b7834503","heightPx":503,"name":"places/ChIJGzR8mKLBvzsRA0WDtwjvrsA/photos/AcnlKN1gRr2qLzM-JnB9jLlYm5W9tcm_Jf0tlVWpOIx-k81ina_Q3Rop
+YsOh4-B6fHtLfzsPxci5ia2F3MlMNfjuHw2I3k1v2FxUroiqR34FTVySp5fxYMM4QXPj_wBlflIfmZ-WqD8HW1VIYKeiTY6U0IzP7Wg6u3afcbigLveptxmtYemnsMs9iHBL
+A8dlQu4xTpxCGyIYcSgclzvT-nLjkR-u343YyQVqyDlNBk0oB7s9M6aCK1FZCsIMuR5sE1_JoIw3rJegeHMuzS6MRhjXqj8AdUJBvC6-B92VUKzoQUsMTQ","widthPx":75
+6},{"authorAttributions":[{"displayName":"Dominik Meyer","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVXm91dFAmkLSlnlt450e
+B6qcKFwvwbsPxG4Et7Df5i6QjDpxzSpw=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/112460225339150850780"}],"flagContentUr
+i":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIABIhBeui5Cs7OQqJEbdGMP2I-s
+&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhBeui5Cs7OQqJEbdGMP2I-s!2e10!4m2!3m1!1s0x3bb
+fc1a2987c341b:0xc0aeef08b7834503","heightPx":4096,"name":"places/ChIJGzR8mKLBvzsRA0WDtwjvrsA/photos/AcnlKN2JGwfnDZWMRVTuS_93UDeJ9a5D
+RK5jhzGhlJljfGGGCEvg3AUyU4LfbWsjgSGIKvl5IIbCnjP2GrL8j3JH0mQze6RyrsRmLVrDTi9sE5UJ7PYR9SrDEDjzmTIcuCRDHm04LvLYeSeRRrsXYkP7ssu9X55bZBTE
+GqDu7Is_n0U467fgQmVM3Tf5HLifs-hfvZqicq2P60PjfWVUpSQOQM49rTzNl9RH46_x85qKEgKklhCK0sC90k7LEuYPhherGNeCdfoiS0xxPdy9PrjZIrnJvrPQ0d73mPI_
+ffF3jy_TIP41e9br4xxiAotrmFsnKlQmRPdxYwWGmrYf5f8cuS6RKdMz0Cjx-FgpOnkHEpoeB6vvjDz-4EThXuIt0wWv4WJYIQBErzXdFoDIM0dfHGrDS2OlZVAXz_3fzngm
+HPCZc_zCtvgMRF2jDEQ9cg","widthPx":3072},{"authorAttributions":[{"displayName":"Altina Khot","photoUri":"https://lh3.googleuserconten
+t.com/a-/ALV-UjXQT_BfaRvoECrLFWJNQvL7vUtcVG3ERKalK9a1TUxtHRtiffTpFQ=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/1175
+60196294785184436"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!
+1e10!2sCIHM0ogKEICAgICKqevM2AE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICKqev
+M2AE!2e10!4m2!3m1!1s0x3bbfc1a2987c341b:0xc0aeef08b7834503","heightPx":3456,"name":"places/ChIJGzR8mKLBvzsRA0WDtwjvrsA/photos/AcnlKN3
+NSlvezboWM0QshT0uFvHb1HrfaXB8kDItn70LgWQWqMTPdnxDehhO02FCe_zc7y6bDq9HRIS-MnGsRnVqyADxogLOTC3pJRSYMp5ZHi1qs0GbKtejzQ0XFrusQHhgxiveeWi
+TrxBpjDqUS6NiRlh3C50g1HOngdNpfxOI8M1Aro0MRD-Jb0owjmMwMuy6tMIs7YxlDc37sMFUR3RQ7LqhHcYMs6Yo092z7i0fIJA5ToTwsXO2wkyn8QRxqA6PE0rY5OuZy4i
+XzaTJEirpmRYnWeMRjE9suXyttjMTOP75E81cwG8aGVnbkA-6K-2cchzBMWYUreD_hRFFnXblu0R8pjwnSvLVuuIb3Y-9z55undA1nZ_wUnLB_H30m3lKClUWBSiC1P7QtD5
+wF-2mSjyEFhJ4tvTP8escMZSjL3jF0sZ7","widthPx":4608},{"authorAttributions":[{"displayName":"La Estoria, Goa - IHCL SeleQtions","photoU
+ri":"https://lh3.googleusercontent.com/a-/ALV-UjW0Y7xeYwdAWpB4INXYG0BbYJrdIJyyO6DuFH000a9hoYbN2ISm=s100-p-k-no-mo","uri":"https://ma
+ps.google.com/maps/contrib/108868926249766538256"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_ap
+i_places.places_api&image_key=!1e10!2sAF1QipNaNK5VK1lSIq_Pd62OSIUxzg74IKE-5tC05EN6&hl=en-US","googleMapsUri":"https://www.google.com
+/maps/place//data=!3m4!1e2!3m2!1sAF1QipNaNK5VK1lSIq_Pd62OSIUxzg74IKE-5tC05EN6!2e10!4m2!3m1!1s0x3bbfc1a2987c341b:0xc0aeef08b7834503",
+"heightPx":503,"name":"places/ChIJGzR8mKLBvzsRA0WDtwjvrsA/photos/AcnlKN2gfXsVlTAFnLtqAiD8kSb_JFpcJBl4SF6L3c5esKHOAOkmrnblfnQOOxDhNsf
+KJlt_6WZqKGZP_5CdaORDHh_zo6BhqNK9cNqnQwPKIW28NPdiWu0aF1sJ1BycZgYZGrv_kyjYANZAyPPnLEWdaL80eGH-vq7QmuwZmNgoeqXuuDKThLJwZglLx6gV_zt9zY8
+1useX9bNindfLmob920NfD412_1BwTkAfAFJIG47PDxMQ5DX4OYmMnFMAmSv4jZMk-zAoV4RUU8hRRF6tvliySNn15BKtpH9P7VlldjQdbQ","widthPx":756},{"author
+Attributions":[{"displayName":"La Estoria, Goa - IHCL SeleQtions","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjW0Y7xeYwdAW
+pB4INXYG0BbYJrdIJyyO6DuFH000a9hoYbN2ISm=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/108868926249766538256"}],"flagCo
+ntentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipOK1IegfIzAeW_Mk
+ZZthYX_ka9BFHVyD9E3wUQe&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipOK1IegfIzAeW_MkZZthY
+X_ka9BFHVyD9E3wUQe!2e10!4m2!3m1!1s0x3bbfc1a2987c341b:0xc0aeef08b7834503","heightPx":1080,"name":"places/ChIJGzR8mKLBvzsRA0WDtwjvrsA/
+photos/AcnlKN0d8eIeBZfBa3gCtuMLF4Pzcz7NmrJkiXMziYPDJgY7fPixBqYU44lH5umKSbBatAYlpyRIIYI7XBcBlRMGROl6z-npr3AGia-1wnBztiDZtqwqRcQxwZCnq
+wqSb2qNnQ7Sl0rFS2KfRpz45zzXLRnKZK2TWLd9qZbKnpYUZJ7qCpiUWJ5T0Wz5oSEHRjKUdwiPtzv6YF1B-eVAyI_8XORcluPRl-eLyYUVO2t7I9OjNqdayxeJXmj9HGJva
+f3wTKwJxznzxB7E64Zk35NbUdgTvcUU_vSeaE4QeWZp_DAhJA","widthPx":1619},{"authorAttributions":[{"displayName":"Country Inn & Suites By Ra
+disson, Goa Candolim","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUF9DFBK5yNpvSgXHDYomz10-eQF7SJzLzrB1nM6tjp00EH9NLc=s100
+-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/104618685716576097124"}],"flagContentUri":"https://www.google.com/local/imag
+ery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipPSh1p9CcjK1O_emrSov-_7yDPJCqifdfqbm8px&hl=en-US","googleMap
+sUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipPSh1p9CcjK1O_emrSov-_7yDPJCqifdfqbm8px!2e10!4m2!3m1!1s0x3bbfc1a2
+987c341b:0xc0aeef08b7834503","heightPx":478,"name":"places/ChIJGzR8mKLBvzsRA0WDtwjvrsA/photos/AcnlKN2d_39lc2o3lRJSVPQhViEz9xy7wuqrI3
+_h8ycalHScbQhacjtaRqCjNk4BPrwwVAEcQUQsjqR3rIycoCi7uCDIE81_CkEvOOOv5TtUSN54wBHqqu9WTy-ImtGHZ0sSa2OWkDjsrjvCKSQFuxM6u07N9NtRDYxHnXiiQm
+EXUht7GBhgp-zGZdAKTMK1UJr9sUqcfs__wuNa6uhUxEfFXv9o6Rix8apE1oaOGA_SdlFzx_vaOztVLzqh8Ksjn64APk6_EIdFW2wWEF02bvzc27Mjay34Jt1bOdspM9e83f
+b31A","widthPx":849},{"authorAttributions":[{"displayName":"La Estoria, Goa - IHCL SeleQtions","photoUri":"https://lh3.googleusercon
+tent.com/a-/ALV-UjW0Y7xeYwdAWpB4INXYG0BbYJrdIJyyO6DuFH000a9hoYbN2ISm=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/108
+868926249766538256"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=
+!1e10!2sAF1QipOMKVWEI-fKB2JxrcFodcmG7K-FdCoA3yURO2XA&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2
+!1sAF1QipOMKVWEI-fKB2JxrcFodcmG7K-FdCoA3yURO2XA!2e10!4m2!3m1!1s0x3bbfc1a2987c341b:0xc0aeef08b7834503","heightPx":2700,"name":"places
+/ChIJGzR8mKLBvzsRA0WDtwjvrsA/photos/AcnlKN2Jm1LEzHcJhVo_-7HL8d4KkirF4t0Q2Q0TBk-j3xJ6OoByPoj2dj-Midajc1rrgSDSLQ1t7Zwj2EXFGjcz-5_4yXr0
+TdvjH565NSwMFKlsyHAlzzqww3_l0JW_r9nZiPeTVB32FVePn5pYdmUZDnlfoEc5qTaMhwTn3jqDX70jNTIRiUIxdHTivcSDTO7Mtj1HhRQPYebpRNpXnKw8zkDh2AWL61Tw
+Qgvz65jCizUsN0QTQotEkF89p81Kxo0_gXR4ufOjjF2mxUKd-DoY9H2hv_6mIGGJvxOlet0AO7KFKg","widthPx":4800},{"authorAttributions":[{"displayName
+":"La Estoria, Goa - IHCL SeleQtions","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjW0Y7xeYwdAWpB4INXYG0BbYJrdIJyyO6DuFH000
+a9hoYbN2ISm=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/108868926249766538256"}],"flagContentUri":"https://www.googl
+e.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipMwdAl8lPvjuqDRdMGyNYKr8FF4Vk2ZdkUPD-Dr&hl=e
+n-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipMwdAl8lPvjuqDRdMGyNYKr8FF4Vk2ZdkUPD-Dr!2e10!4m2!
+3m1!1s0x3bbfc1a2987c341b:0xc0aeef08b7834503","heightPx":2700,"name":"places/ChIJGzR8mKLBvzsRA0WDtwjvrsA/photos/AcnlKN2r2Mg2Hs9KRo6hx
+Bwg8YppXf3WHCmY9_8_eNorHL2M8KTxAMrLNWwailSfrK19njpErEOhuQ9SBXaDwIxgJ-7StXZA11xZKMFALbtaDm704qdmgzH-q_AKvGbKxB4p89o1s_BmBMaOv-MR0Yg4M
+i5uw7lV_iaRjNe0LJ2xWf8-Zu9FUhWq7vwow7ldmkcrRCpBlUKO8YFHqaSqCL3J15Wd6tHl8umf3l6vsbYIHkmIdkBT0II3ZviU-yxAe1yJeHf3EXyLFG9hdFIZsPWn3-tft
+lS_yOxRvYFHz3OewLh2hQ","widthPx":4800},{"authorAttributions":[{"displayName":"La Estoria, Goa - IHCL SeleQtions","photoUri":"https:/
+/lh3.googleusercontent.com/a-/ALV-UjW0Y7xeYwdAWpB4INXYG0BbYJrdIJyyO6DuFH000a9hoYbN2ISm=s100-p-k-no-mo","uri":"https://maps.google.co
+m/maps/contrib/108868926249766538256"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.pla
+ces_api&image_key=!1e10!2sAF1QipPyz5alDk1faH7TasDYV4BUomRiteJTfgSYbh4b&hl=en-US","googleMapsUri":"https://www.google.com/maps/place/
+/data=!3m4!1e2!3m2!1sAF1QipPyz5alDk1faH7TasDYV4BUomRiteJTfgSYbh4b!2e10!4m2!3m1!1s0x3bbfc1a2987c341b:0xc0aeef08b7834503","heightPx":2
+017,"name":"places/ChIJGzR8mKLBvzsRA0WDtwjvrsA/photos/AcnlKN2jkR58Bl_S7FOy_sKPJv0lFrQuJKBabXx39Cqzo9KexuqDXKoycgD3UdJLmxml6spI5Pd4vk
+ulMcWmScNCSDmDVHLcv5kf1iL61wKOkqdrx26g75_QJe40nxrs-k3RGJRo6gxOYNMaQ-kGclNKPM9JIGjR86UDCskhpbx6qrWhquS8QoDGpEBBD9v_bBxddIio4haQTK6euW
+-LnaPrife4LZwNEQdkO1kFtaTc3d7bMpnkj1ZefBdXqQNmj5f4GvUEyrzK-UwRMmnFDI64rem3CZ6iEMx9n1GGrch-6rqSmw","widthPx":3886}],"rating":4.4,"use
+rRatingCount":6574},{"displayName":{"languageCode":"en","text":"Zone Connect by The Park, Parra, Goa"},"editorialSummary":{"language
+Code":"en","text":"Down-to-earth hotel featuring an outdoor pool & a spa, plus a restaurant & breakfast."},"formattedAddress":"569/1
+-A Carrasco Vaddo, Parra, Goa, Parra, Goa 403510, India","photos":[{"authorAttributions":[{"displayName":"Zone Connect by The Park, 
+Parra, Goa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVksLWoICr_njEhub-iEkqDA7j0kG7TpHIOLyLplFpS5n7Rb5c=s100-p-k-no-mo"
+,"uri":"https://maps.google.com/maps/contrib/109302361999532241586"}],"flagContentUri":"https://www.google.com/local/imagery/report/
+?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipNCWRUr1wnYZzLUiUfMEvExkb3g0n28bBvQhu1Y&hl=en-US","googleMapsUri":"http
+s://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipNCWRUr1wnYZzLUiUfMEvExkb3g0n28bBvQhu1Y!2e10!4m2!3m1!1s0x3bbfebf22bf4a06b:0x
+67cd7ac0c8786cd2","heightPx":3200,"name":"places/ChIJa6D0K_LrvzsR0mx4yMB6zWc/photos/AcnlKN1scKaJZBP9wSpKk3fU-scs0wJUGPkWnPO5RpVGSJ-u
+GWl9a8mPscXgOkiNtnAkdGoayqivSWrKAubdQtfriS2cHU6iekwk6JEzyzCk4udtHY6tGdAXIZlAFiPO0tDN84FQxECe_9FmxoMDCp_V-t8GlqxjgT7--JyWEafvifyCil6X
+0uF8fluKV-o-513m9eNt8bkvzZRzOx90jnLfQ6PaWlGt2SaIKr_hL8IOyvU7KiQpsJ4bsj2rYCBiGHDRZRKLO9_YJisAsB0NEybQNLWYyULpHoqH6hoWqTaAtwwSJw","wid
+thPx":4800},{"authorAttributions":[{"displayName":"Zone Connect by The Park, Parra, Goa","photoUri":"https://lh3.googleusercontent.c
+om/a-/ALV-UjVksLWoICr_njEhub-iEkqDA7j0kG7TpHIOLyLplFpS5n7Rb5c=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/1093023619
+99532241586"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2
+sAF1QipMCC1E67ju81RubuMONjQGXYim6B9HOSlXuMYw2&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1Q
+ipMCC1E67ju81RubuMONjQGXYim6B9HOSlXuMYw2!2e10!4m2!3m1!1s0x3bbfebf22bf4a06b:0x67cd7ac0c8786cd2","heightPx":3200,"name":"places/ChIJa6
+D0K_LrvzsR0mx4yMB6zWc/photos/AcnlKN3Ga3pIfeSQJCEo8XVyQzwRN_PZodudGqactg7w3x08SUtkXLaGhpMatt20Mwwq8IUwLUCH4uGr3_k3quLpJUPFSDqxwL2B4K0
+U8MtwtCH8l-kFgFFo9_VchJ_TJjqCmqYO0nTsxXrvr51uHCUczA9PSn5o2hSV5G8AvhHTu5qKsYsmHU_QGQrJFBDZkgECVEwhAFywK5b_9cc9bXQQ5lrZIWJ7AQCDi2Vwp5P
+lVAx7E0_wlSyDUwTaM0wq6FENsyqfN4bhwuLPmJGlRwkKunLOpoud4DnW-f4MVh-p5hGaSg","widthPx":4800},{"authorAttributions":[{"displayName":"Zone
+ Connect by The Park, Parra, Goa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVksLWoICr_njEhub-iEkqDA7j0kG7TpHIOLyLplFpS5
+n7Rb5c=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/109302361999532241586"}],"flagContentUri":"https://www.google.com
+/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipPQsR27P11AJZFaZbxhKWB4MOV3giQQLQxUbXof&hl=en-US"
+,"googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipPQsR27P11AJZFaZbxhKWB4MOV3giQQLQxUbXof!2e10!4m2!3m1!1
+s0x3bbfebf22bf4a06b:0x67cd7ac0c8786cd2","heightPx":3200,"name":"places/ChIJa6D0K_LrvzsR0mx4yMB6zWc/photos/AcnlKN0Pfdc-0qXsJzCFStILsz
+aiEkPrX-AIpzQlhsYXL1opDsBYbOmtMa_dkUq2b7zICe2QygeK0ElqXawr7Ypsd4onlaMY-nvXajhwGNJgq7Qyxx6R8t87ZaYhCefyv_9Atup-LchCI_DXu7oUoUNLw1dHwA
+icxopFY4Q5AtTifU6j-L6uCkAKnpPc2tdsFzkZep8jHf1JEygXZnMKAlmoIFwS_GQdEC0-UZDrAYi2oqh9bwc8Z3ZPE8Wdrp64NqAZGgnVuys0XVnWVDU4Zhq-UzMF_jgz3q
+Z-fT6vdTK6MJ4muw","widthPx":4800},{"authorAttributions":[{"displayName":"Zone Connect by The Park, Parra, Goa","photoUri":"https://l
+h3.googleusercontent.com/a-/ALV-UjVksLWoICr_njEhub-iEkqDA7j0kG7TpHIOLyLplFpS5n7Rb5c=s100-p-k-no-mo","uri":"https://maps.google.com/m
+aps/contrib/109302361999532241586"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places
+_api&image_key=!1e10!2sAF1QipPwGy39z2qxiXFu5VYxGc4Y_Ay5AGN4cTrC-h4J&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//da
+ta=!3m4!1e2!3m2!1sAF1QipPwGy39z2qxiXFu5VYxGc4Y_Ay5AGN4cTrC-h4J!2e10!4m2!3m1!1s0x3bbfebf22bf4a06b:0x67cd7ac0c8786cd2","heightPx":3200
+,"name":"places/ChIJa6D0K_LrvzsR0mx4yMB6zWc/photos/AcnlKN2U0aVmVwJZiPnMb6bl6ZP0w_eUbz6r-g8rFp-HSi9tkxN0BR--TILO8Eo9AOPzPINNAjDifxzf1
+ovVlxS5QVWJBFtIEQIgAe7VqT5QOL6pTfmf4dRnIvhisYFctydv6GhQ4Ofd7Pe83rIJvDAhxobnWeS5W5mzNLr6LxvDKCbz0RcYcjDVc6-0xlL2tfg-0hPAiV6AG_9uywhht
+H0SsqV-Ul5-WoHhp-4M4PQJDb2Q_ffvoTMV1wP7gxl7aTTfTypJ81_ndCD--QqtWzRx8cqzoKCUMDmW109mL2OxAk84aA","widthPx":4800},{"authorAttributions"
+:[{"displayName":"Zone Connect by The Park, Parra, Goa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVksLWoICr_njEhub-iEkq
+DA7j0kG7TpHIOLyLplFpS5n7Rb5c=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/109302361999532241586"}],"flagContentUri":"
+https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipNHX_6wVH1SuhONrU_vTJrYgXXJ
+jAaTAkiQKBGD&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipNHX_6wVH1SuhONrU_vTJrYgXXJjAaTA
+kiQKBGD!2e10!4m2!3m1!1s0x3bbfebf22bf4a06b:0x67cd7ac0c8786cd2","heightPx":3200,"name":"places/ChIJa6D0K_LrvzsR0mx4yMB6zWc/photos/Acnl
+KN2FPXv2uEKBvCvs1113zcxrcjKclUbnsuTiarrP8QjkoM6tOr7NF6tt3NTdszbrtHE9kzCenAguRcgGJMnCPCz5PYvCFfH_XIlqrIBsq6jgrP0k9L0MBFO9F3EaKxYL9XkZ
+OEfF6d-MbLtrRqSNNyGLnQrGqf1IjIt3NY7PSNLGOBYEFwPwY9bhh4WVTM0KVfxin5REfMEjY5k73U6_Tad92li8zFZouTj1ALvazKInxMQhZR1BYSbQuvKVe09-JF9VpJ23
+_UNRhZeqrBX6UZMd5A3lgv-NkF0GI5djrh3r6g","widthPx":4800},{"authorAttributions":[{"displayName":"Zone Connect by The Park, Parra, Goa"
+,"photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVksLWoICr_njEhub-iEkqDA7j0kG7TpHIOLyLplFpS5n7Rb5c=s100-p-k-no-mo","uri":"htt
+ps://maps.google.com/maps/contrib/109302361999532241586"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=
+maps_api_places.places_api&image_key=!1e10!2sAF1QipMV-fFnQCCQwTedmMi-G-4l7ZgWDto2-a83l7wn&hl=en-US","googleMapsUri":"https://www.goo
+gle.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipMV-fFnQCCQwTedmMi-G-4l7ZgWDto2-a83l7wn!2e10!4m2!3m1!1s0x3bbfebf22bf4a06b:0x67cd7ac0c87
+86cd2","heightPx":3200,"name":"places/ChIJa6D0K_LrvzsR0mx4yMB6zWc/photos/AcnlKN0dmO2-sonkbuuQAyuDra5umKeHAG7ZnkGBVDDQKYTdp_1NWoa5qD4
+slaYz2VeyEDqUykvhq2vVQhcdmeLKVC_VHLcDHgJ4e5_Bv2HbeWi0p_iSXYjcgY3pBiWJ618lTFA5URFBH20fI4G8th_vgmI1zalNcaTMK70ZjfMUgsuBbeUaIYgKAO1-pdP
+g8zuxUzlesaz2FsyGnNDGvgyDILmWmV8eo2tDhvTJEoIPnPVtbV8hMs1rbfWWZmMt5aJDOGPYsSTzeyGqGD5rz8DITAsX8hvlpuPl0xG-9WG8gC9hsw","widthPx":4800}
+,{"authorAttributions":[{"displayName":"Zone Connect by The Park, Parra, Goa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-U
+jVksLWoICr_njEhub-iEkqDA7j0kG7TpHIOLyLplFpS5n7Rb5c=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/109302361999532241586
+"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipMMY0
+VyFMjRHfbRF6kS75AQsfyIyw5_o2bVd_b-&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipMMY0VyFMj
+RHfbRF6kS75AQsfyIyw5_o2bVd_b-!2e10!4m2!3m1!1s0x3bbfebf22bf4a06b:0x67cd7ac0c8786cd2","heightPx":3200,"name":"places/ChIJa6D0K_LrvzsR0
+mx4yMB6zWc/photos/AcnlKN3xGuEeXOrUQcKUl62WYJyrx-AF1YPYXh_zniPHPPXt1mKbGrRvDybvh085-0wARQOjnGDKwrt6C_LaR0vW37ClTrMgPZOrCx9XEz3yfulhNu
+qQrJ8HsIGQV38bhHHwAtkPC1fk76hAQY0f24pk_7ycOAFLm4hEt8FpBAUmOQMzw3v6ycAiNGzuC8rgK0Brr2fsTWIKv55Lbp_rZleXJb3uawVz88U3TQ6bPh3V7_TdF2UlQS
+YbF5MGrShp2ExVfry4UeyoKqoXKPo_3zQ-fVZ9bRW8IpXB_Tjwhcpn6R2Ypw","widthPx":4800},{"authorAttributions":[{"displayName":"Zone Connect by
+ The Park, Parra, Goa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVksLWoICr_njEhub-iEkqDA7j0kG7TpHIOLyLplFpS5n7Rb5c=s100
+-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/109302361999532241586"}],"flagContentUri":"https://www.google.com/local/imag
+ery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipM-tYwySMiqpDC2DfxP5IX55U-6ma9vDCKk-Xtq&hl=en-US","googleMap
+sUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipM-tYwySMiqpDC2DfxP5IX55U-6ma9vDCKk-Xtq!2e10!4m2!3m1!1s0x3bbfebf2
+2bf4a06b:0x67cd7ac0c8786cd2","heightPx":3200,"name":"places/ChIJa6D0K_LrvzsR0mx4yMB6zWc/photos/AcnlKN3ShmP9YRWHjxdJXmqNatdNcjqBSBU7X
+iNaWVA6BbPrRpv2_UZakSjYxNMaMN9K4rA5CWZDmQwgqYxyBzJ-LX5ckzfXXa81WE7ZZh8FFWj-RwHIJEWUxh7xbOSqOSNyjZnehXuijCeOWXUiz1nQ2mqjILhIrwrVSv3vW
+b-wRFaDgc-Qa8KfjsDZxLauMqHRaakyXBdihj70esvmbDBi49CYxiTa5bPBeM1l4_9icEc3x5DxGI8LQKaIKhrayx1kKZVJAUT9Gm1Ay9nwFH9XGBr_5jcIIAh2OE1g0-I8k
+aIZiA","widthPx":4800},{"authorAttributions":[{"displayName":"Zone Connect by The Park, Parra, Goa","photoUri":"https://lh3.googleus
+ercontent.com/a-/ALV-UjVksLWoICr_njEhub-iEkqDA7j0kG7TpHIOLyLplFpS5n7Rb5c=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib
+/109302361999532241586"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_
+key=!1e10!2sAF1QipOJ8meltMajQg1labi2G5vBDzHPB4mrp-b1Wyk1&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2
+!3m2!1sAF1QipOJ8meltMajQg1labi2G5vBDzHPB4mrp-b1Wyk1!2e10!4m2!3m1!1s0x3bbfebf22bf4a06b:0x67cd7ac0c8786cd2","heightPx":3200,"name":"pl
+aces/ChIJa6D0K_LrvzsR0mx4yMB6zWc/photos/AcnlKN1_zGyAAHgQ_6xncK2QXAAIgH-Di1rH5Dew33LJWiQWxLAXi-M5ObMo80XzLL-_xcVugdLOG6_G7yh6YMGuCnNw
+dj-gslnqK3bSpc_M65cH9FEkoKvsrFQsHXUVcd4lE4RRAo-oay_5uzaEJAA8JqBC85ryN1lBHxd7jAxcezPfQr2NlEsPCRv7QP_pjpK4TDTAWARDibRNq1psyWp8Odgs65Hd
+295xsDKspvIJm5NBcHuo4p1_mFPUgL4bGUtLR1-M3tHs6qX0yj_yrASAstGht57ELK-y_10JtNVBQ09fCQ","widthPx":4800},{"authorAttributions":[{"display
+Name":"Zone Connect by The Park, Parra, Goa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVksLWoICr_njEhub-iEkqDA7j0kG7TpH
+IOLyLplFpS5n7Rb5c=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/109302361999532241586"}],"flagContentUri":"https://www
+.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipOIm5inktln2Zpg-WO__SInsTICJ-0ZJOOZxTo
+O&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipOIm5inktln2Zpg-WO__SInsTICJ-0ZJOOZxToO!2e1
+0!4m2!3m1!1s0x3bbfebf22bf4a06b:0x67cd7ac0c8786cd2","heightPx":3200,"name":"places/ChIJa6D0K_LrvzsR0mx4yMB6zWc/photos/AcnlKN1dBKQUpTw
+3-kLg0M6lu6pJ6eZe6MrSJCzU8Wb4NViB6EYG2A-2HE7GQmcAugwAaQC8M1StXR0i7r3q-h1pStt_FFmCh7gQspfJUVXFOlfqF3kmbsevG9hBpzkdcA57fpW_dcUme8VmdRH
+vQFqiR9x_w5v6KbadLglC8qXZ5QMwqv9lLJI7mTbSHLIDoVruX_xn4U8HJSrs20MeDWHwusEZVsIVFa0w5no2en8TsGmLnizsiFiNoviIdlrHwCXFsG5r0LVGGZRH2AOZ3L2
+yCl8jb-vN86yl3LNs8vXq18djIQ","widthPx":4800}],"rating":4.5,"userRatingCount":1084},{"displayName":{"languageCode":"en","text":"ibis 
+Styles Goa Vagator"},"formattedAddress":"Chapora Fort Rd, Goa, Anjuna, Goa 403509, India","photos":[{"authorAttributions":[{"display
+Name":"ibis Styles Goa Vagator","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUTgPiSSoddaTYwS7Q1uY5Qycj80aKCuaOguNzJDw3Td60
+hFL-V=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/107819887403306098925"}],"flagContentUri":"https://www.google.com/
+local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipM0TRv5E-yfOpX4neZOT1YXUGKWdpwu88IDF7dO&hl=en-US",
+"googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipM0TRv5E-yfOpX4neZOT1YXUGKWdpwu88IDF7dO!2e10!4m2!3m1!1s
+0x3bbfe90261965b6f:0xdf04f70197233fd6","heightPx":3201,"name":"places/ChIJb1uWYQLpvzsR1j8jlwH3BN8/photos/AcnlKN13J7JjMHhk7TmFWMR49I1
+vO1on5ruvqxGL8uT98G1OEMmhV7tbURmdD-zmDOga09Nlv33i9ivjInYqu_n4SDybsxjDXf7QzcCDK_kk60sr4g7rM_-bIZv4IOhtZ_a_SnHpwla-VSpxRAnRGt5tH1h1tCO
+LXBVpibrTGMScutYUMRGH6_Tv3coK1R25YZ4W-Hq8LwjdD7jLqRyi1gaEOx2554CxCyyrCO-ZooJlfKksba-laNJIcXb0QohksZe7Dz7uDVJ94x99VNuSXvegytgvWR_aDI-
+vFVSm-iLF-6KrPQ","widthPx":4800},{"authorAttributions":[{"displayName":"ibis Styles Goa Vagator","photoUri":"https://lh3.googleuserc
+ontent.com/a-/ALV-UjUTgPiSSoddaTYwS7Q1uY5Qycj80aKCuaOguNzJDw3Td60hFL-V=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/1
+07819887403306098925"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_ke
+y=!1e10!2sAF1QipOHk6c8mo9rbwRjmw7H7g3vv7ihG2LcjfYVWRlt&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3
+m2!1sAF1QipOHk6c8mo9rbwRjmw7H7g3vv7ihG2LcjfYVWRlt!2e10!4m2!3m1!1s0x3bbfe90261965b6f:0xdf04f70197233fd6","heightPx":1152,"name":"plac
+es/ChIJb1uWYQLpvzsR1j8jlwH3BN8/photos/AcnlKN3y_p8QmenuGL7MGu9UtTgIQc2ApnxNxndJUqcN6OBleAUcl6mF6ASrtHfs0NRVsl5e20XwnjgMlA5Ec3M9xVAVyx
+AnrhApI5U6oSP4-Glq8y_cQPQvuQtH6xr0lCagt8kKhxpTQQt01d2sGGb7AwZGmskc_PzqqPXlH526cQMD30fzlc3khIo47jCcsgYfMvwqoNmee9Ts9TMPh4HFn3PJ8GCSSW
+hbD8hwnMXp4tLCAeUhvjF5wPm-B9NGUuTaHzNmOmCQw_uOQVjRGXPTwIDTCXDGCS9ad5T2cccDoTEsuw","widthPx":2048},{"authorAttributions":[{"displayNa
+me":"Deepa Bairagi","photoUri":"https://lh3.googleusercontent.com/a/ACg8ocLeyNX5y3ImnEHvckkAYCkmRt9d-L9vrApHT8ZhuJg4vqe_Jw=s100-p-k-
+no-mo","uri":"https://maps.google.com/maps/contrib/114149242933052086155"}],"flagContentUri":"https://www.google.com/local/imagery/r
+eport/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDntdPl7wE&hl=en-US","googleMapsUri":"https://www.google.
+com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDntdPl7wE!2e10!4m2!3m1!1s0x3bbfe90261965b6f:0xdf04f70197233fd6","heightPx":4800,"n
+ame":"places/ChIJb1uWYQLpvzsR1j8jlwH3BN8/photos/AcnlKN1hAGzZGxcMXf12ybH2FpJXsOWNi-sOX-oyG1CPbzbwY7UZ17i6lVjFzgwRAloNl2be3e61nGK6kTnI
+nHBzUW1889FT4ddPV-BWJ0ec3b8CtUInHLHhlYjyT_aF7Q-xTzLlBJHj2E8N75VR1Z4_WAAnRUIN8ALOEE4G2NqqYhbmz2U-l9K0mfFswCOF1GUEYK-vCSKK_mM7jxMeD2Ba
+bWEYZa5geFflx7ZmsbtxpUQK8kLRnlhGIdAsjDtTossXsRXI53NS1AlBqZzvk7iMtHRkh7f_nvLY_qXD4V71wrT7JZRcsQn0dGUo6KeRjAK3WssHWYROiTJFnWXzZD_RwCol
+D_wkgVo4utD-h_tUc7mUXlAucXK1xtLfBHkeMjC_4XqHWxIbdptfOORoG_FwTmjpwPWKSN1X5H1BWHvhMIaXBV4","widthPx":3600},{"authorAttributions":[{"di
+splayName":"ibis Styles Goa Vagator","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUTgPiSSoddaTYwS7Q1uY5Qycj80aKCuaOguNzJDw
+3Td60hFL-V=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/107819887403306098925"}],"flagContentUri":"https://www.google
+.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipPw2wXuOb1A6njncxDiJ7BVBRIVgiM-8PkyWrwq&hl=en
+-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipPw2wXuOb1A6njncxDiJ7BVBRIVgiM-8PkyWrwq!2e10!4m2!3
+m1!1s0x3bbfe90261965b6f:0xdf04f70197233fd6","heightPx":1152,"name":"places/ChIJb1uWYQLpvzsR1j8jlwH3BN8/photos/AcnlKN0uK6-uY4Th251fyr
+5icdX0p8DOK-BMa9i7SaILayV3-j3coUEYHGHjUF2ENP1bv8ZqhYatsCJhU2-VRf9qS9frPNxwHot3fPs8OIk11-F9o7pRnykoJup_7ST0K0KdrSXx-sma-hbCcbsMhO1BBu
+RzTLAukRQukkHtskU3EyTScyLx53IV509j87ZmmTbuRZCb8EqlpN43kB259dFtn3E9NX5KVVGAhZEM45KhNDOBMLXRWE37vlB1ch4wOeZAlvnOAwv3I4QpAarSKmle-v-qqy
+-7pUSHpdfTjq8egP7_fQ","widthPx":2048},{"authorAttributions":[{"displayName":"ibis Styles Goa Vagator","photoUri":"https://lh3.google
+usercontent.com/a-/ALV-UjUTgPiSSoddaTYwS7Q1uY5Qycj80aKCuaOguNzJDw3Td60hFL-V=s100-p-k-no-mo","uri":"https://maps.google.com/maps/cont
+rib/107819887403306098925"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&ima
+ge_key=!1e10!2sAF1QipPHEL-DJRi_aiJpvA_PWuPLWYQiVPaT5z-P-xcN&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!
+1e2!3m2!1sAF1QipPHEL-DJRi_aiJpvA_PWuPLWYQiVPaT5z-P-xcN!2e10!4m2!3m1!1s0x3bbfe90261965b6f:0xdf04f70197233fd6","heightPx":1536,"name":
+"places/ChIJb1uWYQLpvzsR1j8jlwH3BN8/photos/AcnlKN2ge52ZFYJHBIbwIxs9xWD4aDngvKIHeDJPbLYKTtjyrorSM_khhC09Pg_meNTLb9LZVqdoYklglVePG1bdt
+YkFa12GI1iznuzq6d-G7jaTABHrXDEftgRBv8kN-78pxrsTO4Ky_lxsgZ8yNLAFGA6_a7yJ73oiME88IHfJ8w9VrCFjGHRIp73HY_h8dQeVZFA2_mQ1PDkzn1JgnzsZpqo2m
+faDPXzMYrEWSqkvOZCcWYTfS4w7GQhQTYm50tDMITRd_vwSna_krPVLUEBQrDqW3HK0VQrzy4WAJJ_WrL3jXw","widthPx":2048},{"authorAttributions":[{"disp
+layName":"ibis Styles Goa Vagator","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUTgPiSSoddaTYwS7Q1uY5Qycj80aKCuaOguNzJDw3T
+d60hFL-V=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/107819887403306098925"}],"flagContentUri":"https://www.google.c
+om/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipNt-gVZfca9t7FACbOf5VtG66CucXoZ5yOunuS9&hl=en-U
+S","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipNt-gVZfca9t7FACbOf5VtG66CucXoZ5yOunuS9!2e10!4m2!3m1
+!1s0x3bbfe90261965b6f:0xdf04f70197233fd6","heightPx":768,"name":"places/ChIJb1uWYQLpvzsR1j8jlwH3BN8/photos/AcnlKN0o6VC44hNZrlHp5RgEF
+e87P4RhR_5x7GgrPmksIwO0x1vHNpMncWzRFMHIMenpla2zUJhWClYMxKo-kg-inN68U95rVWZ3yWPmV-HtWZAQmm3n7iImzD1mLqNVnhF8cCbo_S9OTGtv_9GefxQfFKqdY
+IO3FgqfhLqMpYm-1XHMdRgbJnlINLWf1zI_7wj_AcbfSbWpfs0FXp0zb7stnWXfCa8TmEJZjOvxjjObGQ_AB6qw63Bowv7AWi3lhqE3rFmckIB01O-L0SfDgG5gnVLHO7_Z4
+BRRL-F0_OnAs16QOA","widthPx":1024},{"authorAttributions":[{"displayName":"ibis Styles Goa Vagator","photoUri":"https://lh3.googleuse
+rcontent.com/a-/ALV-UjUTgPiSSoddaTYwS7Q1uY5Qycj80aKCuaOguNzJDw3Td60hFL-V=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib
+/107819887403306098925"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_
+key=!1e10!2sAF1QipM_9SGtlUaa5Iaok8TuzWIWMTXRWc8Hv8H-srQ2&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2
+!3m2!1sAF1QipM_9SGtlUaa5Iaok8TuzWIWMTXRWc8Hv8H-srQ2!2e10!4m2!3m1!1s0x3bbfe90261965b6f:0xdf04f70197233fd6","heightPx":1152,"name":"pl
+aces/ChIJb1uWYQLpvzsR1j8jlwH3BN8/photos/AcnlKN2VAvfdvOfUZIjoXTWrCGVXxXbJd9mauu_6zbnIti4dfMvx-UTvG-xESZ5NIxdBBfPjq_TEpV0If54hfiHogfIJ
+Erd-zEUjX_c220jLRLl66ZsOTcWpBKS-zoZHukOthDRwC8gEZEFE3SBgEvBFv4oExYrbrgSie5iLtOsSmG8zF9fQhiwMOiRM2ylvxT6V08Vd0hyW66JZJEh93zFMT2ZBgKfF
+U1yu49wpJQcFRzp1Bdbtw3vuy3K2VbnP7FFgobCeMuH4895qzIwudKgC--ndWk-zO8z-sqNBT96aQpcAag","widthPx":2048},{"authorAttributions":[{"display
+Name":"ibis Styles Goa Vagator","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUTgPiSSoddaTYwS7Q1uY5Qycj80aKCuaOguNzJDw3Td60
+hFL-V=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/107819887403306098925"}],"flagContentUri":"https://www.google.com/
+local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipPgAtalboA9NbHSUekqkjpakEv2ItQigedKMeIO&hl=en-US",
+"googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipPgAtalboA9NbHSUekqkjpakEv2ItQigedKMeIO!2e10!4m2!3m1!1s
+0x3bbfe90261965b6f:0xdf04f70197233fd6","heightPx":768,"name":"places/ChIJb1uWYQLpvzsR1j8jlwH3BN8/photos/AcnlKN3d0i8ulzKmQHU3n2ditMZC
+rU7vtVEKi1E8PysHetTypFK2cN7iVuXfNLD3mx_F_NKM4_OFhCO3_-1XkYPQNFEZSekwmAUlQkKJ4ssfyIGJ87tZPcGs7LfRzKzZqYxKjFPB9Hhq09oXSsOYu48DVhhMwc9a
+N7B-UBF64KTJ6hITuJulxI_jGwDXMAnYW7Zv50PbneRZ7WP2V6WkQY4h7MfyNOfVuUzhY9ZdgMDzGEVVnpU3PbdSGUreQJtnuBm5WCLftFCNORfkIdAuRKK8ejTxQepCtiiW
+bfq6yDYOkhJmVQ","widthPx":1024},{"authorAttributions":[{"displayName":"ibis Styles Goa Vagator","photoUri":"https://lh3.googleuserco
+ntent.com/a-/ALV-UjUTgPiSSoddaTYwS7Q1uY5Qycj80aKCuaOguNzJDw3Td60hFL-V=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/10
+7819887403306098925"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key
+=!1e10!2sAF1QipOXjr61t6yW9M5rr2RaIkFYdfhEEpJIUPK1WLzZ&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m
+2!1sAF1QipOXjr61t6yW9M5rr2RaIkFYdfhEEpJIUPK1WLzZ!2e10!4m2!3m1!1s0x3bbfe90261965b6f:0xdf04f70197233fd6","heightPx":1350,"name":"place
+s/ChIJb1uWYQLpvzsR1j8jlwH3BN8/photos/AcnlKN2oZRxyHzpRHifKK764P0s08gRQ8PGyEgotCltcq3bKro_J9fPB8B9hxI0qpTw_oCd55VZOJdWJHehon7W18s2dJEO
+BQ96BCTR-KVpI9XGE4AluF5GOi66V3PaneJ2SGjuPJonvIPl3IHVLw70RNPqt7qOKU_J_9EsNfZ8rSXdSO7iV5gZDWDsAVsaiudBKgzl9Yie9L_4OLZP1rOkmhlaLv8mpaKb
+kqpJ1LHNhftf63qon6OsVPVLVf20hYncK-3UwpT15WeQ0uwTT4I0sUiaKK0-w9unYnQ9n1j5HMEp4hg","widthPx":2400},{"authorAttributions":[{"displayNam
+e":"ibis Styles Goa Vagator","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUTgPiSSoddaTYwS7Q1uY5Qycj80aKCuaOguNzJDw3Td60hFL
+-V=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/107819887403306098925"}],"flagContentUri":"https://www.google.com/loc
+al/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipOqKBOh6cpX_pKQdvqnE6ZlbjJbE5giFJiEtrLm&hl=en-US","go
+ogleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipOqKBOh6cpX_pKQdvqnE6ZlbjJbE5giFJiEtrLm!2e10!4m2!3m1!1s0x3
+bbfe90261965b6f:0xdf04f70197233fd6","heightPx":768,"name":"places/ChIJb1uWYQLpvzsR1j8jlwH3BN8/photos/AcnlKN3Wfd95wC5BEFnD881aag47M7J
+VXPiPpif19eNgHd07UdSe7RGwlEu8GVzIEsAcxpNPqqQjEd5rthA_mqDjJNAQIPUjZg-0OAt_WjjLcGNchjUEkqsi8IibbcfVpbsXpIK2VYtYJ_yfhaNlRH5p9i8XpSucdaI
+oCrM95pKbMLOafAIWGTQ2k6bTVMqQ3aSL0ZXRrmOHNzIdtJMUK0sGsIRdEp0xVp3Dws2cbbEuoxewjH29Fy6NxLd03ZBlIlFaobDwNZ2YTLDjFRa_BCVbXX6cMH1SFmjGjED
+nVlnvxaulQw","widthPx":1024}],"rating":4.7,"userRatingCount":1826},{"displayName":{"languageCode":"en","text":"Zone Connect by The P
+ark, Calangute Goa"},"editorialSummary":{"languageCode":"en","text":"Bright quarters in a laid-back hotel offering a 24-hour restaur
+ant, a poolside bar & a gym."},"formattedAddress":"H. No. 2, 16 A, Naika Vaddo, Bardez, Calangute, Goa 403516, India","photos":[{"au
+thorAttributions":[{"displayName":"Zone Connect by The Park, Calangute Goa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjV
+iBWvMQUT3joRH0FunlT6pikvy4StBmwCNa3Gg0SmUsGiTWx8h=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/100564014723124253423"
+}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipMSS9Q
+rCzo42dh-_3SHk0hc6ZdoSyBW9T7m853A&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipMSS9QrCzo4
+2dh-_3SHk0hc6ZdoSyBW9T7m853A!2e10!4m2!3m1!1s0x3bbfc1e6df8c2295:0x31c01a64d9bea7e5","heightPx":3200,"name":"places/ChIJlSKM3-bBvzsR5a
+e-2WQawDE/photos/AcnlKN090bt3LjVmID6_-5kvL3RY8i_ylrNd3ln84QnzJr-_1-LmnZwt5fjzF0mQU0NUI9p_fwPT_GWPC0VZ40uL4A2jOI-0BhQH1DLmcGHnHmKZEkN
+aJmMajIa407150TAVRga8sAx9kYgZ6rjupeL9mpYCU8NbwWu7-nlztso1ZgkpyXe_vPcd4ve9EZdOGTMLe3AjItoNs3jik-rZUgwscAyzUJj29_QYM0HTxwSSKrcpFXVfXOv
+gnDGjheNAYmJSRk2sOqMiHNlZquKK5jyYwLDJRejLgDcnEPlUnZ2ZbjkGNQ","widthPx":4800},{"authorAttributions":[{"displayName":"Zone Connect by 
+The Park, Calangute Goa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjViBWvMQUT3joRH0FunlT6pikvy4StBmwCNa3Gg0SmUsGiTWx8h=s
+100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/100564014723124253423"}],"flagContentUri":"https://www.google.com/local/i
+magery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipPBrv_jyu1xl7wyLOuQHpRw1VZfgT0dnMSkj9pY&hl=en-US","google
+MapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipPBrv_jyu1xl7wyLOuQHpRw1VZfgT0dnMSkj9pY!2e10!4m2!3m1!1s0x3bbfc
+1e6df8c2295:0x31c01a64d9bea7e5","heightPx":3200,"name":"places/ChIJlSKM3-bBvzsR5ae-2WQawDE/photos/AcnlKN3dGTz5yq3Gf9eXbC1DCCaneWn6kH
+JfncJsvv7wiPVS0WL144c1JLd5rbjLHe-BWkiNPqUuUuLqx5Oqzr3eMPjcVN8tdsuOCQ35j1Apwg2w3asVRZn5xeKT5cRNPRDU8KjFqZiRD5VsjXphFbFUFz1qL1F8TS7tku
+hEmRslgKZPyPoW82mBuqBrwuZT-pLNWF5SlKtJNXYFMv3pM_F7_E55CtWjmfM5WaQ9UHVbonsRR8aybh7Cuj7WDk2h1ks7-DOjMVghLs8L-Q_7nsOd7c62dxXKVf5iAULDF_
+ZfGgq5nw","widthPx":4800},{"authorAttributions":[{"displayName":"Zone Connect by The Park, Calangute Goa","photoUri":"https://lh3.go
+ogleusercontent.com/a-/ALV-UjViBWvMQUT3joRH0FunlT6pikvy4StBmwCNa3Gg0SmUsGiTWx8h=s100-p-k-no-mo","uri":"https://maps.google.com/maps/
+contrib/100564014723124253423"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api
+&image_key=!1e10!2sAF1QipP8DmBX-gWA-NcLq0UeyMA2VGa6xeoBdzyxTvLK&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!
+3m4!1e2!3m2!1sAF1QipP8DmBX-gWA-NcLq0UeyMA2VGa6xeoBdzyxTvLK!2e10!4m2!3m1!1s0x3bbfc1e6df8c2295:0x31c01a64d9bea7e5","heightPx":3292,"na
+me":"places/ChIJlSKM3-bBvzsR5ae-2WQawDE/photos/AcnlKN2wmwJg2Bsz2zwWdslwGtEEv8ocE3oOTDQtSu64wNr2F6_HIYp9sfECzn7wvDkIpQZRpGTSvRLCP8Je8
+-8odYyc5qbiTDkYAwMwvopAAnsbO_qIg6mhQch0qWr4_M4jyM4iWniouU84dJpBAJHrg2h6RDo6QyKgOYzb5KvGp-8csd2kl5yzB3xEaHQfU0Pu7EXClBIbJHYtcKkAOcB2C
+mAdGBUAU-1e3eCqrpYcbW3m9Bo_w3Bb-zmD33e7CgC67VNUCikCuwijj3zYxKWQI0W5xeo7TaArJuQ6xpQZvSBghQ","widthPx":4800},{"authorAttributions":[{"
+displayName":"Zone Connect by The Park, Calangute Goa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjViBWvMQUT3joRH0FunlT6p
+ikvy4StBmwCNa3Gg0SmUsGiTWx8h=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/100564014723124253423"}],"flagContentUri":"
+https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipMGrOU6fkRgHtwUK7MKjXZGeISj
+oiiCfbF9I-4e&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipMGrOU6fkRgHtwUK7MKjXZGeISjoiiCf
+bF9I-4e!2e10!4m2!3m1!1s0x3bbfc1e6df8c2295:0x31c01a64d9bea7e5","heightPx":3200,"name":"places/ChIJlSKM3-bBvzsR5ae-2WQawDE/photos/Acnl
+KN3V2QoIJ-DPzT5D8uiZe7LQB1QLG5LPnvcEDNhJhEM-6BoyNP_MY7aQh0V-eTLOkDOc9Qtn-jnLs4Okg5UhzZ697lsJnz-kkS5edgEDmn4q-QRDqpiUR_4PFxscvpMl6kWO
+q7w6cUIfz52lWYU-InLoF9x52KumbuGPGloAYEJD9XE3jIirPgH4APdJzbsC3JkcGth8A_qmpYSE_LKD3UOW6v_L6S0uYDMRsYHN8r0k7gk05OaFSx-e4esEH5pFR4o5NF5k
+p5PV2znEs_DGx_OuDj5O0Z_HyS9NlYqR2MeDXw","widthPx":4800},{"authorAttributions":[{"displayName":"Zone Connect by The Park, Calangute G
+oa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjViBWvMQUT3joRH0FunlT6pikvy4StBmwCNa3Gg0SmUsGiTWx8h=s100-p-k-no-mo","uri":
+"https://maps.google.com/maps/contrib/100564014723124253423"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_cli
+ent=maps_api_places.places_api&image_key=!1e10!2sAF1QipPTp5h-bpzIZZaVPl6rh25MiTia46E1jH4YRq_v&hl=en-US","googleMapsUri":"https://www
+.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipPTp5h-bpzIZZaVPl6rh25MiTia46E1jH4YRq_v!2e10!4m2!3m1!1s0x3bbfc1e6df8c2295:0x31c01a6
+4d9bea7e5","heightPx":3200,"name":"places/ChIJlSKM3-bBvzsR5ae-2WQawDE/photos/AcnlKN0xlMZyk4fvuQfyid-9QcvwXVXdDWCS8Yn8R9PNVVmoY-Xdv9b
+4HZVWWKMKFfWgA5Fw4_8kOZ6pPjOZDXMmjD5eojJDXsdExtuc9jF2jc7C8vBBVOnHVlUn4T8rrjzAdikYJw4UXyfgUFJLwIp5zNuEDOVfyriO6BdF0Wgs3Iy7IiIYo397a6W
+3ZlAiDrJeCcVzFhLPtdEG2O2UkeZ4ue5AdA9qaDHu85WcSH9DIPtL8IZXBHM_VvUEwKiGYdtd7XR8W_4A_CRNVwofPaa13O-nTtZPvpAs8hI2k69k99Na8w","widthPx":4
+800},{"authorAttributions":[{"displayName":"Zone Connect by The Park, Calangute Goa","photoUri":"https://lh3.googleusercontent.com/a
+-/ALV-UjViBWvMQUT3joRH0FunlT6pikvy4StBmwCNa3Gg0SmUsGiTWx8h=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/1005640147231
+24253423"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF
+1QipNPBiw5keBeWxP4aCD3D_E8miV5UpAxFnBgphOE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipN
+PBiw5keBeWxP4aCD3D_E8miV5UpAxFnBgphOE!2e10!4m2!3m1!1s0x3bbfc1e6df8c2295:0x31c01a64d9bea7e5","heightPx":3200,"name":"places/ChIJlSKM3
+-bBvzsR5ae-2WQawDE/photos/AcnlKN0Ty-irpDBWmFLL1r1JPlQ5x4WOHfhA-qOGog-V_m3n-VM8tkJiT79pb7lyTU20AzwSMKz6KGrfQtcupEVUYXiuC4SehoQP531Pda
+xLcxuSQiF10i3l8w1ZW7yMGviNIuD9jgr75jNZPuMLIT-Lsu9FhcJYPI4dSTimqiYvgoH4bt5DG1FK-TyX55DepqxH3Lu4gdG6ctfWKPveIW7vaKwQjFOmgfqu2w_aYYOL2X
+m_HIDBFI7a-ZDcpgMqCpK8ppN_d5aOkddAbXFdULNvFJrvj6xmfYy8HJYq1xCfYNHfUA","widthPx":4800},{"authorAttributions":[{"displayName":"Zone Co
+nnect by The Park, Calangute Goa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjViBWvMQUT3joRH0FunlT6pikvy4StBmwCNa3Gg0SmUs
+GiTWx8h=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/100564014723124253423"}],"flagContentUri":"https://www.google.co
+m/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipPIwFpVvrBeUuqK1hkx7EhGf064O5a7GHVSYwHz&hl=en-US
+","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipPIwFpVvrBeUuqK1hkx7EhGf064O5a7GHVSYwHz!2e10!4m2!3m1!
+1s0x3bbfc1e6df8c2295:0x31c01a64d9bea7e5","heightPx":3200,"name":"places/ChIJlSKM3-bBvzsR5ae-2WQawDE/photos/AcnlKN2STswVj1UEZWGFUjuJm
+M0hQCse6C6pOvOkIDl9yHkZp0Aym-T1fODyDWf6HwyKo77snQo9RscvaTPvL-ArTWiwTbz44gkCPqve9iKDKGn_8okZZ2DZ6SvDCFSGAZMtJvS6-ZGnF_sc_x5Dq7KIWM6yM
+uGlIhQ39mGicR1cKVNXA94NGktCyJMrXnfUvOGjzLLop5FiAYYOJBfg0lfCpQen52xhw5VFLuw1Fs7sgHgz0fInXgR3rdaw1nbC0Kp3B_ag_BKrcn5usaEANariXzQni4ixq
+FacEHcq3CYDF5mfZg","widthPx":4800},{"authorAttributions":[{"displayName":"Zone Connect by The Park, Calangute Goa","photoUri":"https
+://lh3.googleusercontent.com/a-/ALV-UjViBWvMQUT3joRH0FunlT6pikvy4StBmwCNa3Gg0SmUsGiTWx8h=s100-p-k-no-mo","uri":"https://maps.google.
+com/maps/contrib/100564014723124253423"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.p
+laces_api&image_key=!1e10!2sAF1QipO37jriQhXzfgplogaTYxXZ8l1SBIDO5IeJcrH8&hl=en-US","googleMapsUri":"https://www.google.com/maps/plac
+e//data=!3m4!1e2!3m2!1sAF1QipO37jriQhXzfgplogaTYxXZ8l1SBIDO5IeJcrH8!2e10!4m2!3m1!1s0x3bbfc1e6df8c2295:0x31c01a64d9bea7e5","heightPx"
+:1600,"name":"places/ChIJlSKM3-bBvzsR5ae-2WQawDE/photos/AcnlKN15U8s7iapM3g8g1dYtWc1bfa8K8pq9qOA4lC3jWBrzfkVhOjOGovSzEpldb1zi3qaOfAcq
+D94biJ7dUSwV72ighOh9jr5z_yKdN20tjvkiyNylU3PoEvdAdeRj5pLT9XbofIP-wt2bccBhvXnSAFunpDZPb7Uv2feuuiSydDgZ7Aas8mET4RhSkTml_t8ZQodJEfYwOAaA
+rtz7W9wVzIsLQFYIzzL5Nvji84VlK6mRzHgMnYRBzJnQvooqAruvwxVo-CVn1Q6LxFtGJsXh0TWU9d5ijRVSsA-1SGeMQuIAYw","widthPx":1200},{"authorAttribut
+ions":[{"displayName":"Zone Connect by The Park, Calangute Goa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjViBWvMQUT3joR
+H0FunlT6pikvy4StBmwCNa3Gg0SmUsGiTWx8h=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/100564014723124253423"}],"flagCont
+entUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipOHqRcD_q4GdLa5xIJ
+SBRRMESjCF9hJvvAEdNlF&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipOHqRcD_q4GdLa5xIJSBRRM
+ESjCF9hJvvAEdNlF!2e10!4m2!3m1!1s0x3bbfc1e6df8c2295:0x31c01a64d9bea7e5","heightPx":3200,"name":"places/ChIJlSKM3-bBvzsR5ae-2WQawDE/ph
+otos/AcnlKN2lllfgJpKpfBhQCS8fBT4NYipCCN90BFvUNBr2Rrey2vv0HdIQTxZCIBQpmJDhlPdtAZP-tcHinIr-OuGPUEEvetsaFf9ju8gBKrCnSmtju9TCdjw7ev26pat
+57OS6nksH_hW7AzPbj7jI-B1zhBtYohhT6iKXuqHH2ScCoouTdzDnewEDvDGNkP9umJzyF6mT-zq0EMma_eZOczqn7B2vcNZHFnqyAu-ZvbnTC9iAOBY2OQfVU4lU6vhDARr
+bo2XyfZ3VTCmqiqQ0Infgjo5b-rPDvJhFoGZtyxbYKUbHuw","widthPx":4800},{"authorAttributions":[{"displayName":"Zone Connect by The Park, Ca
+langute Goa","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjViBWvMQUT3joRH0FunlT6pikvy4StBmwCNa3Gg0SmUsGiTWx8h=s100-p-k-no-m
+o","uri":"https://maps.google.com/maps/contrib/100564014723124253423"}],"flagContentUri":"https://www.google.com/local/imagery/repor
+t/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipOkbxywKeOcGLn3vAS0e7_pvJguEQXh-Ej_3ucE&hl=en-US","googleMapsUri":"ht
+tps://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipOkbxywKeOcGLn3vAS0e7_pvJguEQXh-Ej_3ucE!2e10!4m2!3m1!1s0x3bbfc1e6df8c2295:
+0x31c01a64d9bea7e5","heightPx":3200,"name":"places/ChIJlSKM3-bBvzsR5ae-2WQawDE/photos/AcnlKN3NnVocje47JcLzGtfnBuUQh9Go7do4idQCRxWi1z
+Bc3qL_g43zHxk9BiAIxdoRG0QZhaD3vLktr80avR8wX_xFC7b9w-XLWFlUEvgzPdIcBcHTcx0HxlDoMh2ZOZ190FqDJhtiNB6Ebeac22ZcyjcSMH8qkUrDdf4TZoDFfS_U1q
+FOixWOHGIKye5reiIaIdyans1SFM0GMrBnT9pcI9byvRVZ9A-lV8l_N0QLftD9Zv7oOdZNBwnnCP2fnAUzkxlAfbQdUmiGGxVNeKvEbohuzCFkQ6cSnGFBSJMSufDdRw","w
+idthPx":4800}],"rating":4.3,"userRatingCount":1993}]}}},{"functionResponse":{"name":"get_about_place","response":{"result":[{"displa
+yName":{"languageCode":"en","text":"Fort Aguada"},"editorialSummary":{"languageCode":"en","text":"1612 Portuguese fortress offering 
+ocean views & an abandoned lighthouse erected in 1864."},"formattedAddress":"Fort Aguada Rd, Aguada Fort Area, Candolim, Goa 403515,
+ India","photos":[{"authorAttributions":[{"displayName":"Umanng Jain","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjXlqWnYO
+d_IB3K4TH6ZItwiHNfGQSA8sPJx-1D3Dzy6aPBYV9q9oA=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/113091613881867239102"}],"
+flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIC
+-0r33Sg&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC-0r33Sg!2e10!4m2!3m1!1s0x3b
+bfc175c68cbd6b:0xa3837630b3697b1c","heightPx":415,"name":"places/ChIJa72MxnXBvzsRHHtpszB2g6M/photos/AcnlKN1S8ebm51vyHGwLlXfeQF8OIIeV
+3vuG8kEvxUbJNW2ztaKR6yjcwlUXmnyqvIvhiG8tUohtzFt2oSyHusA83mJWFTboiNzW4RK1z8K-Zu7CYVo3yaQvwD6a4DMpsv7lFIO5jcfNQARmmVuGP4U6Fr7uVtOhsaBh
+NySeNGrYsNhRFj-WJyKPiI-5kAqFukfdzO1JVqnNqviNmCsHbtmr0DYAfiwKM-tKOzC531gJc8X5pYEkiNHYYqDWl10grhH3NYdiuP3y61i10DsncYojnZG0hZ0Nux6SQRSZ
+IE6Xw1ccpsAEcnJ7ytPqymBcH_6u3glgBlC9rCoXjqfHscBcyjhEMumN8wmIPp26P-VrlIzWKMWFoktzXldjIBRxLgIf4rrjHACcQHEBdAs1SF_I851YI6caF5mSxyD05PBc
+NY6GBg","widthPx":739},{"authorAttributions":[{"displayName":"prem siva","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUwYM
+ZTH1fKsSQm_L06oKs2FK7upDCxA5tC2fGx8Mt65ExChJ0egw=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/100701273663224956694"}
+],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICA
+gICcksqiSg&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICcksqiSg!2e10!4m2!3m1!1s0
+x3bbfc175c68cbd6b:0xa3837630b3697b1c","heightPx":1365,"name":"places/ChIJa72MxnXBvzsRHHtpszB2g6M/photos/AcnlKN1QFKtny5_SsUE8gIv2P4Fs
+ZHEXv3nGmgXrfjx4Uspv8uFNoNNRZOkGMQ9JB33ZDKefffe7lF5HcBJWsy-CmIGx2UsjVdtwzh-uTEZuNKx2PQB4X-JHmuNVtAlfgYw3m1I5JKFruMMpjSOC6Cf4SUdezcGo
+w4WaxbHP25-fDIIEPymxb78OI58OwqV9AkKl5cGmIWfLf24xktWI4yFVpAV-0f1z2744e3s2S4wNtTENU2AQtrsxmbgSy4cVDTyqZn7P9kfIbN4JS5EQEly3NL9dWmMqwwSH
+MMzYEAjT54WBWciVCY42nErzM8fbXH0qLL5hMNrdAlhPkMhswNkDinmJYsicJF-NIP2-szpR5zXDJo6WE5BisTFK_5oU2Rlnml-dSSqUIGL2wlZtgJZIuWy2a-_eWE11ZWal
+mZ_ykUE3wQ","widthPx":2048},{"authorAttributions":[{"displayName":"Suraj R","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjW
+19LqazAP74prVIrtkJifA1U23MLGMwwIpjORgHkAgwwVty_Nm=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/114178625479781164495"
+}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEIC
+AgIDHn9GjLA&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDHn9GjLA!2e10!4m2!3m1!1s
+0x3bbfc175c68cbd6b:0xa3837630b3697b1c","heightPx":3472,"name":"places/ChIJa72MxnXBvzsRHHtpszB2g6M/photos/AcnlKN2R-CXKWYhp39sPlrabRXi
+ElA5joOlO0Ekk751UE5z4yslSaCru18XASqPs5HtXI_mnwbRYB4lQWNdCHs8-h5ODv3UZ3oMCT9R0naZnUYy6-QU7lXoTQ2nVYBVIO1aRNCaRLemIWwUI9GZKP7ZBtjJBOsi
+96QfR5BE5Cqq-HGsaNvelylVg4vqYfsZAaKkyWhBg1A7nC3ZJn5CDSmgg421bbJfEaMNpmxSvaYLhdB0vdfXRKiSF9Ro2qgDfLrv-tthSviJNVS_Yem71At2ch7lUSobqmVq
+zJCLkRtscyG_4o0g0S-GJC8-l-AcQflnuJg-TgX2NzfG3C7_IHFop2gYRFDBEh9pG1FCcgVU3wV2llN9YYlfoVii33Akd7WqbN_GALYy5PgfDvlon6nUGgZf3lfUW--Jmfdq
+3K_bY_C8","widthPx":4624},{"authorAttributions":[{"displayName":"Peter Francis","photoUri":"https://lh3.googleusercontent.com/a-/ALV
+-UjU9sjIL4On1l6BYefuPgz8SrucgsWN42SebOrD0KUZIlolyAAR1-w=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/1069610346114692
+85247"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0
+ogKEICAgIDR443axQE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDR443axQE!2e10!4m
+2!3m1!1s0x3bbfc175c68cbd6b:0xa3837630b3697b1c","heightPx":605,"name":"places/ChIJa72MxnXBvzsRHHtpszB2g6M/photos/AcnlKN2U1VBSkAxdkoLS
+t1FVhyDRxEspTEe-_O6CwPkvUFCGgDaNW-1X3tRZzAXpmp3zqo-hFq2_ZdvOXLYYd11D2nbp-4Gr6467k-23WRwBJY5wyjlwsf3EW3zGDP3XXF3tzUrWT4uHvqM52QTlcWZg
+fGCyWEPmlpRqfTUoQeu-jI5dBRgwMjb4B9LaNv7EITxmEaiV2ZuqOu6jexR14djhmtay5tHfu9-XtVxbH9JSoOdPzoKY0G8ta3JlRF_tYdFCS5NM1-LnHpvS8JpiAX6sIODK
+pYjSAxLkVXdjnOg2902vxPTXoyonM0EfIgmY8vltyYvabJfuktyewnvtSyJgkj3shIUs0OB-H-vC24vfZh0NEzaoBYPM1YAeZGkRLyLqivytQ-ZV9ylTJjCYfqF1cfPYcR-n
+Bzuny4zw2doaemy0wr7q","widthPx":828},{"authorAttributions":[{"displayName":"Narendra Gouri","photoUri":"https://lh3.googleuserconten
+t.com/a/ACg8ocJtprn6sMufUgPcDx-NrtCuliYDNRxzfVC_4RvSnEdr6ilIIA=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/107202570
+588305697836"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!
+2sCIHM0ogKEICAgICGpcnLXA&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICGpcnLXA!2e
+10!4m2!3m1!1s0x3bbfc175c68cbd6b:0xa3837630b3697b1c","heightPx":3000,"name":"places/ChIJa72MxnXBvzsRHHtpszB2g6M/photos/AcnlKN3_9YOwO_
+yHWil0wNd_8ZnmJzBan1-OIO8lN99wXEqGcjnktOVpdn_RRt6HUkQEHcSGtGEz6df67M4m7uFKLbVtvY4vE78xpg3nlbRKIIgy-1cgI_ydS6ypDMfTBhojyASXS6Kp0fY3OP
+_ix9kx4VuFiuzLn2HL1sUSNBitJ1cW0-nB86HvBt5ixmK6FUi65I9CTeEamnip2fFSuCU-qWWLaEx_MjGtgdvB27v5cTFTy2D4XgxBVP0e4pUQO7oXBWifalgIC0kukjr9C_
+ODAeIZ40_fewYHM6_wlHWB89pfPPvJ6N12C5Orhl4gWuBytECeLXBHzTUS0cIcpgscg37Kd5K0-c5Ss5Ihuu8Suywsnf2cX5KXak-JgRfRvCQsvJOSGmvLW4Rr_X689HoQoS
+2vuOFG3QkDlacJLrRCLqlrMA","widthPx":4000},{"authorAttributions":[{"displayName":"Sachin Sharma","photoUri":"https://lh3.googleuserco
+ntent.com/a-/ALV-UjWrF5b0eO-58oA_ZhO-eqG58TXYvgBMdnNIU8klezHf4qGkDevJ=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/11
+6878474204421384950"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key
+=!1e10!2sCIHM0ogKEICAgICWxsutHw&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICWxs
+utHw!2e10!4m2!3m1!1s0x3bbfc175c68cbd6b:0xa3837630b3697b1c","heightPx":853,"name":"places/ChIJa72MxnXBvzsRHHtpszB2g6M/photos/AcnlKN1G
+58uekxi8zOOFF18TI1Yacien_-PDYXW6w0XMKUh3AXdPo2yK47MjKXOLZiz1wXz8OwmrWTleYLGILEj7QHizxt1mYNojYWQDmYTJLzsRBVLXCxjYN-paBOFN0MdFMl9RPRyb
+SAjpC2-qZ5bZqqsr8XUY9z8sZ9ySjPNK4Xvb4bjmewN8FcJoxE7zh4Uyljt3b-KY-Ld33rsa26b8pjsQmVlmkY_ZRJh9qlXWDsIr40rIdKCZbrc47XvrnMALMGldJXDV8bJ4
+ii3NepbKutkEfrD3iRuXeN0yMC5E5PK6exTe23QwEnrb34ciECWRpxSGwtYDEor8rkDGEa8S3BWgp_7VFTNZBshmEoVN5SFBG7IYrZQeUHSX_J8_x3Fi6_OJrl8KPy2km8_D
+AvsXY1zYl14EluYMsTD52UbzYwAULg","widthPx":1280},{"authorAttributions":[{"displayName":"Surajit Rakshit","photoUri":"https://lh3.goog
+leusercontent.com/a-/ALV-UjXv9EA8ibjfdXeK9yJsvwyGaPZg5rGtgW8x1sDQEUJY41uDAaKsbQ=s100-p-k-no-mo","uri":"https://maps.google.com/maps/
+contrib/113768896586095656595"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api
+&image_key=!1e10!2sCIHM0ogKEICAgICR15SNQg&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogK
+EICAgICR15SNQg!2e10!4m2!3m1!1s0x3bbfc175c68cbd6b:0xa3837630b3697b1c","heightPx":810,"name":"places/ChIJa72MxnXBvzsRHHtpszB2g6M/photo
+s/AcnlKN1fprQmdWNxd9JMQZgWOlV4Ct03GhFKb70yTCwcmbuR-1EloBS5kWTiVEIy5QwAC-tiWFgMEcHINKiX-dq-8MeNExLdTMTBQXZNg7c2iIIUhxOBAEd20SIM_rVw1e
+QNUvR91qpwl4rfr-W_FwaGS0wK8kS7sysi3h8ytQOJR2qf46BER3bMfU5Uxlp1nY5T9nsdUOempqHDbUTZ72PjsKHwKaMsux7JXWJ8oa-I52v_Et40Ngmf8Sw1yRzMNCrlfN
+LDkoxgJl1I9hF2eyLScnknYwxa2Ea6VKHzhTCX9FFO04k2nVnEHJwBh2_A0p71BE6eNiA2kTh87Ex1lHXxpZNyfa0tjG3JihQARgFDBbD2cbyz2ZYN0XRntJKkiuPIwIXimW
+O9dOc0nqb-Q51Xr6yCWrC366Xuq8l6wKg46Nc","widthPx":1080},{"authorAttributions":[{"displayName":"Samit Varma","photoUri":"https://lh3.g
+oogleusercontent.com/a-/ALV-UjWhHH-EcGbhOXULpdee0uNrj9M-WjopdGmOw6pWyxdy2iWQ7qPC=s100-p-k-no-mo","uri":"https://maps.google.com/maps
+/contrib/108436513389420157922"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_ap
+i&image_key=!1e10!2sCIHM0ogKEICAgICi8cGvpgE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0o
+gKEICAgICi8cGvpgE!2e10!4m2!3m1!1s0x3bbfc175c68cbd6b:0xa3837630b3697b1c","heightPx":3000,"name":"places/ChIJa72MxnXBvzsRHHtpszB2g6M/p
+hotos/AcnlKN2PqOETBVUPC0HeWzl9NooghxhYwF2CuLMzjifTDech_lv7_nfHX9JCS5BVyocH0ce7GWRFFg6DzQSvC1tbCgdl3EFK4KurscYz3a49rG_RzruluatYMc5vXC
+SHujbLgHHFXRhndt5G57AEWlIaKz4Sn0GTFBWMwi9QZRz_8LpFsSuF6T1c8fTQ9k5p1vKTOrLZyAZ0dDIuPbbYBUGwXOoBr_hLrDk05PP7MtqMxH9Lh6gm5TLNjeXuVK0v0n
+dG6Hp6PbM4rpkOzjQzEn4UAvfJTzktXt5za9SmSH4doF4ImkTRp2fn-laJBcTN5bG9f76GPhWOsDYttzmkSEBnsEYbPiYeOvNqoEmD2uRN2MqN6wRRXHGaS3yL6ji0x77hEZ
+66tbQRZmoJkif7vL4AdmD-SU6u_WYptkDdI2tHLaAzpqc","widthPx":4000},{"authorAttributions":[{"displayName":"Juan Albino Flores Guillen","p
+hotoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVb3Y5zinyq8mdbn8wUEx53bnxnuRdI04jyjk-DQLZzr1FHv1renA=s100-p-k-no-mo","uri":"htt
+ps://maps.google.com/maps/contrib/100549297801427556524"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=
+maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICkqtHtzwE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//d
+ata=!3m4!1e2!3m2!1sCIHM0ogKEICAgICkqtHtzwE!2e10!4m2!3m1!1s0x3bbfc175c68cbd6b:0xa3837630b3697b1c","heightPx":3024,"name":"places/ChIJ
+a72MxnXBvzsRHHtpszB2g6M/photos/AcnlKN0OprUuBXxLr_FrMl3r8qmazWsXSUKKomozDCKiGXZfQ1BPK3J2VkDAXT12jo-No4UvBHqsvMSr7uXKhr3Wa1XJ6GCL9Faqu
+lP9PsbQ3ZA5CwofO9qQkBkMMS2I61wdVbRRjaoKTfKykyx4E54PhlJWG34-3j9cTjyvRaGXDmDzmtbkOvSiNwhBvA97bWUcIgiAdI6j1wucTI__1ACfLl8faHlVtsuYxC9qY
+DaVOp4nrTgJ9Q9Oj470NWsRIQf5DOD5ZQ105pkJIhGV30law1pvxGY8hFTIbS5XAx_cuu271njSd3DMdFukUoGsRDp8BAivquySwXyvtU-fnbBXaW-lWMEQGYcgLFnAcxpW5
+y96eD68UJ0toaLpK2eOYMQPQ87RzbgNkjjWMLiZb53jxqtf1FfJUAJrS-1KOspLytBBTLW7","widthPx":4032},{"authorAttributions":[{"displayName":"Mohi
+t Patel","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjV_8L497q-_j-LtC-9ymUZpUtr-iBBT0vo7IvHAoNGdHsypNWqd=s100-p-k-no-mo","
+uri":"https://maps.google.com/maps/contrib/115671944983435602323"}],"flagContentUri":"https://www.google.com/local/imagery/report/?c
+b_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICc-vqP_gE&hl=en-US","googleMapsUri":"https://www.google.com/maps
+/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICc-vqP_gE!2e10!4m2!3m1!1s0x3bbfc175c68cbd6b:0xa3837630b3697b1c","heightPx":3456,"name":"pl
+aces/ChIJa72MxnXBvzsRHHtpszB2g6M/photos/AcnlKN39VlU7D5EffFuGVUMMoW1EeeGUXJmr0aL-T2SvqPEGswQO4ykxEdIniY77nBKWC0gU9DXiVDNtKzDGEPpoZ1AX
+C02rFsb4EfolnQITl77L2LB5o5dwWQBuR0Tk2c11iBPAKHv2243KteChqOcfE8joMif5xacu1DCDr-jHgRsWTE8FpZdMoTyHXgUIuJrhikOPRBBNjZVhhAQlcOxkF2zIV8yA
+MbtUuZsj-Q3mInVbxk0kf3wwalFf3uy1Aew_4Is4Bl63yd_nl-6GqX2mCCvaz2mdrrLCK7_lqVXrJWDxTNjf5U6a63q6W-pWnyoAguY_rpWXtZCW3fJo6yyvLzK4FrntkGzq
+OSsEi5vxqTIds-7FnrHp1ekUpRrsO_fheA_m_B1XgS53JzBboatoO1HjTGUcCGp5G_6yztucl4oKZ2fu","widthPx":4608}],"rating":4.2},{"displayName":{"la
+nguageCode":"en","text":"Reis Magos Fort"},"editorialSummary":{"languageCode":"en","text":"This restored 16th-century fort offers sw
+eeping river & sea views, along with a cultural center."},"formattedAddress":"beside Three Kings church, Bardez, fort, Verem, Goa 40
+3114, India","photos":[{"authorAttributions":[{"displayName":"Sharad Pratap Singh","photoUri":"https://lh3.googleusercontent.com/a-/
+ALV-UjX9xv0htoqMlcw17DDSyEkNdmO9nMcT7ANIccTLbj5EiyYitUoG=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/112768423843925
+445812"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM
+0ogKEICAgICUkpKg-gE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICUkpKg-gE!2e10!4
+m2!3m1!1s0x3bbfc0f0dc93e161:0x6b80a342a7a4c04b","heightPx":560,"name":"places/ChIJYeGT3PDAvzsRS8Ckp0KjgGs/photos/AcnlKN2XwbZKHQxXz0V
+W0JdHeBNYUxAH4PTMcYyc0RPtRqBVd0KgwQBXbDmaJXJe72rSVUP0Uxzkgp5xHi46OVAf9cINqPIHuA_Ag1QU1sXl-bfx7gsDA9qFA8BqQVyLyjsokrEuFVMlN1jdJeSa1Ei
+ni64i-koJ_-osiZZ-_sjlFPsjkRvIGXdhPwKVvxSz1_yRZSBHMv-5i603wudmGpeLt5Ksff-Upia1pjVMdlWDrpipip6ypRHcC1g4Br92zsOrZgXiuOT8bPl9DddtNeOmbvd
+dOAC3vtg9WQPnljDq9qPAHhogSKsJZKlF-xsuz135ZDGzD9jXRJ6v6-RH5PcXteTiQRSvNAwW9aip9pqvMurJaJKGslIRsjrHbpXKLmj_igza1r44nT4pwwmfSA6tIfBPvUj
+5ikIWv3bFv83GsPFpnpA9","widthPx":790},{"authorAttributions":[{"displayName":"Taha Khan","photoUri":"https://lh3.googleusercontent.co
+m/a-/ALV-UjU6e4yD-P7pM-mgchCjQy2vjYNHjit7Fy_D0U9Pu5p6njJiTR3t=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/1120916634
+88331183458"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2
+sCIHM0ogKEICAgICOzc2NRA&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICOzc2NRA!2e1
+0!4m2!3m1!1s0x3bbfc0f0dc93e161:0x6b80a342a7a4c04b","heightPx":3000,"name":"places/ChIJYeGT3PDAvzsRS8Ckp0KjgGs/photos/AcnlKN3EOJhFv9b
+GRZ3hwlm_Pwy4AIX1v-D2w6wjZzbqzaef2_KZDpCcWjuAL-1fi1nQE6v7tNif1NGf8V-qPXlYAlY82YMQ-afg5tdTj81aCXPAOY8-THZ2-pR7Mla2jqR7A5i9DMv_AgfRPsB
+cWVv5NpCESX9Cfbh6PJQ-oWEzP3byKsQftzDB3afDVE-GT0dGnsvd92gdHEiWXnXZZwt7Hwr1jTWOHAeSRAggTGyMlmazVxIQ8_mCwQAF4nahomyAtL5UUUV3QnUgOr3vG4A
+an0JiGn5n8ndWUlmlFG_KmCwL_q24SYsk7-FpxWlHT4i05MG0VhaZUw1Vkq7kkxYlDh9V-TqLK2CSpIMNuD9RrHByFI0j2av4tKhUFuB_HorVtkDsCC2vmz9aRBs-PD8PtMd
+G0LEVXROgUK9iWHy6ZnlPfA","widthPx":4000},{"authorAttributions":[{"displayName":"Rajeev Kamat","photoUri":"https://lh3.googleusercont
+ent.com/a-/ALV-UjUPUW9IOVwQQ_ZgItdI0gC7N2gzaKlTElcUN2h5V6hABeZ8viZ6PQ=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/11
+2582457833431903075"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key
+=!1e10!2sCIHM0ogKEICAgID42riolgE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID42
+riolgE!2e10!4m2!3m1!1s0x3bbfc0f0dc93e161:0x6b80a342a7a4c04b","heightPx":3120,"name":"places/ChIJYeGT3PDAvzsRS8Ckp0KjgGs/photos/AcnlK
+N2rrmSExqqx1CjSJu4h13QqGGXUYzwYJsUct0RtKZriVX0L9AUVhXfcVTiXlnLsKsrBdnBqCA4B5ETieMzjXaEsEwLKIWEUVE-2Cvsm-HSEdM4CovDXpeXyY-KlJiR_GszFE
+UTxwyboa7r5YEVEr5dHSn1xWGJiU5BfxUajM4REHZ_uu2C8DMsWE1pdMbazRzk6aqlg3Istd6X2Xk-Tl8YsjX_0rtct7hQh6Ecl7wDGmhMKiUUzjUIRQ5ySaV8XrqKEb_PJV
+zzE5tIZqz5N45-1Y5IcQmiyUnsX5ps6w4Iguk0B_y1w3AhAJOJZKaArEj58PESs1MDVACjRyNweCebOXES2EmmuFsjivg69WoughW8y8Th8tqzdCRMXJDER41cOlkCyHEinJ
+Ebz2nVTnHUYUt0yyrrHQhsU-BDJZUs7A00","widthPx":4160},{"authorAttributions":[{"displayName":"Vishal Sareen","photoUri":"https://lh3.go
+ogleusercontent.com/a-/ALV-UjWybpT9wDGa6ZWw41qjMN0ZzCxoHBGOzj1yMvZpaZgEZdY9sojFIw=s100-p-k-no-mo","uri":"https://maps.google.com/map
+s/contrib/111949416611708933387"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_a
+pi&image_key=!1e10!2sCIHM0ogKEICAgIDE5ubKzgE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0
+ogKEICAgIDE5ubKzgE!2e10!4m2!3m1!1s0x3bbfc0f0dc93e161:0x6b80a342a7a4c04b","heightPx":3600,"name":"places/ChIJYeGT3PDAvzsRS8Ckp0KjgGs/
+photos/AcnlKN0ZcOR3UX9oY21QxvB9bxMjVac61InLEcrysNCSI8N8fFz6ttRJ_26_eUfjlYL5-aGLUzClDqQiuI0-hHAAUwyaXhxiH4nLdG7AphkFgstnWD6qyBKeaY7Jf
+y9CmJHTu8QxgxzxWRGcXT7c-PYs6PeYll07slr-qtAUsbSwDcPTQN4rwBifPpUi1eNUrXcj2H-Qn_1OgGsf45e50oTIE33sYJ6TX_dHGT580xfSsZUwChNK2V_Cr7uRskpyE
+nxTtXs5Um-CP-ayTyuMbTcgNlAgpj_aYTJSvGfaWCWQ7h5Oe1mpd55WRag7tzhrYd-gcSuSIz6AOuol6JegMuqWMWcXDKWTwUDLd_LGWpbHCVIXsFGK8Qvnx8HZuie0mjxqw
+JN7jjWF2GTPZpAdsGwAGn7VIuSV81F3QIpGyI8bcbsYYZ1U","widthPx":4800},{"authorAttributions":[{"displayName":"Anish Naik","photoUri":"http
+s://lh3.googleusercontent.com/a-/ALV-UjVjLqorvAPBDIUuiFLIBP_81VDYFsJnyWIRE1JW914QrQInT33u=s100-p-k-no-mo","uri":"https://maps.google
+.com/maps/contrib/116768292028743102151"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.
+places_api&image_key=!1e10!2sCIHM0ogKEICAgICEsPnY9AE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2
+!1sCIHM0ogKEICAgICEsPnY9AE!2e10!4m2!3m1!1s0x3bbfc0f0dc93e161:0x6b80a342a7a4c04b","heightPx":386,"name":"places/ChIJYeGT3PDAvzsRS8Ckp
+0KjgGs/photos/AcnlKN0oUUwpOLgxDBcnTf2NMMSRdlr6iN89lgsqrpq8pwsjJlqtS5imbrqlZSQ260R_p1gMztj0dPUUqaZNAyxdANN1zAgR4asQj-OZiTmk4kXBIsIP0l
+-My8g7BgiqIR9qdXmsLht0Fs4KUbb6eL_AeTY1RUQQu1ZM1lrity0hRUnjOaEtpsd_fSzK0gUmc1R9u0l4s90_Kh0TMRvjuh5fzwotfHxir7RIbXepyydXvkjjptWxux-e9M
+VAR-60d_MwvxGLeKcVopHArRQW08PTEjb04gwzFWDBcimBLQApGMgOVGO15vfRoeKfIbXeiYrZwKiUX1Llt3Kf0tXbvxmq_0NA8daS01P4YHsqxfu4odA-34wXk5hNu2nfjw
+Jr_jNIFMDrnjo-7AdRph7_16b741csJLsBouhEg6tdUeIf01fITqHU","widthPx":569},{"authorAttributions":[{"displayName":"Jose Urena","photoUri"
+:"https://lh3.googleusercontent.com/a/ACg8ocJGE6inX7BKPaU6ZfKzb1UTlkJM4LBiEDJqtOAINC2JINZAcw=s100-p-k-no-mo","uri":"https://maps.goo
+gle.com/maps/contrib/112635573048719123158"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_plac
+es.places_api&image_key=!1e10!2sCIHM0ogKEICAgICm7qD8Iw&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3
+m2!1sCIHM0ogKEICAgICm7qD8Iw!2e10!4m2!3m1!1s0x3bbfc0f0dc93e161:0x6b80a342a7a4c04b","heightPx":3000,"name":"places/ChIJYeGT3PDAvzsRS8C
+kp0KjgGs/photos/AcnlKN39MaMKn5P6UkvKEf1POPDOR_1aW8WHpJgTEvMgpRaDxBaziy_qNm2k9n8ECtzq0HGpKsyZR1eSzD8ijl6VDmAD9S1dCuePJQdc2f3wbipkVZNl
+e75vyL6pdinNQWMSHgd0xWanVclsfB_2fLvP8d0CdI734eV7P9JCLT2Mx1E7mdMouVOheq_4XuWURokuZsOb8tezV_2wCZViIgAUjata9qVsZXFk8EwAcyI3zcMeUD1bG3iM
+H8NNX2L6KeYD2i0955U-c8Zn2mIOJH046eUYT3lyX_6MfcRxCZAA0VDpUUvg1ZpQsHolAgZ495gU5mFgkoh-sSTISwYgEESSrVnYS0oln1CnOibTQB6mWPE-v7RlwwWL712-
+u_-mCzEEXct8yCo1OGheECEu0fjv3DjF6MkJspBnIJ98OsFOUrF1Ww","widthPx":4000},{"authorAttributions":[{"displayName":"SIDDHARTH KHARE","pho
+toUri":"https://lh3.googleusercontent.com/a-/ALV-UjVlLF5zdTWp4wkj2Vh0JX1ZBF9b5EbZjQI5H5x4BxdWmcBpCJKI=s100-p-k-no-mo","uri":"https:/
+/maps.google.com/maps/contrib/116837975893329729819"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps
+_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICu9pTyTw&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!
+3m4!1e2!3m2!1sCIHM0ogKEICAgICu9pTyTw!2e10!4m2!3m1!1s0x3bbfc0f0dc93e161:0x6b80a342a7a4c04b","heightPx":3024,"name":"places/ChIJYeGT3P
+DAvzsRS8Ckp0KjgGs/photos/AcnlKN2qgLUr9ES3TWQzbDZYukjXNTIyB7UiuZj5Lx89lk02HvVtbXoLBNr1PRmUet3mBNsNMGGAuPFcnvK6FCzEbL_tCEML9r7rYz9rCCw
+dmQP9m9lPugiGW0flF4TVdtye4YhfNjoBX9rt6v4Zc3vUsTji64OSA-gOVNpjo3zjOdMEXkZ0cP6PDP3v9lf7rTb82FZyG9YhmXezJpThR7ezIAVoXaCoeAx8n8m606MbcV2
+K6SFbUjOsGA4oKkAiT_w1tzMKCvCwWQITLMBBNmkM8qVRu4tlPQ2f6Hpa07FfboS5_aCUMZODs4weEvjYH1LnZRzvr4XOb5EYgy6mBw9DGgbSzVsvdST-C4pi8-oRHnyTQ1o
+FNW0MWlimjVH6S0S6jj6bszp3Oa29Tr8MXLFeA6zAni3gGV6Jq-sSmGiMzJSbpA","widthPx":4032},{"authorAttributions":[{"displayName":"Abdul M Ahme
+d","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVHFOqfArHBRq5YvA9usq8oCqvSQ340bHlNb3U3MUCvuwXmlwUChQ=s100-p-k-no-mo","uri"
+:"https://maps.google.com/maps/contrib/114801195901761946107"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_cl
+ient=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICl_oLeTg&hl=en-US","googleMapsUri":"https://www.google.com/maps/plac
+e//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICl_oLeTg!2e10!4m2!3m1!1s0x3bbfc0f0dc93e161:0x6b80a342a7a4c04b","heightPx":3000,"name":"places/C
+hIJYeGT3PDAvzsRS8Ckp0KjgGs/photos/AcnlKN2lRPCmAeJI6yYpnANIsNPR8G56C1L6NwRm-YjuLDNmSrQvXLBKwfgYbRI65ebqxHc05BcEJXu4zw41aZN-gOtI3cAzek
+4F6XjRj1GPl4x31tuvHPEIEf6bLOZXzCNSKeCq4RIvxcjJ1gqyuk5bdkGyQSfLzI2OePNyFbX_YCYbmM5G84wh8qtJu2fYarJfwZsad0CdxqqomCge3tFYi1mxWNRmPbm6CE
+E-1n2YrXlmNDSMQ4ZGFJEwZ9mzrPrcrEIvJQnMJjNjf3V95X0VafhGHL0J7IpCRrFVOvZJCMgdiok3RaiBFRNUNArH_wOlju9yv9An5QpSlw3WhfQFtS9bg1pupDsSJgXH4x
+6aGY9yBtBpvz6MT7kXmil1__m9eRIZWpxiDku8vrYTKyD9UhvPTYJPOfm5fquRfpGsyVQYjw","widthPx":4000},{"authorAttributions":[{"displayName":"Ash
+winee Kumar","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUEeOovSkVmTwDygiHZy7IPpuMH_IO8IW1nsVbb4eqolzDTojiWBA=s100-p-k-no
+-mo","uri":"https://maps.google.com/maps/contrib/107413078216519708505"}],"flagContentUri":"https://www.google.com/local/imagery/rep
+ort/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDMuIevTA&hl=en-US","googleMapsUri":"https://www.google.com
+/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDMuIevTA!2e10!4m2!3m1!1s0x3bbfc0f0dc93e161:0x6b80a342a7a4c04b","heightPx":2661,"name"
+:"places/ChIJYeGT3PDAvzsRS8Ckp0KjgGs/photos/AcnlKN2u6mrq9bJa1xrPCVKfwtugZmcTnnZwMN1fI6ixHJFdYJUyLqp1_XNyZOYzJAA0xg7o_y-v7XYU_2Dj84kc
+jqKCSmYGbdXnKcL9YK3LcPnN2MZfinrZ1Bj8bngeXn4aMXFPFFdDC4LOTcAR7yXUn647Qg50ZIZXl8PCDGhMAiAGcHfh0S1A3hwbNFKyIU7Djoy8zYQ5w0hOpYNUj8xfHwVJ
+MWZkbZ1YKXYoMYsdbe98KZkZL4tCLFODOPwzJhnhsizIeZooXMI3CGoDsfURkpNu1IcGMEUdImdJ1el1eThF1TXUOR5NL1T-X23TnU9qY7A3ZnzqUcQMZaPLHou86Je4b7Nf
+oMoE_iGslDvfy0zLdqeA4KtxMbSGnnNw_NQI6k1bedKBH43a6OOJjzrhXFsJTjD-MxQzNApE3eNoNH4","widthPx":3992},{"authorAttributions":[{"displayNam
+e":"muruganantham kb","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUqQTNGLh4zg_FD3eriigMpOdDEylccPr9loLaEW-8YKngXkdLf=s100
+-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/113435058067063232657"}],"flagContentUri":"https://www.google.com/local/imag
+ery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDp7aLMUA&hl=en-US","googleMapsUri":"https://www.goo
+gle.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDp7aLMUA!2e10!4m2!3m1!1s0x3bbfc0f0dc93e161:0x6b80a342a7a4c04b","heightPx":3024
+,"name":"places/ChIJYeGT3PDAvzsRS8Ckp0KjgGs/photos/AcnlKN0zcDsuX_GfOCM_6LfRrPUyyXJUSzOX9wK0RRBCG3ZC7ia7yYx3Sgb2E92DudqxecMS2hwvP2tBT
+hT00xIxRd_WWCvJAQVr8pdVk3HaFZPu7wx3L7QT54aYloB6OhU1cqrcJ1EKl73c4dWQ8zw39MKWiu7nWmgbrZdyQHX65j0-GI3vOxV91tEygRqcZErmx1SzOU6z8pkDoZAtp
+uUA6cwPNDE85dWyJ557Y2YER0B26k9YM_oAykeW1mmjOr4yXYUBQBdug3ZbGXiGLfRjOVjzQN5h9quhEvb0IOITeMv_tPos_tSFs-VVTCxqpJyBYuqvbuRNF4BIrazrQ5BRu
+MTA_VmVz3dbmMby_JAwwUQeDDTYglORht6xfUTeZYeYyRN3e7G6WnJjwE231-3qeEoGnFc0bT7xxr6AKQBQObfdXA","widthPx":4032}],"rating":4.4},{"displayN
+ame":{"languageCode":"en","text":"Chapora Fort"},"editorialSummary":{"languageCode":"en","text":"Ruined centuries-old fortress on a 
+headland, a popular vantage point for sunsets over the sea."},"formattedAddress":"Chapora Fort Trail, Vagator, Anjuna, Goa 403509, I
+ndia","photos":[{"authorAttributions":[{"displayName":"Sangam Rout","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjV6RiRPDF8
+cn14ALxtX-BBRFICI3RSR96k_QZ4MvO4upLo_DKjn=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/116827023283491289583"}],"flag
+ContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICWpt6
+-Mw&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICWpt6-Mw!2e10!4m2!3m1!1s0x3bbfe9
+c66255a1e7:0x370be2005b85a107","heightPx":611,"name":"places/ChIJ56FVYsbpvzsRB6GFWwDiCzc/photos/AcnlKN2V2CoYUxQBSPV37m8voWlzKG4kYoTv
+jzbPB1OUF9UiLI2QkXjijkdMECs6Lkr5oZlcRbxO8SAlsZcqE-lTVtXTZXkHdEvi8FVBQhMF_4vjj9xYH-yQpD-SHBb4lflY73gwf2DOiF81yRDtgzlW9VMEJt8u-amO_rHh
+uT-6HkeIdv7ijl9Lu3ltVEVqZLf2d4d4VwzbWcU3qmAPdiJ8KncZzMtASrR0PAlNmSvVEegZUN342jJMnvpm17ufDS4bXa5_E7QEKGS4xz9Kqw-h4IOePtQEH3PhY5EtxIus
+tNS3NxjoCcZ8I7ylV9moCjUyyseUfNsksA5W_n3cO6-HnF7oZlPWRhJW-zdvZuKAOQK0kcBSl3r_iN2c7CNSK7O6GKr5DUJl7ociE_Y8Yj6SIDf6Dl19psFAbU9U-SJmLVsQ
+fQ","widthPx":1080},{"authorAttributions":[{"displayName":"Sachin Mandve","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUxk
+v0DdhHhlEgNfRlsnk3p0VGLSVppT3_yNaNi6hEhONVds3TO=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/110079879942860135814"}]
+,"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIABIhDa7ZS4i
+_i-CyNb-ZZsChdS&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhDa7ZS4i_i-CyNb-ZZsChdS!2e10!
+4m2!3m1!1s0x3bbfe9c66255a1e7:0x370be2005b85a107","heightPx":4608,"name":"places/ChIJ56FVYsbpvzsRB6GFWwDiCzc/photos/AcnlKN2Fz1xVigm9A
+6J-mYOZ_3VZQjsQJ2WZyySg1FLkrAflLzwBsj-5ccxB973tPJafb-2oG7YBjfbWUmaEJNgtIt2loPCt1C6ZoNARki4FeoZ_eiTqPwjxxPSqcaEfMLVj9Zxrt8XDcP4Uwl-PC
+oB-CPa-eek67Dl4eX-_9UKo0PH-wEN4FBhMXTjh9YR73z2pH0U3bG_Pq2XKKkoMpdUjHSEbYcLBypNyVtcsJsg8meqwJIbn_7eie3v_lEBrg9Ha6AtX-INdrvUxyI8nVv6t_
+onlhB-_SULbPkfLqUtNMUXiitV0QknglxDLpc0h7rp3MEqZP_0Uv5TBW6qh-_jwcn0uuyisLYQsN3KkDirykyCrXUGF7HyhU4QSykOaaAGHsGsiIZUPrO0JtRCJUF_W9A5iV
+WV8xMGHuipnuvQPISKMtLRqZOzqkdle8WH2bT8X","widthPx":3456},{"authorAttributions":[{"displayName":"Saurabh Kabbe","photoUri":"https://l
+h3.googleusercontent.com/a-/ALV-UjVh-3l28Cf1vkXDWWMnlyaQWCzOOwBjbR3h-gcrqgrEt7iLP4d2aQ=s100-p-k-no-mo","uri":"https://maps.google.co
+m/maps/contrib/110147295677994645815"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.pla
+ces_api&image_key=!1e10!2sCIHM0ogKEICAgICB2r-JVg&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sC
+IHM0ogKEICAgICB2r-JVg!2e10!4m2!3m1!1s0x3bbfe9c66255a1e7:0x370be2005b85a107","heightPx":2604,"name":"places/ChIJ56FVYsbpvzsRB6GFWwDiC
+zc/photos/AcnlKN05ABQYGKaTNZ8lE_PNgpgNzG2-4mcmdL2MhKL2eGz71h2kRb_QQ66dK1a21VX-hRqP-ZZjJy-vl5pPZP1Tgy4GwVni4i3pkUrMD9oycJt1rKTMSZRSc4
+qqPLMHRCystPqW5DAiSG1aFvZ9Hlqll2IZn-wdjrsoTFEloG74y2A_V7HNfRRlG--6GCAQgSodO37hynL4wlHG-dZFOk0EPSPJNSL1oLxuXNm6ZYJRQ-4CgwFuhFgowWKd4n
+wp5tBIdNrdolyIx5W25nPRQQ28rIYvVQmmXSthJGBulK5ydxlskuT6sWni-gcIOM03njPCrbpqPneQ1-ckKSuYtFMqFY9dbQsya6v5b9q_d7j5sA9sRy7KgAqSuCMkJp_ppy
+D8EkierMRII2V4g2ILNxkCjp6xQelvGfU6QNlsKARxqwHoGQ","widthPx":4624},{"authorAttributions":[{"displayName":"D Nag","photoUri":"https://
+lh3.googleusercontent.com/a-/ALV-UjVV3HQt5LzCcIzoLDpEpWJMDZyWK6g4OCmZyVSXxqQ9kP94b4LCpQ=s100-p-k-no-mo","uri":"https://maps.google.c
+om/maps/contrib/115796112127429703617"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.pl
+aces_api&image_key=!1e10!2sCIHM0ogKEICAgIDRjvCE6gE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1
+sCIHM0ogKEICAgIDRjvCE6gE!2e10!4m2!3m1!1s0x3bbfe9c66255a1e7:0x370be2005b85a107","heightPx":3072,"name":"places/ChIJ56FVYsbpvzsRB6GFWw
+DiCzc/photos/AcnlKN0YzV7jIDR9y4alpw7N1xo-LDrPraO4P-ddMMi5-XgbpvXw6pxpli6kGrOjREjlLNhl-hdNatsqV0s_RqrwJrYbqbbZW8-wegFPjpy2tcadntdJtB3
+TEXkMaDMqaXa2gRWG1uViPAYW4oz0C16i8p9yO7Rv9eZe1u0a1LYQpU1pSAq8tX9ewDY1-zZ8SDUe5KYisQIXTQacjcwdRK4c32cFIE23lKqUfNx-HCNKb4heLMiv84Ilfad
+RcFtGeEDnMHg6tF0Tav-aP0ix6CyIo74wpI1g9cko2rcnOF7onBXsePgg7ICijaKNpthXdye3Jsm3XoVdb66VO06PcwcOjKgTET81zJH8KHjL28oKWZtZp9Bhb5sweNp2ae1
+VMYz8-Mrik-xsr11z8tZXt8csa_r3uJlaKzdrk2O94ug_CAAMqtk","widthPx":4080},{"authorAttributions":[{"displayName":"diksha joshi","photoUri
+":"https://lh3.googleusercontent.com/a-/ALV-UjVqg1vEGs6T6xRISOIdsjfqsM0KYs86bEVIEPpOScypnnZlNgs5=s100-p-k-no-mo","uri":"https://maps
+.google.com/maps/contrib/105422455716617812856"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_
+places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDehoLJuAE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!
+1e2!3m2!1sCIHM0ogKEICAgIDehoLJuAE!2e10!4m2!3m1!1s0x3bbfe9c66255a1e7:0x370be2005b85a107","heightPx":3072,"name":"places/ChIJ56FVYsbpv
+zsRB6GFWwDiCzc/photos/AcnlKN2EB6Ct-uVLGKTji6PZzZEeOQcsThxYCfVDiKwurru-DrqDhgQosQoPC6hHrtNnKAhewEcANsZabcPvB1kAelj16HTqlUr9Q8Vbry-FMU
+ALEeI-FNZc6C2-dpqEKbdiOcAciyAqCKL_5UwGSKXw5s-ozhqG-BcZidJzxDwyZF65UFMR9YnpxPagoHRXYWm-TgS-WpClZE85MZ-Cjm9T51GcczoFKPMZ58djdVKWIHqmJw
+NCVbH0nnUIOdiimxabQTVcINMERoohTSerOW-qsLH4TibeFY0JAWMGA4CemrfenfLpUZjSEyIwLD_gzaTjgRm7rgw-QNAKzg5QvNSi2E4v0buFxffuDCUycre7Nk1piMTe8u
+9YhMF2QEJ0hg4x7HdU8zeJ83yEuySnfncFtja7FpyYNOVknuj3PdbiqS1hHWpK","widthPx":4096},{"authorAttributions":[{"displayName":"Brajesh Kumar
+","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjWrMfaQ8ebaC10RP1ZYuUd_mAyq7zqlF3fni214mmbSJ3oxEZp2=s100-p-k-no-mo","uri":"h
+ttps://maps.google.com/maps/contrib/109804977014118736072"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_clien
+t=maps_api_places.places_api&image_key=!1e10!2sCIABIhCMte-sk4YJHY07GaKpa2pu&hl=en-US","googleMapsUri":"https://www.google.com/maps/p
+lace//data=!3m4!1e2!3m2!1sCIABIhCMte-sk4YJHY07GaKpa2pu!2e10!4m2!3m1!1s0x3bbfe9c66255a1e7:0x370be2005b85a107","heightPx":540,"name":"
+places/ChIJ56FVYsbpvzsRB6GFWwDiCzc/photos/AcnlKN0bUiPdvosNnFZGl3mI2cmR5s2-CuUHPUYCfUv8SdEL2UNabcJ1MT-mf7LxqtIY62NuGX_LKgcAZypfBhFJMG
+3lcQWCGY3TKOrIQs2Ed3I4apQLSD9wxBkzP5vD3wta7hOYEegOiC_o68dr73lRPzt_CHcvMD_tShpwiugQD8LdvFDs5zxkdRQZckgiFI_PxNUyh9BiTjXMdgvEC7uKxiZFNQ
+aQqPnq5InAF7VQK7byMT6OpJlJ4YZJnOp2dbfyB2dp4jBX9mKBL3QukqUSLpzjHVRe_ViOvRVtdEjz6pPNOpRhcsfxGC3YWWoWqV7QLZIcWAZxJhWWyXoFhTM7WeTOwfjYrQ
+d1A8LwwUPoPxf58DssrfRX_uo7dIsOcbfNZtYEJjIckTbmIabgBXZnsijxflToHotfWccLShZg24Xjv_H2hqO0w8jp_EprHkOB","widthPx":720},{"authorAttributi
+ons":[{"displayName":"Venu Kumar","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVyjHXOr4xW7eCTqUdYvh44LWn8PzrMYHJfLA8arm86w
+R1_zwNYPg=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/101895286999321353561"}],"flagContentUri":"https://www.google.
+com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIC6wZy2qwE&hl=en-US","googleMapsUri":"
+https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC6wZy2qwE!2e10!4m2!3m1!1s0x3bbfe9c66255a1e7:0x370be2005b85a107"
+,"heightPx":3456,"name":"places/ChIJ56FVYsbpvzsRB6GFWwDiCzc/photos/AcnlKN3g3wSIR0Woarx4lOebzecC8Q9cuSYN9BIsaFUxL6s6LrDhBRYTvnMs0VKhQ
+MJRgiT4Ku34i9z53gC4wh8xt3SxY0DvFYk-Vh8lb_GRhtU6wrIi26dcDBjROZQQQmt664DuJ8QAdhInLXozVTnwPrxZBaF6dEZ8XBMgZg9lpKjZBamQt0jx4-C2VN7hayrhO
+BwNjNrjWiLQpF_BF3gx0lslgk4X-GNUm5Q4zS7_Wnxt_l3o_Izu-yGyx4yn1iW0qnRJpNwP5_hvHcxmp26sWOn69Mk0mo3zwj_xx34qGAn9xluzjcunNl7sQLsiB0_BVf0L4
+LRgLFrSokuOC04AgPCCiQ157S2WqVkovSZSyE1JlnAjnXcwxlWdsFnuBaRb6quuAh9Tuv191RMMaXt-_iJq5Ozg7WN3CS7qmX20-TAqTN71","widthPx":4608},{"autho
+rAttributions":[{"displayName":"SHIVA SHARMA","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjWyj85pgntuQaXkg13a-gXpjPex2ocmk
+hTLTWWVnXjdkGwXZVua=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/116326257594234319226"}],"flagContentUri":"https://w
+ww.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgID-jd_lFw&hl=en-US","googleM
+apsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID-jd_lFw!2e10!4m2!3m1!1s0x3bbfe9c66255a1e7:0x370be2005
+b85a107","heightPx":3072,"name":"places/ChIJ56FVYsbpvzsRB6GFWwDiCzc/photos/AcnlKN19Qf5Jj7XhBU77ZPTVPPj2sRqqIPt6EJQVB2nMGYWwtyY-Niszy
+bL4Pzf890E0zGCK4tG5RZfxlzK1hS6JxBRollFBavKPgx8r5b1dSwx2CVfsgK8lnJ9-dYNM0XFEUKtKLPiTJqmsSWMlOGV6BcPNXSessS-mymabg3IdYxC7ZPkD0F_IGfu4Z
+6lvcW38EvQZ5pU9Cv1U1C65sZsD5PrKhuOJ5b5Yao7CFOu2R_ajD-PnTDMnSLzyOki6YJUlNVvJBKO1mTR0tmUJK8EcU1ir2dBL6yMOymWwX8s6xPcuYjK-PI2o1R7Vbb9V7
+WcOhFnPguCuMSOzqzuR-uEhT8Xt1_Rzvq0FlUkThgY-AJC82iYlxVcbBzmN7jBndx-_HFjwgVUGRs1g5Q0P2shRDzG3Ts6onezcD6aCWO_UzVV9aA","widthPx":4096},{
+"authorAttributions":[{"displayName":"Somil Gupta","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUHt3tlq-YsdFE_2IHz0rcnPqao
+pvFNB05pIi2ZHkxHrDVE87AP=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/101501277588949686200"}],"flagContentUri":"http
+s://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICr4fPB2wE&hl=en-US","g
+oogleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICr4fPB2wE!2e10!4m2!3m1!1s0x3bbfe9c66255a1e7:0x37
+0be2005b85a107","heightPx":3456,"name":"places/ChIJ56FVYsbpvzsRB6GFWwDiCzc/photos/AcnlKN26_7AxOPtM37YJZUuVBq_HO3w1Xz7YqXx36lluUyg1h4
+MdKm02ev9wQenwmr3m3LkljhLiEcW-K6h-VwVwlT6J-k6jIfEZDiAfeo586nTxXZz9jaSPUL06mI6WmrDudsybqxynABgGCxe5W2kM7CZrrfz_g26GukaSAnm4iAv7etAFNB
+6vYQsfmqKWSxI97kS78rYQXyE8UJJwmk7GUoYRRRDgVdrLWWjLaTshrrNsa2U7oejYxXNDOumxpGcXT1X6BQ6qyQZgoE3HLImQbrd_DBYKhMjJLMYbgY5FaBOPuRYKsft48n
+ggxSex0ZMJP_xUXTS0BC76a-_R-LjodCTcni3Io6ZET4GnBfrrrdaCWhYeZMhcaYuTPyF6tiGZY872noI8NHgDRfU1l7Wv7aTlRHLxKg2YLU4DvWDmAe6LZ3s","widthPx"
+:4608},{"authorAttributions":[{"displayName":"Николай Ундесов","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVcSJ6dK1mXjyIG
+c06lENarJOVejrmbKai1MyVF6DeQT58v03YGLQ=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/115387934867362418323"}],"flagCon
+tentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICKlpflzQ
+E&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICKlpflzQE!2e10!4m2!3m1!1s0x3bbfe9c
+66255a1e7:0x370be2005b85a107","heightPx":2592,"name":"places/ChIJ56FVYsbpvzsRB6GFWwDiCzc/photos/AcnlKN0bmmpaCxkGU7ItfyfjWYve5xZ6xVfP
+SETEYudhqDYrtp_YD2WoB_TuS_VlSzDZeL9YxhYnW0tuqxqnqzvrHiv4xvl9WC-KDdLXkjI17BJGZ6tnM0y9Iz6YCiJ0azayIvF6xcKZAQ1-dnG39nGIfpUL7GSsaEeKRM5X
+grDbax64Hg4kAvrnBe0q4bBdsoiWx46Q81SAlCPQknFOUdwj_qM1FDW8Orh2Ntfigz0IbCoEYkqNhV590wKf1-pWlBzdsnQ_RLD5w5pweVqHwJvuQKMPoap0rCP-IZoEHz1k
+HV-ZLefw4GW5KN_G8sMHvt8xvChW-PvHYwCHc8aCu7GPQsRzC_y0J_iXYdLijqsg237qMFyMX8v7-xCmWxEO1ISJzS-1BOYaZyDSwgGxLxwrM4Qobi-h4Cb8sm8ETD2dD5fv
+Qa2q","widthPx":3888}],"rating":4.2},{"displayName":{"languageCode":"en","text":"Sinquerim Fort"},"editorialSummary":{"languageCode"
+:"en","text":"Remains of an old coastal fortress popular for scenic views of the ocean & sunsets."},"formattedAddress":"FQX8+9GH, Ca
+ndolim, Goa, India","photos":[{"authorAttributions":[{"displayName":"Shivkumar Kapse","photoUri":"https://lh3.googleusercontent.com/
+a-/ALV-UjX-NZbrQqvnSDICi4Ne-3h6bgUBfyT0W6HxRY_A3Zil_BDaZcWp=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/115577814703
+075657148"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sC
+IABIhCMAifMZjcHt0PiKZ-43PDD&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhCMAifMZjcHt0PiKZ
+-43PDD!2e10!4m2!3m1!1s0x3bbfc175c3962cd9:0xbf1fbcf792976612","heightPx":533,"name":"places/ChIJ2SyWw3XBvzsREmaXkve8H78/photos/AcnlKN
+2B8KsnTK4Lbo7fWJNBXeoc4Kf4UAT4ZvGQcsc_YL5eSFBowb49llFzk-H2p16E-cQe1hF8N34ktKzzV8A2MiYzh8M2NPRQ3BZ0EMyVk839BhTVGP_GjoLaMYwQBmPM6n-z04
+sO8T1eD96v3OqWpIIwKR4ofCb7VoDDc5Ax8Maq08THihdW4h_8FdaS7hvooaePsc3siIP8avOqY1X1LN3cEW6O9lMiQV9HzHk_HmywEv-6c_rIW3tcAmaM3RDtveuk9QcI9w
+6AbHHUz1EfNrIdCmJTeg1XyHM4j260JTSn9qG5rgcBilWsbxWg8oSMoMTsmgIDKgzbRP47h3tyvq1ztnSGdvMGMgTENwD0Wp8WTTwNg3tq0DGvtQn7MAphNQb9MM4yeuRNUm
+yhrqggfW9HOUDfg01e3JCkgznkxt6laHfbYuKlMzgWX7tX-pqA","widthPx":800},{"authorAttributions":[{"displayName":"Ketan Panchal","photoUri":
+"https://lh3.googleusercontent.com/a-/ALV-UjVWdRdnI87QE38i2mKRXgochm9bnpiT_OPu8mSAmrFlwA5BUhqt=s100-p-k-no-mo","uri":"https://maps.g
+oogle.com/maps/contrib/104471264887145520788"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_pl
+aces.places_api&image_key=!1e10!2sCIHM0ogKEICAgID6yoLbuAE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e
+2!3m2!1sCIHM0ogKEICAgID6yoLbuAE!2e10!4m2!3m1!1s0x3bbfc175c3962cd9:0xbf1fbcf792976612","heightPx":3456,"name":"places/ChIJ2SyWw3XBvzs
+REmaXkve8H78/photos/AcnlKN2oeL8ub2qFV7qR9uGxjcF0FSgpxc5dcSVUDNNG3Nmat3XNtuoXBGdr8Lr9Z9ulP15i3ExARKwsEyJD5shJS3hZTYiaSICoRG4BYpi2DNIM
+7bVgsVhTEPvQTJQUYgWuKnicPbapXUXf-uwg-tppMuPLt7xydNoLJn24_b-FIA5ii3Nei8FFj3WdHRRVXRB0OLcRKpCH8mJKEL6isfYi6psrylkSDV8bZVXobWaS6fdhs-Lg
+XXhcB32g3HtBAB36VWGOZEyz-BUwnceQP-IoFKUButHIU4rC-UqmrekETZNxeTHedllwY89FAqHww0m2b9kbkevd3-ivpxspa5OFWb7YSIdZZYY9bX6fLKdCRapY5XgyJoTV
+6kO4cJ3zJ9cQ4UWFRdgQR6N2s7JTvCgMDLn-TFwQIw3OIHmNQCVZJ3CzSu-4","widthPx":4608},{"authorAttributions":[{"displayName":"Guruprasad J Ra
+o","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjWAGuBzirbpULOzSGXEc0lGRw8ZBO65GUQgndfyoAESV2kNCMLPZA=s100-p-k-no-mo","uri"
+:"https://maps.google.com/maps/contrib/107425297070073213212"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_cl
+ient=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDzy4uy2wE&hl=en-US","googleMapsUri":"https://www.google.com/maps/pla
+ce//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDzy4uy2wE!2e10!4m2!3m1!1s0x3bbfc175c3962cd9:0xbf1fbcf792976612","heightPx":3472,"name":"places
+/ChIJ2SyWw3XBvzsREmaXkve8H78/photos/AcnlKN1_28zt-pzaYuIIF5QIpVEC6Wgpy2RDHAaeioopZ__-hwV5WV6U0lgG6Eq6ORkPMviszgrl3THWbHJFHmH_P6KRr5EF
+ClCMJmFkkZyqSFLQzJpuZlGK9OP3pONHDE2fVUhbTZTt3q3vbZCnsru3SMKFVeojfiJP8XkdtIS5_1c4dVlXmOWU_VRD8selt7jcEHosG7fllnu8Fe3rxyWBd5NH8NlcXvVL
+htD_qq_-thdpy7vxy8BwdA1YUeSDQt4FjZ9kOzP7j2qwmqnUAM9oRcFhxGBXY7G8s3jmzMYbnm5o3EZaLw-xd-JXuLgUe0b0IKbMsdkOG0ibkOgwtXNKoI_wAOZLEkodhI2o
+OBsugKFHzZCZ3lfI437ge5Z21orUIMRZqCtDmar9z4w5Swj2DlyoE-unEu3YYhJ2bmWM24Jur8TF","widthPx":4624},{"authorAttributions":[{"displayName":
+"Srikanth Velamakanni","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjXfzwV-uvaR1kSTUfk476cyVvRlgyTz8q8TwbiLsXDUqbUybJUVZA=s
+100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/108974178693230900252"}],"flagContentUri":"https://www.google.com/local/i
+magery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIABIhAX1mxJXTDpm9NWYW4KJjuL&hl=en-US","googleMapsUri":"https:
+//www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhAX1mxJXTDpm9NWYW4KJjuL!2e10!4m2!3m1!1s0x3bbfc175c3962cd9:0xbf1fbcf792976612",
+"heightPx":3456,"name":"places/ChIJ2SyWw3XBvzsREmaXkve8H78/photos/AcnlKN0CaKlg1Pewt9GTkEkYxuDPKj4LLHFID-4rF42C1bzNDyMmGmeI0XfsMbTHrA
+3p0YYzcK6vlVqeEwJNo9965ZXTupOUY0swcWRYkCj_a1FjGeSQLjxe0bmAzi2cixw8Z9Qjp2DfiNNkKdQSxyzY32QqxRtHVSX3nqzAnjJ8eF34cLDS5E2dqd7z_ULl2plfef
+NKea2YMJCy2AlXEDMVgV6QvbpaSZqzt1iIhFpVpOsqfCevcu0Bl-mHb75ovLE9yFqmP04hv1wDw6BveU5-lVurgb5iHAG7bDyuH7NQlfT1ddk1XvwL3qvD1pPO1eC469IdKp
+RChkx-wnYsdYzVm-fsx2aINp7yhZTP5f1aKL_5Rvwa6IBD818JNA4RP7WKmfItDmy3dgDB9xUVNwlvWQ-mssHyM45uDoThonk6Cg2az7G2A6zc4GVvOnOteg","widthPx":
+4608},{"authorAttributions":[{"displayName":"astha johri","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjWH7z1sWAQdQNWW6om5Q
+wcGFsJ5jHO8ecq3epWh2vAU72KzHeP3Qg=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/116437404796944144764"}],"flagContentU
+ri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDJoe_srgE&hl=
+en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDJoe_srgE!2e10!4m2!3m1!1s0x3bbfc175c396
+2cd9:0xbf1fbcf792976612","heightPx":3024,"name":"places/ChIJ2SyWw3XBvzsREmaXkve8H78/photos/AcnlKN245Ftgjp-IunA_bVuOhsBCyUO6inUYIKWbE
+CZzO3zSqReTdKJ7iRnghaPVKqN93YE3_KKNOPcSJ_tmwycahZ3jc7tDnsdCYR_wXQykcuaeLd8qa313siffMCd1Mz9ubCB_hdXSggNDetJwuriTMb_Wey3ndMyHEJeNhCtbq
+mb82LhfkmQxKNuKuEUrTgRGsaoYw1LcEbIB6n7xR_f2c8bhAaI6KSrbp7Rb7-0v4ClMkISv0S98wKexFaP2Ji2S5iqk0vplF0Kb0U3floWgLVhPaGXLptQFD5-08Vf82wJTg
+ZJvpglokOCLfoBwVVUURIDzkd_WqRdRIGRA-t7KZ_smMIS9DM2kFKhqtfZSjnhFzOsrsQyMCDFLNQK8CEGgdn0Wwp2r6kOJG7Ugn9APIO-5ge2qoBiXze3rT3XrV2WMm_Vl"
+,"widthPx":4032},{"authorAttributions":[{"displayName":"Deep Patel","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUX99ApheF
+lIyvleRNlC77W08B3o7grjKsWofFufTxmbFoiSvNn=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/108994658993756310708"}],"flag
+ContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIABIhCUlanyBzg-b7Z
+q8pqiMkOP&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhCUlanyBzg-b7Zq8pqiMkOP!2e10!4m2!3m
+1!1s0x3bbfc175c3962cd9:0xbf1fbcf792976612","heightPx":2252,"name":"places/ChIJ2SyWw3XBvzsREmaXkve8H78/photos/AcnlKN1luDZIGt1YaOHbU2u
+7o4AXu0NmXpni6SZQdE9c7v_wzC0E6udBV3IbmqTYTGABd_wgD5eRAjBy8KIaJgXe3thyhyMVWTPrL7p2EaTOEM8Q6Lr_H_r76Md3kscjKdabhz_mlTXGgMQGY6zdrgG1D8g
+NzM6nEEWirhQ2FfqrglbxSjOpgWPuoedgfCxH-HcnKIUAdkNOefD3WjKo8RXiMcU5c9cuMYza8mDI5QMzhq5nmbj74Vd0MMClhsHjzE1yfLbtFZ8hKYuC0GNEYleIwh425dC
+739-MRnBGIaNDgtCuatLQ-avDdJ3s8WHMg3joaBIPaferI-Wb6kc0BTb0WRGoaDMSJWI7onaxgUvgHLw7YICbrgMoTB7rC7VZlObbxk-pL_5Dek6W-J3HHE539HsgAb_yLVv
+Q_herbsBE0TtAs3c032tfpCxRDR4WvQ","widthPx":4000},{"authorAttributions":[{"displayName":"Pratham Mahadeshwar","photoUri":"https://lh3
+.googleusercontent.com/a/ACg8ocIeRifaUap0XrcDJShr96DjM-Ixwx8ejhaNo8e-ETYGpXWV8w=s100-p-k-no-mo","uri":"https://maps.google.com/maps/
+contrib/110704067615194484354"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api
+&image_key=!1e10!2sCIHM0ogKEICAgIDDjs2DpAE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0og
+KEICAgIDDjs2DpAE!2e10!4m2!3m1!1s0x3bbfc175c3962cd9:0xbf1fbcf792976612","heightPx":3600,"name":"places/ChIJ2SyWw3XBvzsREmaXkve8H78/ph
+otos/AcnlKN1XBCP0aww4MBIMGrjfao6LpOLV_V3_QtsdKJ7QE4gW_jvAB4o7YnoBavygNLZcC2av_vvamVjOxa4wNnuj6uJQRDokVe0cZAX_atFGM7EbaD__oa0Irxg9C-I
+rLEgbv9kOzGLUARG_06KcWMXTDH0IU6Qzb3SadlvRyEdXoH4v8Zcvz-WPtSbK1eqNx5NGYCFGKmUgzDkP6cIbVDygPMt9ePH-CFKjb_TJmhE9yc695LxeWCotMGoTLFtGltV
+5pIRXY3rC5M64UObOmD9FEDUmY_M55DfWzKdeR4C2g0WqEsOB2kaXiTzgokiYBy0-VSM3pVVSK_Z3tieJovSZGDA5k28aNFoR7xjgdEwYgkwKPVS3H_7teUx1BB6pihN9SWQ
+L5iB-JhgGS905qteqapRY13CAMI7n8fLzhTMRn0beAMs","widthPx":4800},{"authorAttributions":[{"displayName":"Chandrashekar K","photoUri":"ht
+tps://lh3.googleusercontent.com/a-/ALV-UjXpuRUPROpyISwuAmzQ2yUjHiVuStqBkeNXQyFZqDuA8XowOKUu=s100-p-k-no-mo","uri":"https://maps.goog
+le.com/maps/contrib/103489996149491711630"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_place
+s.places_api&image_key=!1e10!2sCIHM0ogKEICAgIC278CjVA&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m
+2!1sCIHM0ogKEICAgIC278CjVA!2e10!4m2!3m1!1s0x3bbfc175c3962cd9:0xbf1fbcf792976612","heightPx":3120,"name":"places/ChIJ2SyWw3XBvzsREmaX
+kve8H78/photos/AcnlKN1IT2USpi745y74C5vP42QKyCinF-DbN-O_aOn6PNHsSRjP6nRJ8HGGnFnz846Aa289HKmxIgobGWytsKEwmayBLLW5bd3bcIX3VtSXEcLLdHQ1I
+6qrR2rynCaZ_QW0Uhw33sGDjXMj0fNcRttm_BuSp_jUaVqfZ1uRDWnMkPUqNg72WX7-7sgAzveauaJXu8WTKJT9hQ_fW_bTyXRjiP6AAsvU5XLkDV3cQklDPethBhlqm6Mjv
+l6d7tX8dQHNVfuA_IoOPuqWSP4oUPHW3Btq9bpbQdCLjVwxPELyMPSmxh91d7tXPW3QuPc9jxJN1CUTnGnIWvwsRkPv9gvntgRqeeS7ZVof1femeQ1bvXWyY-hgM-4iLSDsa
+1dTA8bgdRbBsqV5pDRogRbC8QDDp2GCV_rhSr2JDY4TjiLi8WEOLA","widthPx":4160},{"authorAttributions":[{"displayName":"Phantom Wolf","photoUr
+i":"https://lh3.googleusercontent.com/a-/ALV-UjW9bMIxTXweFLUVLm96R3kxC2vParlHX3659iHdsCaK645FdzP9=s100-p-k-no-mo","uri":"https://map
+s.google.com/maps/contrib/114545801479732898508"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api
+_places.places_api&image_key=!1e10!2sCIABIhAdyd1NysDAeX8_bpBzmyYI&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data
+=!3m4!1e2!3m2!1sCIABIhAdyd1NysDAeX8_bpBzmyYI!2e10!4m2!3m1!1s0x3bbfc175c3962cd9:0xbf1fbcf792976612","heightPx":4032,"name":"places/Ch
+IJ2SyWw3XBvzsREmaXkve8H78/photos/AcnlKN0YsvtkOsCWm9TuBEwwbXNLPul7YAz54trkbV2_brmkvlyyfvW_xKoggr3PCEDA_-KbOyLBM4qF1nHsj47hD2i9hCAO284
+w9vmpUnWhvNwu0-8EgnDADI85PSZw2HNKJhjt1ejX1COJ-_Gp32JlmJDgzts2afX5yd6A_hPYDmnQxD2m_pSpQdrfMUdrED7dqWUidFStaQBGhfvhztaEuz0A1TG9i34uqga
+Rh5WGy1R-tdz-J63d9NWT9kXlhL0WRMxkoXdONunLzWPttE-GVbNlwSPsKwsSsnj5eYd8WW-2WzsRwk_ToNd20rxWPzqIqMKGSrWE3IwCWWbEMWWxS2AbeQYrw8AU1vqFSYL
+5g3G1BLckgjo-nDEavT_SBSU0T8HXShuRtjoqd_x8Ra9bMzNpMIO4JvkLVplvwqtyCdRceimiz48Jeyk1Q0eXSUJO","widthPx":2268},{"authorAttributions":[{"
+displayName":"Saubhagya Shukla","photoUri":"https://lh3.googleusercontent.com/a/ACg8ocIzorD-ELDWHDLE387lcxFeKGEn8b1AHyq35m8OzxLufVfw
+jQ=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/102126398280083473229"}],"flagContentUri":"https://www.google.com/loc
+al/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICK5uzi1AE&hl=en-US","googleMapsUri":"https:/
+/www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICK5uzi1AE!2e10!4m2!3m1!1s0x3bbfc175c3962cd9:0xbf1fbcf792976612","heigh
+tPx":4032,"name":"places/ChIJ2SyWw3XBvzsREmaXkve8H78/photos/AcnlKN0HPo19fUSmxwPosXxyij69K_6UIray--LY4tRtAuCfzx2KvkBU_vXH7M__3z2ZWCPp
+Mpy91n4uhu2g9M2sEUT6lGtgW7cTW-Km5TPiQuXO_3QYiN507_0ueV0GGDRK4ArRR8WAU-vSvGpbUTUeYD0p_NlW3UOIauciZvRgD6X3Bz1yPTpIOpShK_pZQ8z_a5gWNXm7
+b_Bc-n1viVAjiS-OhmukjluAcdTNo18yPm2Y64sfXMSv1GfreVwutZ1A4zg2CYZoIyImezWNK08CxCVh-DFDJg3XrRnV4ZKLYIzY8MXodRx7WErMEi-dUQ_E6o_0XrfVNv8I
+67ZQalwLxKiIMf2klGSuHFBUx-kjN-CPLGggVRpabXBgYuh7PID5LJ1WuGxPY3hBe0bmr-1GBWT05QuAPmAhy-7N9SRPL7WODEq-","widthPx":3024}],"rating":4.5}
+,{"displayName":{"languageCode":"en","text":"Arvalem Caves"},"editorialSummary":{"languageCode":"en","text":"Historic cave dwellings
+ thought to have been carved out of rock in the 6th century."},"formattedAddress":"H23F+267, Rudreshwar Colony, Harvale, Goa 403505,
+ India","photos":[{"authorAttributions":[{"displayName":"Mohammad Rafik","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjU4MM
+_k84v-bgTFe3JV68Qi8BK2QJBJoMsLdiX9rlhXUgWF4KQ2AQ=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/102374788788509093635"}
+],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICA
+gID0m-aIWA&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID0m-aIWA!2e10!4m2!3m1!1s0
+x3bbfbd4e173520a1:0xdcbc7f802ffbdbfc","heightPx":3456,"name":"places/ChIJoSA1F069vzsR_Nv7L4B_vNw/photos/AcnlKN0pS0wcS5-cXf03H_17euDz
+aYttAIntSDurEJwLiMcNr0DQjMOEDNw4_1BNJQdlw7hkPYQCxsGEfuRxTA8wBTYiu1hoMEHN9kDtWQrjrwrLxDoiVxzUP6IAi904aXQxkYNencmD2Y8VzbcvRo-jcIDIX_rd
+9N9LXyTEPwv_q-24VnEOfa7fZTn-qammEVkGU1ToUNiX-LKfxvexAtQU9suXrEnLVgHxxFxdSmt_9P5k2Khmzi6ipM3oNlkAjT0LsSvEGdiRnDQO6-fItt1MZM_6wvjqyR1D
+eU9TJZMnp0qTgs_I5DksdnP7nqQ8o-ixpyEYTHZYWke0KjRBxevbV9m89W3kNeKwd1cF91_1rjlZKsazJKp60-B9sOsrIs0RGeqEoJQJELL7twExXy3in9gp5mhTuOGWPqLh
+HhTegiQAGA","widthPx":4608},{"authorAttributions":[{"displayName":"Priya Singh","photoUri":"https://lh3.googleusercontent.com/a-/ALV
+-UjX7wd2uZtB1msylp0BHlpHagiO3n6j2fEb5ooWuOrK5vBaJywYoLg=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/1033971383576793
+60641"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0
+ogKEICAgICcioTmrgE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICcioTmrgE!2e10!4m
+2!3m1!1s0x3bbfbd4e173520a1:0xdcbc7f802ffbdbfc","heightPx":864,"name":"places/ChIJoSA1F069vzsR_Nv7L4B_vNw/photos/AcnlKN0zLyZ4jKb7Wo2n
+FCssL6UDOh4U8LUxTh2JqFtcdidTPyYXTiqT8ytR3NI82MjuxRh2leRWvetQ8KtcoY7N_6RrLJaLRzRKjzbu1z7Hf9e_oBN-dVKSVZPPcN1LmERG1v3vJqFP1jk04ziCPV3a
+qM3nwQp4ELBTuKPY1Byl-XOHV9rpgPgtEVEcgkLDh9PYvII2ijGw0N6yuA1tCQMmvz9ZKMFWqvVyDYgptRzy-0YVAauh7hu2OUq7OQN1h5UyGdN7Hx8AKaMByFbGVTNXBqmS
+AAqzSY0y1wTp2ZzepQWDQPfezAkEzu2LUay__9jZzPKEwOtfKqNMLXeGokeV90EPZpZpdL8Ja97YDjjIbMpnmFDO1DtazDMksJLrklUYp2YZFxb0lmF3hsmsQaMyLvEPtXYi
+JpLI1Xny23IMLh-ts5u4","widthPx":1152},{"authorAttributions":[{"displayName":"Prachiti Deshpande","photoUri":"https://lh3.googleuserc
+ontent.com/a/ACg8ocJFe9Trbss5QBWohzjruXBZs2XCNy00vZjGr6eeGADGvD1n6w=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/1018
+71873202895048917"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!
+1e10!2sCIHM0ogKEICAgID4yOGFdQ&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID4yOGF
+dQ!2e10!4m2!3m1!1s0x3bbfbd4e173520a1:0xdcbc7f802ffbdbfc","heightPx":3000,"name":"places/ChIJoSA1F069vzsR_Nv7L4B_vNw/photos/AcnlKN2i5
+Y6HIYal63ea9W5E5EpaRFAy6uxq5zEzV5HBj9pAGjGSBfA-6-w76aIXzI2SI6T5gWC09EfefnU2DqaWoZo-PsOPZUYij_YJecxrrCOm9oUX8jmbdeOXG4uGamGAwNc00fOQ5
+QFGCIrRLZI7jPLmEc-bQWO4-BCa2gjlh3aEv5sei9vgI6s-WniqtzIvarq3YDI7G9UBuGgdJbTQ2HCiIjJL02fboktJBD1773Db5LlWOrV_4pPBcfIw2ET8rKA2agLESNY0i
+_INspFUlBRNnekIKf0wV4eQSyUuOS3rbrKukGQlLuD94_ymMXDij_BHHXVMu0YqnrerG22BWd5Yb2tTdSoTYGTSCTIUV6gvDpiXHTdZbZVFZJJmBBe5mhMXySXFpO-RJEIzs
+FQ2_Thc4BAAWN_fUfwLHmH4yxk0-g","widthPx":4000},{"authorAttributions":[{"displayName":"Alok Barman","photoUri":"https://lh3.googleuse
+rcontent.com/a/ACg8ocJxoXGvXcm0mOjmLNegSpm2Sup1D3Me-fYj_rukcM7SYCkuyRE=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/1
+14860189418609672609"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_ke
+y=!1e10!2sCIHM0ogKEICAgICn5b-q6QE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICn
+5b-q6QE!2e10!4m2!3m1!1s0x3bbfbd4e173520a1:0xdcbc7f802ffbdbfc","heightPx":4080,"name":"places/ChIJoSA1F069vzsR_Nv7L4B_vNw/photos/Acnl
+KN2xzzCtWrZDHezi2EWcHB7Qkq8fmYkdViLG8JM5URdDLVl6ADqPVkvXk7S51b5hjsfei4NLKAADERZFzSCfIHdj4jNoRIOHyytXS_AMO7Qx6Y5en4fRifRFyfhVHpbdypxv
+d58VSy9k41t67RpoDPI4je8gXW0fxCPZGcDoEZY8sgtXlafMA2PwSGzEgh0S0q6dLt8ZkPkCL2wwNNlNCuhJg_1y6xm3Kag-M1m0IHR-ltevRkEe1B56wqpWBgDBpUSal6NG
+zE72FZ2QFlLN_fxw-7kZW0Z2cDzqJlaeKmGzZBe2YAGGQ8EnWj4Sv_qo36b2tCD1UxIWP0gceX0wgbqluvSdY2JDapTVaCQdtciwi-nYBEneMPUUEHS1ZbETWfuj5LaF6jkS
+HBWYWbWxpjsgruZFjnDU9RjfFu5e3tc_6o5z","widthPx":2296},{"authorAttributions":[{"displayName":"pallab datta","photoUri":"https://lh3.g
+oogleusercontent.com/a/ACg8ocK3Whq7joffsEQO871-_DK5y8UOfSa_117_VboR-q2URvUpwA=s100-p-k-no-mo","uri":"https://maps.google.com/maps/co
+ntrib/108840344055055141077"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&i
+mage_key=!1e10!2sCIHM0ogKEICAgICk-aDPPw&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEI
+CAgICk-aDPPw!2e10!4m2!3m1!1s0x3bbfbd4e173520a1:0xdcbc7f802ffbdbfc","heightPx":1200,"name":"places/ChIJoSA1F069vzsR_Nv7L4B_vNw/photos
+/AcnlKN2IxmZS-HYYyEquD7Bo5G6QkL8cGW5KQ2R6ETvt8yi8etb2bat6Vq3CD-iC3FqCk7mesl1xd6aa7rfqQGG-PBUHxly8mEAw39DNApeMscQTK_khY0vVKRM-tPBHnjm
+VOxHsuIiLBu_iQIrqCkLJuXl2VEC3HHcWsfl8eaXob4TfJTn5fvpEQj5uZDSt1_XtWBbCDv2_1BhITzdP8Du675n_qCWb94NQkcjVVX_xqnnI3JmvTvV3-Tk8nlmFPg5cWfY
+PxDP1yX2CwsTYccK2lsQRfpLh1YS7sYMB29TsP-Ty4F8r8kP9esa0-xmoXlvOV_IUns7RcxDA9ibdIufRX3_6DO7Q5UD4sk1CUR_yI0HMkD5j144fp2fL8C7t0JJIK7nV3ZD
+yF4fqGpP-d9Vsli2Lw4XERBTwkCzi_efu1uI","widthPx":1600},{"authorAttributions":[{"displayName":"Shibu Andrews","photoUri":"https://lh3.
+googleusercontent.com/a-/ALV-UjWWxAN6b2a2nb8Rm3sHbjrgLv4n4Ytx-la9vKhrUi9aNhJNH1AESg=s100-p-k-no-mo","uri":"https://maps.google.com/m
+aps/contrib/100484732172663695842"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places
+_api&image_key=!1e10!2sCIHM0ogKEICAgICs-NKtKg&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM
+0ogKEICAgICs-NKtKg!2e10!4m2!3m1!1s0x3bbfbd4e173520a1:0xdcbc7f802ffbdbfc","heightPx":1728,"name":"places/ChIJoSA1F069vzsR_Nv7L4B_vNw/
+photos/AcnlKN1Gj7y1ZVyiYfTShwKXxmGyuNR9TNASyWhwRCzspY5A7fScU_bRlvuPkNC1A47LuMn3PThK1-lJR1FREIKDJZ6hr8XN8HdCluSHA8XG7Py3jp3Vge--sGCta
+upXVizy9J4BpRSzOS0v8jNESdOdeC0hCYBFrYVGUYD-jm8D1FeX8BmCg4ff-RWV7LRAZkeWJiAjkkxdtegGeQ8UnWvFDGcgbHp6PcU9yiy68RGVEp9tpfd6AVjVk-WgqswAc
+mVXRsIXo5KHjUSRmnLraXxxr7n9Hf-rtBbKXpDFcYJd6W0sqIK95omfSCNldeQubJkx834iUi5JOssZhRYDRC5z9s5TeDPwM2k9q-GJn41KmvVQ1jZVOFrqAUPyi1hqlKrm_
+Qg3RqSa0JPwUF5KzXu4fXkSYZIs_qnom8sORuQpURwoyA","widthPx":2592},{"authorAttributions":[{"displayName":"Prashanth P","photoUri":"https
+://lh3.googleusercontent.com/a-/ALV-UjVIz5eylGlO7hSwUXS-eya8D-BDtlQBcbxiL6AUehz_GTzqzSMGTA=s100-p-k-no-mo","uri":"https://maps.googl
+e.com/maps/contrib/115388729848862300102"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places
+.places_api&image_key=!1e10!2sCIHM0ogKEICAgICBsY07&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1
+sCIHM0ogKEICAgICBsY07!2e10!4m2!3m1!1s0x3bbfbd4e173520a1:0xdcbc7f802ffbdbfc","heightPx":3024,"name":"places/ChIJoSA1F069vzsR_Nv7L4B_v
+Nw/photos/AcnlKN0YcNSIQj9Kddse2HL9jL2_LXA3ytlxjoLtaf4q1-P8OyJdXeL_4hZT19WZ1IaqcJylXrqYR8z0STeBGMuJN6UNRfhMpg8J26c6p2ezWbqPdx0cHlSNx6
+KFOtaXHr91M4UfSXQwzH1pBefwKfaRcH_idXpe5HD3kEfdp0z-r6SzFQSIfV79YdpnT4HKErkF4VHjaNqoJTnqy-TKqSLq-aE4Q5QiVLVy-ypR6tkbpOVBT27NLE95BZusxV
+DF3Fjqehtn9wjzwHgrubRUGDencDvCAQKt5DWZulG7fMvX6daoiiwUnTTy6h2tlveWSQmGUU4OadRb21HmSazyAuJq0-d3ohYDXqfWNdnKCcAF2x6lik77byqnzQqdYUf0iv
+exTfUBNyufHdH1HGanbBOORVmvpMpa3CBKtjPUOzw","widthPx":4032},{"authorAttributions":[{"displayName":"krishna singh bhadauria","photoUri
+":"https://lh3.googleusercontent.com/a-/ALV-UjVNiGhPIBdmvd8xmKafMZmoy-MbhUSsnMfSmR5E3nekBxklc0I=s100-p-k-no-mo","uri":"https://maps.
+google.com/maps/contrib/111431536308105899660"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_p
+laces.places_api&image_key=!1e10!2sCIHM0ogKEICAgMCg1v3MuQE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1
+e2!3m2!1sCIHM0ogKEICAgMCg1v3MuQE!2e10!4m2!3m1!1s0x3bbfbd4e173520a1:0xdcbc7f802ffbdbfc","heightPx":1152,"name":"places/ChIJoSA1F069vz
+sR_Nv7L4B_vNw/photos/AcnlKN06341KlzIPqAQCjJncS0ybkWL18WKc58Fnx0xwQLP4nFdVcAy52ZUNZQ2G3TjYM-EAtvqmsS8AJZH_HpvZMN0shyaA_aIppUE2Sb1tXCU
+DtOjHf1N6oFdHR7DwWsKjhXqrsMwb7R0bD1JxGYrdiAuixcD7pqX9WOOboAFjIRQJ6cZr6X-o9WHM6KZq17cnr-Uu5RAGHLSpqW1wlh4WRiosGJmq5iw0qdWrlt9N9oNpRZx
+WSiKWUMDlzYq8zLj5pvqBeWr-ywcF9i0X8_YZaPQwYo7F8k3E6GZLJgPUspKcM4U4_GzHAlO_u-7NroKbREaRQYM0LmYoCpTAXEvRcJBrQZaXEmdhKCWwcXGZOzLr_tmi2ax
+FKm7W-xjz8fsNd2W6YV2gTq8sY_58l8sG7mtgpvgcaCQUXlX7A7c3QT-LksPM","widthPx":864},{"authorAttributions":[{"displayName":"Dr Rajesh Kumar
+ Singh","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVOhm2N1N2rY1dEfksZAsWagzui4URWOHMzBBKVX6Ei0pX6lsy7=s100-p-k-no-mo","u
+ri":"https://maps.google.com/maps/contrib/110771255381297693422"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb
+_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICKqMiKugE&hl=en-US","googleMapsUri":"https://www.google.com/maps/
+place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICKqMiKugE!2e10!4m2!3m1!1s0x3bbfbd4e173520a1:0xdcbc7f802ffbdbfc","heightPx":3072,"name":"pla
+ces/ChIJoSA1F069vzsR_Nv7L4B_vNw/photos/AcnlKN3PLCgYRgRSucc7rdRBCZLC5W5dDfmNFZPf7mVKiDTZz8ffJQV6BLjfQSQJsz3Zsu15hz7EroxfU2xujObuOXbbK
+SE6xWPlSKhF2cZCnOGNOomwp5fluzuPXKsYkYkR0QTyPcLnEw1xhmiQeE1ngcYf_2R1FxgpjL7jXemIqFoQUy4x1deRNy5xaFB0ndr7-qJAaxq7xgWIX-sa3k3WF4DY-OX2k
+HYmPqGPOq_wV_j6I2hpF37BKjR4eBqThhzfow0S0gGlEXPUkQdNnqAQOIrtPU4zwJ4maNkPPIVtjyCfne5DS-pB2i50yO8lKPdcykOvMW5CQERJopvYz-5LCjIFl-vXGYqsT
+zZ3bVajvPu3cIMo1GrxH0xdDt0-wBBJJTN8uMnQsbVMFB8OQKiLOUVT84qmwOvHEU7MLb5GRdLBHnyh","widthPx":4096},{"authorAttributions":[{"displayNam
+e":"Ramesh Kempanna","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjX2JcTtun87zR8TCvULFb3Cq2VDAHcwivBUw7pZzxVEggZ1Yb7liA=s10
+0-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/117219861272978807993"}],"flagContentUri":"https://www.google.com/local/ima
+gery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICM0umUcA&hl=en-US","googleMapsUri":"https://www.go
+ogle.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICM0umUcA!2e10!4m2!3m1!1s0x3bbfbd4e173520a1:0xdcbc7f802ffbdbfc","heightPx":261
+0,"name":"places/ChIJoSA1F069vzsR_Nv7L4B_vNw/photos/AcnlKN1XJdmiSJM1MmRRIl45LkxuXK9oT004FynEGwzAY9ANRLPacxyJCDnsU35XVCYsi4Pmny3fifAv
+IMAEFgJmKF6CuHoc4e0d9P3VHPKVXLdmeJaMiIGc3tGuUV6cqzLrr7PqEOucmK7jxClrZ6f5WIiyejGRfjgp59VFDLhI4FyyT4N7lJ55aETSrzQy3nCwHGNUIoMigkZOnuLo
+w6zfpQZjCjjrQhw_1ch2DvFCK4pZyCg-dLBgx6QJOvNKIzfJT8KGSnq6D-ksjtyyabxj6md9UqadlOirNXixeiT2c4u7G9aMJIu6H7kVBb0CkSwVrogaQOeak9RQ_1JoXWxE
+EAhfvkokJhQ5Qn8D8UWVrjsCXjir1Wweauy6FCkKNCHVxOnYzgcrZAnpuD-rOrgi5l39ddEeXZoqdn6XCyt-vZ7nIQ","widthPx":4640}],"rating":4.1},{"display
+Name":{"languageCode":"en","text":"Basilica of Bom Jesus"},"editorialSummary":{"languageCode":"en","text":"Completed in 1605, this B
+aroque Catholic church contains the tomb of Saint Francis Xavier."},"formattedAddress":"Old Goa Road, गोआ वेळ, Goa 403402, India","pho
+tos":[{"authorAttributions":[{"displayName":"Allister Paul","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjWsQtYeGApEf0Zn_U0
+9Pz9j2aXzErGoo-6tZ9LNMzKDYAKJAsPs=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/110602947927567975100"}],"flagContentU
+ri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICt1NiC3wE&hl=
+en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICt1NiC3wE!2e10!4m2!3m1!1s0x3bbfbef2b99b
+0289:0x1e8056689f15a7b8","heightPx":4800,"name":"places/ChIJiQKbufK-vzsRuKcVn2hWgB4/photos/AcnlKN3_TfvGX29Fux8aT3dEJyVpiSq3jmwbj7hma
+PuN0Tdx7iZWFll-e-0i1lY1r-7b2HSy3RCbExw31NoDXSswcfhVwt0pQfjuOrtHNtJz3265E1H0bKWRUC7SRY5E_Am1MKVfg9gB5SNZ3ts3OXSx7lURrLnL4GfMx6Z6q60yP
+ucCL-Ye3kPekkwzR5F6aHwdUr09Nh6P1pO2_Nlzcg7VnCYNh4F68aIkB1czLG1KdXsbIVaZe6T8MfFLq7P_CzEeltjwUv0wKm-MgfJpoGIZ7IIGJ6kox2DU21wnTZI27dBOQ
+DB71rb3IO_yVBgw4SLCNRG9-AjlS5M01YuPJAdrUZdgjPXkMvnfjy8P2SanGF2YhcIxPc1f3ZqOR5mbTGmsAbQteua-vQiBrUXD771XdLsdBqoj4qWIDnn7hfBtP71v3abV"
+,"widthPx":3600},{"authorAttributions":[{"displayName":"Abhay Kothewar","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjXTfvY
+5GTSC4wvDo42TRqprciSRwDu7o5O0-kWFsX6Enx17as1b=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/100865317923230728772"}],"
+flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIABIhCH9-NlOnH
+9YReJJNaOY525&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhCH9-NlOnH9YReJJNaOY525!2e10!4m
+2!3m1!1s0x3bbfbef2b99b0289:0x1e8056689f15a7b8","heightPx":3072,"name":"places/ChIJiQKbufK-vzsRuKcVn2hWgB4/photos/AcnlKN2k55crEIIKaZN
+fH-32nsY_rE2dH4mgTUZf2kJzyEzheYT14bvw-YZSlb2vNn5Pp2gPKLtbJLAxCshjo6qPnrgKyawI8vTdfhs8hoJ0b2rA15DVVEbJRtrMdecEoOy14mcZe2b2mFZrRRA_Jxt
+1BdKUNb5-kaKFH4-L9en6GrqeBPTC47oktoPNng8guHVU08MNBb016dQuvm31UCDI1VtTOFh9294OMnF5pnPayKbEGV1IkrVGNwyjeMJaAbPJEc6N3IOrOCnjxvIfSrZ3kXr
+pV4mc8J6tfxV9u2MI7xjP6pKg2cAgSfPEW-ANgh694KjskquSRlsI2THtxrOLYgmT7Tdb7qS1_mHjz8g3XoTvszz1H5jw0fnoV8nOLjSA3xepjcgy6b-t55zIWsvb672MmEH
+hacpMCNBwFUci_bdME8xl7_ZrXJsuKjOzQw","widthPx":4096},{"authorAttributions":[{"displayName":"Mohit Rajput","photoUri":"https://lh3.go
+ogleusercontent.com/a-/ALV-UjVpvHV6ZFgLQTM86tF3L8WC75cXavQBzwaqjpRCoPjghIu5JLQ=s100-p-k-no-mo","uri":"https://maps.google.com/maps/c
+ontrib/102788238576962094590"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&
+image_key=!1e10!2sCIHM0ogKEICAgICszeiCHw&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKE
+ICAgICszeiCHw!2e10!4m2!3m1!1s0x3bbfbef2b99b0289:0x1e8056689f15a7b8","heightPx":452,"name":"places/ChIJiQKbufK-vzsRuKcVn2hWgB4/photos
+/AcnlKN0yYDkMPr9G-_E7xrpxAmj7F6l7_uVdsyuPDloyjgRMSkieoeY4t_NS8VhzuRrA0KLwEz42LkbR5yu859sDAWkDvDl-H1XeNk7HyYdmnfuBdHNsObsFvlslf_Kylax
+GgroUDxsXiwICnnPwVxFFZv3xxSwQUv-nqboK4SsRzV5wwXfiXoa_fEekOcZ9Lzhd5e9lvRmZLlmhwzn6UhNLaC0YOPronfxsyEI6Ctsuis-JDVN8sLljC4153SagmxHymYa
+JSHTFAemq1stFgkNYdmwM7UGKYFuklSFg66xpeM7Q-f2-pVJnPrGuscz17lV2xXrUiP1hnKrfgwl9RQE_o_lvJxDRInytN0zyPw7fYwv0dFKPWmKcx8UeIdTBYFnQzf3lFbM
+cufm-YtSM3l-ZcVsgLbg_qdJJOwBAIC5pRmvjDw","widthPx":678},{"authorAttributions":[{"displayName":"ananda bose","photoUri":"https://lh3.
+googleusercontent.com/a-/ALV-UjVcLwJhMBkyZYjcaN50hJcCc-pjoL1aoqSCvJoAls2uTcap0B0=s100-p-k-no-mo","uri":"https://maps.google.com/maps
+/contrib/102746772131243191924"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_ap
+i&image_key=!1e10!2sCIHM0ogKEICAgIC1ktjzHg&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0og
+KEICAgIC1ktjzHg!2e10!4m2!3m1!1s0x3bbfbef2b99b0289:0x1e8056689f15a7b8","heightPx":4032,"name":"places/ChIJiQKbufK-vzsRuKcVn2hWgB4/pho
+tos/AcnlKN0jE599fN7suiApTSDs4_p9n2HaTQCHf_PXllxMGTczbhhocicTVWwlj40eguyxYh6r4fdFvgUJGO6r-14MbO2aYZlDW9tLcRdqaciXWcSUrewWoKXJ8lR6WwO9
+mNQrb3APWt-Hb2wJKQH4B6TYzvY1B82Pdcc9qG6qAldp5RggF0V4GWfyki7xze5M6Rau6siF7euXBV8EwudMCM2at8_KFGI3YVcbp9aDu55xFNwdBmzcSQ40wWwR-FNRF0jV
+svv5vRb-UFMtRpGNj3GDddxWqVCc_hAuhWUIPYVGH1xHbSrrbfYT7R8y6sRc2UVbS4QPkOszg5VEYqibs1v7bUGS9oWRi1-KdGSL1R4u9ePCsmOpbcDALSy3eLFdsH8_9D5L
+mOuAJ9M9Zgxo3khwBRadfq7LOn_31bgm_pzKEbA","widthPx":3024},{"authorAttributions":[{"displayName":"Syam Prakash","photoUri":"https://lh
+3.googleusercontent.com/a-/ALV-UjW0uQshSCa0pCW-nyhs6HiJH5WeR011Bk4brG3pgx7rtTiucBNoAA=s100-p-k-no-mo","uri":"https://maps.google.com
+/maps/contrib/101182983357074730293"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.plac
+es_api&image_key=!1e10!2sCIHM0ogKEICAgICexKKC6QE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sC
+IHM0ogKEICAgICexKKC6QE!2e10!4m2!3m1!1s0x3bbfbef2b99b0289:0x1e8056689f15a7b8","heightPx":4032,"name":"places/ChIJiQKbufK-vzsRuKcVn2hW
+gB4/photos/AcnlKN3yD8uXjn4zJxkGOrC0m8WK9kjPTnBIbfNzp6QZYT_JoOD-k_RAPNNjgEaten5xwz7YvIqY4gZfvtlfEFPtiQoTb1MHICQib-coq5nP5jdyVHfyeAxHQ
+vvsDiK28M0RCjlvn0z2C9Ku5yKVw_OnfsEXUia0TUUQx7IzLt7LMdsR1wvhR_8MinLc9f6dPey_jFuA5ndVxP2YRk6JfNd8v6qxbcIF7Qzf5Krzhu5le0C_pBqaBWYtjN49M
+jIPMkfZWWu1PtId1Qzky6RXn6oH332Kvm8PGs_YeQcIfkUue03MLF5sNhV66sJYZNZ04UL831Wp1KR0qMaRY31xR8P5RcTaKfcBVddxr5BkSjYDQQTmH8RyDGXCKiMGwseIF
+5g4VjgA3l7M59iZfaTXmLoJT646xElLMTJPq9LMrbXUie0aYFCb","widthPx":3024},{"authorAttributions":[{"displayName":"Mahanth Raksha","photoUr
+i":"https://lh3.googleusercontent.com/a-/ALV-UjVgTT-P5ZG5kEgR2kmGfsXsVj8lV_RhxtNtshlryMLURZ2XoWg=s100-p-k-no-mo","uri":"https://maps
+.google.com/maps/contrib/108738997454678885290"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_
+places.places_api&image_key=!1e10!2sCIABIhCPnLBbXElif1nbFGlAL9kr&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=
+!3m4!1e2!3m2!1sCIABIhCPnLBbXElif1nbFGlAL9kr!2e10!4m2!3m1!1s0x3bbfbef2b99b0289:0x1e8056689f15a7b8","heightPx":2592,"name":"places/ChI
+JiQKbufK-vzsRuKcVn2hWgB4/photos/AcnlKN0eXiKki2TgrtornW0InNNovY8TPuziXzk830Y5lRqHMzaaEC75BG_hWbWQTHvveQoxzwd6HGf9O2a4jVGP5M3ioMCNPddi
+GZSeJgEfJLSB6uWTp2vGdMgGfKL_ac2sodDSBzvP0ZlPAYZPew5Ni63e3B1eNeakefvc5ZhdzQFtEuJEJNBNDuXKnCeeK3qtvXuHbdaClDDxggDeSryaC80tC2yumUJk2zRU
+zwR97HYm8ymR1r-Ep8K03NA00CxDJtUwmHVj-0i9rz4Xj_Ng05utrO1EtVbiitZMotaFJclp688cOHS6tZXqCozvobM7z_Tq-oOJ4SexfUtxsPcpc32zgZUULyTta5V2HxMe
+vKxhecBcm9LYWRFSWKMHk9uUpxohPGWAhDHkjI-fPAPStg9Zx7-YVSwqStZ-NZsQRKaCO66saA5vfbynKhDwYmjB","widthPx":4608},{"authorAttributions":[{"d
+isplayName":"Srikanth Kanam","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjWsBfRaUCtcBcbpsIARrWcUOFNkz_QDO0Nm4X0VWkxdSVZJ6N
+xGQg=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/104351135419400933967"}],"flagContentUri":"https://www.google.com/l
+ocal/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDxzf-_wwE&hl=en-US","googleMapsUri":"https
+://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDxzf-_wwE!2e10!4m2!3m1!1s0x3bbfbef2b99b0289:0x1e8056689f15a7b8","hei
+ghtPx":2874,"name":"places/ChIJiQKbufK-vzsRuKcVn2hWgB4/photos/AcnlKN19MygMh3o8IEdCZnOaHVjh6e6rqHnMJV-PZOd8ZMbL9feWyIo7q2l25aAmJuAB-R
+NZ0MNI9OToU8FfdEzuxqAnCdwE5m2-yjrscDAkmrBuYvmbZY91XATzd88MUPoJlS0TwHR5XgkAmdzycQvOrQHkJs7YqxW_AOQPgXBdd8tJwU17VTZatBhir8b-paanqzM8rG
+msbkPurfozGwXUSv-4suYeHINiMjuxeMxA0YsTThsgTOK8rLHZcNQOR6iJVAJKzQZ-9BRlbon--n_cKIBxoTQk2CBznkP5jjnVklyuG5aT2WovILWFbbMMAVQeJZ4HMifaLE
+NDkz-A84jFrqkcDQyi1QvW0HxBuz6ay5diTf3Nori2WBwyPXT5t1HvDe3J98kiMt3Au6C__0I2p4cphH0M3hENFuIMcmWJR5_LGx6q","widthPx":3836},{"authorAttr
+ibutions":[{"displayName":"rakesh sharma","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjWAFzEkARoCo6zkmXPyYlB_-c51hl1L5KhRa
+kqKW7zpuWl4HjvM=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/115105050761112675096"}],"flagContentUri":"https://www.g
+oogle.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIABIhDNmCJuedU8OY1gf_J37wta&hl=en-US","googl
+eMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhDNmCJuedU8OY1gf_J37wta!2e10!4m2!3m1!1s0x3bbfbef2b99b0289:0x1
+e8056689f15a7b8","heightPx":4032,"name":"places/ChIJiQKbufK-vzsRuKcVn2hWgB4/photos/AcnlKN2SW3lUTungBf2mDGOD2TUEmsNDe-WzAfJ41WXfXBZ87
+jyWPgkqgCVv3NtwGR8vRZl8GSrHGR01kD8qcTB-VwbgOXNe9H7k1waIpox-tM3VajUbOwtArDNu4w_fPiz-xZOuIeoM6GtTQGhjNUxmBnyQV2X4R6wsinQIvyiDQ0xEkPYlk
+pOQG4w5CjZyLc5BrRfYlRzhTh4uWDV40t3UD3oL4uY6xiaS4ZlEewOVOHHKcX77DsPpsMtS7YcZxLv6cs2pvIyvRBMnduCHROMI_Bj043A0tUNYFcclzzOhTI_wSxZ02GoHO
+lEOSXA8Csm3abyTccYcXO1kCiPG4d-ia3MxncKap99LQojwcWoUZqz7NXfO05yK_r-tmrcgX9ELieYC0CWGsJUtGM5tLgPceurEatVS7Z4VXIzgDnkI7C9NW4JbRCVdAtXWS
+UYO4g","widthPx":3024},{"authorAttributions":[{"displayName":"Rachit Pathak","photoUri":"https://lh3.googleusercontent.com/a-/ALV-Uj
+Xgf1mKT8qRJw07GWHzu7VXr7mnm_XV_6cokuNcgOeUDrT9wiMeIw=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/1004776720242451778
+81"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogK
+EICAgIDEqqCpzwE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDEqqCpzwE!2e10!4m2!3
+m1!1s0x3bbfbef2b99b0289:0x1e8056689f15a7b8","heightPx":3024,"name":"places/ChIJiQKbufK-vzsRuKcVn2hWgB4/photos/AcnlKN2T9-luGQk5r1GDhT
+4_FnwEE-goGoicT76ZxUMH5vVisFZe8NJO8P1PLQM09JvooMu1pLkIJ8W9kXk1MDtkt4SXfx5ymjrXsr3C5IpD2Rdl5ilRf-oxiJpp9jZzN_C5mswi2vw6T3PTnvB_WZs9xH
+TC2N5rLx_TI5IkgW_ZsRMqpOA9Ae1Z0jQBXZKpZwDW5D_7rNUeovxysntoU10LZ5I5umGsKy3fpp6oj_iIOLvOh2bcJsgND5MXvENIBeY5uR-bNjNir3o9Vvwxq9BNXuEOL9
+nORBOHgmc2MS94XqNNifRSXQ_vIK3GYU-q4pbPTIkRUq5AQnAygxxtzlejBZ4qGL198u9r-d36MJvqqp3pHsTei4a6NXrxoZsj6rTFpTlgaCZCdqSI9mireowsY9JOEpDNiQ
+VSO2EV0kjocAX8Nrfh","widthPx":4032},{"authorAttributions":[{"displayName":"Swapnil Pandit","photoUri":"https://lh3.googleusercontent
+.com/a-/ALV-UjUSJTN8ZOCWgX49kssSG3GdWaw4RJvtSsPWWJxUDjCj-z666He6jA=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/11119
+9301778152340953"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1
+e10!2sCIHM0ogKEICAgICc7rzgjwE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICc7rzg
+jwE!2e10!4m2!3m1!1s0x3bbfbef2b99b0289:0x1e8056689f15a7b8","heightPx":3480,"name":"places/ChIJiQKbufK-vzsRuKcVn2hWgB4/photos/AcnlKN1u
+KUf-RU3Uq-R2ayVKM0j2eTitHfgmBKkPzlED-WLLmzKBiVOJzQ5XGX0orHzMf9gfwR6MPI2GvP11gkRVy6hdTrNTWfAF2ZrEjFgFfxZEvjOdlcB9_P8y6SDcI6Bv6ynoEzuM
+CkV8Fmbbqd0UbQ4KcUjSAQAhw3Y49QCD9WgHmodfK8W4QEalrwCKxGJ2_I_TsJPFmP0jdED2zOfWaLroqFC0K7Jd1BF_Fkh5N4E3cio-cFNePSixFgjbI8hLk3YYsnrEOsHH
+28oXRPvTa1tfe9ZtSJoqr3Qm6C1fic7O6h6Krxf0FmFQco-6ZLPG0nNnM06-ULFlgm0BLpxk3tBJneWqNonR5oDKn6S4lhwDqPe2M6BlvyrfEH2OObVsjQcQIpCSMV9ira4R
+0XrMRJx34SxGFvjROrBCqpr6-fmy9KI","widthPx":4640}],"rating":4.5},{"displayName":{"languageCode":"en","text":"Candolim Beach"},"editor
+ialSummary":{"languageCode":"en","text":"Sunset views & parasailing on a sandy shore with shacks for beer & seafood, plus a nearby m
+arket."},"formattedAddress":"Candolim Beach Rd, Candolim, Goa 403515, India","photos":[{"authorAttributions":[{"displayName":"Abhiji
+t Kalekar (Abhi)","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUYF7UJk3DlgP8bCppluJAOd1AAObCxcKBYLmP8LW1mExEQCtA=s100-p-k-
+no-mo","uri":"https://maps.google.com/maps/contrib/103791432907073622288"}],"flagContentUri":"https://www.google.com/local/imagery/r
+eport/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIC1qIOaqgE&hl=en-US","googleMapsUri":"https://www.google.
+com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC1qIOaqgE!2e10!4m2!3m1!1s0x3bbfc13c227bd1bf:0xfa2f8c6c1efa4aef","heightPx":452,"na
+me":"places/ChIJv9F7IjzBvzsR70r6HmyML_o/photos/AcnlKN0_ppcBKUs498WQNzVRcoJ42rCKXF8511jl0OOCbHD8aEQ5LQ2WPnYna2sLg7YbG_C_Td5f7vj2tLxBd
+YxayJwu0LIlm0kkn3UF5Ii6pFeei1I6b3T7Xp3kyHiiLJ2DoWTR9drhSs93PWfiydERqdCr8K2Gs52jd2fu5St9s4-Q36x_oe9f8MfEv8eGf0vZvuwFKvjBedMtD_XpNP_Ns
+V1ToI13Cb0HCkySijne-sRWebR0ZBP2eKL5khpgNgI0VFlK6IaCQiQ-zkAUc2rOdIE3i0sTd5GeCFyhSg7_LnhxR_2cuu3ESphWaMQmsxz8-mMAdNSRlB6SL6ucJlzsqofdv
+io8HBMdWGCMio9MbFyYlnN8x7PH1T26xt1DFYUgg5miG6erMV4FjzYxzww6HjuQmTeXeCWv9sTDN27XvOkrM7Nq","widthPx":678},{"authorAttributions":[{"dis
+playName":"nishant (nish)","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUEgS4G_Ie1mII22jjdEj6u7SQQ5YM37TrVvtg76zcb3fDFerqi
+=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/115769847483055159773"}],"flagContentUri":"https://www.google.com/local
+/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDBt56k6gE&hl=en-US","googleMapsUri":"https://w
+ww.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDBt56k6gE!2e10!4m2!3m1!1s0x3bbfc13c227bd1bf:0xfa2f8c6c1efa4aef","heightP
+x":4608,"name":"places/ChIJv9F7IjzBvzsR70r6HmyML_o/photos/AcnlKN0EBTLyrMZpyltArLHcYDE9aLzlbuNc5oK4qfvuCyqxAzYZ-v3lAws8OZZEFk2_RRPBGb
+XXPgACSwrGBy5YQB8fHTIIAONXWan2CcjgyBvQmpmvBxty0lXAhopsghtfzzlOEKH-DoPO7rYNksBcKWD7GL-f_ZXkQwcOZL2mS9XrwdLr1r7QPfohIKAuKwbd1iLmEx3aX_
+km9hxdu-v1DYxMzlKfGCsSL5VFP_0jMlVIeFMK0LM4jqqhuT_t_s8ZIJT3cPQvM5vUoPmDHcXzPVZFWlMTNrfvJ0xLuE1d_pzPnA24Cdx0QKLXNqAXlYYcHKT3EwdWOrfQkc
+rBPdh4ZnLVAsyAppxwi0JZmD3tqbOtVesoayCH33Mwy4G18EDz-aaHwgFX6fLKkufkOMB1il0C9YpjpHieiSiK9QMSS740PAQ","widthPx":3456},{"authorAttributi
+ons":[{"displayName":"Vijay Kumar","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjXez6NKiw2MPzN8_cynWy5z1YwVudliKsAhE96SFdU2
+ZAMTeRb6=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/112651265410310687651"}],"flagContentUri":"https://www.google.c
+om/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIChgJmRbw&hl=en-US","googleMapsUri":"ht
+tps://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIChgJmRbw!2e10!4m2!3m1!1s0x3bbfc13c227bd1bf:0xfa2f8c6c1efa4aef","h
+eightPx":1280,"name":"places/ChIJv9F7IjzBvzsR70r6HmyML_o/photos/AcnlKN2VZtT3Hlmv75s2IdAOGJhWVfOO2_bLnlRa87nFPJ1D0RGdiv5RFUtBL_-wqvv3
+hsV33CCEkSSgd-xy-9GtQzhjEmEZuYIoKVft1sadpblaGokhRKMyHuP4-P9HvP9wQBp3CSnxKC68cGBJ6E2SueYHdud0p16fi8ibYTWeGhyldutr6mEznbStapjrOXmgyrFz
+yR6FZCB9D2PU4fyZfyLvwX2VOtD2lyNXcDrs1DBT1H4L_Nh4MdeQa6qWEcXGrrbg9cdxjGgwglkFNnPBpHaP4oauqQrnceZxiNs02H78DPzYtlfYiG_DlJnQBhQt9lChQJx7
+NMtue-gCuPQaMxTp3YcrF_wanCvWh4m7FOjfnBGizOlVX81qo0T9u0b60vkgsGmB1qahohTpGU0H3DpB0kSwt76tTcxSLoaow1w","widthPx":576},{"authorAttribut
+ions":[{"displayName":"Pratyush Srivastava","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjWgeBUOdRru-7RjW3BNFmqysDi0RjrAA7r
+v99hntzO7RzEEydE5xA=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/113077030981677995764"}],"flagContentUri":"https://w
+ww.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICl-smL4AE&hl=en-US","google
+MapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICl-smL4AE!2e10!4m2!3m1!1s0x3bbfc13c227bd1bf:0xfa2f8c6
+c1efa4aef","heightPx":3060,"name":"places/ChIJv9F7IjzBvzsR70r6HmyML_o/photos/AcnlKN19IMu2ls22Z6lzClSdYirA13GhLpP4fai3BmWuIcrmkLxgsRx
+5RMQAfKkTueVvuzuD85tnzxveW7K0n9z_SL5QK10iUgEljUBFoAh4WzGkIdtmExwitvGTkP9C4-Epx5gNpZlEr21vTZNgQ8k7pyWA0J5qsS4v_FVDgVrs7tyQXdUa12b-j8b
+qGG9s8B6YXdhetR-23c6TfgYr-CFliJ0xIBex6QmDTHnF7F_xLCoLntiAW6L_FXhOFa-rEH6DoDD3xOnwHXaBZaMAdC-w3wYVKZkLo1YWztzN1z2s9WNpGjAiMKZ8pLwBkXQ
+vX-MseQVNb4yg26-czArvAplZPKWsPa1S_Y7YeyStZqDdcsxHigluZkjCqPwm2ioG79A08AaRfoU5VUbr-wPR4NXZkeQlDuj9TDbKcseitkUm5wcyvps","widthPx":4080
+},{"authorAttributions":[{"displayName":"a m","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjVFCt2Q4rjX0xCiOlaccbvX4zeg4JhdS
+9NU2cjwkPcaM64P44Qb=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/116221407201620744337"}],"flagContentUri":"https://w
+ww.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICRg_XKAw&hl=en-US","googleM
+apsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICRg_XKAw!2e10!4m2!3m1!1s0x3bbfc13c227bd1bf:0xfa2f8c6c1
+efa4aef","heightPx":2268,"name":"places/ChIJv9F7IjzBvzsR70r6HmyML_o/photos/AcnlKN17B0eYIHgb817rX-AJkerK9tG2NKpNIjCky7L-XpLAJVINr-0E7
+bKnc8SqtOXzmFl1jOckGH3Gle9IEVIizeOgqGVX0F4VbMQL59daktMss3bGeampvD6XJtvMMoUKwUzYNb9IcKmHMGw2Mnj6hb16JP8276ROda2eYMQXkh76VO2gPmiNyLaMH
+NptTNKAvEvI1skfa_niIFTqvPKjPi3Fcr3D7LnBCft8ciArz6_oEsEwVu5VB_z03C817rF8yuM2MP-ynRSApIDRt_3jGZadpZmXXsYWc3d2zD3bb-KseUlyrGGEuVYmwklHP
+GlDr3ekhuClbQ7ovxU9Ae0U1ooa39YoDo1rCfkR_LY38FRD5Fb-cMrLo5mwFHzm1rVsyRbmxNGIgWbg_dkxiZ0mf71EjDAm4qQAxcX27hnyz-A","widthPx":4032},{"au
+thorAttributions":[{"displayName":"Troyden Prem lobo","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUcY_UtlpGCmeiurnHji0Hre
+m_dJx0vy6v1pq6aG7V5ibsMchyEWQ=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/108542241122038131506"}],"flagContentUri":
+"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIABIhAylKC7VtDxRe2y4K3_85vZ&hl
+=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhAylKC7VtDxRe2y4K3_85vZ!2e10!4m2!3m1!1s0x3bbfc1
+3c227bd1bf:0xfa2f8c6c1efa4aef","heightPx":3600,"name":"places/ChIJv9F7IjzBvzsR70r6HmyML_o/photos/AcnlKN2ZdtwFJdINn3c29OfRbBUa65jgrMh
+OgrvpA9-sc6hQgqW6UsGBK-fU0NpVF4eGTsfH1ZHq6tvFl1pZk6EfQItP740zT3gSqoCD9d-PYTgS1e2j6r4jWEtEDCZ3gIa0-t-jP5PuQiG9GgCl8mZ69hIwG89MFVEdKxa
+33kZp5PJp7Kx9ySvyvJ1Poei4JGskMDtrZT7GDdfLcVH1dk4cuhZ4Zmqh20p6IzmlenmM7Z8eP3wVwevpZcadR3nEsLeAa-NNpjqU3VYWN-Mymbi8EWN-fNMlk9iycZAojpo
+q-wEBebv4NftLYn8mwBFs4Y5azN4iA1kWs69-yktrnV_ozAqZ0QBrKwLquqe_GTrmLxxGLPFMXq50XK41Y6N6v4qxN0AkA63GUglBXF1glvdRRwnk98AyoQoSZPA4m3sGikk
+KHkrSA5BIVIfRx2S6Qw","widthPx":4800},{"authorAttributions":[{"displayName":"gaurav raghuvanshi","photoUri":"https://lh3.googleuserco
+ntent.com/a/ACg8ocLVOfQ6XusiOT8TZ3_Fybwf63oMra0_ovaD90aYCO0-nO8_Wg=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/11504
+1265444137340026"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1
+e10!2sCIHM0ogKEICAgID7rK6veA&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID7rK6ve
+A!2e10!4m2!3m1!1s0x3bbfc13c227bd1bf:0xfa2f8c6c1efa4aef","heightPx":588,"name":"places/ChIJv9F7IjzBvzsR70r6HmyML_o/photos/AcnlKN1FU3s
+Byb-n4M-2buIE-xTC-11ahBbzJnjTObnH6PqbspgW-dh84zu5JfUm3yGPnBxOVDOYrVsiggTTa1OX6SIe629v_D-f85MWknIxj4uJq_Ar4IgolokYVzLIHIayziszap7KvRj
+NMaoL-8ift0eFGc950QcR6r0AzMA5E9rVpHimE3uExGyKCvQUq2EScEmhKIE3qTkrGIf3PTWV6N85xhkefyET5R56REHvMjgVDlJV_cSXoAHT3k_8R0qqAOvnZpGchp8ND3i
+g7TMd8EAnD8xgrK5O9_VJwyXEavB-pC1FHx1Yksf-Ur1Gbzl1HmSFNlZEwOu2f5jPYGGCKLKwCJU3FrIokMMBLE_Vm25xHH1ip90uFxSqjYcPiF-EBNgKOHgT5tnCwB7_MMm
+Py6TxIlsyflmQKXJDwnWMbYC02Q","widthPx":967},{"authorAttributions":[{"displayName":"Soumendu Khan","photoUri":"https://lh3.googleuser
+content.com/a-/ALV-UjUbWdRIx9nLlFcD7AHEKdCltJ_DfAkV_mhnmAubEoIEoG6Ez7lXfg=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contri
+b/105385909665180693093"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image
+_key=!1e10!2sCIHM0ogKEICAgICN9qf8dw&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgI
+CN9qf8dw!2e10!4m2!3m1!1s0x3bbfc13c227bd1bf:0xfa2f8c6c1efa4aef","heightPx":3000,"name":"places/ChIJv9F7IjzBvzsR70r6HmyML_o/photos/Acn
+lKN0aK3m5MMGcM8Hi5BIAAVx0__PkYdWSmNdelcVDxcWX3mf-2mc7ppuIiNEA1uOSlwhVUKuK4sS9RjfjqGeOQP0Q-2MiUV8nHz9R5SSKnkwT6WzEiKdIBvLDtHPvZR8s-7t
+vRlNvbr4ZeM6_JDXf08yaI-9AbB9neS-W4M82GQteG8o6qVHHLiBucKtwyCcIb2CCDc_1RG716EPAueCpblzNf-x38Kb4Gy2AH2ZUf_2-eoPQBBZVpJmY9e9sRP4zlw11gaR
+S09qRhfAz_66jYo_qLmMcVsNqhKNr17oDz-uZklODZeBOhoxRGt7cdcghCkbH85AKk5GFcp2awqOOp8EjLQivYPsnLH8Hy4ne-C-R3fDRPjGPDZCR-nLvZaX3k8ut3hVdgxX
+F9NeOoz_bmKvd0BK8AhW2fnVbVRKMiruiJw","widthPx":4000},{"authorAttributions":[{"displayName":"Uday Bhangale","photoUri":"https://lh3.g
+oogleusercontent.com/a-/ALV-UjX0FxNfJhryY9o8uGULijK0fDSg6HZSx8d6JcoMQWwwHpIFanPmjw=s100-p-k-no-mo","uri":"https://maps.google.com/ma
+ps/contrib/115745033866819964294"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_
+api&image_key=!1e10!2sCIHM0ogKEICAgIDW2rH3IA&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0
+ogKEICAgIDW2rH3IA!2e10!4m2!3m1!1s0x3bbfc13c227bd1bf:0xfa2f8c6c1efa4aef","heightPx":4800,"name":"places/ChIJv9F7IjzBvzsR70r6HmyML_o/p
+hotos/AcnlKN0JTo7jS4KUtvKcaEzCDVXlTLh899xJskh6f8khPbAjOeCQgrxGvrfcE-fLZliXkZdb6eDJZym3D4MvRyiGziz-zXjTBS-TyGeuIndPKxNCbuJOGIz4CjsG_A
+qKTXQ6Tvp751tcJmURSpBwFrYWNiYm1sk0nIhX4Im1XWNIFvO0tBv-A1tVxPU7iC6r9z5gw3mpR3SBSGq83ceF7ZSwiufYC7z2tXeqkp2Lk0xQfiomdo-bMJ_r5Km6K70w2G
+6-u_reLA_rxrRsHC4iy3KLW6TPO5QOj6BY3IcYMXStlIh-vW9weovR8n0mfYjxURRuzg56jBookK-3Emhyz38k8sw1SfZkqy_rHE922u-vY6EMNZmvxIe5KbfY0we6jmNiWf
+ZNnKB8UxzlwXPlR4B9uPU9p1MV14zmuVYldM7vT70BjQ","widthPx":3600},{"authorAttributions":[{"displayName":"Sk Azharuddin","photoUri":"http
+s://lh3.googleusercontent.com/a-/ALV-UjXiV8Rgp9hFX70--mf05l0UxT4mTbdsvwQYcHHgHphJo_QPTb48Lg=s100-p-k-no-mo","uri":"https://maps.goog
+le.com/maps/contrib/117871135229420035678"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_place
+s.places_api&image_key=!1e10!2sCIHM0ogKEICAgICmw9iEPQ&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m
+2!1sCIHM0ogKEICAgICmw9iEPQ!2e10!4m2!3m1!1s0x3bbfc13c227bd1bf:0xfa2f8c6c1efa4aef","heightPx":3432,"name":"places/ChIJv9F7IjzBvzsR70r6
+HmyML_o/photos/AcnlKN0IrOBjRuGJujRqPS3LW60qATj-rbidN2b7WPgGxWbX92FSzQ9v5fk_7mTFq1okXF4eL1gI6nB3hgNm3tjnBMA-x6_e3pNveRo_rby5fpDFQhAcN
+U-MHq0HCHZYbFELJ_lmCHJcU0YtrualHF6naSwsmxqyaNWfThv5zNXTzJZqrUH4z7cKSHZl9In87K31v_rcxFEJHzC-QDMmwRe5W0IDrgKxArt5IEuVnEuETnqe4xpHBfNiq
+uuJ2aj2Ftdyr4MX4Sr-_cMUw3pkWhun9rbt4E1zqneyIXnwwOU83F6lupVB7EpALHzuUYLF0isYPkanKAGRPdxqwybrtHRwaMiKGeRx9fq3E_ACTZoPLap-O2r-AsngkmAbL
+R00bLdVMHIMa3FTVueK0utA6P-TczMSkouxBxNvyA7NF3G5acE","widthPx":4576}],"rating":4.5},{"displayName":{"languageCode":"en","text":"Aguad
+a rocky Beach"},"formattedAddress":"FQVH+43H, Goa 403001, India","photos":[{"authorAttributions":[{"displayName":"Angad Somkuwar","p
+hotoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUahHSm_ELnvOeW364GfGNZ93DH65ku7pLfIXjhvtbBGfMD4dVxag=s100-p-k-no-mo","uri":"htt
+ps://maps.google.com/maps/contrib/111558702417264553004"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=
+maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICE19ezOg&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//da
+ta=!3m4!1e2!3m2!1sCIHM0ogKEICAgICE19ezOg!2e10!4m2!3m1!1s0x3bbfc10e86884393:0x360c9590598769cb","heightPx":3120,"name":"places/ChIJk0
+OIhg7BvzsRy2mHWZCVDDY/photos/AcnlKN0qQmG3WvuwTed5Lozq0p1lb6-zhW64TjkHQrm7QuRImf7pXglzAqzQl0BoBZdKtc7H8WQSy_JY33ErU38NcpAC2uTBuvLEzgt
+PRvQYWefBthXNnrFxfMg02wXc7loJZFR5aSi9Xm9ZH_zoP0VzDvYwvDalkZ5kOrck_abkelC3YpRgxkKzY5eOs9Eiv3zRd44pDRQP5oX0mglCfNbWiZexJGClQ34HvpQD6yn
+GhLcWKY2AfmIQXg_Fg94ztLs-41mia1HQrK0TuCiwsM-hwX_ypfyHZIsXDAQdR1qGS-Egs3FONLsThT9JRzm5jRMHCAHPkufET4QIK37Cm_h5U0KCXD3IlBamK19apTaknAN
+4e-GtXhvKsFnA93ULFcGCng-dhB5-5b8Mfnjh7ROZshwos8NlRkmg-ewk2ecpP5RydQ","widthPx":4160},{"authorAttributions":[{"displayName":"Gajanan 
+Wadekar","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjWFhWtYVDt2m16-3QunTh9pwkGlg2GRhgwZeEx5ogc_-aCc7Iho=s100-p-k-no-mo","
+uri":"https://maps.google.com/maps/contrib/116948678123350443053"}],"flagContentUri":"https://www.google.com/local/imagery/report/?c
+b_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICB773r_QE&hl=en-US","googleMapsUri":"https://www.google.com/maps
+/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICB773r_QE!2e10!4m2!3m1!1s0x3bbfc10e86884393:0x360c9590598769cb","heightPx":3024,"name":"pl
+aces/ChIJk0OIhg7BvzsRy2mHWZCVDDY/photos/AcnlKN3tEWuiS2VBgFqaKMG7bTDdqKmVox8Y8K_BPD9LdMgRCYg4ayZ6r6GoK33q2_vPEpU2Z9lr_zWX4yXniO3oSh7A
+Pj7xUiNK_c9AMokx5h6fWmCJOPDNDKHBtTzmT-glgh7jvxTWA0HLdHDQ3jAf_AZpeYVvO9TMRi7qbhD95tGAXLu5tgTACl_7jAEG-YRWMgVCVlHnFKcMsHczW8M9yLRRSoEn
+TV5QlV59IKRp0eeeoA8PdetUo_gN_7UfCgjsAaZTt8mOmKnXY-Pb72CT3ZIEoCHBIqqezUQcGDM9i4c_iTaK616LDGHqCcRYom5ySIGWcDbnMVFKAPWgkOHZB9IJgJsrJrKi
+-jrK_U76sGdvn3ucy9ZBbGYOBUdm28XEtnmp34GosBcwCkGetlukfKA3ximwzcR15QomdkzsKxYoqeGp","widthPx":4032},{"authorAttributions":[{"displayNa
+me":"Shubham Sinha","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjXikxs0hQNNauViZFT492cZazyhp6sq-CHI_klF--x7TNCUFQuU=s100-p
+-k-no-mo","uri":"https://maps.google.com/maps/contrib/102293284849950813357"}],"flagContentUri":"https://www.google.com/local/imager
+y/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICksJTraw&hl=en-US","googleMapsUri":"https://www.googl
+e.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICksJTraw!2e10!4m2!3m1!1s0x3bbfc10e86884393:0x360c9590598769cb","heightPx":2352,"
+name":"places/ChIJk0OIhg7BvzsRy2mHWZCVDDY/photos/AcnlKN1KRzZx9SBYKzmlPEdd0_jvzT0eQkuohw0taa06bXbWWu31WzBq_JBimAF4RxksfoKVrBgWmxUO5oX
+ZIUwILohDBG91YtttVMQnMmQ_fTkxQs5peRjGmG5fHUZn-rMEt7rXFRxNaiPoMg7qIzj25ibnOBZ1NTg0mdBpMUaKdUb2GfOIXNPH14Xu0UMFcYkci8ytGVIKvxZJTCNOJsg
+43-rOhUmQVmKlegCH5jbevsGFxS24aQlZOkEecpb36nRhiiVJwshG3-NxR25BpQy84m7zSXVY4TrCusu3n9Fd2gX6JCC0GLXjwGbEPexR1VUloZJUKEU32Gs9HOtXQOKjeRr
+JmHpgue1rQHbPV1BBxYmPLOTtS4L-K0ovKSRmvGWDao7EvCofcl6CJA9suw6m1U3nSeeHLY90eMhzJA4KgcM_UQ","widthPx":4160},{"authorAttributions":[{"di
+splayName":"HARIKISHAN GOUD MULA","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUtgE-G84sePJsSlP86O62oaoa9KNSREiW7b_xK14fhu
+9BYj-fogA=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/113595791845220722567"}],"flagContentUri":"https://www.google.
+com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICEr7zU9AE&hl=en-US","googleMapsUri":"
+https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICEr7zU9AE!2e10!4m2!3m1!1s0x3bbfc10e86884393:0x360c9590598769cb"
+,"heightPx":3120,"name":"places/ChIJk0OIhg7BvzsRy2mHWZCVDDY/photos/AcnlKN1lnJ2m_TO5Gws9yZsuuk0qrbBG7lAk836iaQKnkib2ReGNr_x2F_sjYqFgI
+Lo3wpcfB0L9r6Ghv5UHXhC8qTaOeJllMHZpfUHOR6mVxU6UwynyoxUua3U_kzVZFG1leKZ4xAdxDn-YxCNk0gzqHlS9VIHbYxJfHgsV-QtiqroIgieZhQFyI4jFP1Vq1CHE_
+3O3OJaahDt-yq8mOtzPPpr6PAeKFcyD4EXnAvzoXMaGqc1SbozC6H8yBISiImsKVgEa5EXf5luk2lKIgUEI7hnO8u-7lDJ4hUSGhwLYVeeTFMM4-_paQZsIebL7RsMEnMyCh
+YvTNsmLHAV7GPcqFjYyYR4AJ1iEEBHf7d4PgXl21_ZnF5taqyMJpVa4csJnbFZ1SpMPqxT_edKD3LcyObQZ1oAhndaljtKVwewaNjMtnL6h","widthPx":4160},{"autho
+rAttributions":[{"displayName":"Paulomi Roy","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjU2gwRhjbCpjJqV2Io0-JGnroFwzk55SV
+A9KOpdg-5SKKHvHESggg=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/102086610023743998202"}],"flagContentUri":"https://
+www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDEl4XyrgE&hl=en-US","googl
+eMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDEl4XyrgE!2e10!4m2!3m1!1s0x3bbfc10e86884393:0x360c95
+90598769cb","heightPx":3456,"name":"places/ChIJk0OIhg7BvzsRy2mHWZCVDDY/photos/AcnlKN3m_bEBjkJ-WbjJQ6KaZijLbY4Cwg9lqi4QUzZ8ewdf8-Seh-
+BfJuvcjrEWjFxGZdTFQpyPypaeQtcUVoAycW24qVnVMu6d4mzlwIvB87TPg2pYMLrUMk-96wAGsjFi_vi0IqnqkPR8Gb2H2cxRP5NZSf1DUFPH0EGFYMeptT-1jYsU-1AXh8
+i-y8VIqNTD916suacSY_m17g4T0TkOhmooj42h3sOsjwsSdfgAqxpk7MsSnuzVQaXf2QlugR4Yq8aWSxassBfrZ8Ihod31KsC7VVgfPobWqfEcwV1jZ6PWrTIwf8exQXf1tg
+Az4Y7rnvT54JbjDqNx67ttJQzoGD_-iK3TXB0tIDntFegm8cEweW9UnJzLAfA0n3-qbG9p056Mw3Xt0Xcb_CvdUe3n5F4BA_0nd3i-DwuKoI78OlFi1Oo","widthPx":460
+8},{"authorAttributions":[{"displayName":"Dinesh Kumar","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjUZbzPKVcfObjqBqFV7dya
+BtLlFeN6sBYMWT_KdohZUUzoE7tqv=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/113719834286573663781"}],"flagContentUri":
+"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDE88yyuQE&hl=en-U
+S","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDE88yyuQE!2e10!4m2!3m1!1s0x3bbfc10e86884393
+:0x360c9590598769cb","heightPx":3024,"name":"places/ChIJk0OIhg7BvzsRy2mHWZCVDDY/photos/AcnlKN0QitDgzbOR8n4cop-iIMIObJVAPTZ38pf-uUjW4
+gA0Ro2lJVSJGaa87Q7yRTlvFGhtTLALS_CU6hlQrOD1_pyHW5nlj7Gzu6N23XWxFaWFB3kGBvSXMWbQGyiiNIhvdwiVsSW9AWYKy5489ARFhrh9GxwOKeqx1-oHHXYgMlxTt
+dTq_fQSFnDxBm5LlrnE2WTWo5YDVQST_eFooTEBYjo1O9GqMaS4p4nSDl0fEojUuYLVmRWmAN0wAiTGQcwP7vFWD7TuJ_JTmDnfJqnhUm3nyak-j32KeBfWvym4utjoIvDRG
+6j8yzhHousOhEU8Ws6ZIjmldghyLnN1f0BNAdYbHnNV2JRMNyTI_1dJKsF5q0NZsvcG9AOjnmIAh6o1XCDrLLIMSl3U33Of23JalA-eQxVJCnB45D1krtSsF5mE_lcc","wi
+dthPx":4032},{"authorAttributions":[{"displayName":"Turbo Distribution Co.","photoUri":"https://lh3.googleusercontent.com/a-/ALV-UjW
+w2yhIvOsiox3EC1HpU5Gyd2zG294CxX3GSGbZzxeySZ69zhej=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/116434768534634591567"
+}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEIC
+AgICE_-TU1AE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICE_-TU1AE!2e10!4m2!3m1!
+1s0x3bbfc10e86884393:0x360c9590598769cb","heightPx":2700,"name":"places/ChIJk0OIhg7BvzsRy2mHWZCVDDY/photos/AcnlKN2QF81BsdZR1EgurOgac
+afuurz8sTzFVqypJrC2T5VqxuCrZHvt-2lsa5F06_dK87M9_CS2r0IxC99CyFr9Uw3YTZwxqeLyRle4-50Ka4AEBQhMwjdq0SrGcKfh3sgWh2SRzQemj154AXK2cpyde6Y-B
+MW8-tyrL4DEVPrkpM9WyAPFqLAxK_qSJV2HUFQInxSpqItJZuAcEbQVV6PQCZ8s9rcjJY6QDZ6Da6dg1RJS2gJ1K5DOCPxzJj1ZLkITxaMHV5uKyc6GkCEQgRRUh3SSZI4Nj
+1VkRuA-ZtZLfr_K0T-WyY7flUeaV2x967VrJaTsn2fjFIzEjRPcgQs30BpZx9LCxQq0H2EpuUf1YPhv6GxD4m-EBNQoZQvG9LB9f4swvvjKawMoO4LLp6gT_iuD1jBruJAQZ
+-OUpY6Yfy383aks","widthPx":4800},{"authorAttributions":[{"displayName":"Sumit Mehta","photoUri":"https://lh3.googleusercontent.com/a
+-/ALV-UjVJhr6r1LbttXHHmFnhuqf6eeGKQo0NaiBFPm_YBKuXreayrazG=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/1103498452815
+45867856"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCI
+HM0ogKEICAgIDEnublkQE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDEnublkQE!2e10
+!4m2!3m1!1s0x3bbfc10e86884393:0x360c9590598769cb","heightPx":4623,"name":"places/ChIJk0OIhg7BvzsRy2mHWZCVDDY/photos/AcnlKN1LuMwFOZU3
+WBFC_HLZ0tAofUuHuwKhb7VEq2-wfOlPt7OXFMhZAh-GnFGDPBnpxV4ingSgHmLirhnNLLpsN6ZIvvYddUbDfWyyi53jHKjbOQCYwrYDfUXYaoGPMvBlhhIGbT_nFA7ks5aT
+_UpjOqiBUBqzjjyqZpYvniRK8cnOSKVR9XtvRdE-GACMFM4qTjbqfDpDARlXIdZQ-lYFfYQErEXTJM6xPhLdB1iHRBsxdV7rUuqJInliq3lc8wcgmfVcfawkBUqHJM1m4iyo
+oOML0sda0fj6DA3SIQCoCSEAlpNesS6PIpyp8xEE0-QeZUTPC9XDwAk5BM3AQpiDgtitis9d5DvRo2Hqq6M3DU5ANHSPYAZ2iZabG4KW8T5vJggiaj_maAH_dpU0fmbA2XwR
+G_WQuuWQBWXEPaRfEJpvg5SO","widthPx":3460},{"authorAttributions":[{"displayName":"Pranav JS","photoUri":"https://lh3.googleuserconten
+t.com/a-/ALV-UjVuTOTMwjCmsuNZrShWTNKnsvnDDeuG8QlK-Ush-RcQIhRL317A=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib/114843
+433989933508355"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e
+10!2sCIHM0ogKEICAgID095OXvgE&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID095OXv
+gE!2e10!4m2!3m1!1s0x3bbfc10e86884393:0x360c9590598769cb","heightPx":3174,"name":"places/ChIJk0OIhg7BvzsRy2mHWZCVDDY/photos/AcnlKN0j1
+MWRlo7Na4tXLNTH9-yNA5iqsGHCZj7ao-MUwv9iByKoQtBMvJ7V-uvnryL620g0Jp0cDUe7Z8wvJ1xeZTA_SFceIV2ajUMM-1RsRMUpj8gi6ypOKriSiTnEsvFtScOH_Sgm0
+7GzXo29_pDOQqz8TmoU9E88zX_8m2JTmncRjOp_YXGigmSHnCqEvfdT-qFSaodd-uLckDMls1Gkmd6QNYtghJ_A5gVwfoRWIMVdeklk93vxzo3-en7-IPyuMA24MKtcjG4iu
+KXzLPJQbZMqWtxfHkZlnPfC9WfVxRElOci9AkKOVJ9v3qMghVN6YbAZq_1EYrx_WW_8eyQ9xGb-P06piWaSraEdbO4za_77dLTd72XfG6rzXjfZT115v8Qw04B0Bx41ucxFa
+I-qABsSg2lA1wt4MxpDUtVFqCMY4Fo","widthPx":4800},{"authorAttributions":[{"displayName":"ANWESHA PRIYA","photoUri":"https://lh3.google
+usercontent.com/a/ACg8ocIg9I8u-WhXoC2hkbQWydAQ79Z7YLyObaVDIJ108Hcy9srCIw=s100-p-k-no-mo","uri":"https://maps.google.com/maps/contrib
+/113395147718263058195"}],"flagContentUri":"https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_
+key=!1e10!2sCIABIhCpDRr4upAN-F14CCyjj7V4&hl=en-US","googleMapsUri":"https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhCpD
+Rr4upAN-F14CCyjj7V4!2e10!4m2!3m1!1s0x3bbfc10e86884393:0x360c9590598769cb","heightPx":3600,"name":"places/ChIJk0OIhg7BvzsRy2mHWZCVDDY
+/photos/AcnlKN33m2l6Iompr0l5s6xqXq9CT226txH5XfDrI7KU5t_vx6Q8WtCRl6M4tLiAOFrnqiHWtpdkmwvHIA6Qu4STgEol1IeMv492UCK62_2JXS2jneMQf1eGfa_r
+yltVuFPTLOIKbFO6I01p2T4B12QwxPzvcGGh8EM0G69N6bmE8aIKy5vqSB6NcA3ZQPCCJrxVUolDRpLqb4w84qf6CHQdyGFg1UaGEVh0JI0Enz-lq53SULRz0TGCMtDdbDjK
+nb2bWeseaRZNPtOjAI-1PefYbManJFCl2l4A4hhWy4XpUg5LaEcB1pRF4qEtUDe-kcQV2XCzQdhRcO5-Eg7oU6rE7Ss2p9DFCKqhS_kRBfRljI3oaICfzXuC2BRJ27Ps6-94
+7pN1pof6Lxv8h7UyTVJFP1pm0XyCqaW4edq1vHQ6VSo3kAyL-AEBNJP6sE8J0Qu_","widthPx":4800}],"rating":4.3}]}}},{"functionResponse":{"name":"fl
+ights_between","response":{"result":[{"arrival_time":"15-02-2026 10:35 PM","bags":{"carry_on":2,"checked":null},"booking_token":"TOKEN_0","delay":{"text":0,"values":false},"departure_time":"15-02-2026 05:55 PM","duration":{"raw":280,"text":"4 hr 40 min"},"flights"
+:[{"aircraft":"Airbus A321neo","airline":"IndiGo","arrival_airport":{"airport_code":"HYD","airport_name":"Rajiv Gandhi International
+ Airport","time":"2026-2-15 20:00"},"departure_airport":{"airport_code":"IXR","airport_name":"Birsa Munda Airport, Ranchi","time":"2
+026-2-15 17:55"},"duration":{"raw":125,"text":"2 hr 5 min"},"extensions":["Below average legroom (28 in)","Emissions estimate: 151 k
+g CO2e"],"flight_number":"6E 328","legroom":"28 in","seat":"Below average legroom"},{"aircraft":"Airbus A321neo","airline":"IndiGo",
+"arrival_airport":{"airport_code":"GOI","airport_name":"Goa Dabolim International Airport","time":"2026-2-15 22:35"},"departure_airp
+ort":{"airport_code":"HYD","airport_name":"Rajiv Gandhi International Airport","time":"2026-2-15 21:15"},"duration":{"raw":80,"text"
+:"1 hr 20 min"},"extensions":["Below average legroom (28 in)","Emissions estimate: 98 kg CO2e"],"flight_number":"6E 984","legroom":"
+28 in","seat":"Below average legroom"}],"layovers":[{"airport_code":"HYD","airport_name":"Rajiv Gandhi International Airport","city"
+:"Hyderabad","duration":75,"duration_label":"1 hr 15 min"}],"price":21370,"self_transfer":false,"stops":0},{"arrival_time":"16-02-20
+26 06:55 AM","bags":{"carry_on":2,"checked":null},"booking_token":"TOKEN_1","delay":{"text":0,"values":false},"departure_time":"15-0
+2-2026 08:00 PM","duration":{"raw":655,"text":"10 hr 55 min"},"flights":[{"aircraft":"Airbus A321neo","airline":"IndiGo","arrival_ai
+rport":{"airport_code":"HYD","airport_name":"Rajiv Gandhi International Airport","time":"2026-2-15 21:45"},"departure_airport":{"air
+port_code":"IXR","airport_name":"Birsa Munda Airport, Ranchi","time":"2026-2-15 20:00"},"duration":{"raw":105,"text":"1 hr 45 min"},
+"extensions":["Below average legroom (28 in)","Emissions estimate: 151 kg CO2e"],"flight_number":"6E 191","legroom":"28 in","seat":"
+Below average legroom"},{"aircraft":"Airbus A320","airline":"IndiGo","arrival_airport":{"airport_code":"GOI","airport_name":"Goa Dab
+olim International Airport","time":"2026-2-16 06:55"},"departure_airport":{"airport_code":"HYD","airport_name":"Rajiv Gandhi Interna
+tional Airport","time":"2026-2-16 05:40"},"duration":{"raw":75,"text":"1 hr 15 min"},"extensions":["Below average legroom (28 in)","
+Emissions estimate: 123 kg CO2e"],"flight_number":"6E 743","legroom":"28 in","seat":"Below average legroom"}],"layovers":[{"airport_
+code":"HYD","airport_name":"Rajiv Gandhi International Airport","city":"Hyderabad","duration":475,"duration_label":"7 hr 55 min"}],"
+price":21370,"self_transfer":false,"stops":0},{"arrival_time":"15-02-2026 01:50 PM","bags":{"carry_on":2,"checked":null},"booking_to
+ken":"TOKEN_2","delay":{"text":0,"values":false},"departure_time":"15-02-2026 09:30 AM","duration":{"raw":260,"text":"4 hr 20 min"},
+"flights":[{"aircraft":"Airbus A321neo","airline":"IndiGo","arrival_airport":{"airport_code":"HYD","airport_name":"Rajiv Gandhi Inte
+rnational Airport","time":"2026-2-15 11:20"},"departure_airport":{"airport_code":"IXR","airport_name":"Birsa Munda Airport, Ranchi",
+"time":"2026-2-15 09:30"},"duration":{"raw":110,"text":"1 hr 50 min"},"extensions":["Below average legroom (28 in)","Emissions estim
+ate: 151 kg CO2e"],"flight_number":"6E 398","legroom":"28 in","seat":"Below average legroom"},{"aircraft":"Airbus A321neo","airline"
+:"IndiGo","arrival_airport":{"airport_code":"GOI","airport_name":"Goa Dabolim International Airport","time":"2026-2-15 13:50"},"depa
+rture_airport":{"airport_code":"HYD","airport_name":"Rajiv Gandhi International Airport","time":"2026-2-15 12:35"},"duration":{"raw"
+:75,"text":"1 hr 15 min"},"extensions":["Below average legroom (28 in)","Emissions estimate: 98 kg CO2e"],"flight_number":"6E 905","
+legroom":"28 in","seat":"Below average legroom"}],"layovers":[{"airport_code":"HYD","airport_name":"Rajiv Gandhi International Airpo
+rt","city":"Hyderabad","duration":75,"duration_label":"1 hr 15 min"}],"price":28188,"self_transfer":false,"stops":0}]}}},{"functionR
+esponse":{"name":"flights_between","response":{"result":[{"arrival_time":"23-02-2026 09:00 AM","bags":{"carry_on":2,"checked":null},
+"booking_token":"TOKEN_3","delay":{"text":0,"values":false},"departure_time":"22-02-2026 11:05 PM","duration":{"raw":595,"text":"9 h
+r 55 min"},"flights":[{"aircraft":"Airbus A321neo","airline":"IndiGo","arrival_airport":{"airport_code":"HYD","airport_name":"Rajiv 
+Gandhi International Airport","time":"2026-2-23 00:15"},"departure_airport":{"airport_code":"GOI","airport_name":"Goa Dabolim Intern
+ational Airport","time":"2026-2-22 23:05"},"duration":{"raw":70,"text":"1 hr 10 min"},"extensions":["Below average legroom (28 in)",
+"Emissions estimate: 98 kg CO2e"],"flight_number":"6E 985","legroom":"28 in","seat":"Below average legroom"},{"aircraft":"Airbus A32
+1neo","airline":"IndiGo","arrival_airport":{"airport_code":"IXR","airport_name":"Birsa Munda Airport, Ranchi","time":"2026-2-23 09:0
+0"},"departure_airport":{"airport_code":"HYD","airport_name":"Rajiv Gandhi International Airport","time":"2026-2-23 07:10"},"duratio
+n":{"raw":110,"text":"1 hr 50 min"},"extensions":["Below average legroom (28 in)","Emissions estimate: 149 kg CO2e"],"flight_number"
+:"6E 421","legroom":"28 in","seat":"Below average legroom"}],"layovers":[{"airport_code":"HYD","airport_name":"Rajiv Gandhi Internat
+ional Airport","city":"Hyderabad","duration":415,"duration_label":"6 hr 55 min"}],"price":21706,"self_transfer":false,"stops":0},{"a
+rrival_time":"22-02-2026 08:25 AM","bags":{"carry_on":2,"checked":null},"booking_token":"TOKEN_4","delay":{"text":0,"values":false},
+"departure_time":"22-02-2026 03:15 AM","duration":{"raw":310,"text":"5 hr 10 min"},"flights":[{"aircraft":"Airbus A320","airline":"I
+ndiGo","arrival_airport":{"airport_code":"PNQ","airport_name":"Pune International Airport","time":"2026-2-22 04:20"},"departure_airp
+ort":{"airport_code":"GOI","airport_name":"Goa Dabolim International Airport","time":"2026-2-22 03:15"},"duration":{"raw":65,"text":
+"1 hr 5 min"},"extensions":["Below average legroom (28 in)","Emissions estimate: 100 kg CO2e"],"flight_number":"6E 920","legroom":"2
+8 in","seat":"Below average legroom"},{"aircraft":"Airbus A321neo","airline":"IndiGo","arrival_airport":{"airport_code":"IXR","airpo
+rt_name":"Birsa Munda Airport, Ranchi","time":"2026-2-22 08:25"},"departure_airport":{"airport_code":"PNQ","airport_name":"Pune Inte
+rnational Airport","time":"2026-2-22 06:20"},"duration":{"raw":125,"text":"2 hr 5 min"},"extensions":["Below average legroom (28 in)
+","Emissions estimate: 185 kg CO2e"],"flight_number":"6E 6484","legroom":"28 in","seat":"Below average legroom"}],"layovers":[{"airp
+ort_code":"PNQ","airport_name":"Pune International Airport","city":"Pune","duration":120,"duration_label":"2 hr 0 min"}],"price":295
+72,"self_transfer":false,"stops":0},{"arrival_time":"22-02-2026 07:20 PM","bags":{"carry_on":2,"checked":null},"booking_token":"TOKE
+N_5","delay":{"text":0,"values":false},"departure_time":"22-02-2026 02:25 PM","duration":{"raw":295,"text":"4 hr 55 min"},"flights":
+[{"aircraft":"Airbus A321neo","airline":"IndiGo","arrival_airport":{"airport_code":"HYD","airport_name":"Rajiv Gandhi International 
+Airport","time":"2026-2-22 15:30"},"departure_airport":{"airport_code":"GOI","airport_name":"Goa Dabolim International Airport","tim
+e":"2026-2-22 14:25"},"duration":{"raw":65,"text":"1 hr 5 min"},"extensions":["Below average legroom (28 in)","Emissions estimate: 9
+8 kg CO2e"],"flight_number":"6E 712","legroom":"28 in","seat":"Below average legroom"},{"aircraft":"Airbus A320neo","airline":"IndiG
+o","arrival_airport":{"airport_code":"IXR","airport_name":"Birsa Munda Airport, Ranchi","time":"2026-2-22 19:20"},"departure_airport
+":{"airport_code":"HYD","airport_name":"Rajiv Gandhi International Airport","time":"2026-2-22 17:40"},"duration":{"raw":100,"text":"
+1 hr 40 min"},"extensions":["Below average legroom (28 in)","Emissions estimate: 159 kg CO2e"],"flight_number":"6E 186","legroom":"2
+8 in","seat":"Below average legroom"}],"layovers":[{"airport_code":"HYD","airport_name":"Rajiv Gandhi International Airport","city":
+"Hyderabad","duration":130,"duration_label":"2 hr 10 min"}],"price":29592,"self_transfer":false,"stops":0},{"arrival_time":"23-02-20
+26 08:15 AM","bags":{"carry_on":2,"checked":null},"booking_token":"TOKEN_6","delay":{"text":0,"values":false},"departure_time":"22-0
+2-2026 09:30 PM","duration":{"raw":645,"text":"10 hr 45 min"},"flights":[{"aircraft":"Airbus A320neo","airline":"Air India","arrival
+_airport":{"airport_code":"BOM","airport_name":"Chhatrapati Shivaji Maharaj International Airport Mumbai","time":"2026-2-22 23:10"},
+"departure_airport":{"airport_code":"GOI","airport_name":"Goa Dabolim International Airport","time":"2026-2-22 21:30"},"duration":{"
+raw":100,"text":"1 hr 40 min"},"extensions":["Below average legroom (32 in)","In-seat USB outlets","Stream media to your device","Em
+issions estimate: 104 kg CO2e"],"flight_number":"AI 2506","legroom":"32 in","seat":"Below average legroom"},{"aircraft":"Boeing 737"
+,"airline":"Air India Express","arrival_airport":{"airport_code":"IXR","airport_name":"Birsa Munda Airport, Ranchi","time":"2026-2-2
+3 08:15"},"departure_airport":{"airport_code":"BOM","airport_name":"Chhatrapati Shivaji Maharaj International Airport Mumbai","time"
+:"2026-2-23 05:55"},"duration":{"raw":140,"text":"2 hr 20 min"},"extensions":[null,"Emissions estimate: 229 kg CO2e"],"flight_number
+":"IX 1237","legroom":"N/A"}],"layovers":[{"airport_code":"BOM","airport_name":"Chhatrapati Shivaji Maharaj International Airport Mu
+mbai","city":"Mumbai","duration":405,"duration_label":"6 hr 45 min"}],"price":40380,"self_transfer":false,"stops":0}]}}}]
+[{"functionCall":{"name":"trains_between","args":{"date":{"day":15,"month":2,"year":2026},"destination":"MAO","source":"RNC"}},"thou
+ghtSignature":"EowVCokVAb4+9vvZCdzCHlvyEFHXx9ipMgh/rZPRPDVprhebyCbDR6e5xcdQp0weRfhVy04PqJljEQmpvr0RleZavBWynWrIDiI0Yx6j/wOMy5dBMTyI1
+N9sAutsgZm0U2jO1GvRzmUdgD7iZzlBUQ9bRO6RGLRGveYuAtWrRK75TyVmaYWUX549XodtOY8St3tkllevQdTYxmI8M1dUzN0syzY4fUeqeDiSQ2F8Y1Cfz3qrue9d+ABqG
+hcWGRsIOsXQrTpqggH2dQ4+fsoicz9FUgPMCE7pS5Z9U5r0ittJ17b6G3X9ECYymk3TD+KRc4k3HcsuHk3jPWEYBYyju1S0HzkWoWeT7Z8Ikaf/vBw1/TkvdPLJHJLenkZX/
+oVStdOCJEIL9/Rcnpnb09m8aVdzO/Q3/rU3DVZkQ2uj9+HeRbqqKc2XP9RaFV9y5FhPyjaQa1ZYTA2yrwBpKWfQTzendfOzS6fyaCGVelQnIE99Y5JvtxUGPPzMDsPktGpd2
+urdSLZOXCh6TqkbxOJz9rdr2/I2qazQOQeg2+tmKSg7cr+dR30FgXEIv4ZBRFQ0kwbOEHTKLppQY52oQKnaw3qlVARfMvZDMgzPi/xgvWlB8aVySjq2Xf27SiE4n+VWIa8tS
+TQxVPHANq2kCjCksmag9sYkeY14hrEOylFecBDnhT6tHjI37rv2lWMeBbaFaToWNPJZnf4fyRY5c1yH9nyNO0emGq5iSU2fkyGBnhtJDFJH41MUX0EVd044QPUw0K9SK9e9A
+QxxwHaLb9QrM1o85OeNkuQ/nt39KWhwxMcs+rzgtmD+2uQgsvVbRYQ2o4OpPhu4BDuAP/EhYCNLKPk2cU6KyWe+WwyFBz78AKrsNSLL94QxINKgFvoBDz5dSLCCLEV+UMZQQ
+uZFFXnudHK/jDA6tVqNKxCxrwN8xMGTe1ZBpODIrvW3ZnnlVMmPGaLQL95VeUmGlMQ+8bGo/iUyDCiwR13tlw/clDVDRC8SCIhlVjDDjhsXBR+IQimzUm8ejBIIsfGN0QCjY
+Jci+ZDcgfzcjM8zRbrkd+RuobQr57TrDLLJKwiyWT9jznnLpfqAEocxVkl4kEU+8RNlhqr/wLB5PKBrlQS3MPMMh9WSM6+ej5mqc13QPrY8ZPdrDCMIg/Fi50/PzLWRBL8R8
+Hmbpi4PRh62auy22m7SwhimT3vKDTCpZmcH0z8AGW/YUaxRuguuWBpaG5uvVRp/II8WGu0+t2cr9s83FrKFCHYObsjAObluZOUlP7CexAF7z9fAF5mluhdoeKCnW2bg27/dC
+itoIHpAGOpfaDwsVD6ncMJI4zi2AS4Fozfqm6/+7Blu8wjyeUrgBq55ArV7mYUj1nPxzco2Sn6/sAYuQsb135AL5brS5hsIxOfPVSNbeh+XM2l1Pcug76BjNi6Rbyfc4vd1z
+B2UopkEVW8nanO+2HqqZeAoGYYcBKXV88h5yEJy00QEIFWBtBv9OLX1rJSn5EVV+Teeq90XiGqXdGkLglvj/SEMsdBBb226TSo65Fw56R5UeNVhbZeFDLmCo9AKA+eVTDw0G
+gaVLyARm90EtpFvM6LTXidWsuYnJFDPuac/V5M8y6RBj8LCa8CBUIJFpAW2Id+oXOUs/9ndVsHY0X5beKzyPwZz12wv+Tu06Exjm/0wjvKrVTGGu9vguQBbHe4eelA0HDSX3
+aOCr7mn+s9lmtfwr1TxgJwgTRDd9KLynIvE5XpBWk9STkOSVFHF9sRJ3ogPqa+vEtC0blTTFVBJ2oT/EV1HKs1OEWi9VLjiT61URYRj+dmColZBwHIo0l6oFWv/HQb2l3bSj
+VkavL0lpKUcOR/3d4ICpYTsWmHVOVQZvUriPazW/ETtCQ2yUpO5n+pxrhpFDT7IhKe3EgkpcsiLw1LjeHCRhkf9RctcJY6bRaAFq4OTNZxgyoKCbmcHcOEZWoQ1LwJeyc9v7
+V6Cgq4bUPIDZ/gqTdNs7Yd05b/l9omCSAKVOhqL5yma9ypkNMNAuNJ6oxrtFeH2HX9s+7Ic/FfWmqmFHEl4ZJpVHkC3S3W64zDaTxrw5Hb7qVUXVUkY/0V3U7RpDHUu7VyJt
+0ztai+XNDXUTlzFCaxv8SIzpSSrqawmJ3MQE3/A258xTR4SP/14skCTQE48Fw4pZjJNGwaswNySYnFZx+DrAbpcjtZDiQTrgGQwitV3Fww6IWF49VCdDhMM5XdjLzBusVBg/
+9RUhvP8j74KrhW7l+F5yiXM3twtJQtdDKyeHZ2JSjvnIl67vOn2IBdHYpuKLxZlIOWuFc0xa0OK1IheJmVvRHm9Eofqq+6OWwOxJyPpl9XNnFKhLHsGwECt7GA67BqLfxf9I
++GuBEv5wfq8aTr5BeTe6gS23OBcAeqyEbz5psD3atFcslUE+WWYSZqmbUpbz4o1Ov9I7xL8J7V34fo5WDGbCHAwCJ2Hgspe2SyBWlKbPsPA2KJFboHeaD2MhcrMBQ/fog3F1
+R7vMws673oRtrPKKMklzg4IqxAtXBKxHtg1JR55KiUaRtYuYLc5ZFt0Rc7XmRgJ1r+lXrgoGocoQ89HNtVaKtxbHasx7kxT5HresSz8A5fNOWrHY5tLR1mjSP7tk6Yll29ic
+NTneer9RRnYj7ZPe+zcbx7kxZT7zZnpC2NwzH4XtNVmpeofLg4qXyX+w8oRU4jpXaEAqFGW0Guf6TGoCPPsgqMpb9uPmZSFl6HwW38gQJVcAWheMuhiwI4H0zdjWLv09lKg8
+OtBACiyQXLCGAf2Z1efHa2Oznhao1A2t9wQwuBimd3JWRHbzLMV9APduZIU7TblvM/6NnZ4Lni0hvSNBAEylAW70ovq+6f79AAFR/S1dHvqcUiYunFNGcKQkbXrR7475f74c
++B3tP3fm67lycfPWBYhDibd5FA6ddyEsT48jrZ40n5R1lHokPptJaurIVTDBsMU+/bYovs4jA3Aa4HEBDwWufhTx+FK6MAoEGdcBQaLlcBjV3PBPwTVm5f6ONaN12O9HqB30
+zHkGU4Nqbhh8CHr8vXobJEtR/ZrC8aq9vdGt/6kDU7dgXVSoN9G7bfV8cfre4O3Yf9zNhwP+MEqQPwfaB3DcBqU2L3D4CSYLaahKIUsujX6SolfYDOMFy1lMjZGMdLRFkJEe
+mfyMl7S8EXTo7ZCpZzEchh9iGVRYihCiXAui9SudVZ3bobxzCBhPGFoJTOV2kR0fQxGwluAn6wn3QbliAmG8lsEE6z6hFbP4fI8dXqqdxyCzOQPtuj9tFoTo6S3oGG0UqqxF
+jaHeAKTupos1Xvpk++ZbF3Tih+k95O8C/XRxQXOo9rtHhmlOLGmur1wvglXX7y+86ABr06L5vlWx52FUJigk6+SDPd5jpBaoS4d+hLyyprKqNet6chBON4qywi9yudUwc59W
++wTtqxZDhjqsp2nftPCV2LGw8/KRRTOExsVGVbLBZt+HfJeQ+1ezFD+T9TgFKg6TRogGp+wM0BMxtNj0vJESqxSP7FEPk1IqvGX5whnNjZ1N7z7q4uVm7P8NrdbS+joBFYIx
+AhCTkeZlW2KaYRdFv7EaunwEHYlmsvQLo+gxzZj1DzHQUvsbKHNmHFF"}]
+[{"functionCall":{"name":"trains_between","args":{"date":{"day":22,"month":2,"year":2026},"destination":"RNC","source":"MAO"}}}]
+[{"functionCall":{"name":"flight_booking_details","args":{"booking_token":"TOKEN_0"}}}]
+[{"functionCall":{"name":"flight_booking_details","args":{"booking_token":"TOKEN_3"}}}]
+[{"text":""}]
+Resolving function calls.
+FunctionResponse:
+[{"functionResponse":{"name":"trains_between","response":{"Error":"RapidAPI error: 429 Too Many Requests"}}},{"functionResponse":{"n
+ame":"trains_between","response":{"Error":"RapidAPI error: 429 Too Many Requests"}}},{"functionResponse":{"name":"flight_booking_det
+ails","response":{"result":[{"bookings":[],"id":"6E","individualBooking":false,"is_airline":true,"meta":null,"price":null,"title":"I
+ndiGo","token":"TOKEN_7","website":"www.goindigo.in"}]}}},{"functionResponse":{"name":"flight_booking_details","response":{"result":
+[{"bookings":[],"id":"6E","individualBooking":false,"is_airline":true,"meta":null,"price":240,"title":"IndiGo","token":"TOKEN_8","we
+bsite":"www.goindigo.in"}]}}}]
+[{"functionCall":{"name":"flight_booking_link","args":{"token":"TOKEN_7"}},"thoughtSignature":"EpYGCpMGAb4+9vs/jmegzkkvAqrfa/s/jkOIw
+Nuvm1/MJ7zYep/5SDFdnEFkeD/vW8YhqougorqMgvmol74HN81/MT2lU4VWSdxE57bRbhkMG/EBInucxur4FbeZry37d6Fc4cWqe1uafAr13xvzxryNRVjfd9Pd2IovSv9iW
+fCDutscGt3NLaa12Je+16GWl4tPuOfO5O3b2Iru5PQ/eDnWH6Re6MaaEhW63xjjlaZUL5RVhPSo+Zjfa/16YteHP6hjZo5225QcbVXYKw5laLBKO/BR7axrhLE329a5W/ZgJ
+TM9ZfKBzwZDGEHzO1BPku6FBbF9g+8YymPZSjzjUzV/cnovNqP+nCspmqGtsoDhoZ32u0FZM0xT36qNUMScXQIZKqHjfvd0y11lcsHBnQLfRZOm5OcHfL/SvtqgeJgAf+XXy
+VxanhJVM1O6LTGNUgFBeMibe2KJrVLpBHL9Jksi3NBXHrxfr/mUAHvx/6ZN5KX901tSJDUtaGhFSaybwi8tGlwRDQyH2IrDCrJUCpdxC57Q9T+RZkbvfgQXYytiHOzLdIofF
+3ywHFJ7CvalEGbmxQbf5BrS3xqpWxhU0nJo6s5ADiOrLjCCEPHyOkoGJBMm+6YKbXbzVWJ3BCVR34kFLWqPBuMjekxPjxmPZg3aSfGJKAIhEMtIATfe2D0SaWzZ5X7lhaEQc
+IHNA45i45o1UhCf3+geg9XB382sthzltmyfoaiw10bNPzc1M2H104L8tz4VGlnB2w3dIdB/J82ofM7nawJt+fOvmxYN8YSNhQqPwWUVZJYxf4KH+hdJsKdFp8+J5q2fMyl0h
+ilRp509RnB8+SKtx6Zw0kuyKCIW9Sh/enw84atH63C6ROSbgoSv5IS2UIkl5hHkSsYHyfxlAW2dqyXtxZ7kKkww2QpF9yxoINDguSBypz9XKZQD0G75mIq8rAe9gfZ6zABcd
+YjkLv0HytUY1qUIGVrLlD/VXKcMPsNL+E90N+P2yQ/DylOsoBFbF4xEX1CfPtZztDlvCCWD+Z7/satk1LRtH43V7bbhCma+Eg=="}]
+[{"functionCall":{"name":"flight_booking_link","args":{"token":"TOKEN_8"}}}]
+[{"text":""}]
+Resolving function calls.
+FunctionResponse:
+[{"functionResponse":{"name":"flight_booking_link","response":{"Error":"{\"message\":\"Invalid token\",\"status\":false,\"timestamp\
+":1770958019091}"}}},{"functionResponse":{"name":"flight_booking_link","response":{"Error":"{\"message\":\"Invalid token\",\"status\
+":false,\"timestamp\":1770958019090}"}}},{"functionResponse":{"name":"flight_booking_link","response":{"result":"https://www.goindig
+o.in/flight-select-redirection.html?cid=metasearch|googleflights&fareType=R&flightNumber=328_984&gclid=ADowPOKFtcuV4nXlnPa7rIAyyFmqd
+Fs8_9n85ANVyX-QPxXiKYV_qvhnUO2iNb0F1DTiSaOVFhWobhLzGgDR6maGXnmNxPTjGGR61NW14LdiZBGJl2M&gclsrc=gf#ixr/goi/20260215/INR/200"}}},{"functionResponse":{"name":"flight_booking_link","response":{"result":"https://www.goindigo.in/flight-select-redirection.html?cid=metasea
+rch|googleflights&fareType=R&flightNumber=985_421&gclid=ADowPOLI-2KOZ5VwTbBM2RqeYHNAHPH2tHHmgROmd8sLxgfNjFX-888806CuzvLlg_SK5vvvIuUy
+y-23TyCIRFZxmT1BIezSU8pzHJXzgx3W8T2-F8I&gclsrc=gf#goi/ixr/20260222/INR/200"}}}]
+

@@ -38,7 +38,6 @@ async fn plan_tour(
 
     let _ = execute_function_calls!(
         session,
-        flight_booking_link,
         train_seats_available,
         trains_between,
         get_about_place,
