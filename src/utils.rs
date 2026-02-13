@@ -1,4 +1,4 @@
-use chrono::{DateTime, FixedOffset, Utc};
+use chrono::{DateTime, Datelike, FixedOffset, Local, Utc};
 use gemini_client_api::gemini::utils::{GeminiSchema, gemini_schema};
 use serde::{Deserialize, Serialize};
 use serde_json::json;
@@ -55,6 +55,14 @@ impl Date {
         let ist_offset = FixedOffset::east_opt(5 * 3600 + 30 * 60).unwrap();
         let ist_now = utc_now.with_timezone(&ist_offset);
         ist_now.format("%a %b %e %H:%M:%S %Z %Y").to_string()
+    }
+    pub fn new_now() -> Self {
+        let local = Local::now();
+        Date {
+            year: local.year() as u16,
+            month: local.month() as u8,
+            day: local.day() as u8,
+        }
     }
 }
 

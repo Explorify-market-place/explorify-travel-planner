@@ -77,16 +77,6 @@ pub async fn flights_between(
     travel_class: TravelClass,
     adults: u8,
 ) -> Result<(Value, Vec<String>), Box<dyn Error + Send + Sync>> {
-    #[cfg(test)]
-    {
-        let mut val: Value = serde_json::from_str(include_str!("../../searchFlights.json"))?;
-        let top_flights = val
-            .pointer_mut("/data/itineraries/topFlights")
-            .ok_or("Path not found: /data/itineraries/topFlights")?;
-        let token_map = clean_and_replace_tokens(top_flights)?;
-        return Ok((mem::take(top_flights), token_map));
-    }
-
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
 
@@ -123,10 +113,12 @@ pub async fn flights_between(
     let top_flights = val
         .pointer_mut("/data/itineraries/topFlights")
         .ok_or("Path not found: /data/itineraries/topFlights")?;
-
-    let token_map = clean_and_replace_tokens(top_flights)?;
-
-    Ok((mem::take(top_flights), token_map))
+    if let Some(true) = top_flights.as_array().and_then(|e| Some(e.len() != 0)) {
+        let token_map = clean_and_replace_tokens(top_flights)?;
+        Ok((mem::take(top_flights), token_map))
+    } else {
+        Err("API out of service. Try again later".into())
+    }
 }
 
 #[gemini_function]
@@ -136,24 +128,6 @@ pub async fn flight_booking_details(
     ///Provided by flights_between eg. TOKEN_0
     booking_token: String,
 ) -> Result<(Vec<Value>, Vec<String>), Box<dyn Error + Send + Sync>> {
-    #[cfg(test)]
-    {
-        let mut val: Value = serde_json::from_str(include_str!("../../details.json"))?;
-        let data = val["data"].as_array_mut().ok_or("data not found")?;
-        let mut token_map = Vec::new();
-        for flights in data.iter_mut() {
-            let flights = flights
-                .as_object_mut()
-                .ok_or("Invalid response format. Data don't have objects")?;
-            if let Some(booking_token) = flights.get_mut("token") {
-                let small_token =
-                    update_token_map(&mut token_map, booking_token.as_str().unwrap().to_string());
-                flights.insert("token".into(), small_token.into());
-            }
-        }
-        return Ok((mem::take(data), token_map));
-    }
-
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
     let url = format!("{BASE_URL}/api/v1/getBookingDetails");
@@ -199,11 +173,6 @@ pub async fn flight_booking_link(
     ///Provided by get_booking_details eg. TOKEN_0
     token: String,
 ) -> Result<String, Box<dyn Error + Send + Sync>> {
-    #[cfg(test)]
-    {
-        return Ok("https://www.google.com/flights?mock_link".to_string());
-    }
-
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
 
@@ -271,7 +240,7 @@ pub async fn execute_calls(session: &mut Session, token_map: &mut Vec<String>) {
                 .expect("Wrong agrument format from gemini")
                 .await)
                 );
-            } else if call.name() == "get_booking_details" {
+            } else if call.name() == "flight_booking_details" {
                 results.push((
                     call.name().to_string(),
                     flight_booking_details::execute_with_closure(
@@ -288,7 +257,7 @@ pub async fn execute_calls(session: &mut Session, token_map: &mut Vec<String>) {
                     .expect("Wrong agrument format from gemini")
                     .await,
                 ));
-            } else if call.name() == "get_booking_link" {
+            } else if call.name() == "flight_booking_link" {
                 results.push((
                     call.name().to_string(),
                     flight_booking_link::execute_with_closure(
@@ -326,7 +295,7 @@ async fn execute_calls_test() {
         Some(json!({
             "origin": "LAX",
             "destination": "JFK",
-            "date": {"year": 2026, "month": 2, "day": 12},
+            "date": Date::new_now(),
             "travel_class": "ECONOMY",
             "adults": 1
         })),
@@ -344,7 +313,7 @@ async fn execute_calls_test() {
     // Verify token_map is populated
     assert!(
         !token_map.is_empty(),
-        "Token map should be populated after flights_between"
+        "Token map should be populated after flights_between. session\n{session:?}"
     );
     let first_token_placeholder = "TOKEN_0";
     println!("Token map size: {}", token_map.len());
@@ -387,9 +356,11 @@ async fn execute_calls_test() {
     if let PartType::FunctionResponse(resp) = last_response {
         assert_eq!(resp.name(), "get_booking_link");
         // add_function_response wraps non-object responses in a {"result": ...} object
-        assert_eq!(
-            resp.response(),
-            &json!({"result": "https://www.google.com/flights?mock_link"})
+        assert!(
+            resp.response()["result"]
+                .as_str()
+                .unwrap()
+                .starts_with("https://"),
         );
     } else {
         panic!("Expected FunctionResponse");

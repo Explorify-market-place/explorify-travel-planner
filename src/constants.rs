@@ -1,5 +1,5 @@
-use std::sync::LazyLock;
 use crate::utils::Date;
+use std::sync::LazyLock;
 
 pub const TRAVEL_PLANNER_SYS_PROMPT: LazyLock<String> = LazyLock::new(|| {
     format!(
