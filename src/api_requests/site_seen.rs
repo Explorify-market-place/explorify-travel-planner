@@ -4,20 +4,50 @@ use serde_json::Value;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 #[gemini_schema]
+/// Fields that can be requested for a place. Each field adds more detail to the response.  
+/// Usage are following:
+    ///- `Id`: Unique identifier for the place.
+    ///- `DislayName`: Name of the place (e.g., "Eiffel Tower").
+    ///- `ForattedAddress`: Full address (e.g., "Champ de Mars, 5 Av. Anatole France, 75007 Paris, France").
+    ///- `Loction`: Latitude and longitude coordinates.
+    ///- `Ratng`: Average user rating (0-5).
+    ///- `UseRatingCount`: Number of people who have rated this place.
+    ///- `PrieLevel`: Price range (e.g., FREE, INEXPENSIVE, MODERATE, EXPENSIVE, VERY_EXPENSIVE).
+    ///- `Typs`: Categories for the place (e.g., "tourist_attraction", "park", "restaurant").
+    ///- `WebiteUri`: Link to the official website of the place.
+    ///- `ReglarOpeningHours`: Operating hours for each day of the week.
+    ///- `EdiorialSummary`: Short description or summary of the place.
+    ///- `Phoos`: List of photo references for the place.
+    ///- `IntrnationalPhoneNumber`: Phone number in international format.
+    ///- `Revews`: Recent customer reviews and comments.
 pub enum PlaceField {
+    /// Unique identifier for the place.
     Id,
+    /// Name of the place (e.g., "Eiffel Tower").
     DisplayName,
+    /// Full address (e.g., "Champ de Mars, 5 Av. Anatole France, 75007 Paris, France").
     FormattedAddress,
+    /// Latitude and longitude coordinates.
     Location,
+    /// Average user rating (0-5).
     Rating,
+    /// Number of people who have rated this place.
     UserRatingCount,
+    /// Price range (e.g., FREE, INEXPENSIVE, MODERATE, EXPENSIVE, VERY_EXPENSIVE).
     PriceLevel,
+    /// Categories for the place (e.g., "tourist_attraction", "park", "restaurant").
     Types,
+    /// Link to the official website of the place.
     WebsiteUri,
+    /// Operating hours for each day of the week.
     RegularOpeningHours,
+    /// Short description or summary of the place.
     EditorialSummary,
+    /// List of photo references for the place.
     Photos,
+    /// Phone number in international format.
     InternationalPhoneNumber,
+    /// Recent customer reviews and comments.
     Reviews,
 }
 
@@ -48,13 +78,16 @@ struct TextSearchResponse {
 }
 
 #[gemini_function]
-///Get detailed information about a specific location or point of interest using Google Places API (New).
+/// Get detailed information about landmarks, tourist attractions, hotels, restaurants, or other points of interest. 
+/// Use this to find places in a city or get more info about a specific known spot.
+/// Returns a list of places matching the query.
 pub async fn get_about_place(
-    ///The name of the place to search for (e.g., 'Eiffel Tower', 'Manali')
+    /// The name of the place to search for (e.g., 'Eiffel Tower', 'Best restaurants in Paris', 'Hotels near Central Park').
     query: String,
-    ///Maximum number of results to return (1-20).
+    /// Maximum number of results to return (1 to 20).
     max_results: u8,
-    ///Specific fields to include in the response. If empty, returns basic fields (id, displayName, formattedAddress).
+    /// Specific fields to include in the response (e.g., Reviews, Rating, EditorialSummary). 
+    /// If empty, defaults to returning ID, Name, and Address.
     fields: Vec<PlaceField>,
 ) -> Result<Vec<Value>, Box<dyn std::error::Error + Send + Sync>> {
     let api_key = std::env::var("GOOGLE_MAPS_API_KEY")?;
@@ -103,4 +136,8 @@ async fn get_about_place_test() {
         .await
         .unwrap()
     );
+}
+#[tokio::test]
+async fn temp() {
+    dbg!(PlaceField::gemini_schema());
 }

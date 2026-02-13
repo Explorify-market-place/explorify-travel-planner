@@ -142,7 +142,7 @@ pub struct IataCode(String);
 impl GeminiSchema for IataCode {
     fn gemini_schema() -> serde_json::Value {
         json!({
-            "description":"ITATA code e.g. NDLS",
+            "description":"IATA code e.g. NDLS",
             "type":"String"
         })
     }
@@ -152,7 +152,7 @@ impl IataCode {
         if code.len() <= 3 && code.chars().all(|c| c.is_ascii_uppercase()) {
             Ok(Self(code))
         } else {
-            Err(format!("Invalid ITATA code: {code}"))
+            Err(format!("Invalid IATA code: {code}"))
         }
     }
 }

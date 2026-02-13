@@ -18,7 +18,7 @@ const CHUNK_SEPERATOR: &str = "\n";
 #[derive(Serialize, Deserialize)]
 pub struct ApiRequest {
     pub session: Session,
-    pub token_map:Vec<String>
+    pub token_map: Vec<String>,
 }
 
 #[derive(Deserialize)]
@@ -39,10 +39,13 @@ async fn stream_handler(
                     while let Some(gemini_response) = response_stream.next().await {
                         match gemini_response {
                             Ok(data) => {
-                                let response =
-                                    serde_json::to_string(data.get_chat().parts()).unwrap();
-                                println!("{response}");
-                                let chunk = format!("{response}{CHUNK_SEPERATOR}").into();
+                                let response = data.get_chat().parts();
+                                println!("Sending\n{response:?}");
+                                let chunk = format!(
+                                    "{}{CHUNK_SEPERATOR}",
+                                    serde_json::to_string(response).unwrap()
+                                )
+                                .into();
                                 tx.send_data(chunk).await.unwrap();
                             }
                             Err(error) => {
@@ -94,7 +97,11 @@ async fn stream_handler_test() {
     let mut session = Session::new(20);
     session.ask(r#"I want to travel to goa from ranchi
 I'm planning a 7-day trip for 2 adults starting on February 15th. I prefer a flight to save time for coding. I’m looking for a mid-range hotel near North Goa with good Wi-Fi. My budget is roughly ₹50,000 for the whole trip."#);
-    let body = to_string(&ApiRequest { session, token_map:Vec::new() }).unwrap();
+    let body = to_string(&ApiRequest {
+        session,
+        token_map: Vec::new(),
+    })
+    .unwrap();
 
     let response = stream_handler(LambdaEvent {
         payload: EventBody { body },

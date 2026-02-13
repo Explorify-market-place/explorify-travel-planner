@@ -69,12 +69,20 @@ fn clean_and_replace_tokens(
 }
 
 #[gemini_function]
-///returns flight between two station at a given date using google-flights.
+/// Search for one-way flights between two cities on a specific date using Google Flights.
+/// Returns a list of flight itineraries. Each itinerary contains a 'booking_token' (e.g., TOKEN_0)
+/// which MUST be passed to 'flight_booking_details' to get actual booking options.
+/// Price will be in INR.
 pub async fn flights_between(
+    /// starting airport
     origin: IataCode,
+    /// destination airport
     destination: IataCode,
+    /// The date of departure.
     date: Date,
+    /// The class of travel (ECONOMY, PREMIUM_ECONOMY, BUSINESS, or FIRST).
     travel_class: TravelClass,
+    /// Number of adult passengers (12+ years old).
     adults: u8,
 ) -> Result<Value, Box<dyn Error + Send + Sync>> {
     todo!()
@@ -136,10 +144,12 @@ async fn between(
 }
 
 #[gemini_function]
-///Get flight booking details and booking link(You will recieve a token which should be passed to
-///flight_booking_link() from different platforms
+/// Get detailed booking options for a specific flight itinerary.
+/// Use this after 'flights_between' to see different ways to book the flight (e.g., directly with airline or via OTA).
+/// Returns a list of booking options, each with a 'token' (e.g., TOKEN_1) that MUST be passed to 'flight_booking_link' to get the final URL.
+/// Price will be in INR.
 pub async fn flight_booking_details(
-    ///Provided by flights_between eg. TOKEN_0
+    /// The placeholder token (e.g., TOKEN_0) received from 'flights_between' for a specific itinerary.
     booking_token: String,
 ) -> Result<(Vec<Value>, Vec<String>), Box<dyn Error + Send + Sync>> {
     todo!()
@@ -187,9 +197,10 @@ async fn booking_details(
 }
 
 #[gemini_function]
-///returns flight booking link for a given booking_token
+/// Get the final booking URL for a specific booking option.
+/// Returns object containing the "url" to the checkout page and the token passed in agrument.
 pub async fn flight_booking_link(
-    ///Provided by flight_booking_details eg. TOKEN_0
+    /// The placeholder token (e.g., TOKEN_1) received from 'flight_booking_details' for a specific booking option.
     token: String,
 ) -> Result<String, Box<dyn Error + Send + Sync>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
