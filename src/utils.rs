@@ -141,7 +141,10 @@ impl Currency {
 pub struct IataCode(String);
 impl GeminiSchema for IataCode {
     fn gemini_schema() -> serde_json::Value {
-        json!({"type":"String"})
+        json!({
+            "description":"ITATA code e.g. NDLS",
+            "type":"String"
+        })
     }
 }
 impl IataCode {

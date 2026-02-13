@@ -63,9 +63,9 @@ fn get_headers() -> HeaderMap {
 #[gemini_function]
 /// Search for trains running between two stations on a specific date.
 pub async fn trains_between(
-    ///Source station code (e.g., 'NDLS')
+    ///Source station 
     source: Station,
-    ///Destination station code (e.g., 'BCT')
+    ///Destination station
     destination: Station,
     date: Date,
 ) -> Result<Vec<Train>, Box<dyn std::error::Error + Send + Sync>> {

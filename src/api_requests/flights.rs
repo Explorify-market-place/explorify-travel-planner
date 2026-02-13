@@ -3,7 +3,7 @@ use gemini_client_api::gemini::types::request::{PartType, Role};
 use gemini_client_api::gemini::types::sessions::Session;
 use gemini_client_api::gemini::utils::{GeminiSchema, gemini_function, gemini_schema};
 use serde::{Deserialize, Serialize};
-use serde_json::{Value, to_value};
+use serde_json::{Value, json, to_value};
 use std::error::Error;
 use std::{env, mem};
 
@@ -69,7 +69,7 @@ fn clean_and_replace_tokens(
 }
 
 #[gemini_function]
-///returns flight between two station at a given time.
+///returns flight between two station at a given date using google-flights.
 pub async fn flights_between(
     origin: IataCode,
     destination: IataCode,
@@ -281,11 +281,13 @@ pub async fn execute_calls(session: &mut Session, token_map: &mut Vec<String>) {
                     flight_booking_link::execute_with_closure(
                         args,
                         async |token| -> Result<Value, Box<dyn Error + Send + Sync>> {
-                            Ok(
+                            let url =
                                 flight_booking_link(resolve_token(token_map, &token)?.to_string())
-                                    .await?
-                                    .into(),
-                            )
+                                    .await?;
+                            Ok(json!({
+                                "url_for":token,
+                                "url": url
+                            }))
                         },
                     )
                     .expect("Wrong agrument format from gemini")

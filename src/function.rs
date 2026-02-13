@@ -1,6 +1,6 @@
 use crate::{
     api_requests::{
-        flights::{execute_calls, flights_between, flight_booking_details, flight_booking_link},
+        flights::{execute_calls, flight_booking_details, flight_booking_link, flights_between},
         site_seen::get_about_place,
         trains::{train_seats_available, trains_between},
     },
@@ -51,6 +51,8 @@ async fn plan_tour(
                 serde_json::to_string(chat.parts()).unwrap()
             )
         }
+    } else {
+        println!("No function call executed");
     }
     ai.ask_as_stream(session).await
 }
