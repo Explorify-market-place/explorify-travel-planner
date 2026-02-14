@@ -7,19 +7,19 @@ use serde_json::Value;
 /// Fields that can be requested for a place. Each field adds more detail to the response.  
 /// Usage are following:
     ///- `Id`: Unique identifier for the place.
-    ///- `DislayName`: Name of the place (e.g., "Eiffel Tower").
-    ///- `ForattedAddress`: Full address (e.g., "Champ de Mars, 5 Av. Anatole France, 75007 Paris, France").
-    ///- `Loction`: Latitude and longitude coordinates.
-    ///- `Ratng`: Average user rating (0-5).
-    ///- `UseRatingCount`: Number of people who have rated this place.
-    ///- `PrieLevel`: Price range (e.g., FREE, INEXPENSIVE, MODERATE, EXPENSIVE, VERY_EXPENSIVE).
-    ///- `Typs`: Categories for the place (e.g., "tourist_attraction", "park", "restaurant").
-    ///- `WebiteUri`: Link to the official website of the place.
-    ///- `ReglarOpeningHours`: Operating hours for each day of the week.
-    ///- `EdiorialSummary`: Short description or summary of the place.
-    ///- `Phoos`: List of photo references for the place.
-    ///- `IntrnationalPhoneNumber`: Phone number in international format.
-    ///- `Revews`: Recent customer reviews and comments.
+    ///- `DisplayName`: Name of the place (e.g., "Eiffel Tower").
+    ///- `FormattedAddress`: Full address (e.g., "Champ de Mars, 5 Av. Anatole France, 75007 Paris, France").
+    ///- `Location`: Latitude and longitude coordinates.
+    ///- `Rating`: Average user rating (0-5).
+    ///- `UserRatingCount`: Number of people who have rated this place.
+    ///- `PriceLevel`: Price range (e.g., FREE, INEXPENSIVE, MODERATE, EXPENSIVE, VERY_EXPENSIVE).
+    ///- `Types`: Categories for the place (e.g., "tourist_attraction", "park", "restaurant").
+    ///- `WebsiteUri`: Link to the official website of the place.
+    ///- `RegularOpeningHours`: Operating hours for each day of the week.
+    ///- `EditorialSummary`: Short description or summary of the place.
+    ///- `Photos`: List of photo references for the place.
+    ///- `InternationalPhoneNumber`: Phone number in international format.
+    ///- `Reviews`: Recent customer reviews and comments.
 pub enum PlaceField {
     /// Unique identifier for the place.
     Id,

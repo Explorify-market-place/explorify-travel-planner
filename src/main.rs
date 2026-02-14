@@ -4,14 +4,17 @@ mod function;
 mod utils;
 
 use crate::function::handle_request;
-use gemini_client_api::{futures::StreamExt, gemini::types::sessions::Session};
+use gemini_client_api::{
+    futures::StreamExt,
+    gemini::types::sessions::Session,
+};
 use lambda_runtime::{
     LambdaEvent, service_fn,
     streaming::{Body, Response, channel},
     tracing,
 };
 use serde::{Deserialize, Serialize};
-use serde_json::from_str;
+use serde_json::{from_str, to_string};
 
 const CHUNK_SEPERATOR: &str = "\n";
 
@@ -41,11 +44,9 @@ async fn stream_handler(
                             Ok(data) => {
                                 let response = data.get_chat().parts();
                                 println!("Sending\n{response:?}");
-                                let chunk = format!(
-                                    "{}{CHUNK_SEPERATOR}",
-                                    serde_json::to_string(response).unwrap()
-                                )
-                                .into();
+                                let chunk =
+                                    format!("{}{CHUNK_SEPERATOR}", to_string(response).unwrap())
+                                        .into();
                                 tx.send_data(chunk).await.unwrap();
                             }
                             Err(error) => {
@@ -60,7 +61,15 @@ async fn stream_handler(
                         .unwrap()
                         .has_function_call()
                     {
+                        tx.send_data(to_string(&request.token_map).unwrap().into())
+                            .await
+                            .unwrap();
                         println!("Response streaming completed.");
+                        let session = response_stream.get_session_owned();
+                        println!(
+                            "{:?}",
+                            session.get_last_chat().unwrap().get_text_no_think("\n")
+                        );
                         break;
                     } else {
                         println!("Resolving function calls.");

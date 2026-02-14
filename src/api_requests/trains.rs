@@ -128,32 +128,6 @@ struct TrainDetailsData {
     station_list: Vec<StationArrival>,
 }
 
-#[gemini_function]
-///Get full details of a train including its route and station stops.
-pub async fn train_details(
-    ///Train number (e.g., '12002')
-    train_number: String,
-) -> Result<TrainDetails, Box<dyn std::error::Error + Send + Sync>> {
-    let url = format!(
-        "https://irctc1.p.rapidapi.com/api/v1/getTrainDetails?trainNo={}",
-        train_number
-    );
-
-    let client = reqwest::Client::new();
-    let resp = client.get(url).headers(get_headers()).send().await?;
-
-    if !resp.status().is_success() {
-        return Err(format!("RapidAPI error: {}", resp.status()).into());
-    }
-
-    let body: TrainDetailsResponse = resp.json().await?;
-    Ok(TrainDetails {
-        train_number: body.data.train_number,
-        train_name: body.data.train_name,
-        station_list: body.data.station_list,
-    })
-}
-
 #[derive(Serialize, Deserialize, Debug)]
 pub struct SeatAvailability {
     pub train_number: String,
