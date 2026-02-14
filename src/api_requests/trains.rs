@@ -37,14 +37,42 @@ impl Display for Station {
 pub struct Train {
     pub train_number: String,
     pub train_name: String,
-    pub from_sta: String,
-    pub to_sta: String,
-    pub run_days: Vec<String>,
     pub train_type: String,
+    pub run_days: Vec<String>,
+
+    /// Arrival time at destination. Used to calculate if the user reaches in the morning/night.
+    pub to_sta: String,
+
+    /// Departure time from source. Essential for "after work" or "early morning" filters.
+    pub from_std: String,
+
+    /// Detailed station names (e.g., "MUMBAI CENTRAL").
+    pub to_station_name: String,
+
+    /// The total travel time (e.g., "15:40").
+    pub duration: String,
+
+    /// List of available travel classes (e.g., ["3A", "2A", "1A"]).
+    pub class_type: Vec<String>,
+
+    /// Indicates if food is available on board.
+    pub has_pantry: bool,
+
+    /// Total number of stops.
+    pub halt_stn: u32,
+
+    /// A pre-calculated quality score from the API.
+    pub score: i32,
+
+    /// Distance in KM.
+    pub distance: f64,
+
+    /// Proximity text (e.g., "6 Kms from NDLS").
+    pub from_distance_text: String,
 }
 
-#[derive(Deserialize)]
-struct TrainBetweenResponse {
+#[derive(Deserialize, Serialize, Debug)]
+pub struct TrainBetweenResponse {
     data: Vec<Train>,
 }
 
@@ -62,8 +90,34 @@ fn get_headers() -> HeaderMap {
 }
 #[gemini_function]
 /// Search for trains running between two stations on a specific date.
+/// Response:
+/// Train {
+///   train_number,
+///   train_name,
+///   train_type,
+///   run_days,
+///   // Arrival time at destination. Used to calculate if the user reaches in the morning/night.
+///   to_sta,
+///   // Departure time from source. Essential for "after work" or "early morning" filters.
+///   from_std,
+///   // Detailed station names (e.g., "MUMBAI CENTRAL").
+///   to_station_name,
+///   // The total travel time (e.g., "15:40").
+///   duration,
+///   // List of available travel classes (e.g., ["3A", "2A", "1A"]).
+///   class_type,
+///   // Indicates if food is available on board.
+///   has_pantry,
+///   // Total number of stops.
+///   // A pre-calculated quality score from the API.
+///   score,
+///   // Distance in KM.
+///   distance,
+///   // Proximity text (e.g., "6 Kms from NDLS").
+///   from_distance_text,
+///}[]
 pub async fn trains_between(
-    ///Source station 
+    ///Source station
     source: Station,
     ///Destination station
     destination: Station,
@@ -83,49 +137,8 @@ pub async fn trains_between(
         return Err(format!("RapidAPI error: {}", resp.status()).into());
     }
 
-    let body: TrainBetweenResponse = resp.json().await?;
-    let trains = body
-        .data
-        .into_iter()
-        .map(|d| Train {
-            train_number: d.train_number,
-            train_name: d.train_name,
-            from_sta: d.from_sta,
-            to_sta: d.to_sta,
-            run_days: d.run_days,
-            train_type: d.train_type,
-        })
-        .collect();
-
-    Ok(trains)
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct TrainDetails {
-    pub train_number: String,
-    pub train_name: String,
-    pub station_list: Vec<StationArrival>,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct StationArrival {
-    pub station_code: String,
-    pub station_name: String,
-    pub arrival_time: String,
-    pub departure_time: String,
-    pub halt_time: String,
-}
-
-#[derive(Deserialize)]
-struct TrainDetailsResponse {
-    data: TrainDetailsData,
-}
-
-#[derive(Deserialize)]
-struct TrainDetailsData {
-    train_number: String,
-    train_name: String,
-    station_list: Vec<StationArrival>,
+    let response: TrainBetweenResponse = resp.json().await?;
+    Ok(response.data)
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -158,7 +171,7 @@ pub async fn train_seats_available(
     class: String,
     ///Quota code (e.g., 'GN', 'TQ')
     quota: String,
-) -> Result<SeatAvailability, Box<dyn std::error::Error + Send + Sync>> {
+) -> Result<Vec<AvailabilityDetail>, Box<dyn std::error::Error + Send + Sync>> {
     let url = format!(
         "https://irctc1.p.rapidapi.com/api/v1/checkSeatAvailability?classCode={}&quotaCode={}&trainNo={}&dateOfJourney={}&fromStationCode={}&toStationCode={}",
         class,
@@ -191,7 +204,7 @@ async fn trains_between_test() {
         trains_between(
             Station::new("NDLS".into()).unwrap(),
             Station::new("BCT".into()).unwrap(),
-            Date::new(2026, 1, 23).unwrap(),
+            Date::new_now(),
         )
         .await
         .unwrap()
