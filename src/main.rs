@@ -3,11 +3,9 @@ mod constants;
 mod function;
 mod utils;
 
-use crate::api_requests::flights::TokenMap;
 use crate::function::handle_request;
+use crate::{api_requests::flights::TokenMap, utils::Date};
 use gemini_client_api::{futures::StreamExt, gemini::types::sessions::Session};
-use std::sync::Arc;
-use tokio::sync::Mutex;
 use lambda_runtime::{
     LambdaEvent, service_fn,
     streaming::{Body, Response, channel},
@@ -15,6 +13,8 @@ use lambda_runtime::{
 };
 use serde::{Deserialize, Serialize};
 use serde_json::{from_str, to_string};
+use std::sync::Arc;
+use tokio::sync::Mutex;
 
 const CHUNK_SEPERATOR: &str = "\n";
 
@@ -108,8 +108,8 @@ async fn stream_handler_test() {
     use serde_json::to_string;
 
     let mut session = Session::new(20);
-    session.ask(r#"I want to travel to goa from ranchi
-I'm planning a 7-day trip for 2 adults starting on February 15th. I prefer a flight to save time for coding. I’m looking for a mid-range hotel near North Goa with good Wi-Fi. My budget is roughly ₹50,000 for the whole trip."#);
+    session.ask(format!(r#"I want to travel to goa from ranchi
+I'm planning a 7-day trip for 2 adults starting on {}. I prefer a flight to save time for coding. I’m looking for a mid-range hotel near North Goa with good Wi-Fi. My budget is roughly ₹50,000 for the whole trip."#, Date::now()));
     let body = to_string(&ApiRequest {
         session,
         token_map: Vec::new(),

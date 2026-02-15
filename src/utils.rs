@@ -3,11 +3,6 @@ use gemini_client_api::gemini::utils::{GeminiSchema, gemini_schema};
 use serde::{Deserialize, Serialize};
 use serde_json::json;
 use std::fmt::Display;
-use std::sync::LazyLock;
-use std::time::{Duration, Instant};
-use tokio::sync::RwLock;
-
-const AUTH_URL: &str = "https://test.api.amadeus.com/v1/security/oauth2/token";
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[gemini_schema]
@@ -160,63 +155,4 @@ impl Display for IataCode {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "{}", self.0)
     }
-}
-
-#[derive(Deserialize, Clone)]
-struct OAuthTokenResponse {
-    access_token: String,
-    token_type: String,
-    expires_in: u64,
-}
-
-struct TokenCache {
-    token: OAuthTokenResponse,
-    expiry: Instant,
-}
-
-static TOKEN_STORAGE: LazyLock<RwLock<Option<TokenCache>>> = LazyLock::new(|| RwLock::new(None));
-
-pub async fn get_bearer_token(
-    client_id: &str,
-    client_secret: &str,
-) -> Result<String, Box<dyn std::error::Error + Send + Sync>> {
-    {
-        let cache = TOKEN_STORAGE.read().await;
-        if let Some(ref entry) = *cache {
-            // Buffer of 30s to prevent race conditions near expiry
-            if entry.expiry > Instant::now() + Duration::from_secs(30) {
-                return Ok(entry.token.access_token.clone());
-            }
-        }
-    }
-
-    let mut cache = TOKEN_STORAGE.write().await;
-
-    if let Some(ref entry) = *cache {
-        if entry.expiry > Instant::now() + Duration::from_secs(30) {
-            return Ok(entry.token.access_token.clone());
-        }
-    }
-
-    let params = [
-        ("grant_type", "client_credentials"),
-        ("client_id", client_id),
-        ("client_secret", client_secret),
-    ];
-
-    let resp = reqwest::Client::new()
-        .post(AUTH_URL)
-        .form(&params)
-        .send()
-        .await?
-        .error_for_status()?;
-
-    let token: OAuthTokenResponse = resp.json().await?;
-
-    *cache = Some(TokenCache {
-        token: token.clone(),
-        expiry: Instant::now() + Duration::from_secs(token.expires_in),
-    });
-
-    Ok(token.access_token)
 }
