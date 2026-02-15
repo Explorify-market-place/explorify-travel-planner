@@ -65,11 +65,6 @@ async fn stream_handler(
                             .await
                             .unwrap();
                         println!("Response streaming completed.");
-                        let session = response_stream.get_session_owned();
-                        println!(
-                            "{:?}",
-                            session.get_last_chat().unwrap().get_text_no_think("\n")
-                        );
                         break;
                     } else {
                         println!("Resolving function calls.");

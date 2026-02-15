@@ -8,7 +8,6 @@ use std::error::Error;
 const RAPID_API_HOST: &str = "booking-com15.p.rapidapi.com";
 const BASE_URL: &str = "https://booking-com15.p.rapidapi.com";
 const DEFAULT_CURRENCY: &str = "INR";
-const DEFAULT_LOCATION: &str = "IN";
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[gemini_schema]
@@ -37,10 +36,9 @@ pub struct HotelSearchResult {
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
-#[gemini_schema]
 pub struct HotelSearchResponse {
     pub status: bool,
-    pub message: String,
+    pub message: Value,
     pub data: HotelSearchData,
 }
 
@@ -52,39 +50,9 @@ pub struct HotelSearchData {
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[gemini_schema]
-pub struct HotelPrice {
-    pub value: f64,
-    pub currency: String,
-    pub amount_rounded: String,
-    pub amount_unrounded: String,
-}
-
-#[derive(Serialize, Deserialize, Debug, Clone)]
-#[gemini_schema]
-pub struct Facility {
-    pub name: String,
-    pub icon: Option<String>,
-}
-
-#[derive(Serialize, Deserialize, Debug, Clone)]
-#[gemini_schema]
-pub struct FacilitiesBlock {
-    pub name: String,
-    pub facilities: Vec<Facility>,
-}
-
-#[derive(Serialize, Deserialize, Debug, Clone)]
-#[gemini_schema]
-pub struct PropertyHighlight {
-    pub name: String,
-}
-
-#[derive(Serialize, Deserialize, Debug, Clone)]
-#[gemini_schema]
 pub struct HotelDetails {
     pub hotel_id: i64,
     pub hotel_name: String,
-    pub description: Option<String>,
     pub arrival_date: Option<String>,
     pub departure_date: Option<String>,
     pub latitude: f64,
@@ -92,17 +60,35 @@ pub struct HotelDetails {
     pub address: Option<String>,
     pub city: Option<String>,
     pub review_nr: Option<i64>,
-    pub all_inclusive_amount_hotel_currency: Option<HotelPrice>,
-    pub property_highlight_strip: Option<Vec<PropertyHighlight>>,
-    pub facilities_block: Option<FacilitiesBlock>,
+    pub price_rounded: Option<String>,
+    pub property_highlights: Option<Vec<String>>,
+    pub top_facilities: Option<Vec<String>>,
+    pub url: String,
 }
 
-#[derive(Serialize, Deserialize, Debug, Clone)]
-#[gemini_schema]
-pub struct HotelDetailsResponse {
-    pub status: bool,
-    pub message: String,
-    pub data: HotelDetails,
+// Internal-only struct for deserialization
+#[derive(Deserialize, Debug)]
+struct RawHotelDetails {
+    hotel_id: i64,
+    hotel_name: String,
+    arrival_date: Option<String>,
+    departure_date: Option<String>,
+    latitude: f64,
+    longitude: f64,
+    address: Option<String>,
+    city: Option<String>,
+    review_nr: Option<i64>,
+    product_price_breakdown: Option<Value>,
+    property_highlight_strip: Option<Vec<Value>>,
+    facilities_block: Option<Value>,
+    url: String,
+}
+
+#[derive(Deserialize, Debug)]
+struct RawDetailsResponse {
+    status: bool,
+    message: Value,
+    data: RawHotelDetails,
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
@@ -128,10 +114,9 @@ pub struct HotelDescriptionItem {
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
-#[gemini_schema]
 pub struct HotelDescriptionResponse {
     pub status: bool,
-    pub message: String,
+    pub message: Value,
     pub data: Vec<HotelDescriptionItem>,
 }
 
@@ -172,7 +157,6 @@ pub async fn get_hotel_by_coordinates(
             ("temperature_unit", "c".to_string()),
             ("languagecode", "en-us".to_string()),
             ("currency_code", DEFAULT_CURRENCY.to_string()),
-            ("location", DEFAULT_LOCATION.to_string()),
         ])
         .send()
         .await?;
@@ -180,14 +164,24 @@ pub async fn get_hotel_by_coordinates(
     if !resp.status().is_success() {
         return Err(format!("Hotel Search Error: {}", resp.status()).into());
     }
-    let resp: HotelSearchResponse = resp.json().await?;
 
+    let raw: Value = resp.json().await?;
+    if raw.get("status").and_then(|s| s.as_bool()) != Some(true) {
+        let msg = raw
+            .get("message")
+            .map(|m| m.to_string())
+            .unwrap_or_default();
+        return Err(format!("Hotel Search API error: {}", msg).into());
+    }
+
+    let resp: HotelSearchResponse = serde_json::from_value(raw)?;
     Ok(resp.data)
 }
 
 #[gemini_function]
 /// Get detailed information for a specific hotel, including address, facilities, and high-level pricing.
 /// Use this tool after finding a hotel ID from a search to get more specifics.
+/// "url" field can be provided as booking link
 pub async fn get_hotel_details(
     /// The unique hotel ID (e.g. "15109166").
     /// Provided by get_hotel_by_coordinates()
@@ -211,7 +205,6 @@ pub async fn get_hotel_details(
             ("departure_date", departure_date.to_yyyy_mm_dd()),
             ("languagecode", "en-us".to_string()),
             ("currency_code", DEFAULT_CURRENCY.to_string()),
-            ("location", DEFAULT_LOCATION.to_string()),
         ])
         .send()
         .await?;
@@ -220,8 +213,62 @@ pub async fn get_hotel_details(
         return Err(format!("Hotel Details Error: {}", resp.status()).into());
     }
 
-    let resp: HotelDetailsResponse = resp.json().await?;
-    Ok(resp.data)
+    let raw: Value = resp.json().await?;
+    if raw.get("status").and_then(|s| s.as_bool()) != Some(true) {
+        let msg = raw
+            .get("message")
+            .map(|m| m.to_string())
+            .unwrap_or_default();
+        return Err(format!("Hotel Details API error: {}", msg).into());
+    }
+
+    let raw: RawDetailsResponse = serde_json::from_value(raw)?;
+    let d = raw.data;
+
+    // Extract price from nested product_price_breakdown
+    let price_rounded = d
+        .product_price_breakdown
+        .as_ref()
+        .and_then(|p| p.pointer("/all_inclusive_amount_hotel_currency/amount_rounded"))
+        .and_then(|v| v.as_str())
+        .map(|s| s.to_string());
+
+    // Flatten property highlights to just names
+    let property_highlights = d.property_highlight_strip.map(|strips| {
+        strips
+            .iter()
+            .filter_map(|v| v.get("name").and_then(|n| n.as_str()))
+            .map(|s| s.to_string())
+            .collect()
+    });
+
+    // Flatten facilities to just names
+    let top_facilities = d.facilities_block.as_ref().and_then(|fb| {
+        fb.pointer("/facilities")
+            .and_then(|f| f.as_array())
+            .map(|arr| {
+                arr.iter()
+                    .filter_map(|v| v.get("name").and_then(|n| n.as_str()))
+                    .map(|s| s.to_string())
+                    .collect()
+            })
+    });
+
+    Ok(HotelDetails {
+        hotel_id: d.hotel_id,
+        hotel_name: d.hotel_name,
+        arrival_date: d.arrival_date,
+        departure_date: d.departure_date,
+        latitude: d.latitude,
+        longitude: d.longitude,
+        address: d.address,
+        city: d.city,
+        review_nr: d.review_nr,
+        url: d.url,
+        price_rounded,
+        property_highlights,
+        top_facilities,
+    })
 }
 
 #[gemini_function]
@@ -255,7 +302,6 @@ pub async fn get_room_availability(
             ("adults", adults.to_string()),
             ("room_qty", room_qty.to_string()),
             ("currency_code", DEFAULT_CURRENCY.to_string()),
-            ("location", DEFAULT_LOCATION.to_string()),
         ])
         .send()
         .await?;
@@ -338,6 +384,106 @@ pub async fn get_hotel_description(
         return Err(format!("Hotel Description Error: {}", resp.status()).into());
     }
 
-    let resp: HotelDescriptionResponse = resp.json().await?;
+    let raw: Value = resp.json().await?;
+    if raw.get("status").and_then(|s| s.as_bool()) != Some(true) {
+        let msg = raw
+            .get("message")
+            .map(|m| m.to_string())
+            .unwrap_or_default();
+        return Err(format!("Hotel Description API error: {}", msg).into());
+    }
+
+    let resp: HotelDescriptionResponse = serde_json::from_value(raw)?;
     Ok(resp.data)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::utils::Date;
+
+    #[tokio::test]
+    async fn test_get_hotel_by_coordinates() {
+        let arrival = Date::new(2026, 3, 15).unwrap();
+        let departure = Date::new(2026, 3, 20).unwrap();
+        let result = get_hotel_by_coordinates(21.57, 83.20, arrival, departure, 1, 1).await;
+        match &result {
+            Ok(data) => {
+                println!("Hotel Search Results ({} hotels):", data.result.len());
+                for h in data.result.iter().take(3) {
+                    println!(
+                        "  {} - {} (score: {:?}, price: {:?})",
+                        h.hotel_id, h.hotel_name, h.review_score, h.min_total_price
+                    );
+                }
+                assert!(
+                    !data.result.is_empty(),
+                    "Expected at least one hotel result"
+                );
+            }
+            Err(e) => {
+                println!("Error: {}", e);
+                panic!("get_hotel_by_coordinates failed: {}", e);
+            }
+        }
+    }
+
+    #[tokio::test]
+    async fn test_get_hotel_details() {
+        let hotel_id = "191605".to_string(); // Novotel Mumbai Juhu Beach
+        let arrival = Date::new(2026, 3, 15).unwrap();
+        let departure = Date::new(2026, 3, 20).unwrap();
+        let result = get_hotel_details(hotel_id, arrival, departure).await;
+        match &result {
+            Ok(data) => {
+                println!("Hotel Details:");
+                println!("  Name: {}", data.hotel_name);
+                println!("  City: {:?}", data.city);
+                println!("  Price: {:?}", data.price_rounded);
+                println!("  Highlights: {:?}", data.property_highlights);
+                println!("  Facilities: {:?}", data.top_facilities);
+                println!("  Url: {:?}", data.url);
+                assert_eq!(data.hotel_name, "Novotel Mumbai Juhu Beach");
+            }
+            Err(e) => {
+                println!("Error: {}", e);
+                panic!("get_hotel_details failed: {}", e);
+            }
+        }
+    }
+
+    #[tokio::test]
+    async fn test_get_room_availability() {
+        let hotel_id = "191605".to_string();
+        let arrival = Date::new(2026, 3, 15).unwrap();
+        let departure = Date::new(2026, 3, 20).unwrap();
+        let result = get_room_availability(hotel_id, arrival, departure, 1, 1).await;
+        match &result {
+            Ok(data) => {
+                println!("Room Availability:");
+                println!("{:#?}", data);
+            }
+            Err(e) => {
+                println!("Error: {}", e);
+                panic!("get_room_availability failed: {}", e);
+            }
+        }
+    }
+
+    #[tokio::test]
+    async fn test_get_hotel_description() {
+        let hotel_id = "191605".to_string();
+        let result = get_hotel_description(hotel_id).await;
+        match &result {
+            Ok(data) => {
+                println!("Hotel Description:");
+                println!("{:#?}", data);
+                assert!(!data.is_empty(), "Expected at least one description item");
+            }
+            Err(e) => {
+                println!("Error: {}", e);
+                panic!("get_hotel_description failed: {}", e);
+            }
+        }
+    }
 }
