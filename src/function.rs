@@ -1,6 +1,8 @@
 use crate::{
     api_requests::{
-        flights::{TokenMap, execute_calls, flight_booking_details, flight_booking_link, flights_between},
+        flights::{
+            TokenMap, execute_calls, flight_booking_details, flight_booking_link, flights_between,
+        },
         hotel::{
             get_hotel_by_coordinates, get_hotel_description, get_hotel_details,
             get_room_availability,
@@ -44,27 +46,29 @@ async fn plan_tour(
     )
     .set_tools(vec![Tool::FunctionDeclarations(tools)]);
 
-    let _ = execute_function_calls!(
-        session,
-        train_seats_available,
-        trains_between,
-        get_about_place,
-        get_hotel_by_coordinates,
-        get_hotel_details,
-        get_room_availability,
-        get_hotel_description,
-    );
-    execute_calls(&mut session, token_map).await;
+    if Role::User != *session.get_last_chat().unwrap().role() {
+        let _ = execute_function_calls!(
+            session,
+            train_seats_available,
+            trains_between,
+            get_about_place,
+            get_hotel_by_coordinates,
+            get_hotel_details,
+            get_room_availability,
+            get_hotel_description,
+        );
+        execute_calls(&mut session, token_map).await;
 
-    if let Some(chat) = session.get_last_chat() {
-        if *chat.role() == Role::Function {
-            println!(
-                "FunctionResponse:\n{}",
-                serde_json::to_string(chat.parts()).unwrap()
-            )
+        if let Some(chat) = session.get_last_chat() {
+            if *chat.role() == Role::Function {
+                println!(
+                    "FunctionResponse:\n{}",
+                    serde_json::to_string(chat.parts()).unwrap()
+                )
+            }
+        } else {
+            println!("No function call executed");
         }
-    } else {
-        println!("No function call executed");
     }
     ai.ask_as_stream(session).await
 }

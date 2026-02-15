@@ -5,6 +5,7 @@ mod utils;
 
 use crate::function::handle_request;
 use crate::{api_requests::flights::TokenMap, utils::Date};
+use gemini_client_api::gemini::types::request::Role;
 use gemini_client_api::{futures::StreamExt, gemini::types::sessions::Session};
 use lambda_runtime::{
     LambdaEvent, service_fn,
@@ -13,6 +14,7 @@ use lambda_runtime::{
 };
 use serde::{Deserialize, Serialize};
 use serde_json::{from_str, to_string};
+use std::env;
 use std::sync::Arc;
 use tokio::sync::Mutex;
 
@@ -22,6 +24,7 @@ const CHUNK_SEPERATOR: &str = "\n";
 pub struct ApiRequest {
     pub session: Session,
     pub token_map: Vec<String>,
+    pub secret: String,
 }
 
 #[derive(Deserialize)]
@@ -34,16 +37,27 @@ async fn stream_handler(
 ) -> Result<Response<Body>, lambda_runtime::Error> {
     let (mut tx, rx) = channel();
     let mut request: ApiRequest = from_str(&event.payload.body)?;
+    if request.secret != env::var("API_SECRET").unwrap() {
+        return Ok(rx.into());
+    }
+
     let token_map: TokenMap = Arc::new(Mutex::new(request.token_map));
     tokio::spawn(async move {
         loop {
             let response = handle_request(request.session, &token_map).await;
             match response {
                 Ok(mut response_stream) => {
+                    let last_chat = response_stream.get_session().get_last_chat().unwrap();
+                    if Role::Function == *last_chat.role() {
+                        println!("Sending\n{last_chat:#?}");
+                        let chunk =
+                            format!("{}{CHUNK_SEPERATOR}", to_string(last_chat).unwrap()).into();
+                        tx.send_data(chunk).await.unwrap();
+                    }
                     while let Some(gemini_response) = response_stream.next().await {
                         match gemini_response {
                             Ok(data) => {
-                                let response = data.get_chat().parts();
+                                let response = data.get_chat();
                                 println!("Sending\n{response:#?}");
                                 let chunk =
                                     format!("{}{CHUNK_SEPERATOR}", to_string(response).unwrap())
@@ -81,14 +95,14 @@ async fn stream_handler(
                     }
                 }
                 Err((session, e)) => {
-                    eprintln!("ERROR: handle_request failed:\n{e}\n{:?}", session);
+                    eprintln!("ERROR: handle_request failed:\n{e:?}\n{:?}", session);
                     tx.send_data(e.to_string().into()).await.unwrap();
                     break;
                 }
             }
         }
     });
-    Ok(Response::from(rx))
+    Ok(rx.into())
 }
 
 #[tokio::main]
@@ -113,6 +127,7 @@ I'm planning a 7-day trip for 2 adults starting on {}. I prefer a flight to save
     let body = to_string(&ApiRequest {
         session,
         token_map: Vec::new(),
+        secret: env::var("API_SECRET").unwrap(),
     })
     .unwrap();
 

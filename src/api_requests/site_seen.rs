@@ -90,7 +90,7 @@ pub async fn get_about_place(
     /// If empty, defaults to returning ID, Name, and Address.
     fields: Vec<PlaceField>,
 ) -> Result<Vec<Value>, Box<dyn std::error::Error + Send + Sync>> {
-    let api_key = std::env::var("GOOGLE_MAPS_API_KEY")?;
+    let api_key = std::env::var("GOOGLE_MAPS_API_KEY").unwrap();
 
     let client = reqwest::Client::new();
     let url = "https://places.googleapis.com/v1/places:searchText";
