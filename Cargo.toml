@@ -6,6 +6,7 @@ edition = "2024"
 [dependencies]
 chrono = "0.4.43"
 dotenv = "0.15.0"
+futures = "0.3.31"
 gemini-client-api = "7.2"
 lambda_runtime = "1.0.2"
 reqwest = { version = "0.13", features = ["json", "form", "query"] }

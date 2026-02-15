@@ -1,6 +1,6 @@
 use crate::{
     api_requests::{
-        flights::{execute_calls, flight_booking_details, flight_booking_link, flights_between},
+        flights::{TokenMap, execute_calls, flight_booking_details, flight_booking_link, flights_between},
         hotel::{
             get_hotel_by_coordinates, get_hotel_description, get_hotel_details,
             get_room_availability,
@@ -23,7 +23,7 @@ use gemini_client_api::gemini::{
 
 async fn plan_tour(
     mut session: Session,
-    token_map: &mut Vec<String>,
+    token_map: &TokenMap,
 ) -> Result<GeminiResponseStream, (Session, GeminiResponseError)> {
     let tools = vec![
         flights_between::gemini_schema(),
@@ -71,7 +71,7 @@ async fn plan_tour(
 
 pub async fn handle_request(
     session: Session,
-    token_map: &mut Vec<String>,
+    token_map: &TokenMap,
 ) -> Result<GeminiResponseStream, (Session, GeminiResponseError)> {
     plan_tour(session, token_map).await
 }

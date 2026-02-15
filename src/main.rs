@@ -3,8 +3,11 @@ mod constants;
 mod function;
 mod utils;
 
+use crate::api_requests::flights::TokenMap;
 use crate::function::handle_request;
 use gemini_client_api::{futures::StreamExt, gemini::types::sessions::Session};
+use std::sync::Arc;
+use tokio::sync::Mutex;
 use lambda_runtime::{
     LambdaEvent, service_fn,
     streaming::{Body, Response, channel},
@@ -31,9 +34,10 @@ async fn stream_handler(
 ) -> Result<Response<Body>, lambda_runtime::Error> {
     let (mut tx, rx) = channel();
     let mut request: ApiRequest = from_str(&event.payload.body)?;
+    let token_map: TokenMap = Arc::new(Mutex::new(request.token_map));
     tokio::spawn(async move {
         loop {
-            let response = handle_request(request.session, &mut request.token_map).await;
+            let response = handle_request(request.session, &token_map).await;
             match response {
                 Ok(mut response_stream) => {
                     while let Some(gemini_response) = response_stream.next().await {
@@ -58,7 +62,7 @@ async fn stream_handler(
                         .unwrap()
                         .has_function_call()
                     {
-                        tx.send_data(to_string(&request.token_map).unwrap().into())
+                        tx.send_data(to_string(&*token_map.lock().await).unwrap().into())
                             .await
                             .unwrap();
                         println!("Response streaming completed.");

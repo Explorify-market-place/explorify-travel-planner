@@ -1,11 +1,16 @@
 use crate::utils::{Date, IataCode};
+use futures::future::join_all;
 use gemini_client_api::gemini::types::request::{PartType, Role};
 use gemini_client_api::gemini::types::sessions::Session;
 use gemini_client_api::gemini::utils::{GeminiSchema, gemini_function, gemini_schema};
 use serde::{Deserialize, Serialize};
 use serde_json::{Value, json, to_value};
 use std::error::Error;
+use std::sync::Arc;
 use std::{env, mem};
+use tokio::sync::Mutex;
+
+pub type TokenMap = Arc<Mutex<Vec<String>>>;
 
 const RAPID_API_HOST: &str = "google-flights2.p.rapidapi.com";
 const BASE_URL: &str = "https://google-flights2.p.rapidapi.com";
@@ -27,14 +32,16 @@ fn update_token_map(map: &mut Vec<String>, token: String) -> String {
     placeholder
 }
 
-fn resolve_token<'a>(
-    map: &'a Vec<String>,
+fn resolve_token(
+    map: &Vec<String>,
     placeholder: &str,
-) -> Result<&'a String, Box<dyn std::error::Error + Send + Sync>> {
+) -> Result<String, Box<dyn std::error::Error + Send + Sync>> {
     let idx: usize = placeholder[TOKEN_PREFIX.len()..]
         .parse()
         .map_err(|_| "Invalid token provided")?;
-    map.get(idx).ok_or("Invalid token provided".into())
+    map.get(idx)
+        .cloned()
+        .ok_or("Invalid token provided".into())
 }
 
 fn clean_and_replace_tokens(
@@ -103,7 +110,7 @@ async fn between(
     date: Date,
     travel_class: TravelClass,
     adults: u8,
-    token_map: &mut Vec<String>,
+    token_map: TokenMap,
     children: u8,
     infant_on_lap: Option<u8>,
     infant_in_seat: Option<u8>,
@@ -163,7 +170,7 @@ async fn between(
                 .ok_or("Field not found: /data/itineraries/otherFlights")?;
         }
     };
-    clean_and_replace_tokens(top_flights, token_map)?;
+    clean_and_replace_tokens(top_flights, &mut *token_map.lock().await)?;
     Ok(mem::take(top_flights))
 }
 
@@ -180,7 +187,7 @@ pub async fn flight_booking_details(
 }
 async fn booking_details(
     booking_token: String,
-    token_map: &mut Vec<String>,
+    token_map: TokenMap,
 ) -> Result<Vec<Value>, Box<dyn Error + Send + Sync>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
@@ -205,6 +212,7 @@ async fn booking_details(
     let data = val["data"].as_array_mut().ok_or("data not found")?;
 
     //Updating response with placeholder tokens
+    let mut map = token_map.lock().await;
     for flights in data.iter_mut() {
         let flights = flights
             .as_object_mut()
@@ -212,7 +220,7 @@ async fn booking_details(
 
         if let Some(booking_token) = flights.get_mut("token") {
             let small_token =
-                update_token_map(token_map, booking_token.as_str().unwrap().to_string());
+                update_token_map(&mut map, booking_token.as_str().unwrap().to_string());
             flights.insert("token".into(), small_token.into());
         }
     }
@@ -265,74 +273,81 @@ fn update_session(
     session.add_function_response(name, response).unwrap();
 }
 
-pub async fn execute_calls(session: &mut Session, token_map: &mut Vec<String>) {
-    let mut results = Vec::new();
+pub async fn execute_calls(session: &mut Session, token_map: &TokenMap) {
     let last_chat = if *session.get_last_chat().unwrap().role() == Role::Function {
         session.get_previous_chat(2).unwrap()
     } else {
         session.get_last_chat().unwrap()
     };
+
+    // Collect (name, future) pairs without awaiting
+    let mut futures: Vec<(
+        String,
+        std::pin::Pin<Box<dyn std::future::Future<Output = Result<Value, Box<dyn Error + Send + Sync>>> + Send>>,
+    )> = Vec::new();
+
     for part in last_chat.parts() {
         if let PartType::FunctionCall(call) = part.data() {
             let args = call.args().as_ref().unwrap();
+            let name = call.name().to_string();
+            let tm = token_map.clone();
+
             if call.name() == "flights_between" {
-                results.push((call.name().to_string(),flights_between::execute_with_closure(
-                    args,
-                    async |origin,
-                           destination,
-                           date,
-                           travel_class,
-                           adults, children,infant_on_lap, infant_in_seat, search_type
-                            |
-                           -> Result<Value, Box<dyn Error + Send + Sync>> {
-                        let response =
-                            between(origin, destination, date, travel_class, adults, token_map, children, infant_on_lap, infant_in_seat, search_type)
-                                .await?;
-                        Ok(response)
-                    },
-                )
-                .expect("Wrong agrument format from gemini")
-                .await)
-                );
+                let args = args.clone();
+                futures.push((name, Box::pin(async move {
+                    flights_between::execute_with_closure(
+                        &args,
+                        async |origin, destination, date, travel_class, adults, children, infant_on_lap, infant_in_seat, search_type|
+                            -> Result<Value, Box<dyn Error + Send + Sync>> {
+                            between(origin, destination, date, travel_class, adults, tm, children, infant_on_lap, infant_in_seat, search_type).await
+                        },
+                    )
+                    .expect("Wrong agrument format from gemini")
+                    .await
+                })));
             } else if call.name() == "flight_booking_details" {
-                results.push((
-                    call.name().to_string(),
+                let args = args.clone();
+                futures.push((name, Box::pin(async move {
+                    let resolved = resolve_token(&*tm.lock().await, &args["booking_token"].as_str().unwrap_or_default())?
+                        .to_string();
                     flight_booking_details::execute_with_closure(
-                        args,
-                        async |booking_token| -> Result<Value, Box<dyn Error + Send + Sync>> {
-                            let response = booking_details(
-                                resolve_token(token_map, &booking_token)?.to_string(),
-                                token_map,
-                            )
-                            .await?;
+                        &args,
+                        async |_booking_token| -> Result<Value, Box<dyn Error + Send + Sync>> {
+                            let response = booking_details(resolved, tm).await?;
                             Ok(to_value(response).unwrap())
                         },
                     )
                     .expect("Wrong agrument format from gemini")
-                    .await,
-                ));
+                    .await
+                })));
             } else if call.name() == "flight_booking_link" {
-                results.push((
-                    call.name().to_string(),
+                let args = args.clone();
+                futures.push((name, Box::pin(async move {
+                    let resolved = resolve_token(&*tm.lock().await, &args["token"].as_str().unwrap_or_default())?
+                        .to_string();
                     flight_booking_link::execute_with_closure(
-                        args,
+                        &args,
                         async |token| -> Result<Value, Box<dyn Error + Send + Sync>> {
-                            let url =
-                                flight_booking_link(resolve_token(token_map, &token)?.to_string())
-                                    .await?;
+                            let url = flight_booking_link(resolved).await?;
                             Ok(json!({
-                                "url_for":token,
+                                "url_for": token,
                                 "url": url
                             }))
                         },
                     )
                     .expect("Wrong agrument format from gemini")
-                    .await,
-                ));
+                    .await
+                })));
             }
         }
     }
-    for (function_name, result) in results {
+
+    // Execute all futures concurrently
+    let names: Vec<String> = futures.iter().map(|(n, _)| n.clone()).collect();
+    let futs: Vec<_> = futures.into_iter().map(|(_, f)| f).collect();
+    let results = join_all(futs).await;
+
+    for (function_name, result) in names.into_iter().zip(results) {
         update_session(function_name, session, result);
     }
 }
@@ -343,7 +358,7 @@ async fn execute_calls_test() {
     use serde_json::json;
 
     let mut session = Session::new(10);
-    let mut token_map = Vec::new();
+    let token_map: TokenMap = Arc::new(Mutex::new(Vec::new()));
 
     // 1. Test flights_between call via execute_calls
     let call = FunctionCall::new(
@@ -351,16 +366,17 @@ async fn execute_calls_test() {
         Some(json!({
             "origin": "GOI",
             "destination": "IXR",
-            "date": Date::new(2026, 2, 14).unwrap(),
+            "date": Date::new_now(),
             "travel_class": "ECONOMY",
             "adults": 1,
-            "children":0
+            "children":0,
+            "search_type":"cheap"
         })),
     );
     session.reply_parts(vec![call.into()]);
 
     println!("Executing flights_between via execute_calls...");
-    execute_calls(&mut session, &mut token_map).await;
+    execute_calls(&mut session, &token_map).await;
 
     // Verify session has response
     assert_eq!(session.get_history_length(), 2);
@@ -369,11 +385,11 @@ async fn execute_calls_test() {
 
     // Verify token_map is populated
     assert!(
-        !token_map.is_empty(),
+        !token_map.lock().await.is_empty(),
         "Token map should be populated after flights_between. session\n{session:?}"
     );
     let first_token_placeholder = "TOKEN_0";
-    println!("Token map size: {}", token_map.len());
+    println!("Token map size: {}", token_map.lock().await.len());
 
     // 2. Test flight_booking_details call via execute_calls
     let call_details = FunctionCall::new(
@@ -385,7 +401,7 @@ async fn execute_calls_test() {
     session.reply_parts(vec![call_details.into()]);
 
     println!("Executing flight_booking_details via execute_calls...");
-    execute_calls(&mut session, &mut token_map).await;
+    execute_calls(&mut session, &token_map).await;
 
     // Verify session has response
     assert_eq!(session.get_history_length(), 4, "{session:?}");
@@ -394,7 +410,7 @@ async fn execute_calls_test() {
     // After flight_booking_details, we should have more tokens in the map
     // The details response (from details.json) has tokens that get replaced by placeholders
     // Let's assume there's at least one new token added.
-    let second_token_placeholder = format!("{TOKEN_PREFIX}{}", token_map.len() - 1);
+    let second_token_placeholder = format!("{TOKEN_PREFIX}{}", token_map.lock().await.len() - 1);
 
     let call_link = FunctionCall::new(
         "flight_booking_link".to_string(),
@@ -405,7 +421,7 @@ async fn execute_calls_test() {
     session.reply_parts(vec![call_link.into()]);
 
     println!("Executing flight_booking_link via execute_calls...");
-    execute_calls(&mut session, &mut token_map).await;
+    execute_calls(&mut session, &token_map).await;
 
     // Verify session has response
     assert_eq!(session.get_history_length(), 6);
@@ -414,7 +430,7 @@ async fn execute_calls_test() {
         assert_eq!(resp.name(), "flight_booking_link");
         // add_function_response wraps non-object responses in a {"result": ...} object
         assert!(
-            resp.response()["result"]
+            resp.response()["url"]
                 .as_str()
                 .unwrap()
                 .starts_with("https://"),

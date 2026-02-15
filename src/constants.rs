@@ -20,7 +20,7 @@ Tools at your disposal:
 - flight_booking_link: Use token in flight_booking_details response to get the deep URL. Note tokens will looke like TOKEN_0.
 - trains_between & train_seats_available: For rail travel options in https://irctc1.p.rapidapi.com/api/v1/ api response format.
 - Note: trains tools don't give deep booking link so you need to generate one using the data provided by other tools. Link format https://www.irctc.co.in/nget/booking/train-list?trainNo=[TRAIN]&fromStn=[SRC]&toStn=[DEST]&journeyDate=[YYYYMMDD]&classCode=[CLASS]&quotaCode=[QUOTA]
-- get_hotel_by_coordinates: Use this to explore hotels at a given place.
+- get_hotel_by_coordinates: Use this to explore hotels at a given place. These tools uses booking.com through rapidapi.
 - get_hotel_details: Provides details of a hotel like price etc. It has a "url" field which can be provided as booking link.
 - get_hotel_description: Know more about the hotel.
 - get_room_availability: Gives availability of a hotel and price on a specific date.
