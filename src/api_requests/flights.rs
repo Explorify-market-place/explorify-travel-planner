@@ -90,6 +90,10 @@ pub async fn flights_between(
     infant_on_lap: Option<u8>,
     ///The count of infants (below 2 years old) who require a separate seat.
     infant_in_seat: Option<u8>,
+    ///Specifies the type of search strategy to apply when retrieving flight results.
+    ///`best`: prioritizes a balanced mix of price, duration, and convenience.
+    ///`cheap`: returns the lowest-cost options, possibly with longer layovers or travel time.
+    search_type: String,
 ) -> Result<Value, Box<dyn Error + Send + Sync>> {
     todo!()
 }
@@ -103,6 +107,7 @@ async fn between(
     children: u8,
     infant_on_lap: Option<u8>,
     infant_in_seat: Option<u8>,
+    search_type: String,
 ) -> Result<Value, Box<dyn Error + Send + Sync>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
@@ -121,6 +126,7 @@ async fn between(
             to_value(travel_class)?.as_str().unwrap().to_string(),
         ),
         ("children", children.to_string()),
+        ("search_type", search_type),
     ];
     if let Some(v) = infant_on_lap {
         query.push(("infant_on_lap", v.to_string()));
@@ -276,12 +282,11 @@ pub async fn execute_calls(session: &mut Session, token_map: &mut Vec<String>) {
                            destination,
                            date,
                            travel_class,
-                           adults, 
-        children,infant_on_lap, infant_in_seat
+                           adults, children,infant_on_lap, infant_in_seat, search_type
                             |
                            -> Result<Value, Box<dyn Error + Send + Sync>> {
                         let response =
-                            between(origin, destination, date, travel_class, adults, token_map, children, infant_on_lap, infant_in_seat)
+                            between(origin, destination, date, travel_class, adults, token_map, children, infant_on_lap, infant_in_seat, search_type)
                                 .await?;
                         Ok(response)
                     },

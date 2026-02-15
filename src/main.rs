@@ -4,10 +4,7 @@ mod function;
 mod utils;
 
 use crate::function::handle_request;
-use gemini_client_api::{
-    futures::StreamExt,
-    gemini::types::sessions::Session,
-};
+use gemini_client_api::{futures::StreamExt, gemini::types::sessions::Session};
 use lambda_runtime::{
     LambdaEvent, service_fn,
     streaming::{Body, Response, channel},
@@ -43,7 +40,7 @@ async fn stream_handler(
                         match gemini_response {
                             Ok(data) => {
                                 let response = data.get_chat().parts();
-                                println!("Sending\n{response:?}");
+                                println!("Sending\n{response:#?}");
                                 let chunk =
                                     format!("{}{CHUNK_SEPERATOR}", to_string(response).unwrap())
                                         .into();
@@ -65,6 +62,14 @@ async fn stream_handler(
                             .await
                             .unwrap();
                         println!("Response streaming completed.");
+                        #[cfg(test)]
+                        {
+                            let session = response_stream.get_session_owned();
+                            println!(
+                                "{}",
+                                session.get_last_chat().unwrap().get_text_no_think("\n")
+                            );
+                        }
                         break;
                     } else {
                         println!("Resolving function calls.");

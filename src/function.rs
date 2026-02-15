@@ -1,7 +1,10 @@
 use crate::{
     api_requests::{
         flights::{execute_calls, flight_booking_details, flight_booking_link, flights_between},
-        hotel::{get_hotel_by_coordinates, get_hotel_description, get_hotel_details, get_room_availability},
+        hotel::{
+            get_hotel_by_coordinates, get_hotel_description, get_hotel_details,
+            get_room_availability,
+        },
         site_seen::get_about_place,
         trains::{train_seats_available, trains_between},
     },
