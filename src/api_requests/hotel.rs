@@ -190,22 +190,33 @@ pub async fn get_hotel_details(
     arrival_date: Date,
     /// Date of departure for the intended stay.
     departure_date: Date,
+    adults: u8,
+    ///The number of children, including infants, who are under 18. Example: Child 1 Age = 8 months Child 2 Age = 1 year Child 3 Age = 17 years Here is what the request parameter would look like: children_age: 0,1,17
+    children_age: Option<String>,
+    ///The number of rooms that are required
+    room_qty: u8,
 ) -> Result<HotelDetails, Box<dyn Error + Send + Sync>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
     let url = format!("{BASE_URL}/api/v1/hotels/getHotelDetails");
 
+    let mut query = vec![
+        ("hotel_id", hotel_id),
+        ("arrival_date", arrival_date.to_yyyy_mm_dd()),
+        ("departure_date", departure_date.to_yyyy_mm_dd()),
+        ("languagecode", "en-us".to_string()),
+        ("currency_code", DEFAULT_CURRENCY.to_string()),
+        ("adults", adults.to_string()),
+        ("room_qty", room_qty.to_string()),
+    ];
+    if let Some(v) = children_age {
+        query.push(("children_age", v));
+    }
     let resp = client
         .get(&url)
         .header("x-rapidapi-key", api_key)
         .header("x-rapidapi-host", RAPID_API_HOST)
-        .query(&[
-            ("hotel_id", hotel_id),
-            ("arrival_date", arrival_date.to_yyyy_mm_dd()),
-            ("departure_date", departure_date.to_yyyy_mm_dd()),
-            ("languagecode", "en-us".to_string()),
-            ("currency_code", DEFAULT_CURRENCY.to_string()),
-        ])
+        .query(&query)
         .send()
         .await?;
 
@@ -433,7 +444,7 @@ mod tests {
         let hotel_id = "191605".to_string(); // Novotel Mumbai Juhu Beach
         let arrival = Date::new(2026, 3, 15).unwrap();
         let departure = Date::new(2026, 3, 20).unwrap();
-        let result = get_hotel_details(hotel_id, arrival, departure).await;
+        let result = get_hotel_details(hotel_id, arrival, departure, 1, None, 1).await;
         match &result {
             Ok(data) => {
                 println!("Hotel Details:");

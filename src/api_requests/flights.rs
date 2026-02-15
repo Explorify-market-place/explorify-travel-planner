@@ -84,6 +84,12 @@ pub async fn flights_between(
     travel_class: TravelClass,
     /// Number of adult passengers (12+ years old).
     adults: u8,
+    ///The number of child passengers (ages 2–11).
+    children: u8,
+    ///The count of infants traveling without a seat, sitting on an adult's lap (ages < 2).
+    infant_on_lap: Option<u8>,
+    ///The count of infants (below 2 years old) who require a separate seat.
+    infant_in_seat: Option<u8>,
 ) -> Result<Value, Box<dyn Error + Send + Sync>> {
     todo!()
 }
@@ -94,28 +100,40 @@ async fn between(
     travel_class: TravelClass,
     adults: u8,
     token_map: &mut Vec<String>,
+    children: u8,
+    infant_on_lap: Option<u8>,
+    infant_in_seat: Option<u8>,
 ) -> Result<Value, Box<dyn Error + Send + Sync>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
 
     let url = format!("{BASE_URL}/api/v1/searchFlights");
 
+    let mut query = vec![
+        ("departure_id", origin.to_string()),
+        ("arrival_id", destination.to_string()),
+        ("outbound_date", date.to_yyyy_mm_dd()),
+        ("currency", "INR".to_string()),
+        ("country_code", "IN".to_string()),
+        ("adults", adults.to_string()),
+        (
+            "travel_class",
+            to_value(travel_class)?.as_str().unwrap().to_string(),
+        ),
+        ("children", children.to_string()),
+    ];
+    if let Some(v) = infant_on_lap {
+        query.push(("infant_on_lap", v.to_string()));
+    }
+    if let Some(v) = infant_in_seat {
+        query.push(("infant_in_seat", v.to_string()));
+    }
+
     let resp = client
         .get(&url)
         .header("x-rapidapi-key", api_key)
         .header("x-rapidapi-host", RAPID_API_HOST)
-        .query(&[
-            ("departure_id", origin.to_string()),
-            ("arrival_id", destination.to_string()),
-            ("outbound_date", date.to_yyyy_mm_dd()),
-            ("currency", "INR".to_string()),
-            ("country_code", "IN".to_string()),
-            ("adults", adults.to_string()),
-            (
-                "travel_class",
-                to_value(travel_class)?.as_str().unwrap().to_string(),
-            ),
-        ])
+        .query(&query)
         .send()
         .await?;
 
@@ -258,10 +276,12 @@ pub async fn execute_calls(session: &mut Session, token_map: &mut Vec<String>) {
                            destination,
                            date,
                            travel_class,
-                           adults|
+                           adults, 
+        children,infant_on_lap, infant_in_seat
+                            |
                            -> Result<Value, Box<dyn Error + Send + Sync>> {
                         let response =
-                            between(origin, destination, date, travel_class, adults, token_map)
+                            between(origin, destination, date, travel_class, adults, token_map, children, infant_on_lap, infant_in_seat)
                                 .await?;
                         Ok(response)
                     },
@@ -328,7 +348,8 @@ async fn execute_calls_test() {
             "destination": "IXR",
             "date": Date::new(2026, 2, 14).unwrap(),
             "travel_class": "ECONOMY",
-            "adults": 1
+            "adults": 1,
+            "children":0
         })),
     );
     session.reply_parts(vec![call.into()]);
