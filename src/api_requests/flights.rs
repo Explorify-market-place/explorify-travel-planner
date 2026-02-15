@@ -76,6 +76,7 @@ fn clean_and_replace_tokens(
 }
 
 #[gemini_function]
+#[allow(unused_variables)]
 /// Search for one-way flights between two cities on a specific date using Google Flights.
 /// Returns a list of flight itineraries. Each itinerary contains a 'booking_token' (e.g., TOKEN_0)
 /// which MUST be passed to 'flight_booking_details' to get actual booking options.
@@ -158,23 +159,33 @@ async fn between(
 
     let mut val: Value = resp.json().await?;
 
-    // Extract topFlights and clean them
-    let mut top_flights = val
+    // Extract topFlights, supplementing with otherFlights if fewer than 3
+    let top = val
         .pointer_mut("/data/itineraries/topFlights")
-        .ok_or("Field not found: /data/itineraries/topFlights")?;
-    match top_flights.as_array().and_then(|e| Some(e.len() != 0)) {
-        Some(true) => {}
-        _ => {
-            top_flights = val
-                .pointer_mut("/data/itineraries/otherFlights")
-                .ok_or("Field not found: /data/itineraries/otherFlights")?;
+        .and_then(|v| v.as_array_mut().map(mem::take))
+        .unwrap_or_default();
+
+    let mut flights = top;
+    if flights.len() < 3 {
+        if let Some(others) = val
+            .pointer_mut("/data/itineraries/otherFlights")
+            .and_then(|v| v.as_array_mut().map(mem::take))
+        {
+            flights.extend(others);
         }
-    };
-    clean_and_replace_tokens(top_flights, &mut *token_map.lock().await)?;
-    Ok(mem::take(top_flights))
+    }
+
+    if flights.is_empty() {
+        return Err("No flight itineraries found for this route".into());
+    }
+
+    let mut flights_val = Value::Array(flights);
+    clean_and_replace_tokens(&mut flights_val, &mut *token_map.lock().await)?;
+    Ok(flights_val)
 }
 
 #[gemini_function]
+#[allow(unused_variables)]
 /// Get detailed booking options for a specific flight itinerary.
 /// Use this after 'flights_between' to see different ways to book the flight (e.g., directly with airline or via OTA).
 /// Returns a list of booking options, each with a 'token' (e.g., TOKEN_1) that MUST be passed to 'flight_booking_link' to get the final URL.
@@ -229,6 +240,7 @@ async fn booking_details(
 }
 
 #[gemini_function]
+#[allow(unused_variables)]
 /// Get the final booking URL for a specific booking option.
 /// Returns object containing the "url" to the checkout page and the token passed in agrument.
 pub async fn flight_booking_link(
