@@ -153,11 +153,16 @@ pub struct SeatAvailability {
 pub struct AvailabilityDetail {
     pub date: String,
     pub status: String,
+    pub availability: String,
+    pub fare: u32,
+    pub quota: String,
 }
 
 #[derive(Deserialize)]
 struct SeatAvailabilityResponse {
-    data: Vec<AvailabilityDetail>,
+    pub status: bool,
+    pub message: String,
+    pub data: Vec<AvailabilityDetail>,
 }
 
 #[gemini_function]
@@ -173,7 +178,7 @@ pub async fn train_seats_available(
     quota: String,
 ) -> Result<Vec<AvailabilityDetail>, Box<dyn std::error::Error + Send + Sync>> {
     let url = format!(
-        "https://irctc1.p.rapidapi.com/api/v1/checkSeatAvailability?classCode={}&quotaCode={}&trainNo={}&dateOfJourney={}&fromStationCode={}&toStationCode={}",
+        "https://irctc1.p.rapidapi.com/api/v2/checkSeatAvailability?classType={}&quota={}&trainNo={}&date={}&fromStationCode={}&toStationCode={}",
         class,
         quota,
         train_number,
@@ -190,12 +195,7 @@ pub async fn train_seats_available(
     }
 
     let body: SeatAvailabilityResponse = resp.json().await?;
-    Ok(SeatAvailability {
-        train_number: train_number.to_string(),
-        class: class.to_string(),
-        quota: quota.to_string(),
-        availability: body.data,
-    })
+    Ok(body.data)
 }
 
 #[tokio::test]
@@ -209,4 +209,26 @@ async fn trains_between_test() {
         .await
         .unwrap()
     );
+}
+
+#[tokio::test]
+async fn train_seats_available_test() {
+    let result = train_seats_available(
+        "12952".to_string(),
+        Station::new("NDLS".into()).unwrap(),
+        Station::new("MMCT".into()).unwrap(),
+        Date::new_now(),
+        "3A".to_string(),
+        "GN".to_string(),
+    )
+    .await;
+
+    match result {
+        Ok(data) => {
+            println!("Got availability data: {:#?}", data);
+        }
+        Err(e) => {
+            println!("Error fetching availability: {}", e);
+        }
+    }
 }

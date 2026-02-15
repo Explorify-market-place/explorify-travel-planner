@@ -1,0 +1,19 @@
+{
+  "status": true,
+  "message": "Success",
+  "timestamp": 1771133363464,
+  "data": [
+    {
+      "hotel_id": "15109166",
+      "languagecode": "xu",
+      "description": "Located in Alībāg, The Grantley Hotel provides a garden. There's a terrace and guests can use free WiFi and free private parking.\n\nAll guest rooms at the hotel are equipped with a seating area. All rooms have a private bathroom with a shower, while selected rooms will provide you with a balcony and others also have city views. At The Grantley Hotel the rooms come with a desk and a flat-screen TV.\n\nAt the accommodation you'll find a restaurant serving Indian cuisine. Vegetarian, dairy-free and halal options can also be requested.\n\nSpeaking English and Hindi, staff at the 24-hour front desk can help you plan your stay.\n\nChhatrapati Shivaji International Mumbai Airport is 56 miles away.",
+      "descriptiontype_id": 6
+    },
+    {
+      "description": "This property does not accommodate bachelor(ette) or similar parties.",
+      "descriptiontype_id": 7,
+      "hotel_id": "15109166",
+      "languagecode": "xu"
+    }
+  ]
+}

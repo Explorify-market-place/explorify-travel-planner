@@ -1,0 +1,18 @@
+{
+  "status": true,
+  "message": "Success",
+  "timestamp": 1771129530744,
+  "data": {
+    "avDates": [
+      {
+        "2026-02-20": 178
+      }
+    ],
+    "lengthsOfStay": [
+      {
+        "2026-02-20": 1
+      }
+    ],
+    "currency": "USD"
+  }
+}

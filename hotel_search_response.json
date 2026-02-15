@@ -1,0 +1,4018 @@
+{
+  "status": true,
+  "message": "Success",
+  "timestamp": 1771129398242,
+  "data": {
+    "applied_filters": [],
+    "filters": [
+      {
+        "title": "Your budget (for 1 night)",
+        "field": "price"
+      },
+      {
+        "title": "Bed Preference",
+        "field": "tdb"
+      },
+      {
+        "field": "roomfacility",
+        "title": "Room Facilities"
+      },
+      {
+        "field": "fc",
+        "title": "Free cancellation "
+      },
+      {
+        "field": "pmt",
+        "title": "Online Payment"
+      },
+      {
+        "field": "entire_place_bedroom_count",
+        "title": "Number of bedrooms"
+      },
+      {
+        "title": "Meals",
+        "field": "mealplan"
+      }
+    ],
+    "primary_count": 2532,
+    "unfiltered_count": 4870,
+    "page_loading_threshold": 10,
+    "b_max_los_data": {
+      "default_los": 45,
+      "extended_los": 90,
+      "has_extended_los": 1,
+      "experiment": "long_stays_ios_extend_los_2",
+      "max_allowed_los": 90,
+      "is_fullon": 0
+    },
+    "extended_count": 0,
+    "count": 2532,
+    "unfiltered_primary_count": 4870,
+    "has_low_availability": "",
+    "result": [
+      {
+        "hotel_id": 15109166,
+        "timezone": "Asia/Kolkata",
+        "is_smart_deal": 0,
+        "updated_checkout": null,
+        "accommodation_type": 204,
+        "latitude": 18.642987374031,
+        "ufi": -2088477,
+        "checkout": {
+          "from": "00:00",
+          "until": "10:00"
+        },
+        "updated_checkin": null,
+        "hotel_name_trans": "The Grantley Hotel",
+        "review_score_word": "Very Good",
+        "preferred": 1,
+        "genius_discount_percentage": 0,
+        "has_free_parking": 1,
+        "hotel_has_vb_boost": 1,
+        "city": "Konkan Division",
+        "soldout": 0,
+        "is_tpi_exclusive_property": 0,
+        "hotel_name": "The Grantley Hotel",
+        "extended": 0,
+        "cant_book": 0,
+        "city_in_trans": "in Alībāg",
+        "class_is_estimated": 0,
+        "countrycode": "in",
+        "review_score": 8.1,
+        "badges": [
+          {
+            "id": "Mobile Rate",
+            "badge_variant": "constructive",
+            "text": "Mobile-only price"
+          }
+        ],
+        "default_language": "xu",
+        "checkin": {
+          "from": "12:00",
+          "until": "12:00"
+        },
+        "is_free_cancellable": 1,
+        "default_wishlist_name": "Alībāg",
+        "id": "property_card_15109166",
+        "block_ids": [
+          "1510916603_422851565_4_0_0"
+        ],
+        "children_not_allowed": 0,
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/789490710.jpg?k=bc3b319d18619276716922fff2367bae6e705d341c369b2cba5a08e47baafa8c&o=",
+        "review_nr": 13,
+        "currencycode": "INR",
+        "longitude": 72.8759259822048,
+        "unit_configuration_label": "<b>Private suite</b>: 2 beds",
+        "type": "property_card",
+        "is_no_prepayment_block": 1,
+        "is_geo_rate": "",
+        "is_genius_deal": 0,
+        "distances": [],
+        "min_total_price": 3644.19,
+        "preferred_plus": 1,
+        "hotel_include_breakfast": 0,
+        "class": 0,
+        "main_photo_id": 789490710,
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "composite_price_breakdown": {
+          "price_display_config": [
+            {
+              "key": "use_nightly_prices",
+              "value": 0
+            },
+            {
+              "value": 0,
+              "key": "use_nightly_as_dominant"
+            },
+            {
+              "key": "use_js_tracking",
+              "value": 1
+            }
+          ],
+          "charges_details": {
+            "mode": "extra_charges",
+            "amount": {
+              "currency": "INR",
+              "value": 182
+            },
+            "translated_copy": ""
+          },
+          "gross_amount_hotel_currency": {
+            "amount_unrounded": "Rs. 3,644.19",
+            "currency": "INR",
+            "value": 3644.19,
+            "amount_rounded": "Rs. 3,644"
+          },
+          "included_taxes_and_charges_amount": {
+            "amount_unrounded": "Rs. 0",
+            "currency": "INR",
+            "value": 0,
+            "amount_rounded": "Rs. 0"
+          },
+          "benefits": [
+            {
+              "name": "Mobile-only price",
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop.",
+              "icon": null,
+              "kind": "badge",
+              "identifier": "mobile-rate",
+              "badge_variant": "constructive"
+            }
+          ],
+          "net_amount": {
+            "amount_unrounded": "Rs. 3,644.19",
+            "currency": "INR",
+            "value": 3644.19,
+            "amount_rounded": "Rs. 3,644"
+          },
+          "all_inclusive_amount": {
+            "amount_unrounded": "Rs. 3,826.40",
+            "currency": "INR",
+            "amount_rounded": "Rs. 3,826",
+            "value": 3826.39950271513
+          },
+          "strikethrough_amount_per_night": {
+            "value": 4499,
+            "amount_rounded": "Rs. 4,499",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 4,499"
+          },
+          "gross_amount_per_night": {
+            "amount_unrounded": "Rs. 3,644.19",
+            "currency": "INR",
+            "amount_rounded": "Rs. 3,644",
+            "value": 3644.19
+          },
+          "has_long_stays_monthly_rate_price": 0,
+          "has_long_stays_weekly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "amount_unrounded": "Rs. 3,826.40",
+            "currency": "INR",
+            "amount_rounded": "Rs. 3,826",
+            "value": 3826.39950271513
+          },
+          "gross_amount": {
+            "value": 3644.19,
+            "amount_rounded": "Rs. 3,644",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 3,644.19"
+          },
+          "discounted_amount": {
+            "amount_unrounded": "Rs. 854.81",
+            "currency": "INR",
+            "amount_rounded": "Rs. 855",
+            "value": 854.81
+          },
+          "excluded_amount": {
+            "amount_rounded": "Rs. 182",
+            "value": 182.2095,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 182.21"
+          },
+          "items": [
+            {
+              "inclusion_type": "excluded",
+              "base": {
+                "kind": "variable_amount",
+                "base_amount": 0
+              },
+              "item_amount": {
+                "currency": "INR",
+                "amount_unrounded": "Rs. 182.21",
+                "value": 182.2095,
+                "amount_rounded": "Rs. 182"
+              },
+              "kind": "charge",
+              "name": "Goods and services tax",
+              "details": "Goods and services tax"
+            },
+            {
+              "kind": "discount",
+              "base": {
+                "kind": "rate"
+              },
+              "item_amount": {
+                "value": 449.9,
+                "amount_rounded": "Rs. 450",
+                "currency": "INR",
+                "amount_unrounded": "Rs. 449.90"
+              },
+              "name": "Bonus savings",
+              "details": "You’re getting a reduced rate because this property is offering a discount.",
+              "identifier": "basic-deal"
+            },
+            {
+              "kind": "discount",
+              "item_amount": {
+                "currency": "INR",
+                "amount_unrounded": "Rs. 404.91",
+                "amount_rounded": "Rs. 405",
+                "value": 404.91
+              },
+              "base": {
+                "kind": "rate"
+              },
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop.",
+              "name": "Mobile-only price",
+              "identifier": "mobile-discount"
+            }
+          ],
+          "strikethrough_amount": {
+            "amount_unrounded": "Rs. 4,499",
+            "currency": "INR",
+            "value": 4499,
+            "amount_rounded": "Rs. 4,499"
+          }
+        }
+      },
+      {
+        "hotel_id": 9052269,
+        "default_wishlist_name": "Lonavala",
+        "checkin": {
+          "until": "22:00",
+          "from": "13:00"
+        },
+        "is_free_cancellable": 1,
+        "block_ids": [
+          "905226901_386253215_6_2_0"
+        ],
+        "id": "property_card_9052269",
+        "booking_home": {
+          "quality_class": 0,
+          "group": "house_like",
+          "is_single_unit_property": 1,
+          "segment": 2,
+          "is_booking_home": 1
+        },
+        "children_not_allowed": 0,
+        "currencycode": "INR",
+        "review_nr": 15,
+        "longitude": 73.376084929641,
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/545975376.jpg?k=ba380a44dc5d4e5eba78ce7c84951834b5b5c8e798c3efbc16aa056ebdb6f178&o=",
+        "unit_configuration_label": "<b>Entire villa – 911 m²</b>: 7 beds • 3 bedrooms • 2 living rooms • 4 bathrooms",
+        "preferred_plus": 0,
+        "is_no_prepayment_block": 1,
+        "type": "property_card",
+        "min_total_price": 2500,
+        "distances": [],
+        "is_geo_rate": "",
+        "is_genius_deal": 0,
+        "hotel_include_breakfast": 0,
+        "class": 0,
+        "main_photo_id": 545975376,
+        "composite_price_breakdown": {
+          "charges_details": {
+            "amount": {
+              "value": 3125,
+              "currency": "INR"
+            },
+            "translated_copy": "",
+            "mode": "extra_charges"
+          },
+          "gross_amount_hotel_currency": {
+            "value": 2500,
+            "amount_rounded": "Rs. 2,500",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 2,500"
+          },
+          "included_taxes_and_charges_amount": {
+            "amount_unrounded": "Rs. 0",
+            "currency": "INR",
+            "value": 0,
+            "amount_rounded": "Rs. 0"
+          },
+          "price_display_config": [
+            {
+              "value": 0,
+              "key": "use_nightly_prices"
+            },
+            {
+              "key": "use_nightly_as_dominant",
+              "value": 0
+            },
+            {
+              "key": "use_js_tracking",
+              "value": 1
+            }
+          ],
+          "all_inclusive_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 5,625",
+            "amount_rounded": "Rs. 5,625",
+            "value": 5625.00000186265
+          },
+          "gross_amount_per_night": {
+            "value": 2500,
+            "amount_rounded": "Rs. 2,500",
+            "amount_unrounded": "Rs. 2,500",
+            "currency": "INR"
+          },
+          "benefits": [],
+          "net_amount": {
+            "amount_rounded": "Rs. 2,500",
+            "value": 2500,
+            "amount_unrounded": "Rs. 2,500",
+            "currency": "INR"
+          },
+          "has_long_stays_weekly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "amount_unrounded": "Rs. 5,625",
+            "currency": "INR",
+            "amount_rounded": "Rs. 5,625",
+            "value": 5625.00000186265
+          },
+          "has_long_stays_monthly_rate_price": 0,
+          "excluded_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 3,125",
+            "amount_rounded": "Rs. 3,125",
+            "value": 3125
+          },
+          "items": [
+            {
+              "item_amount": {
+                "amount_unrounded": "Rs. 125",
+                "currency": "INR",
+                "value": 125,
+                "amount_rounded": "Rs. 125"
+              },
+              "base": {
+                "kind": "variable_amount",
+                "base_amount": 0
+              },
+              "kind": "charge",
+              "details": "Goods and services tax",
+              "name": "Goods and services tax",
+              "inclusion_type": "excluded"
+            },
+            {
+              "name": "Resort fee",
+              "details": "Resort fee",
+              "base": {
+                "kind": "per_night",
+                "base_amount": 1500
+              },
+              "item_amount": {
+                "amount_unrounded": "Rs. 1,500",
+                "currency": "INR",
+                "amount_rounded": "Rs. 1,500",
+                "value": 1500
+              },
+              "kind": "charge",
+              "inclusion_type": "excluded"
+            },
+            {
+              "details": "Environment fee",
+              "name": "Environment fee",
+              "item_amount": {
+                "amount_rounded": "Rs. 1,500",
+                "value": 1500,
+                "currency": "INR",
+                "amount_unrounded": "Rs. 1,500"
+              },
+              "base": {
+                "base_amount": 1500,
+                "kind": "per_night"
+              },
+              "kind": "charge",
+              "inclusion_type": "excluded"
+            }
+          ],
+          "gross_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 2,500",
+            "value": 2500,
+            "amount_rounded": "Rs. 2,500"
+          }
+        },
+        "has_swimming_pool": 1,
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "accommodation_type": 213,
+        "updated_checkout": null,
+        "latitude": 18.7346346846782,
+        "timezone": "Asia/Kolkata",
+        "is_smart_deal": 0,
+        "checkout": {
+          "until": "11:00",
+          "from": "07:00"
+        },
+        "ufi": -2102774,
+        "updated_checkin": null,
+        "review_score_word": "Very Good",
+        "hotel_name_trans": "Mount View Villa - The Dream Stays ll Pvt Pool ll Garden ll 3Ac rooms",
+        "genius_discount_percentage": 0,
+        "has_free_parking": 1,
+        "preferred": 1,
+        "city": "lonavla",
+        "soldout": 0,
+        "hotel_has_vb_boost": 1,
+        "is_tpi_exclusive_property": 0,
+        "cant_book": 0,
+        "city_in_trans": "in Lonavala",
+        "extended": 0,
+        "hotel_name": "Mount View Villa - The Dream Stays ll Pvt Pool ll Garden ll 3Ac rooms",
+        "class_is_estimated": 0,
+        "badges": [],
+        "default_language": "en",
+        "countrycode": "in",
+        "review_score": 8.3
+      },
+      {
+        "hotel_id": 14810029,
+        "genius_discount_percentage": 0,
+        "has_free_parking": 1,
+        "preferred": 1,
+        "review_score_word": "Pleasant",
+        "hotel_name_trans": "Grantley - Alibag Beach",
+        "ufi": -2088477,
+        "checkout": {
+          "from": "00:00",
+          "until": "10:00"
+        },
+        "updated_checkin": null,
+        "updated_checkout": null,
+        "accommodation_type": 204,
+        "latitude": 18.6428934537951,
+        "timezone": "Asia/Kolkata",
+        "is_smart_deal": 0,
+        "badges": [
+          {
+            "id": "Early Year Deals",
+            "badge_variant": "constructive",
+            "text": "Early 2026 Deal"
+          }
+        ],
+        "default_language": "xu",
+        "countrycode": "in",
+        "review_score": 6.8,
+        "hotel_name": "Grantley - Alibag Beach",
+        "extended": 0,
+        "cant_book": 0,
+        "city_in_trans": "in Alībāg",
+        "class_is_estimated": 0,
+        "is_tpi_exclusive_property": 0,
+        "city": "Alibag",
+        "soldout": 0,
+        "hotel_has_vb_boost": 1,
+        "currencycode": "INR",
+        "review_nr": 9,
+        "longitude": 72.8759266963257,
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/802004860.jpg?k=9106ac039759dce8236724e2ffab4e9c4919bc1724af65a5e4945f3e8a21eae3&o=",
+        "children_not_allowed": 0,
+        "id": "property_card_14810029",
+        "block_ids": [
+          "1481002902_419575720_0_42_0"
+        ],
+        "default_wishlist_name": "Alībāg",
+        "checkin": {
+          "until": "12:00",
+          "from": "12:00"
+        },
+        "is_free_cancellable": 0,
+        "composite_price_breakdown": {
+          "discounted_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 395.82",
+            "amount_rounded": "Rs. 396",
+            "value": 395.82
+          },
+          "gross_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 1,583.28",
+            "amount_rounded": "Rs. 1,583",
+            "value": 1583.28
+          },
+          "strikethrough_amount": {
+            "value": 1979.1,
+            "amount_rounded": "Rs. 1,979",
+            "amount_unrounded": "Rs. 1,979.10",
+            "currency": "INR"
+          },
+          "items": [
+            {
+              "details": "Goods and services tax",
+              "name": "Goods and services tax",
+              "base": {
+                "base_amount": 0,
+                "kind": "variable_amount"
+              },
+              "item_amount": {
+                "amount_unrounded": "Rs. 79.16",
+                "currency": "INR",
+                "amount_rounded": "Rs. 79",
+                "value": 79.164
+              },
+              "kind": "charge",
+              "inclusion_type": "excluded"
+            },
+            {
+              "identifier": "campaign_37",
+              "item_amount": {
+                "amount_rounded": "Rs. 396",
+                "value": 395.82,
+                "currency": "INR",
+                "amount_unrounded": "Rs. 395.82"
+              },
+              "base": {
+                "kind": "rate"
+              },
+              "kind": "discount",
+              "name": "Early 2026 Deal",
+              "details": "This property is offering a discount on stays between Jan 1 and Apr 1, 2026."
+            }
+          ],
+          "excluded_amount": {
+            "amount_unrounded": "Rs. 79.16",
+            "currency": "INR",
+            "value": 79.164,
+            "amount_rounded": "Rs. 79"
+          },
+          "has_long_stays_monthly_rate_price": 0,
+          "has_long_stays_weekly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "value": 1662.44400117964,
+            "amount_rounded": "Rs. 1,662",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 1,662.44"
+          },
+          "benefits": [
+            {
+              "identifier": "early-2021-deals",
+              "badge_variant": "constructive",
+              "kind": "badge",
+              "name": "Early 2026 Deal",
+              "details": "This property is offering a discount on stays between Jan 1 and Apr 1, 2026.",
+              "icon": null
+            }
+          ],
+          "net_amount": {
+            "amount_unrounded": "Rs. 1,583.28",
+            "currency": "INR",
+            "value": 1583.28,
+            "amount_rounded": "Rs. 1,583"
+          },
+          "gross_amount_per_night": {
+            "amount_rounded": "Rs. 1,583",
+            "value": 1583.28,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 1,583.28"
+          },
+          "strikethrough_amount_per_night": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 1,979.10",
+            "value": 1979.1,
+            "amount_rounded": "Rs. 1,979"
+          },
+          "all_inclusive_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 1,662.44",
+            "value": 1662.44400117964,
+            "amount_rounded": "Rs. 1,662"
+          },
+          "price_display_config": [
+            {
+              "key": "use_nightly_prices",
+              "value": 0
+            },
+            {
+              "value": 0,
+              "key": "use_nightly_as_dominant"
+            },
+            {
+              "value": 1,
+              "key": "use_js_tracking"
+            }
+          ],
+          "included_taxes_and_charges_amount": {
+            "value": 0,
+            "amount_rounded": "Rs. 0",
+            "amount_unrounded": "Rs. 0",
+            "currency": "INR"
+          },
+          "gross_amount_hotel_currency": {
+            "value": 1583.28,
+            "amount_rounded": "Rs. 1,583",
+            "amount_unrounded": "Rs. 1,583.28",
+            "currency": "INR"
+          },
+          "charges_details": {
+            "mode": "extra_charges",
+            "translated_copy": "",
+            "amount": {
+              "value": 79,
+              "currency": "INR"
+            }
+          }
+        },
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "class": 0,
+        "hotel_include_breakfast": 0,
+        "main_photo_id": 802004860,
+        "preferred_plus": 0,
+        "type": "property_card",
+        "is_no_prepayment_block": 0,
+        "is_genius_deal": 0,
+        "is_geo_rate": "",
+        "distances": [],
+        "min_total_price": 1583.28,
+        "unit_configuration_label": "<b>Room with shared bathroom</b>: 1 bed"
+      },
+      {
+        "hotel_id": 13544936,
+        "is_tpi_exclusive_property": 0,
+        "hotel_has_vb_boost": 1,
+        "soldout": 0,
+        "city": "Karjat",
+        "review_score": 9.2,
+        "countrycode": "in",
+        "default_language": "en",
+        "badges": [
+          {
+            "badge_variant": "constructive",
+            "text": "Early 2026 Deal",
+            "id": "Early Year Deals"
+          }
+        ],
+        "class_is_estimated": 0,
+        "extended": 0,
+        "hotel_name": "Mount Aurora I Staymist",
+        "cant_book": 0,
+        "city_in_trans": "in Karjat",
+        "updated_checkin": null,
+        "ufi": -2099818,
+        "checkout": {
+          "from": "",
+          "until": "11:00"
+        },
+        "is_smart_deal": 0,
+        "timezone": "Asia/Kolkata",
+        "latitude": 18.9889630638005,
+        "updated_checkout": null,
+        "accommodation_type": 213,
+        "preferred": 1,
+        "has_free_parking": 1,
+        "genius_discount_percentage": 0,
+        "hotel_name_trans": "Mount Aurora I Staymist",
+        "review_score_word": "Wonderful",
+        "is_geo_rate": "",
+        "is_genius_deal": 0,
+        "min_total_price": 7225,
+        "distances": [],
+        "type": "property_card",
+        "is_no_prepayment_block": 1,
+        "preferred_plus": 0,
+        "unit_configuration_label": "<b>Entire villa – 1,000 m²</b>: 4 beds • 3 bedrooms • 1 living room • 4 bathrooms",
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "has_swimming_pool": 1,
+        "composite_price_breakdown": {
+          "included_taxes_and_charges_amount": {
+            "amount_unrounded": "Rs. 0",
+            "currency": "INR",
+            "value": 0,
+            "amount_rounded": "Rs. 0"
+          },
+          "gross_amount_hotel_currency": {
+            "amount_rounded": "Rs. 7,225",
+            "value": 7225,
+            "amount_unrounded": "Rs. 7,225",
+            "currency": "INR"
+          },
+          "charges_details": {
+            "mode": "extra_charges",
+            "translated_copy": "",
+            "amount": {
+              "currency": "INR",
+              "value": 361
+            }
+          },
+          "price_display_config": [
+            {
+              "key": "use_nightly_prices",
+              "value": 0
+            },
+            {
+              "value": 0,
+              "key": "use_nightly_as_dominant"
+            },
+            {
+              "key": "use_js_tracking",
+              "value": 1
+            }
+          ],
+          "strikethrough_amount_per_night": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 8,500",
+            "amount_rounded": "Rs. 8,500",
+            "value": 8500
+          },
+          "all_inclusive_amount": {
+            "amount_rounded": "Rs. 7,586",
+            "value": 7586.25000538304,
+            "amount_unrounded": "Rs. 7,586.25",
+            "currency": "INR"
+          },
+          "gross_amount_per_night": {
+            "value": 7225,
+            "amount_rounded": "Rs. 7,225",
+            "amount_unrounded": "Rs. 7,225",
+            "currency": "INR"
+          },
+          "net_amount": {
+            "value": 7225,
+            "amount_rounded": "Rs. 7,225",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 7,225"
+          },
+          "benefits": [
+            {
+              "name": "Early 2026 Deal",
+              "details": "This property is offering a discount on stays between Jan 1 and Apr 1, 2026.",
+              "icon": null,
+              "kind": "badge",
+              "identifier": "early-2021-deals",
+              "badge_variant": "constructive"
+            }
+          ],
+          "all_inclusive_amount_hotel_currency": {
+            "value": 7586.25000538304,
+            "amount_rounded": "Rs. 7,586",
+            "amount_unrounded": "Rs. 7,586.25",
+            "currency": "INR"
+          },
+          "has_long_stays_weekly_rate_price": 0,
+          "has_long_stays_monthly_rate_price": 0,
+          "strikethrough_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 8,500",
+            "amount_rounded": "Rs. 8,500",
+            "value": 8500
+          },
+          "items": [
+            {
+              "name": "Goods and services tax",
+              "details": "Goods and services tax",
+              "item_amount": {
+                "amount_unrounded": "Rs. 361.25",
+                "currency": "INR",
+                "value": 361.25,
+                "amount_rounded": "Rs. 361"
+              },
+              "base": {
+                "kind": "variable_amount",
+                "base_amount": 0
+              },
+              "kind": "charge",
+              "inclusion_type": "excluded"
+            },
+            {
+              "identifier": "campaign_37",
+              "name": "Early 2026 Deal",
+              "details": "This property is offering a discount on stays between Jan 1 and Apr 1, 2026.",
+              "base": {
+                "kind": "rate"
+              },
+              "item_amount": {
+                "value": 1275,
+                "amount_rounded": "Rs. 1,275",
+                "currency": "INR",
+                "amount_unrounded": "Rs. 1,275"
+              },
+              "kind": "discount"
+            }
+          ],
+          "excluded_amount": {
+            "amount_unrounded": "Rs. 361.25",
+            "currency": "INR",
+            "amount_rounded": "Rs. 361",
+            "value": 361.25
+          },
+          "discounted_amount": {
+            "value": 1275,
+            "amount_rounded": "Rs. 1,275",
+            "amount_unrounded": "Rs. 1,275",
+            "currency": "INR"
+          },
+          "gross_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 7,225",
+            "amount_rounded": "Rs. 7,225",
+            "value": 7225
+          }
+        },
+        "main_photo_id": 818715328,
+        "class": 0,
+        "hotel_include_breakfast": 0,
+        "id": "property_card_13544936",
+        "block_ids": [
+          "1354493601_417047021_10_0_0"
+        ],
+        "is_free_cancellable": 0,
+        "checkin": {
+          "until": "",
+          "from": "14:00"
+        },
+        "default_wishlist_name": "Karjat",
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/818715328.jpg?k=f63284708aee5e08c7a264ad9ea87bed3127de2f0686a0ab4cca228a6f30441f&o=",
+        "currencycode": "INR",
+        "review_nr": 11,
+        "longitude": 73.4232212000305,
+        "children_not_allowed": 0,
+        "booking_home": {
+          "is_booking_home": 1,
+          "segment": 2,
+          "is_single_unit_property": 1,
+          "group": "house_like",
+          "quality_class": 0
+        }
+      },
+      {
+        "hotel_id": 12662784,
+        "hotel_has_vb_boost": 0,
+        "soldout": 0,
+        "city": "Tale Ghar,  Ambegaon, Pune, Maharashtra",
+        "is_tpi_exclusive_property": 0,
+        "class_is_estimated": 0,
+        "hotel_name": "Eshi Resorts and Restaurant - Bhimashankars Jungle Luxury Resort",
+        "extended": 0,
+        "city_in_trans": "in Taleghar",
+        "cant_book": 0,
+        "review_score": 8.6,
+        "countrycode": "in",
+        "default_language": "en",
+        "badges": [],
+        "is_smart_deal": 0,
+        "timezone": "Asia/Kolkata",
+        "latitude": 19.0670837483068,
+        "updated_checkout": null,
+        "accommodation_type": 204,
+        "updated_checkin": null,
+        "ufi": -2112477,
+        "checkout": {
+          "until": "11:30",
+          "from": "11:00"
+        },
+        "hotel_name_trans": "Eshi Resorts and Restaurant - Bhimashankars Jungle Luxury Resort",
+        "review_score_word": "Excellent",
+        "preferred": 1,
+        "has_free_parking": 1,
+        "genius_discount_percentage": 0,
+        "unit_configuration_label": "<b>Hotel room</b>: 1 bed",
+        "is_genius_deal": 0,
+        "is_geo_rate": "",
+        "min_total_price": 4000,
+        "distances": [],
+        "type": "property_card",
+        "is_no_prepayment_block": 0,
+        "preferred_plus": 0,
+        "main_photo_id": 670766747,
+        "class": 0,
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "has_swimming_pool": 1,
+        "composite_price_breakdown": {
+          "has_long_stays_monthly_rate_price": 0,
+          "has_long_stays_weekly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "amount_rounded": "Rs. 4,200",
+            "value": 4200.00000298023,
+            "amount_unrounded": "Rs. 4,200",
+            "currency": "INR"
+          },
+          "gross_amount": {
+            "value": 4000,
+            "amount_rounded": "Rs. 4,000",
+            "amount_unrounded": "Rs. 4,000",
+            "currency": "INR"
+          },
+          "excluded_amount": {
+            "value": 200,
+            "amount_rounded": "Rs. 200",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 200"
+          },
+          "items": [
+            {
+              "inclusion_type": "excluded",
+              "name": "Goods and services tax",
+              "details": "Goods and services tax",
+              "base": {
+                "kind": "variable_amount",
+                "base_amount": 0
+              },
+              "item_amount": {
+                "amount_rounded": "Rs. 200",
+                "value": 200,
+                "amount_unrounded": "Rs. 200",
+                "currency": "INR"
+              },
+              "kind": "charge"
+            }
+          ],
+          "price_display_config": [
+            {
+              "key": "use_nightly_prices",
+              "value": 0
+            },
+            {
+              "key": "use_nightly_as_dominant",
+              "value": 0
+            },
+            {
+              "key": "use_js_tracking",
+              "value": 1
+            }
+          ],
+          "charges_details": {
+            "mode": "extra_charges",
+            "translated_copy": "",
+            "amount": {
+              "value": 200,
+              "currency": "INR"
+            }
+          },
+          "gross_amount_hotel_currency": {
+            "value": 4000,
+            "amount_rounded": "Rs. 4,000",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 4,000"
+          },
+          "included_taxes_and_charges_amount": {
+            "value": 0,
+            "amount_rounded": "Rs. 0",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 0"
+          },
+          "net_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 4,000",
+            "value": 4000,
+            "amount_rounded": "Rs. 4,000"
+          },
+          "benefits": [],
+          "all_inclusive_amount": {
+            "value": 4200.00000298023,
+            "amount_rounded": "Rs. 4,200",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 4,200"
+          },
+          "gross_amount_per_night": {
+            "amount_unrounded": "Rs. 4,000",
+            "currency": "INR",
+            "amount_rounded": "Rs. 4,000",
+            "value": 4000
+          }
+        },
+        "is_free_cancellable": 0,
+        "checkin": {
+          "from": "13:00",
+          "until": "00:00"
+        },
+        "default_wishlist_name": "Taleghar",
+        "id": "property_card_12662784",
+        "block_ids": [
+          "1266278404_403510450_2_41_0"
+        ],
+        "children_not_allowed": 0,
+        "ribbon_text": "Breakfast included",
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/670766747.jpg?k=429a16168880fc73ac88d4cc214ccac1d31ff9c098346ec01b2793c5d9508b7a&o=",
+        "review_nr": 123,
+        "longitude": 73.6279958449034,
+        "currencycode": "INR"
+      },
+      {
+        "hotel_id": 12731894,
+        "unit_configuration_label": "<b>Entire studio – 37 m²</b>: 2 beds • 1 bedroom • 1 bathroom",
+        "preferred_plus": 0,
+        "is_geo_rate": "",
+        "is_genius_deal": 0,
+        "distances": [],
+        "min_total_price": 2250,
+        "type": "property_card",
+        "is_no_prepayment_block": 0,
+        "main_photo_id": 593563299,
+        "class": 0,
+        "hotel_include_breakfast": 0,
+        "composite_price_breakdown": {
+          "net_amount": {
+            "amount_rounded": "Rs. 2,250",
+            "value": 2250,
+            "amount_unrounded": "Rs. 2,250",
+            "currency": "INR"
+          },
+          "benefits": [
+            {
+              "icon": null,
+              "name": "Mobile-only price",
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop.",
+              "kind": "badge",
+              "badge_variant": "constructive",
+              "identifier": "mobile-rate"
+            }
+          ],
+          "strikethrough_amount_per_night": {
+            "amount_unrounded": "Rs. 2,500",
+            "currency": "INR",
+            "value": 2500,
+            "amount_rounded": "Rs. 2,500"
+          },
+          "all_inclusive_amount": {
+            "amount_rounded": "Rs. 2,363",
+            "value": 2362.50000167638,
+            "amount_unrounded": "Rs. 2,362.50",
+            "currency": "INR"
+          },
+          "gross_amount_per_night": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 2,250",
+            "amount_rounded": "Rs. 2,250",
+            "value": 2250
+          },
+          "price_display_config": [
+            {
+              "key": "use_nightly_prices",
+              "value": 0
+            },
+            {
+              "value": 0,
+              "key": "use_nightly_as_dominant"
+            },
+            {
+              "value": 1,
+              "key": "use_js_tracking"
+            }
+          ],
+          "charges_details": {
+            "mode": "extra_charges",
+            "translated_copy": "",
+            "amount": {
+              "currency": "INR",
+              "value": 113
+            }
+          },
+          "included_taxes_and_charges_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 0",
+            "value": 0,
+            "amount_rounded": "Rs. 0"
+          },
+          "gross_amount_hotel_currency": {
+            "amount_rounded": "Rs. 2,250",
+            "value": 2250,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 2,250"
+          },
+          "gross_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 2,250",
+            "amount_rounded": "Rs. 2,250",
+            "value": 2250
+          },
+          "discounted_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 250",
+            "value": 250,
+            "amount_rounded": "Rs. 250"
+          },
+          "items": [
+            {
+              "inclusion_type": "excluded",
+              "base": {
+                "kind": "variable_amount",
+                "base_amount": 0
+              },
+              "item_amount": {
+                "value": 112.5,
+                "amount_rounded": "Rs. 113",
+                "amount_unrounded": "Rs. 112.50",
+                "currency": "INR"
+              },
+              "kind": "charge",
+              "name": "Goods and services tax",
+              "details": "Goods and services tax"
+            },
+            {
+              "kind": "discount",
+              "base": {
+                "kind": "rate"
+              },
+              "item_amount": {
+                "currency": "INR",
+                "amount_unrounded": "Rs. 250",
+                "value": 250,
+                "amount_rounded": "Rs. 250"
+              },
+              "name": "Mobile-only price",
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop.",
+              "identifier": "mobile-discount"
+            }
+          ],
+          "excluded_amount": {
+            "value": 112.5,
+            "amount_rounded": "Rs. 113",
+            "amount_unrounded": "Rs. 112.50",
+            "currency": "INR"
+          },
+          "strikethrough_amount": {
+            "amount_rounded": "Rs. 2,500",
+            "value": 2500,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 2,500"
+          },
+          "has_long_stays_monthly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "value": 2362.50000167638,
+            "amount_rounded": "Rs. 2,363",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 2,362.50"
+          },
+          "has_long_stays_weekly_rate_price": 0
+        },
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "default_wishlist_name": "Dhamni",
+        "is_free_cancellable": 1,
+        "checkin": {
+          "from": "15:00",
+          "until": "18:00"
+        },
+        "id": "property_card_12731894",
+        "block_ids": [
+          "1273189401_417085618_2_0_0"
+        ],
+        "booking_home": {
+          "is_single_unit_property": 1,
+          "segment": 0,
+          "is_booking_home": 1,
+          "group": "hotels_and_others",
+          "quality_class": 3
+        },
+        "children_not_allowed": 0,
+        "review_nr": 12,
+        "longitude": 73.482037934901,
+        "currencycode": "INR",
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/593563299.jpg?k=ef2638cacaab30bee84e938da53b077c2081ec477616d2d63d03a4db2a0d8d85&o=",
+        "soldout": 0,
+        "city": "KARJAT",
+        "hotel_has_vb_boost": 0,
+        "is_tpi_exclusive_property": 0,
+        "class_is_estimated": 0,
+        "hotel_name": "Hidden Haven - The Goan Getaway",
+        "extended": 0,
+        "city_in_trans": "in Dhamni",
+        "cant_book": 0,
+        "default_language": "en",
+        "badges": [
+          {
+            "text": "Mobile-only price",
+            "badge_variant": "constructive",
+            "id": "Mobile Rate"
+          }
+        ],
+        "review_score": 9.7,
+        "countrycode": "in",
+        "latitude": 18.989076160104,
+        "updated_checkout": null,
+        "accommodation_type": 208,
+        "is_smart_deal": 0,
+        "timezone": "Asia/Kolkata",
+        "updated_checkin": null,
+        "ufi": 900062563,
+        "checkout": {
+          "from": "08:00",
+          "until": "11:00"
+        },
+        "review_score_word": "Exceptional",
+        "hotel_name_trans": "Hidden Haven - The Goan Getaway",
+        "has_free_parking": 1,
+        "genius_discount_percentage": 0,
+        "preferred": 1
+      },
+      {
+        "hotel_id": 5467336,
+        "updated_checkout": null,
+        "accommodation_type": 204,
+        "latitude": 18.7173857,
+        "timezone": "Asia/Kolkata",
+        "is_smart_deal": 0,
+        "ufi": -2112475,
+        "checkout": {
+          "from": "",
+          "until": "11:00"
+        },
+        "updated_checkin": null,
+        "review_score_word": "Good",
+        "hotel_name_trans": "Hotel Om Inn - Talegaon Dabhade",
+        "genius_discount_percentage": 0,
+        "preferred": 1,
+        "city": "Pune",
+        "soldout": 0,
+        "hotel_has_vb_boost": 0,
+        "is_tpi_exclusive_property": 0,
+        "hotel_name": "Hotel Om Inn - Talegaon Dabhade",
+        "extended": 0,
+        "cant_book": 0,
+        "city_in_trans": "in Talegaon Dābhāde",
+        "class_is_estimated": 0,
+        "badges": [],
+        "default_language": "en",
+        "countrycode": "in",
+        "review_score": 7.9,
+        "default_wishlist_name": "Talegaon Dābhāde",
+        "checkin": {
+          "from": "12:00",
+          "until": ""
+        },
+        "is_free_cancellable": 1,
+        "id": "property_card_5467336",
+        "block_ids": [
+          "546733602_356174638_2_42_0"
+        ],
+        "children_not_allowed": 0,
+        "review_nr": 105,
+        "currencycode": "INR",
+        "longitude": 73.672044,
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/414030272.jpg?k=48b83405cbf8768823a065ec2f4dc695eaec8383b02192f0555fbd8036d0ccdf&o=",
+        "unit_configuration_label": "<b>Hotel room</b>: 1 bed",
+        "preferred_plus": 0,
+        "type": "property_card",
+        "is_no_prepayment_block": 0,
+        "is_geo_rate": 1,
+        "is_genius_deal": 0,
+        "distances": [],
+        "min_total_price": 2343.36,
+        "class": 3,
+        "hotel_include_breakfast": 0,
+        "main_photo_id": 414030272,
+        "composite_price_breakdown": {
+          "charges_details": {
+            "amount": {
+              "value": 117,
+              "currency": "INR"
+            },
+            "translated_copy": "",
+            "mode": "extra_charges"
+          },
+          "included_taxes_and_charges_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 0",
+            "value": 0,
+            "amount_rounded": "Rs. 0"
+          },
+          "gross_amount_hotel_currency": {
+            "value": 2343.36,
+            "amount_rounded": "Rs. 2,343",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 2,343.36"
+          },
+          "price_display_config": [
+            {
+              "key": "use_nightly_prices",
+              "value": 0
+            },
+            {
+              "value": 0,
+              "key": "use_nightly_as_dominant"
+            },
+            {
+              "key": "use_js_tracking",
+              "value": 1
+            }
+          ],
+          "strikethrough_amount_per_night": {
+            "value": 2724.84,
+            "amount_rounded": "Rs. 2,725",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 2,724.84"
+          },
+          "all_inclusive_amount": {
+            "value": 2460.52800174594,
+            "amount_rounded": "Rs. 2,461",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 2,460.53"
+          },
+          "gross_amount_per_night": {
+            "amount_rounded": "Rs. 2,343",
+            "value": 2343.36,
+            "amount_unrounded": "Rs. 2,343.36",
+            "currency": "INR"
+          },
+          "net_amount": {
+            "amount_unrounded": "Rs. 2,343.36",
+            "currency": "INR",
+            "amount_rounded": "Rs. 2,343",
+            "value": 2343.36
+          },
+          "benefits": [],
+          "has_long_stays_weekly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "amount_rounded": "Rs. 2,461",
+            "value": 2460.52800174594,
+            "amount_unrounded": "Rs. 2,460.53",
+            "currency": "INR"
+          },
+          "has_long_stays_monthly_rate_price": 0,
+          "items": [
+            {
+              "inclusion_type": "excluded",
+              "name": "Goods and services tax",
+              "details": "Goods and services tax",
+              "base": {
+                "base_amount": 0,
+                "kind": "variable_amount"
+              },
+              "item_amount": {
+                "amount_rounded": "Rs. 117",
+                "value": 117.168,
+                "currency": "INR",
+                "amount_unrounded": "Rs. 117.17"
+              },
+              "kind": "charge"
+            },
+            {
+              "name": "Bonus savings",
+              "details": "You’re getting a reduced rate because this property is offering a discount.",
+              "item_amount": {
+                "amount_rounded": "Rs. 381",
+                "value": 381.48,
+                "currency": "INR",
+                "amount_unrounded": "Rs. 381.48"
+              },
+              "base": {
+                "kind": "rate"
+              },
+              "kind": "discount",
+              "identifier": "basic-deal"
+            }
+          ],
+          "excluded_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 117.17",
+            "value": 117.168,
+            "amount_rounded": "Rs. 117"
+          },
+          "strikethrough_amount": {
+            "amount_rounded": "Rs. 2,725",
+            "value": 2724.84,
+            "amount_unrounded": "Rs. 2,724.84",
+            "currency": "INR"
+          },
+          "gross_amount": {
+            "amount_rounded": "Rs. 2,343",
+            "value": 2343.36,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 2,343.36"
+          },
+          "discounted_amount": {
+            "amount_rounded": "Rs. 381",
+            "value": 381.48,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 381.48"
+          }
+        },
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        }
+      },
+      {
+        "hotel_id": 7549037,
+        "is_tpi_exclusive_property": 0,
+        "hotel_has_vb_boost": 0,
+        "soldout": 0,
+        "city": "Lonavala",
+        "review_score": 8.2,
+        "countrycode": "in",
+        "default_language": "en",
+        "badges": [],
+        "class_is_estimated": 0,
+        "cant_book": 0,
+        "city_in_trans": "in Lonavala",
+        "hotel_name": "Radisson Resort and Spa Lonavala",
+        "extended": 0,
+        "updated_checkin": null,
+        "checkout": {
+          "from": "",
+          "until": "11:00"
+        },
+        "ufi": -2102774,
+        "is_smart_deal": 0,
+        "timezone": "Asia/Kolkata",
+        "latitude": 18.7726435089301,
+        "accommodation_type": 206,
+        "updated_checkout": null,
+        "preferred": 1,
+        "has_free_parking": 1,
+        "genius_discount_percentage": 0,
+        "hotel_name_trans": "Radisson Resort and Spa Lonavala",
+        "review_score_word": "Very Good",
+        "min_total_price": 15000,
+        "distances": [],
+        "is_geo_rate": "",
+        "is_genius_deal": 0,
+        "is_no_prepayment_block": 0,
+        "type": "property_card",
+        "preferred_plus": 0,
+        "unit_configuration_label": "<b>Hotel room</b>: 1 bed",
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "has_swimming_pool": 1,
+        "composite_price_breakdown": {
+          "all_inclusive_amount": {
+            "value": 18231.0001072884,
+            "amount_rounded": "Rs. 18,231",
+            "amount_unrounded": "Rs. 18,231",
+            "currency": "INR"
+          },
+          "gross_amount_per_night": {
+            "amount_unrounded": "Rs. 15,000",
+            "currency": "INR",
+            "value": 15000,
+            "amount_rounded": "Rs. 15,000"
+          },
+          "benefits": [],
+          "net_amount": {
+            "amount_unrounded": "Rs. 15,000",
+            "currency": "INR",
+            "amount_rounded": "Rs. 15,000",
+            "value": 15000
+          },
+          "gross_amount_hotel_currency": {
+            "amount_unrounded": "Rs. 15,000",
+            "currency": "INR",
+            "amount_rounded": "Rs. 15,000",
+            "value": 15000
+          },
+          "included_taxes_and_charges_amount": {
+            "amount_unrounded": "Rs. 0",
+            "currency": "INR",
+            "value": 0,
+            "amount_rounded": "Rs. 0"
+          },
+          "charges_details": {
+            "translated_copy": "",
+            "amount": {
+              "value": 3231,
+              "currency": "INR"
+            },
+            "mode": "extra_charges"
+          },
+          "price_display_config": [
+            {
+              "key": "use_nightly_prices",
+              "value": 0
+            },
+            {
+              "key": "use_nightly_as_dominant",
+              "value": 0
+            },
+            {
+              "value": 1,
+              "key": "use_js_tracking"
+            }
+          ],
+          "excluded_amount": {
+            "amount_unrounded": "Rs. 3,231",
+            "currency": "INR",
+            "amount_rounded": "Rs. 3,231",
+            "value": 3231.0001
+          },
+          "items": [
+            {
+              "kind": "charge",
+              "base": {
+                "kind": "variable_amount",
+                "base_amount": 0
+              },
+              "item_amount": {
+                "amount_unrounded": "Rs. 2,700",
+                "currency": "INR",
+                "value": 2700.0001,
+                "amount_rounded": "Rs. 2,700"
+              },
+              "details": "Goods and services tax",
+              "name": "Goods and services tax",
+              "inclusion_type": "excluded"
+            },
+            {
+              "inclusion_type": "excluded",
+              "name": "Service charge",
+              "details": "3.54 % Service charge",
+              "kind": "charge",
+              "base": {
+                "percentage": 3.54,
+                "kind": "percentage"
+              },
+              "item_amount": {
+                "amount_unrounded": "Rs. 531",
+                "currency": "INR",
+                "amount_rounded": "Rs. 531",
+                "value": 531
+              }
+            }
+          ],
+          "gross_amount": {
+            "amount_rounded": "Rs. 15,000",
+            "value": 15000,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 15,000"
+          },
+          "has_long_stays_weekly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "amount_unrounded": "Rs. 18,231",
+            "currency": "INR",
+            "amount_rounded": "Rs. 18,231",
+            "value": 18231.0001072884
+          },
+          "has_long_stays_monthly_rate_price": 0
+        },
+        "main_photo_id": 336895741,
+        "class": 5,
+        "block_ids": [
+          "754903702_350494847_2_41_0"
+        ],
+        "id": "property_card_7549037",
+        "is_free_cancellable": 1,
+        "checkin": {
+          "from": "15:00",
+          "until": ""
+        },
+        "default_wishlist_name": "Lonavala",
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/336895741.jpg?k=9fdb967126727946db8dfafc207dbc80e3d255f155c3c38d04c32f8079399742&o=",
+        "longitude": 73.3986472595215,
+        "review_nr": 905,
+        "currencycode": "INR",
+        "children_not_allowed": 0,
+        "ribbon_text": "Breakfast included"
+      },
+      {
+        "hotel_id": 11091032,
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "has_swimming_pool": 1,
+        "composite_price_breakdown": {
+          "has_long_stays_monthly_rate_price": 0,
+          "has_long_stays_weekly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "amount_unrounded": "Rs. 5,957.44",
+            "currency": "INR",
+            "value": 5957.43750422727,
+            "amount_rounded": "Rs. 5,957"
+          },
+          "gross_amount": {
+            "amount_unrounded": "Rs. 5,673.75",
+            "currency": "INR",
+            "amount_rounded": "Rs. 5,674",
+            "value": 5673.75
+          },
+          "discounted_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 2,826.25",
+            "amount_rounded": "Rs. 2,826",
+            "value": 2826.25
+          },
+          "items": [
+            {
+              "name": "Goods and services tax",
+              "details": "Goods and services tax",
+              "base": {
+                "kind": "variable_amount",
+                "base_amount": 0
+              },
+              "item_amount": {
+                "amount_rounded": "Rs. 284",
+                "value": 283.6875,
+                "amount_unrounded": "Rs. 283.69",
+                "currency": "INR"
+              },
+              "kind": "charge",
+              "inclusion_type": "excluded"
+            },
+            {
+              "details": "You’re getting a reduced rate because this property is offering a discount.",
+              "name": "Last-minute Deal",
+              "kind": "discount",
+              "item_amount": {
+                "amount_unrounded": "Rs. 2,125",
+                "currency": "INR",
+                "amount_rounded": "Rs. 2,125",
+                "value": 2125
+              },
+              "base": {
+                "kind": "rate"
+              },
+              "identifier": "last-minute-deal"
+            },
+            {
+              "identifier": "mobile-discount",
+              "name": "Mobile-only price",
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop.",
+              "base": {
+                "kind": "rate"
+              },
+              "item_amount": {
+                "value": 701.25,
+                "amount_rounded": "Rs. 701",
+                "amount_unrounded": "Rs. 701.25",
+                "currency": "INR"
+              },
+              "kind": "discount"
+            }
+          ],
+          "excluded_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 283.69",
+            "amount_rounded": "Rs. 284",
+            "value": 283.6875
+          },
+          "strikethrough_amount": {
+            "value": 8500,
+            "amount_rounded": "Rs. 8,500",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 8,500"
+          },
+          "price_display_config": [
+            {
+              "key": "use_nightly_prices",
+              "value": 0
+            },
+            {
+              "key": "use_nightly_as_dominant",
+              "value": 0
+            },
+            {
+              "value": 1,
+              "key": "use_js_tracking"
+            }
+          ],
+          "charges_details": {
+            "translated_copy": "",
+            "amount": {
+              "value": 284,
+              "currency": "INR"
+            },
+            "mode": "extra_charges"
+          },
+          "gross_amount_hotel_currency": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 5,673.75",
+            "value": 5673.75,
+            "amount_rounded": "Rs. 5,674"
+          },
+          "included_taxes_and_charges_amount": {
+            "value": 0,
+            "amount_rounded": "Rs. 0",
+            "amount_unrounded": "Rs. 0",
+            "currency": "INR"
+          },
+          "net_amount": {
+            "value": 5673.75,
+            "amount_rounded": "Rs. 5,674",
+            "amount_unrounded": "Rs. 5,673.75",
+            "currency": "INR"
+          },
+          "benefits": [
+            {
+              "identifier": "mobile-rate",
+              "badge_variant": "constructive",
+              "name": "Mobile-only price",
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop.",
+              "icon": null,
+              "kind": "badge"
+            }
+          ],
+          "all_inclusive_amount": {
+            "amount_unrounded": "Rs. 5,957.44",
+            "currency": "INR",
+            "amount_rounded": "Rs. 5,957",
+            "value": 5957.43750422727
+          },
+          "strikethrough_amount_per_night": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 8,500",
+            "value": 8500,
+            "amount_rounded": "Rs. 8,500"
+          },
+          "gross_amount_per_night": {
+            "amount_unrounded": "Rs. 5,673.75",
+            "currency": "INR",
+            "value": 5673.75,
+            "amount_rounded": "Rs. 5,674"
+          }
+        },
+        "main_photo_id": 649183713,
+        "class": 0,
+        "hotel_include_breakfast": 0,
+        "distances": [],
+        "min_total_price": 5673.75,
+        "is_geo_rate": "",
+        "is_genius_deal": 0,
+        "is_no_prepayment_block": 0,
+        "type": "property_card",
+        "preferred_plus": 0,
+        "unit_configuration_label": "<b>Hotel room</b>: 2 beds",
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/649183713.jpg?k=3f3c5b24f44d34c6764b323ea406128646d5536415cd0fc5e28f85e058ebdc48&o=",
+        "review_nr": 95,
+        "currencycode": "INR",
+        "longitude": 73.276036221264,
+        "children_not_allowed": 0,
+        "block_ids": [
+          "1109103208_429136477_3_42_0"
+        ],
+        "id": "property_card_11091032",
+        "is_free_cancellable": 0,
+        "checkin": {
+          "until": "20:00",
+          "from": "13:00"
+        },
+        "default_wishlist_name": "Karjat",
+        "review_score": 7.6,
+        "countrycode": "in",
+        "default_language": "en",
+        "badges": [
+          {
+            "text": "Mobile-only price",
+            "badge_variant": "constructive",
+            "id": "Mobile Rate"
+          }
+        ],
+        "class_is_estimated": 0,
+        "cant_book": 0,
+        "city_in_trans": "in Karjat",
+        "hotel_name": "Pool Villas by Baya Resorts - Karjat",
+        "extended": 0,
+        "is_tpi_exclusive_property": 0,
+        "hotel_has_vb_boost": 0,
+        "soldout": 0,
+        "city": "Karjat",
+        "preferred": 1,
+        "has_free_parking": 1,
+        "genius_discount_percentage": 0,
+        "hotel_name_trans": "Pool Villas by Baya Resorts - Karjat",
+        "review_score_word": "Good",
+        "updated_checkin": null,
+        "checkout": {
+          "until": "11:00",
+          "from": "08:00"
+        },
+        "ufi": -2099818,
+        "is_smart_deal": 0,
+        "timezone": "Asia/Kolkata",
+        "latitude": 18.910839755157,
+        "accommodation_type": 206,
+        "updated_checkout": null
+      },
+      {
+        "hotel_id": 1314760,
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "has_swimming_pool": 1,
+        "composite_price_breakdown": {
+          "all_inclusive_amount": {
+            "amount_rounded": "Rs. 7,489",
+            "value": 7488.77400516627,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 7,488.77"
+          },
+          "gross_amount_per_night": {
+            "amount_rounded": "Rs. 6,934",
+            "value": 6934.05,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 6,934.05"
+          },
+          "benefits": [],
+          "net_amount": {
+            "amount_unrounded": "Rs. 6,934.05",
+            "currency": "INR",
+            "amount_rounded": "Rs. 6,934",
+            "value": 6934.05
+          },
+          "charges_details": {
+            "translated_copy": "",
+            "amount": {
+              "value": 555,
+              "currency": "INR"
+            },
+            "mode": "extra_charges"
+          },
+          "included_taxes_and_charges_amount": {
+            "amount_rounded": "Rs. 0",
+            "value": 0,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 0"
+          },
+          "gross_amount_hotel_currency": {
+            "amount_rounded": "Rs. 6,934",
+            "value": 6934.05,
+            "amount_unrounded": "Rs. 6,934.05",
+            "currency": "INR"
+          },
+          "price_display_config": [
+            {
+              "key": "use_nightly_prices",
+              "value": 0
+            },
+            {
+              "value": 0,
+              "key": "use_nightly_as_dominant"
+            },
+            {
+              "value": 1,
+              "key": "use_js_tracking"
+            }
+          ],
+          "excluded_amount": {
+            "amount_unrounded": "Rs. 554.72",
+            "currency": "INR",
+            "value": 554.724,
+            "amount_rounded": "Rs. 555"
+          },
+          "items": [
+            {
+              "details": "3 % Service charge",
+              "name": "Service charge",
+              "item_amount": {
+                "amount_rounded": "Rs. 208",
+                "value": 208.0215,
+                "amount_unrounded": "Rs. 208.02",
+                "currency": "INR"
+              },
+              "base": {
+                "percentage": 3,
+                "kind": "percentage"
+              },
+              "kind": "charge",
+              "inclusion_type": "excluded"
+            },
+            {
+              "inclusion_type": "excluded",
+              "name": "Goods and services tax",
+              "details": "Goods and services tax",
+              "base": {
+                "base_amount": 0,
+                "kind": "variable_amount"
+              },
+              "item_amount": {
+                "currency": "INR",
+                "amount_unrounded": "Rs. 346.70",
+                "value": 346.7025,
+                "amount_rounded": "Rs. 347"
+              },
+              "kind": "charge"
+            }
+          ],
+          "gross_amount": {
+            "value": 6934.05,
+            "amount_rounded": "Rs. 6,934",
+            "amount_unrounded": "Rs. 6,934.05",
+            "currency": "INR"
+          },
+          "has_long_stays_weekly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "value": 7488.77400516627,
+            "amount_rounded": "Rs. 7,489",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 7,488.77"
+          },
+          "has_long_stays_monthly_rate_price": 0
+        },
+        "main_photo_id": 215321174,
+        "hotel_include_breakfast": 0,
+        "class": 4,
+        "is_genius_deal": 0,
+        "is_geo_rate": 1,
+        "min_total_price": 6934.05,
+        "distances": [],
+        "type": "property_card",
+        "is_no_prepayment_block": 0,
+        "preferred_plus": 0,
+        "unit_configuration_label": "<b>Hotel room</b>: 1 bed",
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/215321174.jpg?k=774ac882473c31a6d738f72625eaa56dcd6620dfe4251eefa89e3ed29668b999&o=",
+        "review_nr": 603,
+        "longitude": 73.4036466479301,
+        "currencycode": "INR",
+        "children_not_allowed": 0,
+        "id": "property_card_1314760",
+        "block_ids": [
+          "131476001_423657301_2_1_0"
+        ],
+        "is_free_cancellable": 1,
+        "checkin": {
+          "until": "",
+          "from": "13:00"
+        },
+        "default_wishlist_name": "Lonavala",
+        "review_score": 7.7,
+        "countrycode": "in",
+        "default_language": "en",
+        "badges": [],
+        "class_is_estimated": 0,
+        "extended": 0,
+        "hotel_name": "Meritas Picaddle Resort Lonavala",
+        "cant_book": 0,
+        "city_in_trans": "in Lonavala",
+        "is_tpi_exclusive_property": 0,
+        "hotel_has_vb_boost": 0,
+        "soldout": 0,
+        "city": "Lonavala",
+        "preferred": 1,
+        "has_free_parking": 1,
+        "genius_discount_percentage": 0,
+        "hotel_name_trans": "Meritas Picaddle Resort Lonavala",
+        "review_score_word": "Good",
+        "updated_checkin": null,
+        "ufi": -2102774,
+        "checkout": {
+          "until": "11:00",
+          "from": ""
+        },
+        "is_smart_deal": 0,
+        "timezone": "Asia/Kolkata",
+        "latitude": 18.7544794178307,
+        "updated_checkout": null,
+        "accommodation_type": 206
+      },
+      {
+        "hotel_id": 11820309,
+        "checkout": {
+          "until": "11:00",
+          "from": "08:00"
+        },
+        "ufi": -2113443,
+        "updated_checkin": null,
+        "timezone": "Asia/Kolkata",
+        "is_smart_deal": 0,
+        "accommodation_type": 204,
+        "updated_checkout": null,
+        "latitude": 19.969081732665,
+        "preferred": 1,
+        "genius_discount_percentage": 0,
+        "has_free_parking": 1,
+        "hotel_name_trans": "Energise Soul Retreat By ELIVAAS, Trimbakeshwar Nashik",
+        "review_score_word": "Excellent",
+        "is_tpi_exclusive_property": 0,
+        "hotel_has_vb_boost": 0,
+        "city": "Trimbak ,Nashik",
+        "soldout": 0,
+        "countrycode": "in",
+        "review_score": 8.7,
+        "badges": [
+          {
+            "badge_variant": "constructive",
+            "text": "Early 2026 Deal",
+            "id": "Early Year Deals"
+          }
+        ],
+        "default_language": "xu",
+        "cant_book": 0,
+        "city_in_trans": "in Trimbak",
+        "extended": 0,
+        "hotel_name": "Energise Soul Retreat By ELIVAAS, Trimbakeshwar Nashik",
+        "class_is_estimated": 0,
+        "block_ids": [
+          "1182030901_428546183_3_2_0"
+        ],
+        "id": "property_card_11820309",
+        "checkin": {
+          "until": "19:00",
+          "from": "13:00"
+        },
+        "is_free_cancellable": 0,
+        "default_wishlist_name": "Trimbak",
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/808089463.jpg?k=a11ff15d85b174852ae85792beaaaf8d11656848a80469a72393ea72310dcb42&o=",
+        "longitude": 73.541796730926,
+        "review_nr": 42,
+        "currencycode": "INR",
+        "children_not_allowed": 0,
+        "is_no_prepayment_block": 0,
+        "type": "property_card",
+        "distances": [],
+        "min_total_price": 8836.94,
+        "is_genius_deal": 0,
+        "is_geo_rate": "",
+        "preferred_plus": 0,
+        "unit_configuration_label": "<b>Hotel room</b>: 1 bed",
+        "has_swimming_pool": 1,
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "composite_price_breakdown": {
+          "benefits": [
+            {
+              "kind": "badge",
+              "icon": null,
+              "details": "This property is offering a discount on stays between Jan 1 and Apr 1, 2026.",
+              "name": "Early 2026 Deal",
+              "badge_variant": "constructive",
+              "identifier": "early-2021-deals"
+            }
+          ],
+          "net_amount": {
+            "value": 8836.94,
+            "amount_rounded": "Rs. 8,837",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 8,836.94"
+          },
+          "strikethrough_amount_per_night": {
+            "value": 14369,
+            "amount_rounded": "Rs. 14,369",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 14,369"
+          },
+          "all_inclusive_amount": {
+            "amount_unrounded": "Rs. 10,427.59",
+            "currency": "INR",
+            "amount_rounded": "Rs. 10,428",
+            "value": 10427.5892632067
+          },
+          "gross_amount_per_night": {
+            "amount_unrounded": "Rs. 8,836.94",
+            "currency": "INR",
+            "value": 8836.94,
+            "amount_rounded": "Rs. 8,837"
+          },
+          "price_display_config": [
+            {
+              "key": "use_nightly_prices",
+              "value": 0
+            },
+            {
+              "value": 0,
+              "key": "use_nightly_as_dominant"
+            },
+            {
+              "key": "use_js_tracking",
+              "value": 1
+            }
+          ],
+          "charges_details": {
+            "translated_copy": "",
+            "amount": {
+              "currency": "INR",
+              "value": 1591
+            },
+            "mode": "extra_charges"
+          },
+          "gross_amount_hotel_currency": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 8,836.94",
+            "amount_rounded": "Rs. 8,837",
+            "value": 8836.94
+          },
+          "included_taxes_and_charges_amount": {
+            "amount_unrounded": "Rs. 0",
+            "currency": "INR",
+            "amount_rounded": "Rs. 0",
+            "value": 0
+          },
+          "gross_amount": {
+            "value": 8836.94,
+            "amount_rounded": "Rs. 8,837",
+            "amount_unrounded": "Rs. 8,836.94",
+            "currency": "INR"
+          },
+          "discounted_amount": {
+            "amount_rounded": "Rs. 5,532",
+            "value": 5532.06,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 5,532.06"
+          },
+          "excluded_amount": {
+            "value": 1590.6493,
+            "amount_rounded": "Rs. 1,591",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 1,590.65"
+          },
+          "items": [
+            {
+              "name": "Goods and services tax",
+              "details": "Goods and services tax",
+              "kind": "charge",
+              "base": {
+                "kind": "variable_amount",
+                "base_amount": 0
+              },
+              "item_amount": {
+                "value": 1590.6493,
+                "amount_rounded": "Rs. 1,591",
+                "amount_unrounded": "Rs. 1,590.65",
+                "currency": "INR"
+              },
+              "inclusion_type": "excluded"
+            },
+            {
+              "name": "Early 2026 Deal",
+              "details": "This property is offering a discount on stays between Jan 1 and Apr 1, 2026.",
+              "item_amount": {
+                "amount_rounded": "Rs. 5,532",
+                "value": 5532.06,
+                "currency": "INR",
+                "amount_unrounded": "Rs. 5,532.06"
+              },
+              "base": {
+                "kind": "rate"
+              },
+              "kind": "discount",
+              "identifier": "campaign_37"
+            }
+          ],
+          "strikethrough_amount": {
+            "amount_unrounded": "Rs. 14,369",
+            "currency": "INR",
+            "amount_rounded": "Rs. 14,369",
+            "value": 14369
+          },
+          "has_long_stays_monthly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "amount_unrounded": "Rs. 10,427.59",
+            "currency": "INR",
+            "amount_rounded": "Rs. 10,428",
+            "value": 10427.5892632067
+          },
+          "has_long_stays_weekly_rate_price": 0
+        },
+        "class": 5,
+        "hotel_include_breakfast": 0,
+        "main_photo_id": 808089463
+      },
+      {
+        "hotel_id": 7160937,
+        "unit_configuration_label": "<b>Hotel room</b>: 1 bed",
+        "is_no_prepayment_block": 0,
+        "type": "property_card",
+        "min_total_price": 6700,
+        "distances": [],
+        "is_genius_deal": 0,
+        "is_geo_rate": "",
+        "preferred_plus": 0,
+        "class": 0,
+        "main_photo_id": 733448821,
+        "has_swimming_pool": 1,
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "composite_price_breakdown": {
+          "gross_amount_per_night": {
+            "amount_unrounded": "Rs. 6,700",
+            "currency": "INR",
+            "amount_rounded": "Rs. 6,700",
+            "value": 6700
+          },
+          "all_inclusive_amount": {
+            "amount_rounded": "Rs. 7,035",
+            "value": 7035.00000499189,
+            "amount_unrounded": "Rs. 7,035",
+            "currency": "INR"
+          },
+          "net_amount": {
+            "amount_unrounded": "Rs. 6,700",
+            "currency": "INR",
+            "amount_rounded": "Rs. 6,700",
+            "value": 6700
+          },
+          "benefits": [],
+          "included_taxes_and_charges_amount": {
+            "amount_rounded": "Rs. 0",
+            "value": 0,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 0"
+          },
+          "gross_amount_hotel_currency": {
+            "amount_rounded": "Rs. 6,700",
+            "value": 6700,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 6,700"
+          },
+          "charges_details": {
+            "translated_copy": "",
+            "amount": {
+              "currency": "INR",
+              "value": 335
+            },
+            "mode": "extra_charges"
+          },
+          "price_display_config": [
+            {
+              "value": 0,
+              "key": "use_nightly_prices"
+            },
+            {
+              "value": 0,
+              "key": "use_nightly_as_dominant"
+            },
+            {
+              "key": "use_js_tracking",
+              "value": 1
+            }
+          ],
+          "items": [
+            {
+              "name": "Goods and services tax",
+              "details": "Goods and services tax",
+              "item_amount": {
+                "amount_rounded": "Rs. 335",
+                "value": 335,
+                "currency": "INR",
+                "amount_unrounded": "Rs. 335"
+              },
+              "base": {
+                "kind": "variable_amount",
+                "base_amount": 0
+              },
+              "kind": "charge",
+              "inclusion_type": "excluded"
+            }
+          ],
+          "excluded_amount": {
+            "value": 335,
+            "amount_rounded": "Rs. 335",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 335"
+          },
+          "gross_amount": {
+            "amount_rounded": "Rs. 6,700",
+            "value": 6700,
+            "amount_unrounded": "Rs. 6,700",
+            "currency": "INR"
+          },
+          "all_inclusive_amount_hotel_currency": {
+            "value": 7035.00000499189,
+            "amount_rounded": "Rs. 7,035",
+            "amount_unrounded": "Rs. 7,035",
+            "currency": "INR"
+          },
+          "has_long_stays_weekly_rate_price": 0,
+          "has_long_stays_monthly_rate_price": 0
+        },
+        "checkin": {
+          "from": "12:00",
+          "until": ""
+        },
+        "is_free_cancellable": 0,
+        "default_wishlist_name": "Karjat",
+        "block_ids": [
+          "716093707_413708231_2_41_0"
+        ],
+        "id": "property_card_7160937",
+        "ribbon_text": "Breakfast included",
+        "children_not_allowed": 0,
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/733448821.jpg?k=298a0cd8f8d6e515aac111482cd063ce450e8802ce0ff41317ed51aa78bf93f5&o=",
+        "review_nr": 18,
+        "longitude": 73.3502613842773,
+        "currencycode": "INR",
+        "hotel_has_vb_boost": 0,
+        "city": "Karjat",
+        "soldout": 0,
+        "is_tpi_exclusive_property": 0,
+        "cant_book": 0,
+        "city_in_trans": "in Karjat",
+        "extended": 0,
+        "hotel_name": "Pinewood Resort",
+        "class_is_estimated": 0,
+        "countrycode": "in",
+        "review_score": 7.1,
+        "badges": [],
+        "default_language": "en",
+        "timezone": "Asia/Kolkata",
+        "is_smart_deal": 0,
+        "accommodation_type": 204,
+        "updated_checkout": null,
+        "latitude": 18.9275137388293,
+        "checkout": {
+          "from": "",
+          "until": "10:00"
+        },
+        "ufi": -2099817,
+        "updated_checkin": null,
+        "hotel_name_trans": "Pinewood Resort",
+        "review_score_word": "Good",
+        "preferred": 1,
+        "genius_discount_percentage": 0,
+        "has_free_parking": 1
+      },
+      {
+        "hotel_id": 8505767,
+        "default_wishlist_name": "Chakan",
+        "checkin": {
+          "from": "13:00",
+          "until": "18:00"
+        },
+        "is_free_cancellable": 1,
+        "block_ids": [
+          "850576707_376922046_3_0_0"
+        ],
+        "id": "property_card_8505767",
+        "children_not_allowed": 0,
+        "review_nr": 11,
+        "currencycode": "INR",
+        "longitude": 73.8056303731098,
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/495285636.jpg?k=ee98ff5d5790df871cff30bb35e204180787c99f97c3bcec5ed45d19bb811415&o=",
+        "unit_configuration_label": "<b>Hotel room</b>: 2 beds",
+        "preferred_plus": 0,
+        "is_no_prepayment_block": 1,
+        "type": "property_card",
+        "distances": [],
+        "min_total_price": 5944,
+        "is_geo_rate": "",
+        "is_genius_deal": 0,
+        "class": 4,
+        "hotel_include_breakfast": 0,
+        "main_photo_id": 495285636,
+        "composite_price_breakdown": {
+          "net_amount": {
+            "value": 5944,
+            "amount_rounded": "Rs. 5,944",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 5,944"
+          },
+          "benefits": [
+            {
+              "badge_variant": "constructive",
+              "identifier": "mobile-rate",
+              "icon": null,
+              "name": "Mobile-only price",
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop.",
+              "kind": "badge"
+            }
+          ],
+          "strikethrough_amount_per_night": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 7,430",
+            "value": 7430,
+            "amount_rounded": "Rs. 7,430"
+          },
+          "gross_amount_per_night": {
+            "amount_rounded": "Rs. 5,944",
+            "value": 5944,
+            "amount_unrounded": "Rs. 5,944",
+            "currency": "INR"
+          },
+          "all_inclusive_amount": {
+            "amount_rounded": "Rs. 6,241",
+            "value": 6241.20000442863,
+            "amount_unrounded": "Rs. 6,241.20",
+            "currency": "INR"
+          },
+          "price_display_config": [
+            {
+              "value": 0,
+              "key": "use_nightly_prices"
+            },
+            {
+              "value": 0,
+              "key": "use_nightly_as_dominant"
+            },
+            {
+              "key": "use_js_tracking",
+              "value": 1
+            }
+          ],
+          "charges_details": {
+            "mode": "extra_charges",
+            "amount": {
+              "value": 297,
+              "currency": "INR"
+            },
+            "translated_copy": ""
+          },
+          "gross_amount_hotel_currency": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 5,944",
+            "value": 5944,
+            "amount_rounded": "Rs. 5,944"
+          },
+          "included_taxes_and_charges_amount": {
+            "value": 0,
+            "amount_rounded": "Rs. 0",
+            "amount_unrounded": "Rs. 0",
+            "currency": "INR"
+          },
+          "gross_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 5,944",
+            "amount_rounded": "Rs. 5,944",
+            "value": 5944
+          },
+          "discounted_amount": {
+            "amount_unrounded": "Rs. 1,486",
+            "currency": "INR",
+            "amount_rounded": "Rs. 1,486",
+            "value": 1486
+          },
+          "excluded_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 297.20",
+            "amount_rounded": "Rs. 297",
+            "value": 297.2
+          },
+          "items": [
+            {
+              "inclusion_type": "excluded",
+              "name": "Goods and services tax",
+              "details": "Goods and services tax",
+              "kind": "charge",
+              "item_amount": {
+                "currency": "INR",
+                "amount_unrounded": "Rs. 297.20",
+                "amount_rounded": "Rs. 297",
+                "value": 297.2
+              },
+              "base": {
+                "base_amount": 0,
+                "kind": "variable_amount"
+              }
+            },
+            {
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop.",
+              "name": "Mobile-only price",
+              "item_amount": {
+                "value": 1486,
+                "amount_rounded": "Rs. 1,486",
+                "currency": "INR",
+                "amount_unrounded": "Rs. 1,486"
+              },
+              "base": {
+                "kind": "rate"
+              },
+              "kind": "discount",
+              "identifier": "mobile-discount"
+            }
+          ],
+          "strikethrough_amount": {
+            "amount_rounded": "Rs. 7,430",
+            "value": 7430,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 7,430"
+          },
+          "has_long_stays_monthly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "value": 6241.20000442863,
+            "amount_rounded": "Rs. 6,241",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 6,241.20"
+          },
+          "has_long_stays_weekly_rate_price": 0
+        },
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "accommodation_type": 204,
+        "updated_checkout": null,
+        "latitude": 18.752334645678,
+        "timezone": "Asia/Kolkata",
+        "is_smart_deal": 0,
+        "checkout": {
+          "until": "11:00",
+          "from": "08:00"
+        },
+        "ufi": -2092601,
+        "updated_checkin": null,
+        "review_score_word": "Good",
+        "hotel_name_trans": "The Monarch at Chakan MIDC, Pune",
+        "genius_discount_percentage": 0,
+        "has_free_parking": 1,
+        "preferred": 1,
+        "city": "Chakan",
+        "soldout": 0,
+        "hotel_has_vb_boost": 0,
+        "is_tpi_exclusive_property": 0,
+        "cant_book": 0,
+        "city_in_trans": "in Chākan",
+        "extended": 0,
+        "hotel_name": "The Monarch at Chakan MIDC, Pune",
+        "class_is_estimated": 0,
+        "badges": [
+          {
+            "id": "Mobile Rate",
+            "text": "Mobile-only price",
+            "badge_variant": "constructive"
+          }
+        ],
+        "default_language": "xu",
+        "countrycode": "in",
+        "review_score": 7.8
+      },
+      {
+        "hotel_id": 10706302,
+        "id": "property_card_10706302",
+        "block_ids": [
+          "1070630206_394345000_8_41_0"
+        ],
+        "checkin": {
+          "until": "",
+          "from": "14:00"
+        },
+        "is_free_cancellable": 1,
+        "default_wishlist_name": "Boisar",
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/513503408.jpg?k=1320b532cdff4fdb9c4635e1c5639547e66f4789d5a381b9cee9c2f18f052c14&o=",
+        "longitude": 72.7163929,
+        "review_nr": 28,
+        "currencycode": "INR",
+        "ribbon_text": "Breakfast included",
+        "children_not_allowed": 0,
+        "type": "property_card",
+        "is_no_prepayment_block": 0,
+        "is_geo_rate": "",
+        "is_genius_deal": 0,
+        "distances": [],
+        "min_total_price": 14785.2,
+        "preferred_plus": 0,
+        "unit_configuration_label": "<b>Shared dorm room</b>: 4 beds",
+        "has_swimming_pool": 1,
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "composite_price_breakdown": {
+          "strikethrough_amount_per_night": {
+            "value": 24642,
+            "amount_rounded": "Rs. 24,642",
+            "amount_unrounded": "Rs. 24,642",
+            "currency": "INR"
+          },
+          "gross_amount_per_night": {
+            "amount_rounded": "Rs. 14,785",
+            "value": 14785.2,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 14,785.20"
+          },
+          "all_inclusive_amount": {
+            "amount_rounded": "Rs. 17,447",
+            "value": 17446.536105752,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 17,446.54"
+          },
+          "benefits": [
+            {
+              "badge_variant": "constructive",
+              "identifier": "early-2021-deals",
+              "kind": "badge",
+              "icon": null,
+              "details": "This property is offering a discount on stays between Jan 1 and Apr 1, 2026.",
+              "name": "Early 2026 Deal"
+            }
+          ],
+          "net_amount": {
+            "amount_unrounded": "Rs. 14,785.20",
+            "currency": "INR",
+            "amount_rounded": "Rs. 14,785",
+            "value": 14785.2
+          },
+          "charges_details": {
+            "mode": "extra_charges",
+            "translated_copy": "",
+            "amount": {
+              "value": 2661,
+              "currency": "INR"
+            }
+          },
+          "included_taxes_and_charges_amount": {
+            "amount_unrounded": "Rs. 0",
+            "currency": "INR",
+            "amount_rounded": "Rs. 0",
+            "value": 0
+          },
+          "gross_amount_hotel_currency": {
+            "amount_unrounded": "Rs. 14,785.20",
+            "currency": "INR",
+            "amount_rounded": "Rs. 14,785",
+            "value": 14785.2
+          },
+          "price_display_config": [
+            {
+              "value": 0,
+              "key": "use_nightly_prices"
+            },
+            {
+              "value": 0,
+              "key": "use_nightly_as_dominant"
+            },
+            {
+              "value": 1,
+              "key": "use_js_tracking"
+            }
+          ],
+          "excluded_amount": {
+            "amount_unrounded": "Rs. 2,661.34",
+            "currency": "INR",
+            "value": 2661.3361,
+            "amount_rounded": "Rs. 2,661"
+          },
+          "items": [
+            {
+              "inclusion_type": "excluded",
+              "base": {
+                "base_amount": 0,
+                "kind": "variable_amount"
+              },
+              "item_amount": {
+                "value": 2661.3361,
+                "amount_rounded": "Rs. 2,661",
+                "currency": "INR",
+                "amount_unrounded": "Rs. 2,661.34"
+              },
+              "kind": "charge",
+              "details": "Goods and services tax",
+              "name": "Goods and services tax"
+            },
+            {
+              "name": "Early 2026 Deal",
+              "details": "This property is offering a discount on stays between Jan 1 and Apr 1, 2026.",
+              "kind": "discount",
+              "base": {
+                "kind": "rate"
+              },
+              "item_amount": {
+                "currency": "INR",
+                "amount_unrounded": "Rs. 9,856.80",
+                "amount_rounded": "Rs. 9,857",
+                "value": 9856.8
+              },
+              "identifier": "campaign_37"
+            }
+          ],
+          "strikethrough_amount": {
+            "value": 24642,
+            "amount_rounded": "Rs. 24,642",
+            "amount_unrounded": "Rs. 24,642",
+            "currency": "INR"
+          },
+          "gross_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 14,785.20",
+            "value": 14785.2,
+            "amount_rounded": "Rs. 14,785"
+          },
+          "discounted_amount": {
+            "value": 9856.8,
+            "amount_rounded": "Rs. 9,857",
+            "amount_unrounded": "Rs. 9,856.80",
+            "currency": "INR"
+          },
+          "has_long_stays_weekly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "amount_rounded": "Rs. 17,447",
+            "value": 17446.536105752,
+            "amount_unrounded": "Rs. 17,446.54",
+            "currency": "INR"
+          },
+          "has_long_stays_monthly_rate_price": 0
+        },
+        "class": 4,
+        "main_photo_id": 513503408,
+        "ufi": -2092145,
+        "checkout": {
+          "from": "",
+          "until": "11:00"
+        },
+        "updated_checkin": null,
+        "timezone": "Asia/Kolkata",
+        "is_smart_deal": 0,
+        "updated_checkout": null,
+        "accommodation_type": 206,
+        "latitude": 19.8967273,
+        "preferred": 1,
+        "genius_discount_percentage": 0,
+        "has_free_parking": 1,
+        "hotel_name_trans": "DAN Resorts & Weddings",
+        "review_score_word": "Pleasant",
+        "is_tpi_exclusive_property": 0,
+        "hotel_has_vb_boost": 0,
+        "city": "Boisar",
+        "soldout": 0,
+        "countrycode": "in",
+        "review_score": 6.9,
+        "badges": [
+          {
+            "id": "Early Year Deals",
+            "badge_variant": "constructive",
+            "text": "Early 2026 Deal"
+          }
+        ],
+        "default_language": "en",
+        "extended": 0,
+        "hotel_name": "DAN Resorts & Weddings",
+        "city_in_trans": "in Boisar",
+        "cant_book": 0,
+        "class_is_estimated": 0
+      },
+      {
+        "hotel_id": 7136741,
+        "genius_discount_percentage": 0,
+        "has_free_parking": 1,
+        "preferred": 1,
+        "review_score_word": "Good",
+        "hotel_name_trans": "Meritas Crystal Resort",
+        "checkout": {
+          "from": "",
+          "until": "11:00"
+        },
+        "ufi": -2102774,
+        "updated_checkin": null,
+        "accommodation_type": 206,
+        "updated_checkout": null,
+        "latitude": 18.759251,
+        "timezone": "Asia/Kolkata",
+        "is_smart_deal": 0,
+        "badges": [
+          {
+            "id": "Mobile Rate",
+            "text": "Mobile-only price",
+            "badge_variant": "constructive"
+          }
+        ],
+        "default_language": "en",
+        "countrycode": "in",
+        "review_score": 7.1,
+        "city_in_trans": "in Lonavala",
+        "cant_book": 0,
+        "extended": 0,
+        "hotel_name": "Meritas Crystal Resort",
+        "class_is_estimated": 0,
+        "is_tpi_exclusive_property": 0,
+        "city": "Lonavala",
+        "soldout": 0,
+        "hotel_has_vb_boost": 0,
+        "review_nr": 633,
+        "longitude": 73.396492,
+        "currencycode": "INR",
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/337629411.jpg?k=e288151909171d4449d7bf3395e19821134d442e6647053bc403c1e423bbba5d&o=",
+        "children_not_allowed": 0,
+        "block_ids": [
+          "713674105_419526251_2_41_0"
+        ],
+        "id": "property_card_7136741",
+        "default_wishlist_name": "Lonavala",
+        "checkin": {
+          "until": "",
+          "from": "13:00"
+        },
+        "is_free_cancellable": 1,
+        "composite_price_breakdown": {
+          "benefits": [
+            {
+              "kind": "badge",
+              "icon": null,
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop.",
+              "name": "Mobile-only price",
+              "badge_variant": "constructive",
+              "identifier": "mobile-rate"
+            }
+          ],
+          "net_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 7,957.70",
+            "amount_rounded": "Rs. 7,958",
+            "value": 7957.7
+          },
+          "strikethrough_amount_per_night": {
+            "amount_rounded": "Rs. 9,362",
+            "value": 9362,
+            "amount_unrounded": "Rs. 9,362",
+            "currency": "INR"
+          },
+          "all_inclusive_amount": {
+            "amount_rounded": "Rs. 9,390",
+            "value": 9390.08605691791,
+            "amount_unrounded": "Rs. 9,390.09",
+            "currency": "INR"
+          },
+          "gross_amount_per_night": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 7,957.70",
+            "value": 7957.7,
+            "amount_rounded": "Rs. 7,958"
+          },
+          "price_display_config": [
+            {
+              "value": 0,
+              "key": "use_nightly_prices"
+            },
+            {
+              "value": 0,
+              "key": "use_nightly_as_dominant"
+            },
+            {
+              "key": "use_js_tracking",
+              "value": 1
+            }
+          ],
+          "charges_details": {
+            "translated_copy": "",
+            "amount": {
+              "value": 1432,
+              "currency": "INR"
+            },
+            "mode": "extra_charges"
+          },
+          "included_taxes_and_charges_amount": {
+            "value": 0,
+            "amount_rounded": "Rs. 0",
+            "amount_unrounded": "Rs. 0",
+            "currency": "INR"
+          },
+          "gross_amount_hotel_currency": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 7,957.70",
+            "amount_rounded": "Rs. 7,958",
+            "value": 7957.7
+          },
+          "gross_amount": {
+            "amount_rounded": "Rs. 7,958",
+            "value": 7957.7,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 7,957.70"
+          },
+          "discounted_amount": {
+            "amount_rounded": "Rs. 1,404",
+            "value": 1404.3,
+            "amount_unrounded": "Rs. 1,404.30",
+            "currency": "INR"
+          },
+          "excluded_amount": {
+            "value": 1432.3861,
+            "amount_rounded": "Rs. 1,432",
+            "amount_unrounded": "Rs. 1,432.39",
+            "currency": "INR"
+          },
+          "items": [
+            {
+              "item_amount": {
+                "currency": "INR",
+                "amount_unrounded": "Rs. 1,432.39",
+                "amount_rounded": "Rs. 1,432",
+                "value": 1432.3861
+              },
+              "base": {
+                "base_amount": 0,
+                "kind": "variable_amount"
+              },
+              "kind": "charge",
+              "details": "Goods and services tax",
+              "name": "Goods and services tax",
+              "inclusion_type": "excluded"
+            },
+            {
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop.",
+              "name": "Mobile-only price",
+              "kind": "discount",
+              "item_amount": {
+                "currency": "INR",
+                "amount_unrounded": "Rs. 1,404.30",
+                "value": 1404.3,
+                "amount_rounded": "Rs. 1,404"
+              },
+              "base": {
+                "kind": "rate"
+              },
+              "identifier": "mobile-discount"
+            }
+          ],
+          "strikethrough_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 9,362",
+            "amount_rounded": "Rs. 9,362",
+            "value": 9362
+          },
+          "has_long_stays_monthly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "amount_unrounded": "Rs. 9,390.09",
+            "currency": "INR",
+            "amount_rounded": "Rs. 9,390",
+            "value": 9390.08605691791
+          },
+          "has_long_stays_weekly_rate_price": 0
+        },
+        "has_swimming_pool": 1,
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "hotel_include_breakfast": 0,
+        "class": 4,
+        "main_photo_id": 337629411,
+        "preferred_plus": 0,
+        "is_no_prepayment_block": 0,
+        "type": "property_card",
+        "distances": [],
+        "min_total_price": 7957.7,
+        "is_genius_deal": 0,
+        "is_geo_rate": "",
+        "unit_configuration_label": "<b>Hotel room</b>: 1 bed"
+      },
+      {
+        "hotel_id": 14564942,
+        "is_tpi_exclusive_property": 0,
+        "city": "Mumbai",
+        "soldout": 0,
+        "hotel_has_vb_boost": 0,
+        "badges": [],
+        "default_language": "en",
+        "countrycode": "in",
+        "review_score": 7.4,
+        "cant_book": 0,
+        "city_in_trans": "in Jāmb",
+        "extended": 0,
+        "hotel_name": "Hotel Isra Comfort Inn",
+        "class_is_estimated": 0,
+        "checkout": {
+          "from": "10:30",
+          "until": "11:00"
+        },
+        "ufi": -2098184,
+        "updated_checkin": null,
+        "accommodation_type": 204,
+        "updated_checkout": null,
+        "latitude": 18.9345182689919,
+        "timezone": "Asia/Kolkata",
+        "is_smart_deal": 0,
+        "genius_discount_percentage": 0,
+        "has_free_parking": 1,
+        "preferred": 1,
+        "review_score_word": "Good",
+        "hotel_name_trans": "Hotel Isra Comfort Inn",
+        "preferred_plus": 0,
+        "is_no_prepayment_block": 1,
+        "type": "property_card",
+        "distances": [],
+        "min_total_price": 5759.19,
+        "is_genius_deal": 0,
+        "is_geo_rate": "",
+        "unit_configuration_label": "<b>Hotel room</b>: 1 bed",
+        "composite_price_breakdown": {
+          "price_display_config": [
+            {
+              "key": "use_nightly_prices",
+              "value": 0
+            },
+            {
+              "value": 0,
+              "key": "use_nightly_as_dominant"
+            },
+            {
+              "key": "use_js_tracking",
+              "value": 1
+            }
+          ],
+          "charges_details": {
+            "mode": "extra_charges",
+            "amount": {
+              "value": 288,
+              "currency": "INR"
+            },
+            "translated_copy": ""
+          },
+          "included_taxes_and_charges_amount": {
+            "amount_unrounded": "Rs. 0",
+            "currency": "INR",
+            "value": 0,
+            "amount_rounded": "Rs. 0"
+          },
+          "gross_amount_hotel_currency": {
+            "amount_unrounded": "Rs. 5,759.19",
+            "currency": "INR",
+            "amount_rounded": "Rs. 5,759",
+            "value": 5759.19
+          },
+          "benefits": [],
+          "net_amount": {
+            "amount_unrounded": "Rs. 5,759.19",
+            "currency": "INR",
+            "amount_rounded": "Rs. 5,759",
+            "value": 5759.19
+          },
+          "all_inclusive_amount": {
+            "amount_unrounded": "Rs. 6,047.15",
+            "currency": "INR",
+            "value": 6047.14950429093,
+            "amount_rounded": "Rs. 6,047"
+          },
+          "gross_amount_per_night": {
+            "amount_rounded": "Rs. 5,759",
+            "value": 5759.19,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 5,759.19"
+          },
+          "has_long_stays_monthly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 6,047.15",
+            "amount_rounded": "Rs. 6,047",
+            "value": 6047.14950429093
+          },
+          "has_long_stays_weekly_rate_price": 0,
+          "gross_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 5,759.19",
+            "value": 5759.19,
+            "amount_rounded": "Rs. 5,759"
+          },
+          "excluded_amount": {
+            "value": 287.9595,
+            "amount_rounded": "Rs. 288",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 287.96"
+          },
+          "items": [
+            {
+              "inclusion_type": "excluded",
+              "kind": "charge",
+              "base": {
+                "base_amount": 0,
+                "kind": "variable_amount"
+              },
+              "item_amount": {
+                "value": 287.9595,
+                "amount_rounded": "Rs. 288",
+                "amount_unrounded": "Rs. 287.96",
+                "currency": "INR"
+              },
+              "name": "Goods and services tax",
+              "details": "Goods and services tax"
+            }
+          ]
+        },
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "hotel_include_breakfast": 0,
+        "class": 3,
+        "main_photo_id": 785636065,
+        "block_ids": [
+          "1456494201_424619038_1_0_1099511627776"
+        ],
+        "id": "property_card_14564942",
+        "default_wishlist_name": "Jāmb",
+        "checkin": {
+          "until": "14:00",
+          "from": "12:00"
+        },
+        "is_free_cancellable": 1,
+        "currencycode": "INR",
+        "review_nr": 15,
+        "longitude": 72.8357449914265,
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/785636065.jpg?k=abff4ab3c6a7626cbc986b656838d82ab70143e9950365a462d416a565a25e6e&o=",
+        "children_not_allowed": 0
+      },
+      {
+        "hotel_id": 11445268,
+        "children_not_allowed": 0,
+        "review_nr": 50,
+        "longitude": 73.411354076073,
+        "currencycode": "INR",
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/818254912.jpg?k=486c45a06bb645f8212042ec077653df2a172ae0a52c8d1f1932d029c4942cb8&o=",
+        "default_wishlist_name": "Lonavala",
+        "checkin": {
+          "from": "12:00",
+          "until": "00:00"
+        },
+        "is_free_cancellable": 1,
+        "block_ids": [
+          "1144526804_426843190_3_0_0"
+        ],
+        "id": "property_card_11445268",
+        "hotel_include_breakfast": 0,
+        "class": 0,
+        "main_photo_id": 818254912,
+        "composite_price_breakdown": {
+          "gross_amount_hotel_currency": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 4,250",
+            "amount_rounded": "Rs. 4,250",
+            "value": 4250
+          },
+          "included_taxes_and_charges_amount": {
+            "amount_unrounded": "Rs. 0",
+            "currency": "INR",
+            "value": 0,
+            "amount_rounded": "Rs. 0"
+          },
+          "charges_details": {
+            "translated_copy": "",
+            "amount": {
+              "currency": "INR",
+              "value": 213
+            },
+            "mode": "extra_charges"
+          },
+          "price_display_config": [
+            {
+              "value": 0,
+              "key": "use_nightly_prices"
+            },
+            {
+              "key": "use_nightly_as_dominant",
+              "value": 0
+            },
+            {
+              "key": "use_js_tracking",
+              "value": 1
+            }
+          ],
+          "strikethrough_amount_per_night": {
+            "amount_rounded": "Rs. 5,000",
+            "value": 5000,
+            "amount_unrounded": "Rs. 5,000",
+            "currency": "INR"
+          },
+          "gross_amount_per_night": {
+            "value": 4250,
+            "amount_rounded": "Rs. 4,250",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 4,250"
+          },
+          "all_inclusive_amount": {
+            "amount_rounded": "Rs. 4,463",
+            "value": 4462.5000031665,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 4,462.50"
+          },
+          "benefits": [
+            {
+              "badge_variant": "constructive",
+              "identifier": "mobile-rate",
+              "icon": null,
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop.",
+              "name": "Mobile-only price",
+              "kind": "badge"
+            }
+          ],
+          "net_amount": {
+            "amount_unrounded": "Rs. 4,250",
+            "currency": "INR",
+            "value": 4250,
+            "amount_rounded": "Rs. 4,250"
+          },
+          "all_inclusive_amount_hotel_currency": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 4,462.50",
+            "amount_rounded": "Rs. 4,463",
+            "value": 4462.5000031665
+          },
+          "has_long_stays_weekly_rate_price": 0,
+          "has_long_stays_monthly_rate_price": 0,
+          "strikethrough_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 5,000",
+            "value": 5000,
+            "amount_rounded": "Rs. 5,000"
+          },
+          "excluded_amount": {
+            "amount_rounded": "Rs. 213",
+            "value": 212.5,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 212.50"
+          },
+          "items": [
+            {
+              "kind": "charge",
+              "item_amount": {
+                "amount_rounded": "Rs. 213",
+                "value": 212.5,
+                "amount_unrounded": "Rs. 212.50",
+                "currency": "INR"
+              },
+              "base": {
+                "kind": "variable_amount",
+                "base_amount": 0
+              },
+              "name": "Goods and services tax",
+              "details": "Goods and services tax",
+              "inclusion_type": "excluded"
+            },
+            {
+              "kind": "discount",
+              "base": {
+                "kind": "rate"
+              },
+              "item_amount": {
+                "value": 750,
+                "amount_rounded": "Rs. 750",
+                "currency": "INR",
+                "amount_unrounded": "Rs. 750"
+              },
+              "name": "Mobile-only price",
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop.",
+              "identifier": "mobile-discount"
+            }
+          ],
+          "discounted_amount": {
+            "amount_unrounded": "Rs. 750",
+            "currency": "INR",
+            "value": 750,
+            "amount_rounded": "Rs. 750"
+          },
+          "gross_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 4,250",
+            "value": 4250,
+            "amount_rounded": "Rs. 4,250"
+          }
+        },
+        "has_swimming_pool": 1,
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "unit_configuration_label": "2 beds",
+        "preferred_plus": 0,
+        "is_no_prepayment_block": 0,
+        "type": "property_card",
+        "min_total_price": 4250,
+        "distances": [],
+        "is_geo_rate": "",
+        "is_genius_deal": 0,
+        "review_score_word": "Good",
+        "hotel_name_trans": "Misty Blue Resort and Villas",
+        "genius_discount_percentage": 0,
+        "has_free_parking": 1,
+        "preferred": 1,
+        "accommodation_type": 206,
+        "updated_checkout": null,
+        "latitude": 18.765138192353,
+        "timezone": "Asia/Kolkata",
+        "is_smart_deal": 0,
+        "checkout": {
+          "until": "10:30",
+          "from": "10:00"
+        },
+        "ufi": -2102774,
+        "updated_checkin": null,
+        "cant_book": 0,
+        "city_in_trans": "in Lonavala",
+        "hotel_name": "Misty Blue Resort and Villas",
+        "extended": 0,
+        "class_is_estimated": 0,
+        "badges": [
+          {
+            "badge_variant": "constructive",
+            "text": "Mobile-only price",
+            "id": "Mobile Rate"
+          }
+        ],
+        "default_language": "xu",
+        "countrycode": "in",
+        "review_score": 7.3,
+        "city": "Lonavala",
+        "soldout": 0,
+        "hotel_has_vb_boost": 0,
+        "is_tpi_exclusive_property": 0
+      },
+      {
+        "hotel_id": 11361227,
+        "default_language": "xu",
+        "badges": [],
+        "review_score": 8.5,
+        "countrycode": "in",
+        "class_is_estimated": 0,
+        "hotel_name": "Cherryleen Resort Nagaon Alibaug",
+        "extended": 0,
+        "cant_book": 0,
+        "city_in_trans": "in Nagaon",
+        "is_tpi_exclusive_property": 0,
+        "soldout": 0,
+        "city": "Nagaon",
+        "hotel_has_vb_boost": 0,
+        "has_free_parking": 1,
+        "genius_discount_percentage": 0,
+        "preferred": 1,
+        "review_score_word": "Very Good",
+        "hotel_name_trans": "Cherryleen Resort Nagaon Alibaug",
+        "updated_checkin": null,
+        "ufi": -2105314,
+        "checkout": {
+          "from": "10:00",
+          "until": "11:00"
+        },
+        "latitude": 18.619497213225,
+        "updated_checkout": null,
+        "accommodation_type": 204,
+        "is_smart_deal": 0,
+        "timezone": "Asia/Kolkata",
+        "composite_price_breakdown": {
+          "price_display_config": [
+            {
+              "value": 0,
+              "key": "use_nightly_prices"
+            },
+            {
+              "key": "use_nightly_as_dominant",
+              "value": 0
+            },
+            {
+              "key": "use_js_tracking",
+              "value": 1
+            }
+          ],
+          "included_taxes_and_charges_amount": {
+            "value": 0,
+            "amount_rounded": "Rs. 0",
+            "amount_unrounded": "Rs. 0",
+            "currency": "INR"
+          },
+          "gross_amount_hotel_currency": {
+            "amount_rounded": "Rs. 6,080",
+            "value": 6080,
+            "amount_unrounded": "Rs. 6,080",
+            "currency": "INR"
+          },
+          "charges_details": {
+            "translated_copy": "",
+            "amount": {
+              "value": 304,
+              "currency": "INR"
+            },
+            "mode": "extra_charges"
+          },
+          "benefits": [],
+          "net_amount": {
+            "amount_rounded": "Rs. 6,080",
+            "value": 6080,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 6,080"
+          },
+          "all_inclusive_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 6,384",
+            "value": 6384.00000452995,
+            "amount_rounded": "Rs. 6,384"
+          },
+          "gross_amount_per_night": {
+            "value": 6080,
+            "amount_rounded": "Rs. 6,080",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 6,080"
+          },
+          "has_long_stays_monthly_rate_price": 0,
+          "has_long_stays_weekly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "amount_rounded": "Rs. 6,384",
+            "value": 6384.00000452995,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 6,384"
+          },
+          "gross_amount": {
+            "amount_unrounded": "Rs. 6,080",
+            "currency": "INR",
+            "amount_rounded": "Rs. 6,080",
+            "value": 6080
+          },
+          "items": [
+            {
+              "inclusion_type": "excluded",
+              "name": "Goods and services tax",
+              "details": "Goods and services tax",
+              "kind": "charge",
+              "base": {
+                "base_amount": 0,
+                "kind": "variable_amount"
+              },
+              "item_amount": {
+                "amount_unrounded": "Rs. 304",
+                "currency": "INR",
+                "amount_rounded": "Rs. 304",
+                "value": 304
+              }
+            }
+          ],
+          "excluded_amount": {
+            "value": 304,
+            "amount_rounded": "Rs. 304",
+            "amount_unrounded": "Rs. 304",
+            "currency": "INR"
+          }
+        },
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "has_swimming_pool": 1,
+        "main_photo_id": 519387542,
+        "class": 3,
+        "hotel_include_breakfast": 0,
+        "preferred_plus": 1,
+        "is_geo_rate": "",
+        "is_genius_deal": 0,
+        "min_total_price": 6080,
+        "distances": [],
+        "type": "property_card",
+        "is_no_prepayment_block": 0,
+        "unit_configuration_label": "<b>Hotel room</b>: 2 beds",
+        "currencycode": "INR",
+        "review_nr": 60,
+        "longitude": 72.899979171893,
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/519387542.jpg?k=debdc82f3c9ea38a27673c73ce4b97f556292b67d062fa902ecd61618d299a85&o=",
+        "children_not_allowed": 0,
+        "id": "property_card_11361227",
+        "block_ids": [
+          "1136122702_429085169_0_42_0"
+        ],
+        "default_wishlist_name": "Nagaon",
+        "is_free_cancellable": 1,
+        "checkin": {
+          "until": "17:30",
+          "from": "12:00"
+        }
+      },
+      {
+        "hotel_id": 11667970,
+        "composite_price_breakdown": {
+          "strikethrough_amount_per_night": {
+            "amount_rounded": "Rs. 2,000",
+            "value": 2000,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 2,000"
+          },
+          "all_inclusive_amount": {
+            "amount_unrounded": "Rs. 3,090",
+            "currency": "INR",
+            "amount_rounded": "Rs. 3,090",
+            "value": 3090.0000013411
+          },
+          "gross_amount_per_night": {
+            "value": 1800,
+            "amount_rounded": "Rs. 1,800",
+            "amount_unrounded": "Rs. 1,800",
+            "currency": "INR"
+          },
+          "benefits": [
+            {
+              "badge_variant": "constructive",
+              "identifier": "mobile-rate",
+              "icon": null,
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop.",
+              "name": "Mobile-only price",
+              "kind": "badge"
+            }
+          ],
+          "net_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 1,800",
+            "value": 1800,
+            "amount_rounded": "Rs. 1,800"
+          },
+          "gross_amount_hotel_currency": {
+            "value": 1800,
+            "amount_rounded": "Rs. 1,800",
+            "amount_unrounded": "Rs. 1,800",
+            "currency": "INR"
+          },
+          "included_taxes_and_charges_amount": {
+            "amount_unrounded": "Rs. 0",
+            "currency": "INR",
+            "amount_rounded": "Rs. 0",
+            "value": 0
+          },
+          "charges_details": {
+            "amount": {
+              "currency": "INR",
+              "value": 1290
+            },
+            "translated_copy": "",
+            "mode": "extra_charges"
+          },
+          "price_display_config": [
+            {
+              "value": 0,
+              "key": "use_nightly_prices"
+            },
+            {
+              "key": "use_nightly_as_dominant",
+              "value": 0
+            },
+            {
+              "value": 1,
+              "key": "use_js_tracking"
+            }
+          ],
+          "strikethrough_amount": {
+            "amount_unrounded": "Rs. 2,000",
+            "currency": "INR",
+            "value": 2000,
+            "amount_rounded": "Rs. 2,000"
+          },
+          "items": [
+            {
+              "details": "Goods and services tax",
+              "name": "Goods and services tax",
+              "base": {
+                "kind": "variable_amount",
+                "base_amount": 0
+              },
+              "item_amount": {
+                "amount_rounded": "Rs. 90",
+                "value": 90,
+                "currency": "INR",
+                "amount_unrounded": "Rs. 90"
+              },
+              "kind": "charge",
+              "inclusion_type": "excluded"
+            },
+            {
+              "inclusion_type": "excluded",
+              "details": "Environment fee",
+              "name": "Environment fee",
+              "kind": "charge",
+              "item_amount": {
+                "value": 600,
+                "amount_rounded": "Rs. 600",
+                "currency": "INR",
+                "amount_unrounded": "Rs. 600"
+              },
+              "base": {
+                "base_amount": 600,
+                "kind": "per_night"
+              }
+            },
+            {
+              "name": "Resort fee",
+              "details": "Resort fee",
+              "base": {
+                "kind": "per_night",
+                "base_amount": 600
+              },
+              "item_amount": {
+                "amount_unrounded": "Rs. 600",
+                "currency": "INR",
+                "value": 600,
+                "amount_rounded": "Rs. 600"
+              },
+              "kind": "charge",
+              "inclusion_type": "excluded"
+            },
+            {
+              "identifier": "mobile-discount",
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop.",
+              "name": "Mobile-only price",
+              "item_amount": {
+                "amount_rounded": "Rs. 200",
+                "value": 200,
+                "amount_unrounded": "Rs. 200",
+                "currency": "INR"
+              },
+              "base": {
+                "kind": "rate"
+              },
+              "kind": "discount"
+            }
+          ],
+          "excluded_amount": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 1,290",
+            "amount_rounded": "Rs. 1,290",
+            "value": 1290
+          },
+          "discounted_amount": {
+            "value": 200,
+            "amount_rounded": "Rs. 200",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 200"
+          },
+          "gross_amount": {
+            "amount_rounded": "Rs. 1,800",
+            "value": 1800,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 1,800"
+          },
+          "has_long_stays_weekly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "amount_rounded": "Rs. 3,090",
+            "value": 3090.0000013411,
+            "amount_unrounded": "Rs. 3,090",
+            "currency": "INR"
+          },
+          "has_long_stays_monthly_rate_price": 0
+        },
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "class": 0,
+        "hotel_include_breakfast": 0,
+        "main_photo_id": 653438338,
+        "preferred_plus": 0,
+        "type": "property_card",
+        "is_no_prepayment_block": 1,
+        "is_genius_deal": 0,
+        "is_geo_rate": "",
+        "distances": [],
+        "min_total_price": 1800,
+        "unit_configuration_label": "<b>Entire villa – 232 m²</b>: 4 beds • 2 bedrooms • 1 living room • 2 bathrooms",
+        "review_nr": 1,
+        "currencycode": "INR",
+        "longitude": 73.4019760283929,
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/653438338.jpg?k=bc6ae0163efdde1e26e74364df54b1bf7b7127d359a1309b8f8a27861bf528b7&o=",
+        "booking_home": {
+          "quality_class": 0,
+          "segment": 2,
+          "is_booking_home": 1,
+          "is_single_unit_property": 1,
+          "group": "house_like"
+        },
+        "children_not_allowed": 0,
+        "id": "property_card_11667970",
+        "block_ids": [
+          "1166797001_400346364_4_0_0"
+        ],
+        "default_wishlist_name": "Khandala",
+        "checkin": {
+          "from": "13:00",
+          "until": "22:00"
+        },
+        "is_free_cancellable": 1,
+        "badges": [
+          {
+            "id": "Mobile Rate",
+            "text": "Mobile-only price",
+            "badge_variant": "constructive"
+          }
+        ],
+        "default_language": "en",
+        "countrycode": "in",
+        "review_score": 10,
+        "extended": 0,
+        "hotel_name": "Serene Guest House ll 2 Ac Rooms ll WiFi ll Tv ll Garden",
+        "cant_book": 0,
+        "city_in_trans": "in Khandāla",
+        "class_is_estimated": 0,
+        "is_tpi_exclusive_property": 0,
+        "city": "Kurvande , thombrewadi lonavla",
+        "soldout": 0,
+        "hotel_has_vb_boost": 1,
+        "genius_discount_percentage": 0,
+        "has_free_parking": 1,
+        "preferred": 0,
+        "review_score_word": "Exceptional",
+        "hotel_name_trans": "Serene Guest House ll 2 Ac Rooms ll WiFi ll Tv ll Garden",
+        "ufi": -2100507,
+        "checkout": {
+          "until": "11:00",
+          "from": "08:00"
+        },
+        "updated_checkin": null,
+        "updated_checkout": null,
+        "accommodation_type": 213,
+        "latitude": 18.7598253996637,
+        "timezone": "Asia/Kolkata",
+        "is_smart_deal": 0
+      },
+      {
+        "hotel_id": 14381318,
+        "updated_checkin": null,
+        "checkout": {
+          "until": "11:00",
+          "from": "08:00"
+        },
+        "ufi": -2100507,
+        "is_smart_deal": 0,
+        "timezone": "Asia/Kolkata",
+        "latitude": 18.734822655935,
+        "accommodation_type": 213,
+        "updated_checkout": null,
+        "preferred": 0,
+        "has_free_parking": 1,
+        "genius_discount_percentage": 0,
+        "hotel_name_trans": "Friends Farm House - The Dream Stays ll Pvt Pool ll 3 Bhk ll Big Lawn",
+        "review_score_word": "Exceptional",
+        "is_tpi_exclusive_property": 0,
+        "hotel_has_vb_boost": 1,
+        "soldout": 0,
+        "city": "Kune N.m.",
+        "review_score": 10,
+        "countrycode": "in",
+        "default_language": "en",
+        "badges": [
+          {
+            "text": "Mobile-only price",
+            "badge_variant": "constructive",
+            "id": "Mobile Rate"
+          }
+        ],
+        "class_is_estimated": 0,
+        "cant_book": 0,
+        "city_in_trans": "in Khandāla",
+        "hotel_name": "Friends Farm House - The Dream Stays ll Pvt Pool ll 3 Bhk ll Big Lawn",
+        "extended": 0,
+        "block_ids": [
+          "1438131801_415327253_8_0_0"
+        ],
+        "id": "property_card_14381318",
+        "is_free_cancellable": 1,
+        "checkin": {
+          "from": "13:00",
+          "until": "18:00"
+        },
+        "default_wishlist_name": "Khandala",
+        "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/787320062.jpg?k=065e32e288bbde601512304e2889011d1a74850c7cc4db398e32b3faca1c3cf3&o=",
+        "currencycode": "INR",
+        "review_nr": 2,
+        "longitude": 73.3760742063251,
+        "children_not_allowed": 0,
+        "booking_home": {
+          "quality_class": 0,
+          "group": "house_like",
+          "segment": 2,
+          "is_single_unit_property": 1,
+          "is_booking_home": 1
+        },
+        "min_total_price": 5400,
+        "distances": [],
+        "is_genius_deal": 0,
+        "is_geo_rate": "",
+        "is_no_prepayment_block": 1,
+        "type": "property_card",
+        "preferred_plus": 0,
+        "unit_configuration_label": "<b>Entire villa – 9,999 m²</b>: 4 beds • 3 bedrooms • 1 living room • 3 bathrooms",
+        "last_reservation_data": {
+          "last_reservation_ellapsed_months": 1
+        },
+        "bwallet": {
+          "hotel_eligibility": 0
+        },
+        "has_swimming_pool": 1,
+        "composite_price_breakdown": {
+          "strikethrough_amount": {
+            "value": 6000,
+            "amount_rounded": "Rs. 6,000",
+            "amount_unrounded": "Rs. 6,000",
+            "currency": "INR"
+          },
+          "items": [
+            {
+              "details": "Goods and services tax",
+              "name": "Goods and services tax",
+              "item_amount": {
+                "amount_rounded": "Rs. 270",
+                "value": 270,
+                "amount_unrounded": "Rs. 270",
+                "currency": "INR"
+              },
+              "base": {
+                "base_amount": 0,
+                "kind": "variable_amount"
+              },
+              "kind": "charge",
+              "inclusion_type": "excluded"
+            },
+            {
+              "item_amount": {
+                "amount_unrounded": "Rs. 1,800",
+                "currency": "INR",
+                "value": 1800,
+                "amount_rounded": "Rs. 1,800"
+              },
+              "base": {
+                "kind": "per_night",
+                "base_amount": 1800
+              },
+              "kind": "charge",
+              "details": "Resort fee",
+              "name": "Resort fee",
+              "inclusion_type": "excluded"
+            },
+            {
+              "base": {
+                "base_amount": 2000,
+                "kind": "per_night"
+              },
+              "item_amount": {
+                "amount_rounded": "Rs. 2,000",
+                "value": 2000,
+                "currency": "INR",
+                "amount_unrounded": "Rs. 2,000"
+              },
+              "kind": "charge",
+              "name": "Environment fee",
+              "details": "Environment fee",
+              "inclusion_type": "excluded"
+            },
+            {
+              "identifier": "mobile-discount",
+              "kind": "discount",
+              "base": {
+                "kind": "rate"
+              },
+              "item_amount": {
+                "amount_rounded": "Rs. 600",
+                "value": 600,
+                "currency": "INR",
+                "amount_unrounded": "Rs. 600"
+              },
+              "name": "Mobile-only price",
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop."
+            }
+          ],
+          "excluded_amount": {
+            "value": 4070,
+            "amount_rounded": "Rs. 4,070",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 4,070"
+          },
+          "discounted_amount": {
+            "amount_unrounded": "Rs. 600",
+            "currency": "INR",
+            "amount_rounded": "Rs. 600",
+            "value": 600
+          },
+          "gross_amount": {
+            "amount_rounded": "Rs. 5,400",
+            "value": 5400,
+            "amount_unrounded": "Rs. 5,400",
+            "currency": "INR"
+          },
+          "has_long_stays_weekly_rate_price": 0,
+          "all_inclusive_amount_hotel_currency": {
+            "value": 9470.00000402331,
+            "amount_rounded": "Rs. 9,470",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 9,470"
+          },
+          "has_long_stays_monthly_rate_price": 0,
+          "all_inclusive_amount": {
+            "value": 9470.00000402331,
+            "amount_rounded": "Rs. 9,470",
+            "currency": "INR",
+            "amount_unrounded": "Rs. 9,470"
+          },
+          "strikethrough_amount_per_night": {
+            "amount_rounded": "Rs. 6,000",
+            "value": 6000,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 6,000"
+          },
+          "gross_amount_per_night": {
+            "currency": "INR",
+            "amount_unrounded": "Rs. 5,400",
+            "amount_rounded": "Rs. 5,400",
+            "value": 5400
+          },
+          "net_amount": {
+            "amount_rounded": "Rs. 5,400",
+            "value": 5400,
+            "amount_unrounded": "Rs. 5,400",
+            "currency": "INR"
+          },
+          "benefits": [
+            {
+              "badge_variant": "constructive",
+              "identifier": "mobile-rate",
+              "kind": "badge",
+              "icon": null,
+              "name": "Mobile-only price",
+              "details": "You’re getting a reduced rate compared to the rate available on a computer or laptop."
+            }
+          ],
+          "included_taxes_and_charges_amount": {
+            "amount_unrounded": "Rs. 0",
+            "currency": "INR",
+            "amount_rounded": "Rs. 0",
+            "value": 0
+          },
+          "gross_amount_hotel_currency": {
+            "amount_rounded": "Rs. 5,400",
+            "value": 5400,
+            "currency": "INR",
+            "amount_unrounded": "Rs. 5,400"
+          },
+          "charges_details": {
+            "translated_copy": "",
+            "amount": {
+              "value": 4070,
+              "currency": "INR"
+            },
+            "mode": "extra_charges"
+          },
+          "price_display_config": [
+            {
+              "key": "use_nightly_prices",
+              "value": 0
+            },
+            {
+              "key": "use_nightly_as_dominant",
+              "value": 0
+            },
+            {
+              "key": "use_js_tracking",
+              "value": 1
+            }
+          ]
+        },
+        "main_photo_id": 787320062,
+        "class": 0,
+        "hotel_include_breakfast": 0
+      }
+    ],
+    "room_distribution": [
+      {
+        "children": [
+          0,
+          17
+        ],
+        "adults": "1"
+      }
+    ]
+  }
+}

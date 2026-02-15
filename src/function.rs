@@ -1,6 +1,7 @@
 use crate::{
     api_requests::{
         flights::{execute_calls, flight_booking_details, flight_booking_link, flights_between},
+        hotel::{get_hotel_by_coordinates, get_hotel_description, get_hotel_details, get_room_availability},
         site_seen::get_about_place,
         trains::{train_seats_available, trains_between},
     },
@@ -28,6 +29,10 @@ async fn plan_tour(
         trains_between::gemini_schema(),
         train_seats_available::gemini_schema(),
         get_about_place::gemini_schema(),
+        get_hotel_by_coordinates::gemini_schema(),
+        get_hotel_details::gemini_schema(),
+        get_room_availability::gemini_schema(),
+        get_hotel_description::gemini_schema(),
     ];
     let ai = Gemini::new(
         std::env::var("GEMINI_API_KEY").unwrap(),
@@ -41,6 +46,10 @@ async fn plan_tour(
         train_seats_available,
         trains_between,
         get_about_place,
+        get_hotel_by_coordinates,
+        get_hotel_details,
+        get_room_availability,
+        get_hotel_description,
     );
     execute_calls(&mut session, token_map).await;
 

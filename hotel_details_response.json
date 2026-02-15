@@ -1,0 +1,1248 @@
+{
+  "status": true,
+  "message": "Success",
+  "timestamp": 1771133716118,
+  "data": {
+    "ufi": -2092174,
+    "hotel_id": 191605,
+    "hotel_name": "Novotel Mumbai Juhu Beach",
+    "url": "https://www.booking.com/hotel/in/novotel-mumbai-juhu-beach.html",
+    "hotel_name_trans": "",
+    "review_nr": 1861,
+    "arrival_date": "2026-02-20",
+    "departure_date": "2026-02-21",
+    "price_transparency_mode": "none",
+    "accommodation_type_name": "Hotels",
+    "latitude": 19.1085017376187,
+    "longitude": 72.8243981301785,
+    "address": "Juhu Beach, Maharastra",
+    "address_trans": "",
+    "city": "Mumbai",
+    "city_trans": "Mumbai",
+    "city_in_trans": "in Mumbai",
+    "city_name_en": "Mumbai",
+    "district": "Juhu",
+    "countrycode": "in",
+    "distance_to_cc": 6.66271369989499,
+    "default_language": "en-gb",
+    "country_trans": "India",
+    "currency_code": "INR",
+    "zip": "400049",
+    "timezone": "Asia/Kolkata",
+    "rare_find_state": "NOT_RARE",
+    "soldout": 0,
+    "available_rooms": 7,
+    "max_rooms_in_reservation": 7,
+    "average_room_size_for_ufi_m2": "14.07",
+    "is_family_friendly": 0,
+    "is_closed": 0,
+    "is_crimea": 0,
+    "is_hotel_ctrip": 0,
+    "is_price_transparent": 0,
+    "is_genius_deal": 0,
+    "is_cash_accepted_check_enabled": 1,
+    "qualifies_for_no_cc_reservation": 0,
+    "hotel_include_breakfast": 0,
+    "cc1": "in",
+    "family_facilities": [
+      "Babysitting/Child services",
+      "Outdoor pool (year-round)",
+      "Outdoor pool",
+      "Beachfront",
+      "Kids' club",
+      "Family rooms"
+    ],
+    "product_price_breakdown": {
+      "all_inclusive_amount": {
+        "currency": "EUR",
+        "amount_unrounded": "€ 219.73",
+        "amount_rounded": "€ 220",
+        "value": 219.728273331881
+      },
+      "gross_amount": {
+        "amount_unrounded": "€ 186.21",
+        "currency": "EUR",
+        "amount_rounded": "€ 186",
+        "value": 186.2104
+      },
+      "charges_details": {
+        "translated_copy": "",
+        "amount": {
+          "value": 34,
+          "currency": "EUR"
+        },
+        "mode": "extra_charges"
+      },
+      "all_inclusive_amount_hotel_currency": {
+        "value": 23600.0001430511,
+        "currency": "INR",
+        "amount_unrounded": "Rs. 23,600",
+        "amount_rounded": "Rs. 23,600"
+      },
+      "price_display_config": [
+        {
+          "key": "use_nightly_prices",
+          "value": 0
+        },
+        {
+          "value": 0,
+          "key": "use_nightly_as_dominant"
+        },
+        {
+          "value": 1,
+          "key": "use_js_tracking"
+        }
+      ],
+      "excluded_amount": {
+        "value": 33.517873862104,
+        "amount_unrounded": "€ 33.52",
+        "currency": "EUR",
+        "amount_rounded": "€ 34"
+      },
+      "net_amount": {
+        "amount_rounded": "€ 186",
+        "amount_unrounded": "€ 186.21",
+        "currency": "EUR",
+        "value": 186.2104
+      },
+      "benefits": [],
+      "gross_amount_per_night": {
+        "value": 186.2104,
+        "currency": "EUR",
+        "amount_unrounded": "€ 186.21",
+        "amount_rounded": "€ 186"
+      },
+      "items": [
+        {
+          "name": "Goods and services tax",
+          "item_amount": {
+            "amount_rounded": "€ 34",
+            "amount_unrounded": "€ 33.52",
+            "currency": "EUR",
+            "value": 33.517873862104
+          },
+          "base": {
+            "base_amount": 0,
+            "kind": "variable_amount"
+          },
+          "details": "Goods and services tax",
+          "inclusion_type": "excluded",
+          "kind": "charge"
+        }
+      ],
+      "has_long_stays_monthly_rate_price": 0,
+      "has_long_stays_weekly_rate_price": 0,
+      "included_taxes_and_charges_amount": {
+        "amount_rounded": "€ 0",
+        "amount_unrounded": "€ 0",
+        "currency": "EUR",
+        "value": 0
+      },
+      "nr_stays": 7,
+      "gross_amount_hotel_currency": {
+        "amount_rounded": "Rs. 20,000",
+        "amount_unrounded": "Rs. 20,000",
+        "currency": "INR",
+        "value": 20000
+      }
+    },
+    "composite_price_breakdown": {
+      "benefits": [],
+      "net_amount": {
+        "value": 186.2104,
+        "amount_rounded": "€ 186",
+        "amount_unrounded": "€ 186.21",
+        "currency": "EUR"
+      },
+      "gross_amount_hotel_currency": {
+        "amount_unrounded": "Rs. 20,000",
+        "currency": "INR",
+        "amount_rounded": "Rs. 20,000",
+        "value": 20000
+      },
+      "included_taxes_and_charges_amount": {
+        "amount_rounded": "€ 0",
+        "amount_unrounded": "€ 0",
+        "currency": "EUR",
+        "value": 0
+      },
+      "has_long_stays_weekly_rate_price": 0,
+      "has_long_stays_monthly_rate_price": 0,
+      "items": [
+        {
+          "details": "Goods and services tax",
+          "inclusion_type": "excluded",
+          "kind": "charge",
+          "name": "Goods and services tax",
+          "item_amount": {
+            "value": 33.517873862104,
+            "amount_rounded": "€ 34",
+            "currency": "EUR",
+            "amount_unrounded": "€ 33.52"
+          },
+          "base": {
+            "kind": "variable_amount",
+            "base_amount": 0
+          }
+        }
+      ],
+      "gross_amount_per_night": {
+        "amount_rounded": "€ 186",
+        "amount_unrounded": "€ 186.21",
+        "currency": "EUR",
+        "value": 186.2104
+      },
+      "price_display_config": [
+        {
+          "value": 0,
+          "key": "use_nightly_prices"
+        },
+        {
+          "key": "use_nightly_as_dominant",
+          "value": 0
+        },
+        {
+          "key": "use_js_tracking",
+          "value": 1
+        }
+      ],
+      "all_inclusive_amount_hotel_currency": {
+        "amount_rounded": "Rs. 23,600",
+        "currency": "INR",
+        "amount_unrounded": "Rs. 23,600",
+        "value": 23600.0001430511
+      },
+      "charges_details": {
+        "mode": "extra_charges",
+        "amount": {
+          "value": 34,
+          "currency": "EUR"
+        },
+        "translated_copy": ""
+      },
+      "gross_amount": {
+        "value": 186.2104,
+        "amount_unrounded": "€ 186.21",
+        "currency": "EUR",
+        "amount_rounded": "€ 186"
+      },
+      "all_inclusive_amount": {
+        "value": 219.728273331881,
+        "amount_unrounded": "€ 219.73",
+        "currency": "EUR",
+        "amount_rounded": "€ 220"
+      },
+      "excluded_amount": {
+        "value": 33.517873862104,
+        "amount_unrounded": "€ 33.52",
+        "currency": "EUR",
+        "amount_rounded": "€ 34"
+      }
+    },
+    "property_highlight_strip": [
+      {
+        "icon_list": [
+          {
+            "size": 1,
+            "icon": "iconset/parking_sign"
+          }
+        ],
+        "name": "Free parking"
+      },
+      {
+        "name": "Pet friendly",
+        "icon_list": [
+          {
+            "size": 1,
+            "icon": "iconset/pawprint"
+          }
+        ]
+      },
+      {
+        "icon_list": [
+          {
+            "icon": "iconset/pool",
+            "size": 1
+          }
+        ],
+        "name": "Outdoor pool"
+      },
+      {
+        "icon_list": [
+          {
+            "size": 1,
+            "icon": "iconset/food"
+          }
+        ],
+        "name": "Restaurant"
+      },
+      {
+        "name": "Spa",
+        "icon_list": [
+          {
+            "size": 1,
+            "icon": "iconset/spa"
+          }
+        ]
+      },
+      {
+        "name": "Air conditioning",
+        "icon_list": [
+          {
+            "size": 1,
+            "icon": "iconset/snowflake"
+          }
+        ]
+      },
+      {
+        "name": "Private bathroom",
+        "icon_list": [
+          {
+            "size": 1,
+            "icon": "iconset/shower"
+          }
+        ]
+      },
+      {
+        "name": "Free Wifi",
+        "icon_list": [
+          {
+            "icon": "iconset/wifi",
+            "size": 1
+          }
+        ]
+      },
+      {
+        "name": "Shower",
+        "icon_list": [
+          {
+            "size": 1,
+            "icon": "iconset/shower"
+          }
+        ]
+      },
+      {
+        "icon_list": [
+          {
+            "icon": "iconset/fitness",
+            "size": 1
+          }
+        ],
+        "name": "Fitness center"
+      }
+    ],
+    "facilities_block": {
+      "name": "Most Popular Facilities",
+      "type": "popular",
+      "facilities": [
+        {
+          "icon": "pool",
+          "name": "1 swimming pool"
+        },
+        {
+          "icon": "shuttle",
+          "name": "Airport shuttle"
+        },
+        {
+          "icon": "nosmoking",
+          "name": "Non-smoking rooms"
+        },
+        {
+          "name": "Fitness center",
+          "icon": "fitness"
+        },
+        {
+          "icon": "clean",
+          "name": "Room service"
+        },
+        {
+          "icon": "spa",
+          "name": "Spa"
+        },
+        {
+          "icon": "food_and_drink",
+          "name": "Restaurant"
+        },
+        {
+          "icon": "disabled",
+          "name": "Facilities for disabled guests"
+        },
+        {
+          "name": "Free parking",
+          "icon": "parking_sign"
+        },
+        {
+          "name": "Wifi in all areas",
+          "icon": "wifi"
+        },
+        {
+          "icon": "beach",
+          "name": "Beachfront"
+        },
+        {
+          "icon": "parking_sign",
+          "name": "Private Parking"
+        },
+        {
+          "name": "Family rooms",
+          "icon": "family"
+        },
+        {
+          "icon": "pawprint",
+          "name": "Pet friendly"
+        },
+        {
+          "icon": "wifi",
+          "name": "Free Wifi"
+        }
+      ]
+    },
+    "top_ufi_benefits": [
+      {
+        "translated_name": "Wifi",
+        "icon": "wifi"
+      },
+      {
+        "translated_name": "Airport shuttle",
+        "icon": "shuttle"
+      },
+      {
+        "icon": "pool",
+        "translated_name": "Swimming pool"
+      },
+      {
+        "icon": "family",
+        "translated_name": "Family rooms"
+      },
+      {
+        "translated_name": "Parking",
+        "icon": "parking_sign"
+      },
+      {
+        "translated_name": "Fitness center",
+        "icon": "fitness"
+      }
+    ],
+    "languages_spoken": {
+      "languagecode": [
+        "mr",
+        "hi",
+        "en-gb"
+      ]
+    },
+    "spoken_languages": [
+      "mr",
+      "hi",
+      "en-gb"
+    ],
+    "breakfast_review_score": {
+      "review_number": 0,
+      "review_score_word": "",
+      "review_score": 0,
+      "rating": 0,
+      "review_count": 0,
+      "review_snippet": ""
+    },
+    "wifi_review_score": {
+      "rating": 7.8
+    },
+    "min_room_distribution": {
+      "adults": 1,
+      "children": []
+    },
+    "tax_exceptions": [],
+    "booking_home": {},
+    "aggregated_data": {
+      "has_nonrefundable": 0,
+      "has_seating": 0,
+      "common_kitchen_fac": [
+        {
+          "id": 86,
+          "name": "Electric kettle"
+        }
+      ],
+      "has_kitchen": 0,
+      "has_refundable": 1
+    },
+    "last_reservation": {
+      "time": "",
+      "countrycode": null,
+      "country": null
+    },
+    "free_facilities_cancel_breakfast": [
+      {
+        "facility_id": 46
+      },
+      {
+        "facility_id": 105
+      }
+    ],
+    "room_recommendation": [
+      {
+        "extra_beds_for_adults_price_in_hotel_currency": 0,
+        "adults": 1,
+        "extra_beds_for_children_price": 0,
+        "total_extra_bed_price_in_hotel_currency": 0,
+        "number_of_extra_beds_and_babycots_total": 0,
+        "number_of_extra_babycots": 0,
+        "number_of_extra_beds_for_children": 0,
+        "total_extra_bed_price": 0,
+        "babies": 0,
+        "number_of_extra_beds_for_adults": 0,
+        "extra_babycots_price_in_hotel_currency": 0,
+        "children": 0,
+        "extra_beds_for_children_price_in_hotel_currency": 0,
+        "extra_beds_for_adults_price": 0,
+        "extra_babycots_price": 0,
+        "block_id": "19160501_246100790_2_34_0"
+      }
+    ],
+    "hotel_text": {},
+    "districts": [
+      2375,
+      3287
+    ],
+    "preferences": [],
+    "hotel_important_information_with_codes": [
+      {
+        "phrase": "Please inform Novotel Mumbai Juhu Beach of your expected arrival time in advance. You can use the Special Requests box when booking, or contact the property directly using the contact details in your confirmation.",
+        "sentence_id": 4,
+        "executing_phase": 0
+      },
+      {
+        "phrase": "Guests are required to show a photo ID and credit card upon check-in. Please note that all Special Requests are subject to availability and additional charges may apply.",
+        "sentence_id": 3,
+        "executing_phase": 0
+      },
+      {
+        "phrase": "Swimming pool #1: Closed from Fri, Feb 06, 2026 until Fri, Feb 06, 2026",
+        "executing_phase": 0,
+        "sentence_id": 45
+      },
+      {
+        "phrase": "Swimming pool #1: Closed from Sun, Feb 08, 2026 until Sun, Feb 08, 2026",
+        "sentence_id": 45,
+        "executing_phase": 0
+      },
+      {
+        "phrase": "Swimming pool #1: Closed from Tue, Feb 10, 2026 until Tue, Feb 10, 2026",
+        "sentence_id": 45,
+        "executing_phase": 0
+      },
+      {
+        "phrase": "Swimming pool #1: Closed from Sat, Feb 21, 2026 until Sun, Feb 22, 2026",
+        "sentence_id": 45,
+        "executing_phase": 0
+      }
+    ],
+    "rooms": {
+      "19160501": {
+        "facilities": [
+          {
+            "name": "Bathrobe",
+            "facilitytype_id": 5,
+            "id": 19,
+            "alt_facilitytype_id": 5,
+            "alt_facilitytype_name": "Bathroom"
+          },
+          {
+            "alt_facilitytype_id": 1,
+            "id": 6,
+            "alt_facilitytype_name": "General",
+            "name": "Safe",
+            "facilitytype_id": 4
+          },
+          {
+            "id": 132,
+            "alt_facilitytype_id": 19,
+            "alt_facilitytype_name": "Accessibility",
+            "name": "Upper floors accessible by elevator",
+            "facilitytype_id": 19
+          },
+          {
+            "alt_facilitytype_id": 6,
+            "id": 75,
+            "alt_facilitytype_name": "Media & Technology",
+            "name": "Flat-screen TV",
+            "facilitytype_id": 6
+          },
+          {
+            "name": "Wake-up service",
+            "facilitytype_id": 8,
+            "id": 83,
+            "alt_facilitytype_id": 3,
+            "alt_facilitytype_name": "Services"
+          },
+          {
+            "name": "Sofa",
+            "facilitytype_id": 4,
+            "alt_facilitytype_id": 15,
+            "id": 77,
+            "alt_facilitytype_name": "Living Area"
+          },
+          {
+            "facilitytype_id": 4,
+            "name": "Iron",
+            "alt_facilitytype_name": "General",
+            "id": 15,
+            "alt_facilitytype_id": 1
+          },
+          {
+            "facilitytype_id": 8,
+            "name": "Towels",
+            "alt_facilitytype_name": "Bathroom",
+            "alt_facilitytype_id": 5,
+            "id": 124
+          },
+          {
+            "name": "Ironing facilities",
+            "facilitytype_id": 4,
+            "alt_facilitytype_id": 1,
+            "id": 25,
+            "alt_facilitytype_name": "General"
+          },
+          {
+            "name": "Free toiletries",
+            "facilitytype_id": 5,
+            "alt_facilitytype_id": 5,
+            "id": 27,
+            "alt_facilitytype_name": "Bathroom"
+          },
+          {
+            "facilitytype_id": 4,
+            "name": "Socket near the bed",
+            "alt_facilitytype_name": "Room amenities",
+            "alt_facilitytype_id": 4,
+            "id": 184
+          },
+          {
+            "alt_facilitytype_id": 7,
+            "id": 1,
+            "alt_facilitytype_name": "Food & Drink",
+            "name": "Tea/Coffee maker",
+            "facilitytype_id": 7
+          },
+          {
+            "alt_facilitytype_id": 5,
+            "id": 43,
+            "alt_facilitytype_name": "Bathroom",
+            "name": "Slippers",
+            "facilitytype_id": 5
+          },
+          {
+            "alt_facilitytype_id": 5,
+            "id": 12,
+            "alt_facilitytype_name": "Bathroom",
+            "name": "Hairdryer",
+            "facilitytype_id": 5
+          },
+          {
+            "alt_facilitytype_name": "Media & Technology",
+            "id": 8,
+            "alt_facilitytype_id": 6,
+            "facilitytype_id": 6,
+            "name": "TV"
+          },
+          {
+            "facilitytype_id": 8,
+            "name": "Linens",
+            "alt_facilitytype_name": "Bedroom",
+            "alt_facilitytype_id": 17,
+            "id": 125
+          },
+          {
+            "alt_facilitytype_name": "Food & Drink",
+            "id": 3,
+            "alt_facilitytype_id": 7,
+            "facilitytype_id": 7,
+            "name": "Minibar"
+          },
+          {
+            "alt_facilitytype_name": "Bathroom",
+            "alt_facilitytype_id": 5,
+            "id": 31,
+            "facilitytype_id": 5,
+            "name": "Toilet"
+          },
+          {
+            "alt_facilitytype_name": "Kitchen",
+            "id": 86,
+            "alt_facilitytype_id": 12,
+            "facilitytype_id": 7,
+            "name": "Electric kettle"
+          },
+          {
+            "name": "Telephone",
+            "facilitytype_id": 6,
+            "alt_facilitytype_id": 6,
+            "id": 9,
+            "alt_facilitytype_name": "Media & Technology"
+          },
+          {
+            "facilitytype_id": 5,
+            "name": "Shower",
+            "alt_facilitytype_name": "Bathroom",
+            "alt_facilitytype_id": 5,
+            "id": 4
+          },
+          {
+            "alt_facilitytype_id": 5,
+            "id": 100,
+            "alt_facilitytype_name": "Bathroom",
+            "name": "Bidet",
+            "facilitytype_id": 5
+          },
+          {
+            "id": 95,
+            "alt_facilitytype_id": 17,
+            "alt_facilitytype_name": "Bedroom",
+            "name": "Wardrobe or closet",
+            "facilitytype_id": 4
+          },
+          {
+            "alt_facilitytype_name": "Bathroom",
+            "alt_facilitytype_id": 5,
+            "id": 141,
+            "facilitytype_id": 5,
+            "name": "Toilet paper"
+          },
+          {
+            "name": "Interconnecting room(s) available",
+            "facilitytype_id": 4,
+            "id": 73,
+            "alt_facilitytype_id": 1,
+            "alt_facilitytype_name": "General"
+          },
+          {
+            "name": "Air conditioning",
+            "facilitytype_id": 4,
+            "alt_facilitytype_id": 1,
+            "id": 11,
+            "alt_facilitytype_name": "General"
+          },
+          {
+            "facilitytype_id": 5,
+            "name": "Private bathroom",
+            "alt_facilitytype_name": "Bathroom",
+            "id": 38,
+            "alt_facilitytype_id": 5
+          }
+        ],
+        "private_bathroom_highlight": {
+          "has_highlight": 1
+        },
+        "photos": [
+          {
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/776725897.jpg?k=e14a652bdaa92deaae49464ac914200ca8cc77be481243eb5adb77c873b1d56d&o=",
+            "photo_id": 776725897,
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/776725897.jpg?k=e14a652bdaa92deaae49464ac914200ca8cc77be481243eb5adb77c873b1d56d&o=",
+            "last_update_date": "2025-11-14 04:42:34",
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/776725897.jpg?k=e14a652bdaa92deaae49464ac914200ca8cc77be481243eb5adb77c873b1d56d&o=",
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/776725897.jpg?k=e14a652bdaa92deaae49464ac914200ca8cc77be481243eb5adb77c873b1d56d&o=",
+            "ratio": 1.33333333333333,
+            "url_square180": "https://cf.bstatic.com/xdata/images/hotel/square180/776725897.jpg?k=e14a652bdaa92deaae49464ac914200ca8cc77be481243eb5adb77c873b1d56d&o=",
+            "url_max750": "https://cf.bstatic.com/xdata/images/hotel/max750/776725897.jpg?k=e14a652bdaa92deaae49464ac914200ca8cc77be481243eb5adb77c873b1d56d&o=",
+            "url_max1280": "https://cf.bstatic.com/xdata/images/hotel/1280x900/776725897.jpg?k=e14a652bdaa92deaae49464ac914200ca8cc77be481243eb5adb77c873b1d56d&o="
+          },
+          {
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/766389124.jpg?k=38f22cca0bc03b7fbd3f9dddee5bddae91983d813c4a4246472a4c0f70278b00&o=",
+            "photo_id": 766389124,
+            "last_update_date": "2025-10-22 08:08:35",
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/766389124.jpg?k=38f22cca0bc03b7fbd3f9dddee5bddae91983d813c4a4246472a4c0f70278b00&o=",
+            "ratio": 1.33333333333333,
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/766389124.jpg?k=38f22cca0bc03b7fbd3f9dddee5bddae91983d813c4a4246472a4c0f70278b00&o=",
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/766389124.jpg?k=38f22cca0bc03b7fbd3f9dddee5bddae91983d813c4a4246472a4c0f70278b00&o=",
+            "url_square180": "https://cf.bstatic.com/xdata/images/hotel/square180/766389124.jpg?k=38f22cca0bc03b7fbd3f9dddee5bddae91983d813c4a4246472a4c0f70278b00&o=",
+            "url_max750": "https://cf.bstatic.com/xdata/images/hotel/max750/766389124.jpg?k=38f22cca0bc03b7fbd3f9dddee5bddae91983d813c4a4246472a4c0f70278b00&o=",
+            "url_max1280": "https://cf.bstatic.com/xdata/images/hotel/1280x900/766389124.jpg?k=38f22cca0bc03b7fbd3f9dddee5bddae91983d813c4a4246472a4c0f70278b00&o="
+          },
+          {
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/776725894.jpg?k=9665463d8b8cda22027977b4584a79e2c097b563156ef5b828b2e98c91515f3b&o=",
+            "photo_id": 776725894,
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/776725894.jpg?k=9665463d8b8cda22027977b4584a79e2c097b563156ef5b828b2e98c91515f3b&o=",
+            "last_update_date": "2025-11-14 04:42:33",
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/776725894.jpg?k=9665463d8b8cda22027977b4584a79e2c097b563156ef5b828b2e98c91515f3b&o=",
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/776725894.jpg?k=9665463d8b8cda22027977b4584a79e2c097b563156ef5b828b2e98c91515f3b&o=",
+            "ratio": 1.33333333333333,
+            "url_max1280": "https://cf.bstatic.com/xdata/images/hotel/1280x900/776725894.jpg?k=9665463d8b8cda22027977b4584a79e2c097b563156ef5b828b2e98c91515f3b&o=",
+            "url_max750": "https://cf.bstatic.com/xdata/images/hotel/max750/776725894.jpg?k=9665463d8b8cda22027977b4584a79e2c097b563156ef5b828b2e98c91515f3b&o=",
+            "url_square180": "https://cf.bstatic.com/xdata/images/hotel/square180/776725894.jpg?k=9665463d8b8cda22027977b4584a79e2c097b563156ef5b828b2e98c91515f3b&o="
+          },
+          {
+            "photo_id": 776725900,
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/776725900.jpg?k=4517174f66464a7ff6d6cf65f5b13cb7f7e811009cadf89ac43d7d7a78db246f&o=",
+            "last_update_date": "2025-11-14 04:42:35",
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/776725900.jpg?k=4517174f66464a7ff6d6cf65f5b13cb7f7e811009cadf89ac43d7d7a78db246f&o=",
+            "ratio": 1.33333333333333,
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/776725900.jpg?k=4517174f66464a7ff6d6cf65f5b13cb7f7e811009cadf89ac43d7d7a78db246f&o=",
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/776725900.jpg?k=4517174f66464a7ff6d6cf65f5b13cb7f7e811009cadf89ac43d7d7a78db246f&o=",
+            "url_max1280": "https://cf.bstatic.com/xdata/images/hotel/1280x900/776725900.jpg?k=4517174f66464a7ff6d6cf65f5b13cb7f7e811009cadf89ac43d7d7a78db246f&o=",
+            "url_max750": "https://cf.bstatic.com/xdata/images/hotel/max750/776725900.jpg?k=4517174f66464a7ff6d6cf65f5b13cb7f7e811009cadf89ac43d7d7a78db246f&o=",
+            "url_square180": "https://cf.bstatic.com/xdata/images/hotel/square180/776725900.jpg?k=4517174f66464a7ff6d6cf65f5b13cb7f7e811009cadf89ac43d7d7a78db246f&o="
+          },
+          {
+            "url_max750": "https://cf.bstatic.com/xdata/images/hotel/max750/266814459.jpg?k=5d44df453be6dbcac045c0df1793e48ad4c22e4ce104033ac3d3b62277641c81&o=",
+            "url_max1280": "https://cf.bstatic.com/xdata/images/hotel/1280x900/266814459.jpg?k=5d44df453be6dbcac045c0df1793e48ad4c22e4ce104033ac3d3b62277641c81&o=",
+            "url_square180": "https://cf.bstatic.com/xdata/images/hotel/square180/266814459.jpg?k=5d44df453be6dbcac045c0df1793e48ad4c22e4ce104033ac3d3b62277641c81&o=",
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/266814459.jpg?k=5d44df453be6dbcac045c0df1793e48ad4c22e4ce104033ac3d3b62277641c81&o=",
+            "ratio": 1.88058298072402,
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/266814459.jpg?k=5d44df453be6dbcac045c0df1793e48ad4c22e4ce104033ac3d3b62277641c81&o=",
+            "last_update_date": "2020-08-24 11:50:19",
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/266814459.jpg?k=5d44df453be6dbcac045c0df1793e48ad4c22e4ce104033ac3d3b62277641c81&o=",
+            "photo_id": 266814459,
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/266814459.jpg?k=5d44df453be6dbcac045c0df1793e48ad4c22e4ce104033ac3d3b62277641c81&o="
+          },
+          {
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/266814465.jpg?k=8b6e953af21895ce37f9b15e44cdf5b084b202d7fa382a821000cfd6bcd597e3&o=",
+            "photo_id": 266814465,
+            "last_update_date": "2020-08-24 11:50:22",
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/266814465.jpg?k=8b6e953af21895ce37f9b15e44cdf5b084b202d7fa382a821000cfd6bcd597e3&o=",
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/266814465.jpg?k=8b6e953af21895ce37f9b15e44cdf5b084b202d7fa382a821000cfd6bcd597e3&o=",
+            "ratio": 1.72562553925798,
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/266814465.jpg?k=8b6e953af21895ce37f9b15e44cdf5b084b202d7fa382a821000cfd6bcd597e3&o=",
+            "url_max1280": "https://cf.bstatic.com/xdata/images/hotel/1280x900/266814465.jpg?k=8b6e953af21895ce37f9b15e44cdf5b084b202d7fa382a821000cfd6bcd597e3&o=",
+            "url_max750": "https://cf.bstatic.com/xdata/images/hotel/max750/266814465.jpg?k=8b6e953af21895ce37f9b15e44cdf5b084b202d7fa382a821000cfd6bcd597e3&o=",
+            "url_square180": "https://cf.bstatic.com/xdata/images/hotel/square180/266814465.jpg?k=8b6e953af21895ce37f9b15e44cdf5b084b202d7fa382a821000cfd6bcd597e3&o="
+          },
+          {
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/266814529.jpg?k=cf04a6696e641fc8cee4a1804de33e8361adaeaf060dc049dfbe4ae0daeb8072&o=",
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/266814529.jpg?k=cf04a6696e641fc8cee4a1804de33e8361adaeaf060dc049dfbe4ae0daeb8072&o=",
+            "ratio": 1.79131213613972,
+            "url_square180": "https://cf.bstatic.com/xdata/images/hotel/square180/266814529.jpg?k=cf04a6696e641fc8cee4a1804de33e8361adaeaf060dc049dfbe4ae0daeb8072&o=",
+            "url_max1280": "https://cf.bstatic.com/xdata/images/hotel/1280x900/266814529.jpg?k=cf04a6696e641fc8cee4a1804de33e8361adaeaf060dc049dfbe4ae0daeb8072&o=",
+            "url_max750": "https://cf.bstatic.com/xdata/images/hotel/max750/266814529.jpg?k=cf04a6696e641fc8cee4a1804de33e8361adaeaf060dc049dfbe4ae0daeb8072&o=",
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/266814529.jpg?k=cf04a6696e641fc8cee4a1804de33e8361adaeaf060dc049dfbe4ae0daeb8072&o=",
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/266814529.jpg?k=cf04a6696e641fc8cee4a1804de33e8361adaeaf060dc049dfbe4ae0daeb8072&o=",
+            "photo_id": 266814529,
+            "last_update_date": "2020-08-24 11:50:45"
+          },
+          {
+            "last_update_date": "2020-08-24 11:50:46",
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/266814538.jpg?k=75b3780a6f269c77d5b90fec82b9d19a397150dc27a07e363353d74b991e2323&o=",
+            "photo_id": 266814538,
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/266814538.jpg?k=75b3780a6f269c77d5b90fec82b9d19a397150dc27a07e363353d74b991e2323&o=",
+            "url_square180": "https://cf.bstatic.com/xdata/images/hotel/square180/266814538.jpg?k=75b3780a6f269c77d5b90fec82b9d19a397150dc27a07e363353d74b991e2323&o=",
+            "url_max1280": "https://cf.bstatic.com/xdata/images/hotel/1280x900/266814538.jpg?k=75b3780a6f269c77d5b90fec82b9d19a397150dc27a07e363353d74b991e2323&o=",
+            "url_max750": "https://cf.bstatic.com/xdata/images/hotel/max750/266814538.jpg?k=75b3780a6f269c77d5b90fec82b9d19a397150dc27a07e363353d74b991e2323&o=",
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/266814538.jpg?k=75b3780a6f269c77d5b90fec82b9d19a397150dc27a07e363353d74b991e2323&o=",
+            "ratio": 1.49981252343457,
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/266814538.jpg?k=75b3780a6f269c77d5b90fec82b9d19a397150dc27a07e363353d74b991e2323&o="
+          }
+        ],
+        "bed_configurations": [
+          {
+            "bed_types": [
+              {
+                "bed_type": 1,
+                "description": "90–130 cm wide",
+                "name": "Twin bed(s)",
+                "description_localized": null,
+                "name_with_count": "2 twin beds",
+                "description_imperial": "35–51 inches wide",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "private_bathroom_count": 0,
+        "highlights": [
+          {
+            "icon": "wifi",
+            "translated_name": "Free WiFi"
+          },
+          {
+            "icon": "bath",
+            "translated_name": "Attached bathroom",
+            "id": 38
+          },
+          {
+            "icon": "snowflake",
+            "id": 11,
+            "translated_name": "Air conditioning"
+          },
+          {
+            "icon": "screen",
+            "translated_name": "Flat-screen TV",
+            "id": 75
+          },
+          {
+            "translated_name": "Minibar",
+            "id": 3,
+            "icon": "checkmark"
+          }
+        ],
+        "children_and_beds_text": {
+          "children_at_the_property": [
+            {
+              "highlight": 0,
+              "text": "Children of all ages are welcome."
+            },
+            {
+              "text": "Children 16 and above will be charged as adults at this property.",
+              "highlight": 0
+            },
+            {
+              "highlight": 1,
+              "text": "To see correct prices and occupancy info, add the number and ages of children in your group to your search."
+            }
+          ],
+          "cribs_and_extra_beds": [
+            {
+              "highlight": 0,
+              "text": "The price in INR has been converted to show you the approximate price in EUR."
+            },
+            {
+              "text": "Additional fees are not calculated automatically in the total cost and will have to be paid for separately during your stay.",
+              "highlight": 0
+            },
+            {
+              "text": "The maximum number of cribs, extra beds, and children allowed in existing beds can vary depending on the option booked.",
+              "highlight": 0
+            },
+            {
+              "highlight": 0,
+              "text": "All cribs and extra beds are subject to availability."
+            }
+          ],
+          "age_intervals": [
+            {
+              "types_by_price": [
+                [
+                  "crib"
+                ]
+              ],
+              "max_age": 3,
+              "crib": {
+                "price_mode_n": 0,
+                "price_mode": "per_night",
+                "price": 0,
+                "guaranteed": 0,
+                "id": 46808341,
+                "price_type": "free",
+                "price_type_n": 0
+              },
+              "group_by_price": {
+                "free,per_night,0": [
+                  "crib"
+                ]
+              },
+              "min_age": 0
+            },
+            {
+              "extra_bed": {
+                "price_mode": "per_night",
+                "price_mode_n": 0,
+                "price": "€ 21.97",
+                "id": 46808340,
+                "price_type": "fixed",
+                "price_type_n": 2
+              },
+              "group_by_price": {
+                "fixed,per_night,21.97": [
+                  "extra_bed"
+                ]
+              },
+              "min_age": 16,
+              "types_by_price": [
+                [
+                  "extra_bed"
+                ]
+              ],
+              "max_age": 16
+            }
+          ],
+          "allow_children": 1
+        },
+        "description": "This spacious, air-conditioned room has views of Mumbai, a flat-screen TV, and a rain shower. This room is newly renovated."
+      }
+    },
+    "block": [
+      {
+        "is_flash_deal": 0,
+        "deposit_required": 0,
+        "room_name": "Superior Twin Room with City View ",
+        "roomtype_id": 8,
+        "smoking": 2,
+        "mealplan": "Enjoy a convenient breakfast at the property for EUR 12 per person, per night.\nEnjoy a convenient dinner at the property for EUR 21 per person, per night.",
+        "extrabed_available": 0,
+        "room_id": 19160501,
+        "name": "Superior Twin Room with City View  - Free cancellation",
+        "max_occupancy": "2",
+        "extrabed_available_amount": null,
+        "bh_room_highlights": [],
+        "full_board": 0,
+        "half_board": 0,
+        "name_without_policy": "Superior Twin Room with City View ",
+        "babycots_available_amount": null,
+        "fit_occupancy": {
+          "nr_adults": 1,
+          "children_ages": []
+        },
+        "block_text": {
+          "policies": [
+            {
+              "content": "You can cancel for free until 1 day before arrival. You'll be charged the total price of the reservation if you cancel within 1 day of arrival. If you don't show up, the no-show fee will be the same as the cancellation fee.",
+              "class": "POLICY_CANCELLATION"
+            },
+            {
+              "content": "No prepayment is needed.",
+              "class": "POLICY_PREPAY"
+            },
+            {
+              "class": "POLICY_HOTEL_MEALPLAN",
+              "mealplan_vector": "34",
+              "content": "Enjoy a convenient breakfast at the property for EUR 12 per person, per night.\nEnjoy a convenient dinner at the property for EUR 21 per person, per night."
+            },
+            {
+              "class": "POLICY_TITLE",
+              "content": "General"
+            }
+          ]
+        },
+        "genius_discount_percentage": 0,
+        "is_domestic_rate": 0,
+        "fit_status": 0,
+        "nr_adults": 2,
+        "can_reserve_free_parking": 1,
+        "is_smart_deal": 0,
+        "nr_children": 0,
+        "room_count": 14,
+        "refundable_until": "2026-02-18 23:59:59 +0530",
+        "babycots_available": 0,
+        "breakfast_included": 0,
+        "pod_ios_migrate_policies_to_smp_fullon": 0,
+        "max_children_free_age": 17,
+        "is_block_fit": "",
+        "is_last_minute_deal": 0,
+        "number_of_bedrooms": 0,
+        "room_surface_in_feet2": 312.1534016,
+        "must_reserve_free_parking": 1,
+        "children_ages": [],
+        "max_children_free": 2,
+        "package_id": 0,
+        "refundable": 1,
+        "block_id": "19160501_246100790_2_34_0",
+        "room_surface_in_m2": 29,
+        "number_of_bathrooms": 0,
+        "all_inclusive": 0,
+        "paymentterms": {
+          "cancellation": {
+            "description": "You can cancel for free until 1 day before arrival. You'll be charged the total price of the reservation if you cancel within 1 day of arrival. If you don't show up, the no-show fee will be the same as the cancellation fee.",
+            "info": {
+              "timezone": "IST",
+              "is_midnight": 1,
+              "time": "12:00 AM",
+              "timezone_offset": "19800",
+              "refundable_date": "2026-02-19T00:00:00+05:30",
+              "refundable": 1,
+              "date": "February 19, 2026",
+              "date_before_raw": "2026-02-18",
+              "date_before": "February 18, 2026",
+              "refundable_date_midnight": "2026-02-18T23:59:59+05:30",
+              "time_before_midnight": "11:59 PM",
+              "date_raw": "2026-02-19 00:00:00"
+            },
+            "bucket": "SMP_FLEX",
+            "type_translation": "Free cancellation",
+            "timeline": {
+              "stages": [
+                {
+                  "stage_fee_pretty": "INR 0",
+                  "u_fee_pretty": "&#x20AC; 0",
+                  "limit_from_raw": "2026-02-15 06:35:13",
+                  "text": "Free cancellation until 11:59 PM on Feb 18",
+                  "u_stage_fee_pretty": "&#x20AC; 0",
+                  "u_fee_remaining_pretty": "&#x20AC; 186",
+                  "fee": 0,
+                  "limit_timezone": "Mumbai",
+                  "u_fee": "0.00",
+                  "b_state": "FREE",
+                  "is_effective": 1,
+                  "current_stage": 1,
+                  "fee_pretty": "INR 0",
+                  "is_free": 1,
+                  "text_refundable": "You'll get a full refund if you cancel before 11:59 PM on February 18, 2026.",
+                  "date_until": "2026-02-18 23:59:59 +0530",
+                  "limit_until_raw": "2026-02-18 23:59:59",
+                  "limit_from": "February 15, 2026 6:35 AM",
+                  "fee_rounded": 0,
+                  "limit_until": "February 18, 2026 11:59 PM",
+                  "effective_number": 0,
+                  "stage_translation": "Free to cancel",
+                  "limit_until_date": "February 18, 2026",
+                  "b_number": 0,
+                  "limit_from_date": "February 15, 2026",
+                  "fee_remaining_pretty": "INR 20000",
+                  "stage_fee": 0,
+                  "u_fee_remaining": "186.21",
+                  "limit_until_time": "11:59 PM",
+                  "u_stage_fee": "0.00",
+                  "limit_from_time": "6:35 AM",
+                  "fee_remaining": 20000
+                },
+                {
+                  "u_stage_fee_pretty": "&#x20AC; 186",
+                  "u_fee_remaining_pretty": "&#x20AC; 0",
+                  "limit_from_raw": "2026-02-19 00:00:00",
+                  "text": "After 12:00 AM on Feb 19",
+                  "stage_fee_pretty": "INR 20000",
+                  "u_fee_pretty": "&#x20AC; 186",
+                  "fee_pretty": "INR 20000",
+                  "current_stage": 0,
+                  "is_effective": 1,
+                  "text_refundable": "If you cancel after 12:00 AM on February 19, 2026, you won't be eligible for a refund.",
+                  "is_free": 0,
+                  "u_fee": "186.21",
+                  "b_state": "NONREF",
+                  "limit_timezone": "Mumbai",
+                  "fee": 20000,
+                  "stage_translation": "No refund if you cancel",
+                  "effective_number": 1,
+                  "amount_pretty": "&#x20AC; 186",
+                  "limit_from": "February 19, 2026 12:00 AM",
+                  "fee_rounded": 20000,
+                  "limit_until": "February 19, 2026 12:00 AM",
+                  "limit_until_raw": "2026-02-19 00:00:00",
+                  "u_fee_remaining": "0.00",
+                  "limit_until_time": "12:00 AM",
+                  "u_stage_fee": "186.21",
+                  "limit_from_time": "12:00 AM",
+                  "fee_remaining": 0,
+                  "fee_remaining_pretty": "INR 0",
+                  "stage_fee": 20000,
+                  "amount": 186.21,
+                  "limit_from_date": "February 19, 2026",
+                  "limit_until_date": "February 19, 2026",
+                  "b_number": 1,
+                  "date_from": "2026-02-19 00:00:00 +0530"
+                }
+              ],
+              "policygroup_instance_id": "36/152/-",
+              "nr_stages": 2,
+              "currency_code": "INR",
+              "u_currency_code": "EUR"
+            },
+            "guaranteed_non_refundable": 0,
+            "non_refundable_anymore": 0,
+            "type": "free_cancellation"
+          },
+          "prepayment": {
+            "simple_translation": "No prepayment",
+            "description": "You'll pay during your stay.",
+            "extended_type_translation": "No payment needed today",
+            "info": {
+              "date_before": null,
+              "time_before_midnight": null,
+              "timezone_offset": null,
+              "timezone": null,
+              "is_midnight": null,
+              "refundable": "anytime",
+              "prepayment_at_booktime": 0,
+              "date": null,
+              "time": null
+            },
+            "type_translation": "No payment needed today",
+            "timeline": {
+              "stages": [
+                {
+                  "text": "Before you stay you'll pay",
+                  "limit_from_raw": "2026-02-15 06:35:13",
+                  "stage_fee_pretty": "INR 0",
+                  "u_fee_pretty": "&#x20AC; 0",
+                  "u_stage_fee_pretty": "&#x20AC; 0",
+                  "u_fee_remaining_pretty": "&#x20AC; 186",
+                  "limit_timezone": "Mumbai",
+                  "fee": 0,
+                  "is_effective": 1,
+                  "current_stage": 1,
+                  "fee_pretty": "INR 0",
+                  "is_free": 1,
+                  "b_state": "FREE",
+                  "u_fee": "0.00",
+                  "limit_until_raw": "2026-02-20 23:59:59",
+                  "effective_number": 0,
+                  "amount_pretty": "&#x20AC; 0",
+                  "limit_from": "February 15, 2026 6:35 AM",
+                  "limit_until": "February 20, 2026 11:59 PM",
+                  "fee_rounded": 0,
+                  "amount": "0.00",
+                  "limit_from_date": "February 15, 2026",
+                  "b_number": 0,
+                  "limit_until_date": "February 20, 2026",
+                  "u_stage_fee": "0.00",
+                  "limit_until_time": "11:59 PM",
+                  "u_fee_remaining": "186.21",
+                  "fee_remaining": 20000,
+                  "limit_from_time": "6:35 AM",
+                  "fee_remaining_pretty": "INR 20000",
+                  "stage_fee": 0
+                },
+                {
+                  "after_checkin": 1,
+                  "amount_pretty": "&#x20AC; 186",
+                  "is_free": 0,
+                  "amount": "186.21",
+                  "text": "At the property you'll pay"
+                }
+              ],
+              "policygroup_instance_id": "36/152/-",
+              "nr_stages": 2,
+              "currency_code": "INR",
+              "u_currency_code": "EUR"
+            },
+            "type_extended": "non_refundable_prepayment",
+            "type": "no_prepayment"
+          }
+        }
+      }
+    ],
+    "rawData": {
+      "blockIds": [
+        "19160501_246100790_2_34_0"
+      ],
+      "checkin": {
+        "untilTime": "00:00",
+        "fromTime": "15:00"
+      },
+      "isFirstPage": true,
+      "latitude": 19.1085017376187,
+      "currency": "INR",
+      "countryCode": "in",
+      "propertyClass": 5,
+      "reviewCount": 1861,
+      "priceBreakdown": {
+        "grossPrice": {
+          "value": 18408.0001,
+          "currency": "INR",
+          "amountRounded": "Rs. 18,408"
+        },
+        "taxExceptions": [],
+        "chargesInfo": "Includes taxes and charges",
+        "benefitBadges": []
+      },
+      "reviewScore": 6.3,
+      "longitude": 72.8243981301785,
+      "reviewScoreWord": "Pleasant",
+      "isHighlightedHotel": true,
+      "accuratePropertyClass": 5,
+      "qualityClass": 0,
+      "rankingPosition": 0,
+      "checkout": {
+        "fromTime": "00:00",
+        "untilTime": "12:00"
+      },
+      "checkinDate": "2026-02-16",
+      "id": 191605,
+      "optOutFromGalleryChanges": 0,
+      "name": "Novotel Mumbai Juhu Beach",
+      "checkoutDate": "2026-02-17",
+      "ufi": -2092174,
+      "wishlistName": "Mumbai",
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/252005217.jpg?k=9d4ae263d055f30dd78158dbf2f6c34900e5c9078b1a545caa28a3c8466b6a69&o="
+      ],
+      "mainPhotoId": 252005217,
+      "position": 0
+    }
+  }
+}
