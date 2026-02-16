@@ -1,3 +1,5 @@
+use std::time::Duration;
+
 use crate::{
     api_requests::{
         flights::{TokenMap, flight_booking_details, flight_booking_link, flights_between},
@@ -8,16 +10,18 @@ use crate::{
         site_seen::get_about_place,
         trains::{train_seats_available, trains_between},
     },
-    constants::TRAVEL_PLANNER_SYS_PROMPT, execute_functions::execute_calls,
+    constants::TRAVEL_PLANNER_SYS_PROMPT,
+    execute_functions::execute_calls,
 };
 use gemini_client_api::gemini::{
     ask::Gemini,
     error::GeminiResponseError,
     types::{
-        request::{Role, Tool},
+        request::{self, Role, Tool},
         response::GeminiResponseStream,
         sessions::Session,
-    }, utils::GeminiSchema,
+    },
+    utils::GeminiSchema,
 };
 
 async fn plan_tour(
@@ -36,10 +40,14 @@ async fn plan_tour(
         get_room_availability::gemini_schema(),
         get_hotel_description::gemini_schema(),
     ];
-    let ai = Gemini::new(
+    let ai = Gemini::new_with_client(
         std::env::var("GEMINI_API_KEY").unwrap(),
         "gemini-3-flash-preview",
         Some(TRAVEL_PLANNER_SYS_PROMPT.to_string().into()),
+        reqwest::Client::builder()
+            .timeout(Duration::from_secs(60))
+            .build()
+            .unwrap(),
     )
     .set_tools(vec![Tool::FunctionDeclarations(tools)]);
 
