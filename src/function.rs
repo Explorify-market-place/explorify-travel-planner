@@ -1,8 +1,6 @@
 use crate::{
     api_requests::{
-        flights::{
-            TokenMap, execute_calls, flight_booking_details, flight_booking_link, flights_between,
-        },
+        flights::{TokenMap, flight_booking_details, flight_booking_link, flights_between},
         hotel::{
             get_hotel_by_coordinates, get_hotel_description, get_hotel_details,
             get_room_availability,
@@ -10,7 +8,7 @@ use crate::{
         site_seen::get_about_place,
         trains::{train_seats_available, trains_between},
     },
-    constants::TRAVEL_PLANNER_SYS_PROMPT,
+    constants::TRAVEL_PLANNER_SYS_PROMPT, execute_functions::execute_calls,
 };
 use gemini_client_api::gemini::{
     ask::Gemini,
@@ -19,8 +17,7 @@ use gemini_client_api::gemini::{
         request::{Role, Tool},
         response::GeminiResponseStream,
         sessions::Session,
-    },
-    utils::{GeminiSchema, execute_function_calls},
+    }, utils::GeminiSchema,
 };
 
 async fn plan_tour(
@@ -47,16 +44,6 @@ async fn plan_tour(
     .set_tools(vec![Tool::FunctionDeclarations(tools)]);
 
     if Role::User != *session.get_last_chat().unwrap().role() {
-        let _ = execute_function_calls!(
-            session,
-            train_seats_available,
-            trains_between,
-            get_about_place,
-            get_hotel_by_coordinates,
-            get_hotel_details,
-            get_room_availability,
-            get_hotel_description,
-        );
         execute_calls(&mut session, token_map).await;
 
         if let Some(chat) = session.get_last_chat() {

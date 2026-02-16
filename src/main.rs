@@ -1,10 +1,11 @@
 mod api_requests;
 mod constants;
+mod execute_functions;
 mod function;
 mod utils;
 
+use crate::api_requests::flights::TokenMap;
 use crate::function::handle_request;
-use crate::{api_requests::flights::TokenMap, utils::Date};
 use gemini_client_api::gemini::types::request::Role;
 use gemini_client_api::{futures::StreamExt, gemini::types::sessions::Session};
 use lambda_runtime::{
@@ -123,7 +124,7 @@ async fn stream_handler_test() {
 
     let mut session = Session::new(20);
     session.ask(format!(r#"I want to travel to goa from ranchi
-I'm planning a 7-day trip for 2 adults starting on {}. I prefer a flight to save time for coding. I’m looking for a mid-range hotel near North Goa with good Wi-Fi. My budget is roughly ₹50,000 for the whole trip."#, Date::now()));
+I'm planning a 7-day trip for 2 adults starting on {}. I prefer a flight to save time for coding. I’m looking for a mid-range hotel near North Goa with good Wi-Fi. My budget is roughly ₹50,000 for the whole trip."#,crate::utils::Date::now()));
     let body = to_string(&ApiRequest {
         session,
         token_map: Vec::new(),
