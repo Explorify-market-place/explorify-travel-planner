@@ -41,12 +41,12 @@ async fn stream_handler(
     if request.secret != env::var("API_SECRET").unwrap() {
         return Ok(rx.into());
     }
-    let mut proxy_urls_map = Vec::new();
+    let mut proxy_url_map = Vec::new();
 
     let token_map: TokenMap = Arc::new(Mutex::new(request.token_map));
     tokio::spawn(async move {
         loop {
-            let response = plan_tour(request.session, &token_map, &mut proxy_urls_map).await;
+            let response = plan_tour(request.session, &token_map, &mut proxy_url_map).await;
             match response {
                 Ok(mut response_stream) => {
                     let last_chat = response_stream.get_session().get_last_chat().unwrap();
@@ -81,7 +81,7 @@ async fn stream_handler(
                         tx.send_data(
                             json!({
                                 "token_map":*token_map.lock().await,
-                                "proxy_urls_map": proxy_urls_map
+                                "proxy_url_map": proxy_url_map
                             })
                             .to_string()
                             .into(),

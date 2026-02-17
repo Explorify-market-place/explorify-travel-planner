@@ -9,7 +9,6 @@ use crate::api_requests::{
     site_seen::{get_about_place, get_place_image_url},
     trains::{train_seats_available, trains_between},
 };
-use chrono::Local;
 use futures::future::join_all;
 use gemini_client_api::gemini::{
     types::{
@@ -19,8 +18,16 @@ use gemini_client_api::gemini::{
     utils::execute_function_calls,
 };
 use serde_json::{Value, json, to_value};
-use std::{error::Error, sync::Arc};
+use std::{
+    error::Error,
+    sync::{
+        Arc,
+        atomic::{AtomicU64, Ordering},
+    },
+};
 use tokio::sync::Mutex;
+
+static PROXY_COUNTER: AtomicU64 = AtomicU64::new(0);
 
 fn update_session(
     name: String,
@@ -127,8 +134,10 @@ pub async fn execute_calls(session: &mut Session, token_map: &TokenMap) -> Vec<(
                             &args,
                             async |name| -> Result<Value, Box<dyn Error + Send + Sync>> {
                                 let base64 = get_place_image_url(name).await?;
-                                let proxy_url =
-                                    format!("https://PROXY_{}", Local::now().format("%M_%S_%3f"));
+                                let proxy_url = format!(
+                                    "https://PROXY_{}",
+                                    PROXY_COUNTER.fetch_add(1, Ordering::Relaxed)
+                                );
                                 let response = json!({"url":proxy_url});
 
                                 proxy_url_map.lock().await.push((proxy_url, base64));
