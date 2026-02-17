@@ -1,6 +1,7 @@
+use base64::{Engine, engine::general_purpose};
 use gemini_client_api::gemini::utils::{GeminiSchema, gemini_function, gemini_schema};
 use serde::{Deserialize, Serialize};
-use serde_json::Value;
+use serde_json::{Value, json};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 #[gemini_schema]
@@ -123,15 +124,54 @@ pub async fn get_about_place(
     }
 
     let payload: TextSearchResponse = resp.json().await?;
-    Ok(payload.places.unwrap_or_default())
+    let places = payload
+        .places
+        .unwrap_or_default()
+        .into_iter()
+        .map(|mut place| {
+            if let Some(photos) = place["photos"].as_array_mut() {
+                for photo in photos {
+                    *photo = json!({
+                        "googleMapsUri":photo["googleMapsUri"],
+                        "name":photo["name"]
+                    })
+                }
+            }
+            place
+        })
+        .collect();
+    Ok(places)
 }
+#[gemini_function]
+///Returns proxy image url which can be used in ![](proxy_url) to show that image
+pub async fn get_place_image_url(
+    ///photos.name found in get_about_place()
+    photo_name: String,
+) -> Result<String, Box<dyn std::error::Error + Send + Sync>> {
+    let api_key = std::env::var("GOOGLE_MAPS_API_KEY").unwrap();
+    let url = format!(
+        "https://places.googleapis.com/v1/{photo_name}/media?key={api_key}&maxHeightPx=400",
+    );
+
+    let response = reqwest::get(url).await?.error_for_status()?;
+    let image_bytes = response.bytes().await?;
+    let b64_string = general_purpose::STANDARD.encode(image_bytes);
+
+    Ok(b64_string)
+}
+
 #[tokio::test]
 async fn get_about_place_test() {
     dbg!(
         get_about_place(
             "top tourist attractions in North Goa".into(),
             1,
-            vec![PlaceField::DisplayName, PlaceField::EditorialSummary, PlaceField::Photos, PlaceField::Rating]
+            vec![
+                PlaceField::DisplayName,
+                PlaceField::EditorialSummary,
+                PlaceField::Photos,
+                PlaceField::Rating
+            ]
         )
         .await
         .unwrap()
