@@ -171,7 +171,11 @@ pub async fn between(
     }
 
     if flights.is_empty() {
-        return Err("No flight itineraries found for this route".into());
+        return Err(format!(
+            "No flight itineraries found for {origin} to {destination} on {}",
+            date.to_yyyy_mm_dd()
+        )
+        .into());
     }
 
     let mut flights_val = Value::Array(flights);

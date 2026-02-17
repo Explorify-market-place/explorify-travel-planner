@@ -22,12 +22,12 @@ use std::{
     error::Error,
     sync::{
         Arc,
-        atomic::{AtomicU64, Ordering},
+        atomic::{AtomicU32, Ordering},
     },
 };
 use tokio::sync::Mutex;
 
-static PROXY_COUNTER: AtomicU64 = AtomicU64::new(0);
+static PROXY_COUNTER: AtomicU32 = AtomicU32::new(0);
 
 fn update_session(
     name: String,
@@ -135,7 +135,7 @@ pub async fn execute_calls(session: &mut Session, token_map: &TokenMap) -> Vec<(
                             async |name| -> Result<Value, Box<dyn Error + Send + Sync>> {
                                 let base64 = get_place_image_url(name).await?;
                                 let proxy_url = format!(
-                                    "https://PROXY_{}",
+                                    "https://explorify_proxy.com/{}",
                                     PROXY_COUNTER.fetch_add(1, Ordering::Relaxed)
                                 );
                                 let response = json!({"url":proxy_url});

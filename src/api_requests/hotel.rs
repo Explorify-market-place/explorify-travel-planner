@@ -124,9 +124,11 @@ pub struct HotelDescriptionResponse {
 /// Search for hotels near the specified coordinates.
 /// Use this tool to find a list of available hotels in a specific area.
 pub async fn get_hotel_by_coordinates(
-    /// Latitude of the location to search around (e.g. 18.6429).
+    /// Latitude of the location to search around (e.g. 18.6429). Can be found with
+    /// get_about_place()
     latitude: f64,
-    /// Longitude of the location to search around (e.g. 72.8759).
+    /// Longitude of the location to search around (e.g. 72.8759).Can be found with
+    /// get_about_place()
     longitude: f64,
     /// Date of arrival at the hotel.
     arrival_date: Date,

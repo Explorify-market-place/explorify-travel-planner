@@ -56,17 +56,6 @@ pub async fn plan_tour(
     if Role::User != *session.get_last_chat().unwrap().role() {
         let proxy_urls = execute_calls(&mut session, token_map).await;
         proxy_url_map.extend(proxy_urls);
-
-        if let Some(chat) = session.get_last_chat() {
-            if *chat.role() == Role::Function {
-                println!(
-                    "FunctionResponse:\n{}",
-                    serde_json::to_string(chat.parts()).unwrap()
-                )
-            }
-        } else {
-            println!("No function call executed");
-        }
     }
     ai.ask_as_stream(session).await
 }
