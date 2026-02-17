@@ -129,15 +129,11 @@ pub async fn get_about_place(
 async fn get_about_place_test() {
     dbg!(
         get_about_place(
-            "Kashmir, manali".into(),
+            "top tourist attractions in North Goa".into(),
             1,
-            vec![PlaceField::DisplayName, PlaceField::FormattedAddress]
+            vec![PlaceField::DisplayName, PlaceField::EditorialSummary, PlaceField::Photos, PlaceField::Rating]
         )
         .await
         .unwrap()
     );
-}
-#[tokio::test]
-async fn temp() {
-    dbg!(PlaceField::gemini_schema());
 }

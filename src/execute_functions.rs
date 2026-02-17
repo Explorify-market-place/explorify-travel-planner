@@ -135,7 +135,7 @@ pub async fn execute_calls(session: &mut Session, token_map: &TokenMap) {
     ));
 
     // Execute all futures concurrently
-    let names: Vec<String> = futures.iter().map(|(n, _)| n.clone()).collect();
+    let names: Vec<String> = futures.iter().map(|(n, _)| n.to_string()).collect();
     let futs: Vec<_> = futures.into_iter().map(|(_, f)| f).collect();
     let results = join_all(futs).await;
 
