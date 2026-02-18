@@ -6,7 +6,7 @@ use crate::api_requests::{
     hotel::{
         get_hotel_by_coordinates, get_hotel_description, get_hotel_details, get_room_availability,
     },
-    site_seen::{get_about_place, get_place_image_url},
+    site_seen::get_about_place,
     trains::{train_seats_available, trains_between},
 };
 use futures::future::join_all;
@@ -18,16 +18,7 @@ use gemini_client_api::gemini::{
     utils::execute_function_calls,
 };
 use serde_json::{Value, json, to_value};
-use std::{
-    error::Error,
-    sync::{
-        Arc,
-        atomic::{AtomicU32, Ordering},
-    },
-};
-use tokio::sync::Mutex;
-
-static PROXY_COUNTER: AtomicU32 = AtomicU32::new(0);
+use std::error::Error;
 
 fn update_session(
     name: String,
@@ -41,7 +32,7 @@ fn update_session(
     session.add_function_response(name, response).unwrap();
 }
 
-pub async fn execute_calls(session: &mut Session, token_map: &TokenMap) -> Vec<(String, String)> {
+pub async fn execute_calls(session: &mut Session, token_map: &TokenMap) {
     let last_chat = if *session.get_last_chat().unwrap().role() == Role::Function {
         session.get_previous_chat(2).unwrap()
     } else {
@@ -58,14 +49,12 @@ pub async fn execute_calls(session: &mut Session, token_map: &TokenMap) -> Vec<(
             >,
         >,
     )> = Vec::new();
-    let proxy_url_map: Arc<Mutex<Vec<(String, String)>>> = Arc::new(Mutex::new(Vec::new()));
 
     for part in last_chat.parts() {
         if let PartType::FunctionCall(call) = part.data() {
             let args = call.args().as_ref().unwrap();
             let name = call.name().to_string();
             let tm = token_map.clone();
-            let proxy_url_map = proxy_url_map.clone();
 
             if call.name() == "flights_between" {
                 let args = args.clone();
@@ -125,29 +114,6 @@ pub async fn execute_calls(session: &mut Session, token_map: &TokenMap) -> Vec<(
                         .await
                     }),
                 ));
-            } else if call.name() == "get_place_image_url" {
-                let args = args.clone();
-                futures.push((
-                    name,
-                    Box::pin(async move {
-                        get_place_image_url::execute_with_closure(
-                            &args,
-                            async |name| -> Result<Value, Box<dyn Error + Send + Sync>> {
-                                let base64 = get_place_image_url(name).await?;
-                                let proxy_url = format!(
-                                    "https://explorify_proxy.com/{}",
-                                    PROXY_COUNTER.fetch_add(1, Ordering::Relaxed)
-                                );
-                                let response = json!({"url":proxy_url});
-
-                                proxy_url_map.lock().await.push((proxy_url, base64));
-                                Ok(response)
-                            },
-                        )
-                        .expect("Wrong agrument format from gemini")
-                        .await
-                    }),
-                ));
             }
         }
     }
@@ -179,7 +145,6 @@ pub async fn execute_calls(session: &mut Session, token_map: &TokenMap) -> Vec<(
         }
         update_session(function_name, session, result);
     }
-    Arc::into_inner(proxy_url_map).unwrap().into_inner()
 }
 
 #[tokio::test]

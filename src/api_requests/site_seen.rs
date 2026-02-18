@@ -1,4 +1,3 @@
-use base64::{Engine, engine::general_purpose};
 use gemini_client_api::gemini::utils::{GeminiSchema, gemini_function, gemini_schema};
 use serde::{Deserialize, Serialize};
 use serde_json::{Value, json};
@@ -82,6 +81,9 @@ struct TextSearchResponse {
 /// Get detailed information about landmarks, tourist attractions, hotels, restaurants, or other points of interest.
 /// Use this to find places in a city or get more info about a specific known spot.
 /// Returns a list of places matching the query.
+/// Note: It is safe to show image_url containing placeholder_api_key (found in photos field of
+/// response) and will work properly.(due
+/// to post processing)
 pub async fn get_about_place(
     /// The name of the place to search for (e.g., 'Eiffel Tower', 'Best restaurants in Paris', 'Hotels near Central Park').
     query: String,
@@ -133,7 +135,7 @@ pub async fn get_about_place(
                 for photo in photos {
                     *photo = json!({
                         "googleMapsUri":photo["googleMapsUri"],
-                        "name":photo["name"]
+                        "image_url":get_place_image_url(photo["name"].as_str().expect("INVALID RESPONSE. Expected photos.name to be string"))
                     })
                 }
             }
@@ -142,31 +144,11 @@ pub async fn get_about_place(
         .collect();
     Ok(places)
 }
-#[gemini_function]
-///Returns proxy image url which can be used in ![](proxy_url) to show that image
-pub async fn get_place_image_url(
-    ///photos.name found in get_about_place()
-    photo_name: String,
-) -> Result<String, Box<dyn std::error::Error + Send + Sync>> {
-    let api_key = std::env::var("GOOGLE_MAPS_API_KEY").expect("GOOGLE_MAPS_API_KEY not set");
-    let url = format!(
-        "https://places.googleapis.com/v1/{}/media?key={}&maxHeightPx=400",
-        photo_name, api_key
-    );
-
-    let response = reqwest::get(url).await?.error_for_status()?;
-
-    let mime_type = response
-        .headers()
-        .get(reqwest::header::CONTENT_TYPE)
-        .and_then(|h| h.to_str().ok())
-        .unwrap_or("image/jpeg")
-        .to_string();
-
-    let image_bytes = response.bytes().await?;
-    let b64_string = general_purpose::STANDARD.encode(image_bytes);
-
-    Ok(format!("data:{mime_type};base64,{b64_string}"))
+const PLACEHOLDER_API_KEY: &str = "placeholder_api_key";
+fn get_place_image_url(photo_name: &str) -> String {
+    format!(
+        "https://places.googleapis.com/v1/{photo_name}/media?key={PLACEHOLDER_API_KEY}&maxHeightPx=400",
+    )
 }
 
 #[tokio::test]

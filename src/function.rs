@@ -7,7 +7,7 @@ use crate::{
             get_hotel_by_coordinates, get_hotel_description, get_hotel_details,
             get_room_availability,
         },
-        site_seen::{get_about_place, get_place_image_url},
+        site_seen::get_about_place,
         trains::{train_seats_available, trains_between},
     },
     constants::TRAVEL_PLANNER_SYS_PROMPT,
@@ -27,7 +27,6 @@ use gemini_client_api::gemini::{
 pub async fn plan_tour(
     mut session: Session,
     token_map: &TokenMap,
-    proxy_url_map: &mut Vec<(String, String)>,
 ) -> Result<GeminiResponseStream, (Session, GeminiResponseError)> {
     let tools = vec![
         flights_between::gemini_schema(),
@@ -36,7 +35,6 @@ pub async fn plan_tour(
         trains_between::gemini_schema(),
         train_seats_available::gemini_schema(),
         get_about_place::gemini_schema(),
-        get_place_image_url::gemini_schema(),
         get_hotel_by_coordinates::gemini_schema(),
         get_hotel_details::gemini_schema(),
         get_room_availability::gemini_schema(),
@@ -54,8 +52,7 @@ pub async fn plan_tour(
     .set_tools(vec![Tool::FunctionDeclarations(tools)]);
 
     if Role::User != *session.get_last_chat().unwrap().role() {
-        let proxy_urls = execute_calls(&mut session, token_map).await;
-        proxy_url_map.extend(proxy_urls);
+        execute_calls(&mut session, token_map).await;
     }
     ai.ask_as_stream(session).await
 }

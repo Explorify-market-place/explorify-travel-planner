@@ -14,7 +14,7 @@ use lambda_runtime::{
     tracing,
 };
 use serde::{Deserialize, Serialize};
-use serde_json::{from_str, json, to_string};
+use serde_json::{from_str, to_string};
 use std::env;
 use std::sync::Arc;
 use tokio::sync::Mutex;
@@ -41,12 +41,11 @@ async fn stream_handler(
     if request.secret != env::var("API_SECRET").unwrap() {
         return Ok(rx.into());
     }
-    let mut proxy_url_map = Vec::new();
 
     let token_map: TokenMap = Arc::new(Mutex::new(request.token_map));
     tokio::spawn(async move {
         loop {
-            let response = plan_tour(request.session, &token_map, &mut proxy_url_map).await;
+            let response = plan_tour(request.session, &token_map).await;
             match response {
                 Ok(mut response_stream) => {
                     let last_chat = response_stream.get_session().get_last_chat().unwrap();
@@ -78,16 +77,9 @@ async fn stream_handler(
                         .unwrap()
                         .has_function_call()
                     {
-                        tx.send_data(
-                            json!({
-                                "token_map":*token_map.lock().await,
-                                "proxy_url_map": proxy_url_map
-                            })
-                            .to_string()
-                            .into(),
-                        )
-                        .await
-                        .unwrap();
+                        tx.send_data(to_string(&*token_map.lock().await).unwrap().into())
+                            .await
+                            .unwrap();
                         println!("Response streaming completed.");
                         #[cfg(test)]
                         {

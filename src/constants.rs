@@ -24,8 +24,7 @@ Tools at your disposal:
 - get_hotel_details: Provides details of a hotel like price etc. It has a "url" field which can be provided as booking link.
 - get_hotel_description: Know more about the hotel.
 - get_room_availability: Gives availability of a hotel and price on a specific date.
-- get_about_place: Get details about a place in https://places.googleapis.com/v1/places:searchText api response format.
-- get_place_image_url: Use it to show image using name field in get_about_place() response."#,
+- get_about_place: Get details about a place in https://places.googleapis.com/v1/places:searchText api response format."#,
         Date::now()
     )
 });
