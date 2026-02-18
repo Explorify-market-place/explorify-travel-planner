@@ -148,16 +148,25 @@ pub async fn get_place_image_url(
     ///photos.name found in get_about_place()
     photo_name: String,
 ) -> Result<String, Box<dyn std::error::Error + Send + Sync>> {
-    let api_key = std::env::var("GOOGLE_MAPS_API_KEY").unwrap();
+    let api_key = std::env::var("GOOGLE_MAPS_API_KEY").expect("GOOGLE_MAPS_API_KEY not set");
     let url = format!(
-        "https://places.googleapis.com/v1/{photo_name}/media?key={api_key}&maxHeightPx=400",
+        "https://places.googleapis.com/v1/{}/media?key={}&maxHeightPx=400",
+        photo_name, api_key
     );
 
     let response = reqwest::get(url).await?.error_for_status()?;
+
+    let mime_type = response
+        .headers()
+        .get(reqwest::header::CONTENT_TYPE)
+        .and_then(|h| h.to_str().ok())
+        .unwrap_or("image/jpeg")
+        .to_string();
+
     let image_bytes = response.bytes().await?;
     let b64_string = general_purpose::STANDARD.encode(image_bytes);
 
-    Ok(b64_string)
+    Ok(format!("data:{mime_type};base64,{b64_string}"))
 }
 
 #[tokio::test]
