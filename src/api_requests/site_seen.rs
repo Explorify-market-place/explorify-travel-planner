@@ -81,9 +81,7 @@ struct TextSearchResponse {
 /// Get detailed information about landmarks, tourist attractions, hotels, restaurants, or other points of interest.
 /// Use this to find places in a city or get more info about a specific known spot.
 /// Returns a list of places matching the query.
-/// Note: It is safe to show image_url containing placeholder_api_key (found in photos field of
-/// response) and will work properly.(due
-/// to post processing)
+/// Note: It is safe to show image_url containing placeholder_api_key (found in photos field of response) and will work properly.(due to post processing)
 pub async fn get_about_place(
     /// The name of the place to search for (e.g., 'Eiffel Tower', 'Best restaurants in Paris', 'Hotels near Central Park').
     query: String,
@@ -132,6 +130,7 @@ pub async fn get_about_place(
         .into_iter()
         .map(|mut place| {
             if let Some(photos) = place["photos"].as_array_mut() {
+                photos.truncate(2);
                 for photo in photos {
                     *photo = json!({
                         "googleMapsUri":photo["googleMapsUri"],
