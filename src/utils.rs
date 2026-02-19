@@ -72,7 +72,8 @@ impl GeminiSchema for IataCode {
     }
 }
 impl IataCode {
-    pub fn new(code: String) -> Result<Self, String> {
+    pub fn new(code: impl Into<String>) -> Result<Self, String> {
+        let code = code.into();
         if code.len() <= 3 && code.chars().all(|c| c.is_ascii_uppercase()) {
             Ok(Self(code))
         } else {
