@@ -65,9 +65,7 @@ pub async fn execute_calls(session: &mut Session, token_map: &TokenMap) {
                             -> Result<Value, Box<dyn Error + Send + Sync>> {
                             between(origin, destination, date, travel_class, adults, tm, children, infant_on_lap, infant_in_seat, search_type).await
                         },
-                    )
-                    .expect("Wrong agrument format from gemini")
-                    .await
+                    )?.await
                 })));
             } else if call.name() == "flight_booking_details" {
                 let args = args.clone();
@@ -85,8 +83,7 @@ pub async fn execute_calls(session: &mut Session, token_map: &TokenMap) {
                                 let response = booking_details(resolved, tm).await?;
                                 Ok(to_value(response).unwrap())
                             },
-                        )
-                        .expect("Wrong agrument format from gemini")
+                        )?
                         .await
                     }),
                 ));
@@ -109,8 +106,7 @@ pub async fn execute_calls(session: &mut Session, token_map: &TokenMap) {
                                     "url": url
                                 }))
                             },
-                        )
-                        .expect("Wrong agrument format from gemini")
+                        )?
                         .await
                     }),
                 ));

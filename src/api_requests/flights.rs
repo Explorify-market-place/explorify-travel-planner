@@ -74,7 +74,7 @@ fn clean_and_replace_tokens(
 #[allow(unused_variables)]
 /// Search for one-way flights between two cities on a specific date using Google Flights.
 /// Returns a list of flight itineraries. Each itinerary contains a 'booking_token' (e.g., TOKEN_0)
-/// which MUST be passed to 'flight_booking_details' to get actual booking options.
+/// which MUST be passed to 'flight_booking_details' to get live price and booking link.
 /// Price will be in INR.
 pub async fn flights_between(
     /// starting airport
