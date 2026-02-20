@@ -50,7 +50,7 @@ async fn stream_handler(
                 Ok(mut response_stream) => {
                     let last_chat = response_stream.get_session().get_last_chat().unwrap();
                     if Role::Function == *last_chat.role() {
-                        println!("Sending\n{last_chat:#?}");
+                        println!("Sending\n{last_chat:?}");
                         let chunk =
                             format!("{}{CHUNK_SEPERATOR}", to_string(last_chat).unwrap()).into();
                         tx.send_data(chunk).await.unwrap();
@@ -59,7 +59,7 @@ async fn stream_handler(
                         match gemini_response {
                             Ok(data) => {
                                 let response = data.get_chat();
-                                println!("Sending\n{response:#?}");
+                                println!("Sending\n{response:?}");
                                 let chunk =
                                     format!("{}{CHUNK_SEPERATOR}", to_string(response).unwrap())
                                         .into();

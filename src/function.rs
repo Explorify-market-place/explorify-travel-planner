@@ -51,7 +51,12 @@ pub async fn plan_tour(
     )
     .set_tools(vec![Tool::FunctionDeclarations(tools)]);
 
-    if Role::User != *session.get_last_chat().unwrap().role() {
+    if Role::User == *session.get_last_chat().unwrap().role() {
+        println!(
+            "User: {}",
+            session.get_last_chat().unwrap().get_text_no_think("\n")
+        )
+    } else {
         execute_calls(&mut session, token_map).await;
     }
     ai.ask_as_stream(session).await
