@@ -11,10 +11,7 @@ use crate::api_requests::{
 };
 use futures::future::join_all;
 use gemini_client_api::gemini::{
-    types::{
-        request::{PartType, Role},
-        sessions::Session,
-    },
+    types::{request::Role, sessions::Session},
     utils::execute_function_calls,
 };
 use serde_json::{Value, json, to_value};
@@ -50,67 +47,71 @@ pub async fn execute_calls(session: &mut Session, token_map: &TokenMap) {
         >,
     )> = Vec::new();
 
-    for part in last_chat.parts() {
-        if let PartType::FunctionCall(call) = part.data() {
-            let args = call.args().as_ref().unwrap();
-            let name = call.name().to_string();
-            let tm = token_map.clone();
+    for call in last_chat.get_function_calls() {
+        let args = call.args().as_ref().unwrap();
+        let name = call.name().to_string();
+        let tm = token_map.clone();
 
-            if call.name() == "flights_between" {
-                let args = args.clone();
-                futures.push((name, Box::pin(async move {
-                    flights_between::execute_with_closure(
-                        &args,
-                        async |origin, destination, date, travel_class, adults, children, infant_on_lap, infant_in_seat, search_type|
-                            -> Result<Value, Box<dyn Error + Send + Sync>> {
-                            between(origin, destination, date, travel_class, adults, tm, children, infant_on_lap, infant_in_seat, search_type).await
-                        },
-                    )?.await
-                })));
-            } else if call.name() == "flight_booking_details" {
-                let args = args.clone();
-                futures.push((
-                    name,
-                    Box::pin(async move {
-                        let resolved = resolve_token(
-                            &*tm.lock().await,
-                            &args["booking_token"].as_str().unwrap_or_default(),
-                        )?
-                        .to_string();
-                        flight_booking_details::execute_with_closure(
-                            &args,
-                            async |_booking_token| -> Result<Value, Box<dyn Error + Send + Sync>> {
-                                let response = booking_details(resolved, tm).await?;
-                                Ok(to_value(response).unwrap())
-                            },
-                        )?
-                        .await
-                    }),
-                ));
-            } else if call.name() == "flight_booking_link" {
-                let args = args.clone();
-                futures.push((
-                    name,
-                    Box::pin(async move {
-                        let resolved = resolve_token(
-                            &*tm.lock().await,
-                            &args["token"].as_str().unwrap_or_default(),
-                        )?
-                        .to_string();
-                        flight_booking_link::execute_with_closure(
-                            &args,
-                            async |token| -> Result<Value, Box<dyn Error + Send + Sync>> {
-                                let url = flight_booking_link(resolved).await?;
-                                Ok(json!({
-                                    "url_for": token,
-                                    "url": url
-                                }))
-                            },
-                        )?
-                        .await
-                    }),
-                ));
-            }
+        if call.name() == "flights_between" {
+            let args = args.clone();
+            futures.push((
+                name,
+                Box::pin(async move {
+                    let (
+                        origin,
+                        destination,
+                        date,
+                        travel_class,
+                        adults,
+                        children,
+                        infant_on_lap,
+                        infant_in_seat,
+                        search_type,
+                    ) = flights_between::parse_arguments(&args)?;
+                    between(
+                        origin,
+                        destination,
+                        date,
+                        travel_class,
+                        adults,
+                        tm,
+                        children,
+                        infant_on_lap,
+                        infant_in_seat,
+                        search_type,
+                    )
+                    .await
+                }),
+            ));
+        } else if call.name() == "flight_booking_details" {
+            let args = args.clone();
+            futures.push((
+                name,
+                Box::pin(async move {
+                    let (booking_token,) = flight_booking_details::parse_arguments(&args)?;
+                    let booking_token = resolve_token(&*tm.lock().await, &booking_token)?;
+                    let response = booking_details(booking_token, tm).await?;
+                    Ok(to_value(response).unwrap())
+                }),
+            ));
+        } else if call.name() == "flight_booking_link" {
+            let args = args.clone();
+            futures.push((
+                name,
+                Box::pin(async move {
+                    let resolved = resolve_token(
+                        &*tm.lock().await,
+                        &args["token"].as_str().unwrap_or_default(),
+                    )?
+                    .to_string();
+                    let (token,) = flight_booking_link::parse_arguments(&args)?;
+                    let url = flight_booking_link(resolved).await?;
+                    Ok(json!({
+                        "url_for": token,
+                        "url": url
+                    }))
+                }),
+            ));
         }
     }
     futures.push((
@@ -145,7 +146,7 @@ pub async fn execute_calls(session: &mut Session, token_map: &TokenMap) {
 
 #[tokio::test]
 async fn execute_calls_test() {
-    use gemini_client_api::gemini::types::request::FunctionCall;
+    use gemini_client_api::gemini::types::request::{FunctionCall, PartType};
     use serde_json::json;
     use std::sync::Arc;
     use tokio::sync::Mutex;
