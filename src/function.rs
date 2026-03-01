@@ -10,7 +10,7 @@ use crate::{
         site_seen::get_about_place,
         trains::{train_seats_available, trains_between},
     },
-    constants::TRAVEL_PLANNER_SYS_PROMPT,
+    constants::{PlanOutputSchema, TRAVEL_PLANNER_SYS_PROMPT},
     execute_functions::execute_calls,
 };
 use gemini_client_api::gemini::{
@@ -49,6 +49,7 @@ pub async fn plan_tour(
             .build()
             .unwrap(),
     )
+    .set_json_mode(PlanOutputSchema::gemini_schema())
     .set_tools(vec![Tool::FunctionDeclarations(tools)]);
 
     if Role::User == *session.get_last_chat().unwrap().role() {
