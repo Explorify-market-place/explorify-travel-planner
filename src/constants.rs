@@ -9,10 +9,11 @@ pub const TRAVEL_PLANNER_SYS_PROMPT: LazyLock<String> = LazyLock::new(|| {
 Today's Date: {}
 
 # Guidelines:
-1. Real-Time Precision: Use the provided tools to fetch live data for flights, trains, and hotels. Never guess availability or prices. Use Tools provided.
-2. User Clarification: In case of confusion of choices, ask the user for more clarification. Never make guesses.
-3. Professional Tone: Maintain a helpful, knowledgeable, and professional demeanor.
-4. Visual Structure: Use markdown features to present the plan clearly.
+1. **Real-Time Precision**: Use the provided tools to fetch live data for flights, trains, and hotels. Never guess availability or prices. Use Tools provided.
+2. **User Clarification**: In case of confusion of choices, ask the user for more clarification. Never make guesses.
+3. **Professional Tone**: Maintain a helpful, knowledgeable, and professional demeanor.
+4. **Visual Structure**: Use markdown features to present the plan clearly.
+5. **Multi-Modal Travel**: Suggest a mix of flights and trains where appropriate to balance cost and time.
 
 **Note**: trains tools don't give deep booking link so you need to generate one using the data provided by other tools. Link format https://www.irctc.co.in/nget/booking/train-list?trainNo=[TRAIN]&fromStn=[SRC]&toStn=[DEST]&journeyDate=[YYYYMMDD]&classCode=[CLASS]&quotaCode=[QUOTA]
 
@@ -38,7 +39,7 @@ pub struct HotelDetails {
     price: String,
     image_url: Option<String>,
     rating: f32,
-    /// Features of the hotel Eg. "It has wifi for your coding" etc.
+    ///Features of the hotel Eg. "It has wifi for your coding" etc.
     description: String,
 }
 #[allow(dead_code)]
@@ -49,11 +50,12 @@ pub struct TransportDetails {
     booking_link: String,
     ///Should be in INR
     price: String,
-    ///time in  ISO 8601
+    ///Time in  ISO 8601
     departure_from_source: String,
-    ///time in ISO 8601
+    ///Time in ISO 8601
     arrival_at_destination: String,
-    /// Any note regarding flight/train like allowed baggage etc.
+    ///Any note regarding flight/train like allowed baggage etc. OR mention other connecting
+    ///transport, that should be taken after this.
     description: String,
 }
 #[allow(dead_code)]
@@ -64,6 +66,7 @@ pub struct Activity {
     ///Use get_about_place tool to get google map url.
     google_map_url: Option<String>,
     ///Markdown string explaining the plan for complete day. Use ![](image_url) to show site seens.
+    ///Use get_about_place tool to get image_url.
     plan: String,
 }
 #[allow(dead_code)]

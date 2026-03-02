@@ -17,7 +17,7 @@ use serde_json::{Value, json};
 ///- `WebsiteUri`: Link to the official website of the place.
 ///- `RegularOpeningHours`: Operating hours for each day of the week.
 ///- `EditorialSummary`: Short description or summary of the place.
-///- `Photos`: List of photo references for the place.
+///- `Photos`: List of image_url and googleMapsUri for the place.
 ///- `InternationalPhoneNumber`: Phone number in international format.
 ///- `Reviews`: Recent customer reviews and comments.
 pub enum PlaceField {
