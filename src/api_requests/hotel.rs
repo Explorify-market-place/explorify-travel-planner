@@ -123,6 +123,7 @@ pub struct HotelDescriptionResponse {
 #[gemini_function]
 /// Search for hotels near the specified coordinates.
 /// Use this tool to find a list of available hotels in a specific area.
+/// Reponse has temperature_unit: C, units: metric and price in INR
 pub async fn get_hotel_by_coordinates(
     /// Latitude of the location to search around (e.g. 18.6429). Can be found with
     /// get_about_place()

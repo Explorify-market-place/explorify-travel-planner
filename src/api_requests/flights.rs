@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 use serde_json::{Value, to_value};
 use std::error::Error;
 use std::sync::Arc;
-use std::{env, mem};
+use std::{env, mem, u64};
 use tokio::sync::Mutex;
 
 pub type TokenMap = Arc<Mutex<Vec<String>>>;
@@ -70,6 +70,21 @@ fn clean_and_replace_tokens(
     Ok(())
 }
 
+#[gemini_schema]
+#[derive(Deserialize, Debug)]
+pub enum SearchType {
+    Cheap,
+    Best,
+}
+impl ToString for SearchType {
+    fn to_string(&self) -> String {
+        match self {
+            SearchType::Cheap => "cheap".to_string(),
+            SearchType::Best => "best".to_string(),
+        }
+    }
+}
+
 #[gemini_function]
 #[allow(unused_variables)]
 /// Search for one-way flights between two cities on a specific date using Google Flights.
@@ -94,9 +109,9 @@ pub async fn flights_between(
     ///The count of infants (below 2 years old) who require a separate seat.
     infant_in_seat: Option<u8>,
     ///Specifies the type of search strategy to apply when retrieving flight results.
-    ///`best`: prioritizes a balanced mix of price, duration, and convenience.
-    ///`cheap`: returns the lowest-cost options, possibly with longer layovers or travel time.
-    search_type: Option<String>,
+    ///`Best`: prioritizes a balanced mix of price, duration, and convenience.
+    ///`Cheap`: returns the lowest-cost options, possibly with longer layovers or travel time.
+    search_type: Option<SearchType>,
 ) -> Result<Value, Box<dyn Error + Send + Sync>> {
     todo!()
 }
@@ -110,7 +125,7 @@ pub async fn between(
     children: u8,
     infant_on_lap: Option<u8>,
     infant_in_seat: Option<u8>,
-    search_type: Option<String>,
+    search_type: Option<SearchType>,
 ) -> Result<Value, Box<dyn Error + Send + Sync>> {
     let api_key = env::var("RAPIDAPI_KEY")?;
     let client = reqwest::Client::new();
@@ -129,7 +144,10 @@ pub async fn between(
             to_value(travel_class)?.as_str().unwrap().to_string(),
         ),
         ("children", children.to_string()),
-        ("search_type", search_type.unwrap_or("cheap".into())),
+        (
+            "search_type",
+            search_type.unwrap_or(SearchType::Cheap).to_string(),
+        ),
     ];
     if let Some(v) = infant_on_lap {
         query.push(("infant_on_lap", v.to_string()));
@@ -161,13 +179,13 @@ pub async fn between(
         .unwrap_or_default();
 
     let mut flights = top;
-    if flights.len() < 3 {
-        if let Some(others) = val
-            .pointer_mut("/data/itineraries/otherFlights")
-            .and_then(|v| v.as_array_mut().map(mem::take))
-        {
-            flights.extend(others);
-        }
+    if let Some(mut others) = val
+        .pointer_mut("/data/itineraries/otherFlights")
+        .and_then(|v| v.as_array_mut().map(mem::take))
+    {
+        others.sort_by_key(|a| a["price"].as_u64().unwrap_or(u64::MAX));
+        others.truncate(3);
+        flights.extend(others);
     }
 
     if flights.is_empty() {
@@ -276,11 +294,11 @@ pub async fn flight_booking_link(
 async fn flights_between_test() {
     dbg!(
         between(
-            IataCode::new("IXR").unwrap(),
             IataCode::new("GOI").unwrap(),
-            Date::new_now(),
+            IataCode::new("IDR").unwrap(),
+            Date::new(2026, 3, 23).unwrap(),
             TravelClass::ECONOMY,
-            2,
+            4,
             Arc::new(Mutex::new(vec![])),
             0,
             None,
