@@ -17,7 +17,7 @@ use gemini_client_api::gemini::{
     ask::Gemini,
     error::GeminiResponseError,
     types::{
-        request::{Role, Tool},
+        request::{Role, ThinkingConfig, ThinkingLevel, Tool},
         response::GeminiResponseStream,
         sessions::Session,
     },
@@ -49,6 +49,7 @@ pub async fn plan_tour(
             .build()
             .unwrap(),
     )
+    .set_thinking_config(ThinkingConfig::new(false, ThinkingLevel::Medium))
     .set_json_mode(PlanOutputSchema::gemini_schema())
     .set_tools(vec![Tool::FunctionDeclarations(tools)]);
 

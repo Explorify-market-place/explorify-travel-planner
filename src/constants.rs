@@ -1,6 +1,6 @@
 use gemini_client_api::gemini::utils::{GeminiSchema, gemini_schema};
 
-use crate::utils::Date;
+use crate::{api_requests::flights::flights_between, utils::Date};
 use std::sync::LazyLock;
 
 pub const TRAVEL_PLANNER_SYS_PROMPT: LazyLock<String> = LazyLock::new(|| {
@@ -33,7 +33,7 @@ Today's Date: {}
 #[gemini_schema]
 pub struct HotelDetails {
     name: String,
-    ///Use tools to get booking deep urls.
+    ///Use get_hotel_details tool to get deep urls.
     booking_link: String,
     ///Should be in INR
     price: String,
@@ -46,7 +46,7 @@ pub struct HotelDetails {
 #[gemini_schema]
 pub struct TransportDetails {
     name: String,
-    ///Use tools to get booking deep urls.
+    ///Use flight_booking_link tool for flights and for trains, construct deep URL yourself.
     booking_link: String,
     ///Should be in INR
     price: String,

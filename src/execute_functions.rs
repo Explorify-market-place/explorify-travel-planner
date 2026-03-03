@@ -202,8 +202,6 @@ async fn execute_calls_test() {
 
     // 3. Test flight_booking_link call via execute_calls
     // After flight_booking_details, we should have more tokens in the map
-    // The details response (from details.json) has tokens that get replaced by placeholders
-    // Let's assume there's at least one new token added.
     let second_token_placeholder = format!(
         "{}{}",
         crate::api_requests::flights::TOKEN_PREFIX,
