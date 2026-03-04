@@ -1,6 +1,6 @@
 use gemini_client_api::gemini::utils::{GeminiSchema, gemini_schema};
 
-use crate::{api_requests::flights::flights_between, utils::Date};
+use crate::utils::Date;
 use std::sync::LazyLock;
 
 pub const TRAVEL_PLANNER_SYS_PROMPT: LazyLock<String> = LazyLock::new(|| {
@@ -37,10 +37,10 @@ pub struct HotelDetails {
     booking_link: String,
     ///Should be in INR
     price: String,
-    ///Use get_hotel_details tool to get photos.
+    ///Use get_hotel_details tool to get photos of the rooms.
     image_urls: Vec<String>,
     rating: f32,
-    ///Features of the hotel Eg. "It has wifi for your coding" etc.
+    ///Markdown string for features of the hotel Eg. "It has wifi for your coding" etc.
     description: String,
 }
 #[allow(dead_code)]

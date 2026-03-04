@@ -48,6 +48,34 @@ pub struct HotelSearchData {
     pub result: Vec<HotelSearchResult>,
 }
 
+/// Facilities grouped by category (e.g. "Bathroom", "Media & Technology", "Bedroom")
+#[derive(Serialize, Deserialize, Debug, Clone)]
+#[gemini_schema]
+pub struct RoomFacilityGroup {
+    /// The facility category name (alt_facilitytype_name)
+    pub category: String,
+    /// Individual amenity names belonging to this category
+    pub amenities: Vec<String>,
+}
+
+/// Details about a single room type available at the hotel
+#[derive(Serialize, Deserialize, Debug, Clone)]
+#[gemini_schema]
+pub struct RoomInfo {
+    /// Internal room ID
+    pub room_id: String,
+    /// Short text description of the room
+    pub description: Option<String>,
+    /// Key highlights, e.g. "Free WiFi", "Air conditioning"
+    pub highlights: Vec<String>,
+    /// Bed configuration description, e.g. "2 twin beds (90–130 cm wide)"
+    pub bed_configuration: Option<String>,
+    /// Facilities grouped by category for easy AI reasoning
+    pub facility_groups: Vec<RoomFacilityGroup>,
+    /// Photo URLs (max-300 resolution, suitable for display)
+    pub photo_urls: Vec<String>,
+}
+
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[gemini_schema]
 pub struct HotelDetails {
@@ -62,7 +90,12 @@ pub struct HotelDetails {
     pub review_nr: Option<i64>,
     pub price_rounded: Option<String>,
     pub property_highlights: Option<Vec<String>>,
+    /// Most popular facilities at the hotel level
     pub top_facilities: Option<Vec<String>>,
+    /// Facilities specifically for families (kids' club, babysitting, family rooms, etc.)
+    pub family_facilities: Option<Vec<String>>,
+    /// Detailed info per room type, including photos and grouped facilities
+    pub rooms: Vec<RoomInfo>,
     pub url: String,
 }
 
@@ -81,6 +114,10 @@ struct RawHotelDetails {
     product_price_breakdown: Option<Value>,
     property_highlight_strip: Option<Vec<Value>>,
     facilities_block: Option<Value>,
+    /// Top-level family amenities list
+    family_facilities: Option<Vec<String>>,
+    /// Room details keyed by room_id string
+    rooms: Option<Value>,
     url: String,
 }
 
@@ -254,6 +291,122 @@ pub async fn get_hotel_details(
             })
     });
 
+    // Family facilities come directly as a Vec<String> from the API
+    let family_facilities = d.family_facilities;
+
+    // Build structured RoomInfo for each room in the rooms map
+    let rooms = d
+        .rooms
+        .as_ref()
+        .and_then(|v| v.as_object())
+        .map(|map| {
+            map.iter()
+                .map(|(room_id, room_val)| {
+                    // Description
+                    let description = room_val
+                        .get("description")
+                        .and_then(|d| d.as_str())
+                        .map(|s| s.to_string());
+
+                    // Highlights (translated_name)
+                    let highlights = room_val
+                        .get("highlights")
+                        .and_then(|h| h.as_array())
+                        .map(|arr| {
+                            arr.iter()
+                                .filter_map(|h| h.get("translated_name").and_then(|n| n.as_str()))
+                                .map(|s| s.to_string())
+                                .collect::<Vec<_>>()
+                        })
+                        .unwrap_or_default();
+
+                    // Bed configuration: concatenate name_with_count + description per bed type
+                    let bed_configuration = room_val
+                        .pointer("/bed_configurations/0/bed_types")
+                        .and_then(|bt| bt.as_array())
+                        .map(|arr| {
+                            arr.iter()
+                                .filter_map(|b| {
+                                    let name = b
+                                        .get("name_with_count")
+                                        .or_else(|| b.get("name"))
+                                        .and_then(|n| n.as_str())?;
+                                    let desc =
+                                        b.get("description").and_then(|d| d.as_str()).unwrap_or("");
+                                    if desc.is_empty() {
+                                        Some(name.to_string())
+                                    } else {
+                                        Some(format!("{name} ({desc})"))
+                                    }
+                                })
+                                .collect::<Vec<_>>()
+                                .join(", ")
+                        });
+
+                    // Group facilities by alt_facilitytype_name
+                    let facility_groups = {
+                        use std::collections::HashMap;
+                        let mut groups: HashMap<String, Vec<String>> = HashMap::new();
+                        if let Some(facilities) =
+                            room_val.get("facilities").and_then(|f| f.as_array())
+                        {
+                            for fac in facilities {
+                                let category = fac
+                                    .get("alt_facilitytype_name")
+                                    .and_then(|c| c.as_str())
+                                    .unwrap_or("General")
+                                    .to_string();
+                                let name = fac
+                                    .get("name")
+                                    .and_then(|n| n.as_str())
+                                    .unwrap_or("")
+                                    .to_string();
+                                if !name.is_empty() {
+                                    groups.entry(category).or_default().push(name);
+                                }
+                            }
+                        }
+                        let mut result: Vec<RoomFacilityGroup> = groups
+                            .into_iter()
+                            .map(|(category, amenities)| RoomFacilityGroup {
+                                category,
+                                amenities,
+                            })
+                            .collect();
+                        // Sort by category for deterministic output
+                        result.sort_by(|a, b| a.category.cmp(&b.category));
+                        result
+                    };
+
+                    // Collect photo URLs (max300 preferred, fallback to url_original)
+                    let photo_urls = room_val
+                        .get("photos")
+                        .and_then(|p| p.as_array())
+                        .map(|arr| {
+                            arr.iter()
+                                .filter_map(|p| {
+                                    p.get("url_max300")
+                                        .or_else(|| p.get("url_original"))
+                                        .and_then(|u| u.as_str())
+                                })
+                                .map(|s| s.to_string())
+                                .collect::<Vec<_>>()
+                        })
+                        .unwrap_or_default();
+
+                    RoomInfo {
+                        room_id: room_id.clone(),
+                        description,
+                        highlights,
+                        bed_configuration,
+                        facility_groups,
+                        photo_urls,
+                    }
+                })
+                .collect::<Vec<_>>()
+        })
+        .unwrap_or_default();
+
     Ok(HotelDetails {
         hotel_id: d.hotel_id,
         hotel_name: d.hotel_name,
@@ -268,6 +421,8 @@ pub async fn get_hotel_details(
         price_rounded,
         property_highlights,
         top_facilities,
+        family_facilities,
+        rooms,
     })
 }
 
@@ -397,13 +552,7 @@ mod tests {
         let result = get_hotel_details(hotel_id, arrival, departure, 1, None, 1).await;
         match &result {
             Ok(data) => {
-                println!("Hotel Details:");
-                println!("  Name: {}", data.hotel_name);
-                println!("  City: {:?}", data.city);
-                println!("  Price: {:?}", data.price_rounded);
-                println!("  Highlights: {:?}", data.property_highlights);
-                println!("  Facilities: {:?}", data.top_facilities);
-                println!("  Url: {:?}", data.url);
+                println!("{data:?}");
                 assert_eq!(data.hotel_name, "Novotel Mumbai Juhu Beach");
             }
             Err(e) => {
