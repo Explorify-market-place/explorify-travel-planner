@@ -106,20 +106,6 @@ pub struct AvailabilityData {
     pub currency: Option<String>,
 }
 
-#[derive(Serialize, Deserialize, Debug, Clone)]
-#[gemini_schema]
-pub struct HotelDescriptionItem {
-    pub hotel_id: String,
-    pub description: String,
-}
-
-#[derive(Serialize, Deserialize, Debug, Clone)]
-pub struct HotelDescriptionResponse {
-    pub status: bool,
-    pub message: Value,
-    pub data: Vec<HotelDescriptionItem>,
-}
-
 #[gemini_function]
 /// Search for hotels near the specified coordinates.
 /// Use this tool to find a list of available hotels in a specific area.
@@ -372,45 +358,6 @@ pub async fn get_room_availability(
     })
 }
 
-#[gemini_function]
-/// Get a descriptive text summary and general information for a specific hotel.
-pub async fn get_hotel_description(
-    /// The unique hotel ID.
-    /// Provided by get_hotel_by_coordinates()
-    hotel_id: String,
-) -> Result<Vec<HotelDescriptionItem>, Box<dyn Error + Send + Sync>> {
-    let api_key = env::var("RAPIDAPI_KEY")?;
-    let client = reqwest::Client::new();
-    let url = format!("{BASE_URL}/api/v1/hotels/getDescriptionAndInfo");
-
-    let resp = client
-        .get(&url)
-        .header("x-rapidapi-key", api_key)
-        .header("x-rapidapi-host", RAPID_API_HOST)
-        .query(&[
-            ("hotel_id", hotel_id),
-            ("languagecode", "en-us".to_string()),
-        ])
-        .send()
-        .await?;
-
-    if !resp.status().is_success() {
-        return Err(format!("Hotel Description Error: {}", resp.status()).into());
-    }
-
-    let raw: Value = resp.json().await?;
-    if raw.get("status").and_then(|s| s.as_bool()) != Some(true) {
-        let msg = raw
-            .get("message")
-            .map(|m| m.to_string())
-            .unwrap_or_default();
-        return Err(format!("Hotel Description API error: {}", msg).into());
-    }
-
-    let resp: HotelDescriptionResponse = serde_json::from_value(raw)?;
-    Ok(resp.data)
-}
-
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -480,23 +427,6 @@ mod tests {
             Err(e) => {
                 println!("Error: {}", e);
                 panic!("get_room_availability failed: {}", e);
-            }
-        }
-    }
-
-    #[tokio::test]
-    async fn test_get_hotel_description() {
-        let hotel_id = "191605".to_string();
-        let result = get_hotel_description(hotel_id).await;
-        match &result {
-            Ok(data) => {
-                println!("Hotel Description:");
-                println!("{:#?}", data);
-                assert!(!data.is_empty(), "Expected at least one description item");
-            }
-            Err(e) => {
-                println!("Error: {}", e);
-                panic!("get_hotel_description failed: {}", e);
             }
         }
     }

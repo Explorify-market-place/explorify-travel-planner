@@ -3,9 +3,7 @@ use crate::api_requests::{
         TokenMap, between, booking_details, flight_booking_details, flight_booking_link,
         flights_between, resolve_token,
     },
-    hotel::{
-        get_hotel_by_coordinates, get_hotel_description, get_hotel_details, get_room_availability,
-    },
+    hotel::{get_hotel_by_coordinates, get_hotel_details, get_room_availability},
     site_seen::get_about_place,
     trains::{train_seats_available, trains_between},
 };
@@ -125,7 +123,6 @@ pub async fn execute_calls(session: &mut Session, token_map: &TokenMap) {
                 get_hotel_by_coordinates,
                 get_hotel_details,
                 get_room_availability,
-                get_hotel_description,
             );
             Ok("".into())
         }),

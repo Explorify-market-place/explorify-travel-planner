@@ -37,7 +37,8 @@ pub struct HotelDetails {
     booking_link: String,
     ///Should be in INR
     price: String,
-    image_url: Option<String>,
+    ///Use get_hotel_details tool to get photos.
+    image_urls: Vec<String>,
     rating: f32,
     ///Features of the hotel Eg. "It has wifi for your coding" etc.
     description: String,
