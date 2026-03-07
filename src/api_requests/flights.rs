@@ -62,8 +62,13 @@ fn clean_and_replace_tokens(
         obj_ref.remove("airline_logo");
         obj_ref.remove("carbon_emissions");
         if let Some(booking_token) = obj_ref.get_mut("booking_token") {
-            let small_token =
-                update_token_map(token_map, booking_token.as_str().unwrap().to_string());
+            let small_token = update_token_map(
+                token_map,
+                booking_token
+                    .as_str()
+                    .expect(&format!("Invalid booking token: {booking_token}"))
+                    .to_string(),
+            );
             obj_ref.insert("booking_token".into(), small_token.into());
         }
     }
@@ -247,8 +252,13 @@ pub async fn booking_details(
             .ok_or("Invalid response format. Data don't have objects")?;
 
         if let Some(booking_token) = flights.get_mut("token") {
-            let small_token =
-                update_token_map(&mut map, booking_token.as_str().unwrap().to_string());
+            let small_token = update_token_map(
+                &mut map,
+                booking_token
+                    .as_str()
+                    .expect(&format!("Invalid booking token: {booking_token}"))
+                    .to_string(),
+            );
             flights.insert("token".into(), small_token.into());
         }
     }
