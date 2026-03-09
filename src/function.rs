@@ -36,7 +36,7 @@ pub async fn plan_tour(
         get_hotel_details::gemini_schema(),
         get_room_availability::gemini_schema(),
     ];
-    let ai = Gemini::new_with_client(
+    let mut ai = Gemini::new_with_client(
         std::env::var("GEMINI_API_KEY").unwrap(),
         "gemini-3-flash-preview",
         Some(TRAVEL_PLANNER_SYS_PROMPT.to_string().into()),
@@ -45,9 +45,10 @@ pub async fn plan_tour(
             .build()
             .unwrap(),
     )
-    .set_thinking_config(ThinkingConfig::new(false, ThinkingLevel::Medium))
+    .set_thinking_config(ThinkingConfig::new(false, ThinkingLevel::High))
     .set_json_mode(PlanOutputSchema::gemini_schema())
     .set_tools(vec![Tool::FunctionDeclarations(tools)]);
+    ai.set_generation_config()["seed"] = 1.into();
 
     if Role::User == *session.get_last_chat().unwrap().role() {
         println!(
