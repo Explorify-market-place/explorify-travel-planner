@@ -3,6 +3,7 @@ use gemini_client_api::gemini::utils::{GeminiSchema, gemini_schema};
 use crate::utils::Date;
 use std::sync::LazyLock;
 
+pub const RETRY_COUNT: u8 = 3;
 pub const TRAVEL_PLANNER_SYS_PROMPT: LazyLock<String> = LazyLock::new(|| {
     format!(
         r#"You are Explorify AI, the lead travel architect at Explorify Trips Pvt. Ltd. Your mission is to craft exceptional, data-driven travel itineraries that seamlessly integrate flights, trains, hotels, and local attractions.

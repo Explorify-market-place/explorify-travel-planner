@@ -45,61 +45,50 @@ async fn stream_handler(
     let token_map: TokenMap = Arc::new(Mutex::new(request.token_map));
     tokio::spawn(async move {
         loop {
-            let response = plan_tour(request.session, &token_map).await;
-            match response {
-                Ok(mut response_stream) => {
-                    let last_chat = response_stream.get_session().get_last_chat().unwrap();
-                    if Role::Function == *last_chat.role() {
-                        println!("Sending\n{last_chat:?}");
+            let mut response_stream = plan_tour(request.session, &token_map).await;
+            let last_chat = response_stream.get_session().get_last_chat().unwrap();
+            if Role::Function == *last_chat.role() {
+                println!("Sending\n{last_chat:?}");
+                let chunk = format!("{}{CHUNK_SEPERATOR}", to_string(last_chat).unwrap()).into();
+                tx.send_data(chunk).await.unwrap();
+            }
+            while let Some(gemini_response) = response_stream.next().await {
+                match gemini_response {
+                    Ok(data) => {
+                        let response = data.get_chat();
+                        println!("Sending\n{response:?}");
                         let chunk =
-                            format!("{}{CHUNK_SEPERATOR}", to_string(last_chat).unwrap()).into();
+                            format!("{}{CHUNK_SEPERATOR}", to_string(response).unwrap()).into();
                         tx.send_data(chunk).await.unwrap();
                     }
-                    while let Some(gemini_response) = response_stream.next().await {
-                        match gemini_response {
-                            Ok(data) => {
-                                let response = data.get_chat();
-                                println!("Sending\n{response:?}");
-                                let chunk =
-                                    format!("{}{CHUNK_SEPERATOR}", to_string(response).unwrap())
-                                        .into();
-                                tx.send_data(chunk).await.unwrap();
-                            }
-                            Err(error) => {
-                                eprintln!("ERROR: Did not send stream due to error:\n{error:?}");
-                                break;
-                            }
-                        }
+                    Err(error) => {
+                        eprintln!("ERROR: Did not send stream due to error:\n{error:?}");
+                        break;
                     }
-                    if !response_stream
-                        .get_session()
+                }
+            }
+            if !response_stream
+                .get_session()
+                .get_last_chat()
+                .unwrap()
+                .has_function_call()
+            {
+                tx.send_data(to_string(&*token_map.lock().await).unwrap().into())
+                    .await
+                    .unwrap();
+                println!("Response streaming completed.");
+                println!(
+                    "Last message:\n{}",
+                    response_stream
+                        .get_session_owned()
                         .get_last_chat()
                         .unwrap()
-                        .has_function_call()
-                    {
-                        tx.send_data(to_string(&*token_map.lock().await).unwrap().into())
-                            .await
-                            .unwrap();
-                        println!("Response streaming completed.");
-                        println!(
-                            "Last message:\n{}",
-                            response_stream
-                                .get_session_owned()
-                                .get_last_chat()
-                                .unwrap()
-                                .get_text_all("\n")
-                        );
-                        break;
-                    } else {
-                        println!("Resolving function calls.");
-                        request.session = response_stream.get_session_owned();
-                    }
-                }
-                Err((session, e)) => {
-                    eprintln!("ERROR: handle_request failed:\n{e:?}\n{:?}", session);
-                    tx.send_data(e.to_string().into()).await.unwrap();
-                    break;
-                }
+                        .get_text_all("\n")
+                );
+                break;
+            } else {
+                println!("Resolving function calls.");
+                request.session = response_stream.get_session_owned();
             }
         }
     });

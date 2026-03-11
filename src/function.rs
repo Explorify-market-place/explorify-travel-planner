@@ -7,12 +7,12 @@ use crate::{
         site_seen::get_about_place,
         trains::{train_seats_available, trains_between},
     },
-    constants::{PlanOutputSchema, TRAVEL_PLANNER_SYS_PROMPT},
+    constants::{PlanOutputSchema, RETRY_COUNT, TRAVEL_PLANNER_SYS_PROMPT},
     execute_functions::execute_calls,
 };
 use gemini_client_api::gemini::{
     ask::Gemini,
-    error::GeminiResponseError,
+    error::{GeminiResponseError, Status},
     types::{
         request::{Role, ThinkingConfig, ThinkingLevel, Tool},
         response::GeminiResponseStream,
@@ -21,10 +21,7 @@ use gemini_client_api::gemini::{
     utils::GeminiSchema,
 };
 
-pub async fn plan_tour(
-    mut session: Session,
-    token_map: &TokenMap,
-) -> Result<GeminiResponseStream, (Session, GeminiResponseError)> {
+pub async fn plan_tour(mut session: Session, token_map: &TokenMap) -> GeminiResponseStream {
     let tools = vec![
         flights_between::gemini_schema(),
         flight_booking_link::gemini_schema(),
@@ -58,5 +55,24 @@ pub async fn plan_tour(
     } else {
         execute_calls(&mut session, token_map).await;
     }
-    ai.ask_as_stream(session).await
+    let mut retry_remaining = RETRY_COUNT;
+    loop {
+        match ai.ask_as_stream(session).await {
+            Err((new_session, GeminiResponseError::StatusNotOk(e)))
+                if e.error.status == Status::Unavailable =>
+            {
+                session = new_session;
+                retry_remaining -= 1;
+                if retry_remaining == 0 {
+                    panic!(
+                        "Model not available for {RETRY_COUNT} consecutive retries.\n{e}\nCrashing.."
+                    )
+                } else {
+                    eprintln!("Model not available. {retry_remaining} retry remaining\n{e}")
+                }
+            }
+            Err((session, e)) => panic!("ERROR: handle_request failed:\n{e:?}\n{:?}", session),
+            Ok(v) => break v,
+        }
+    }
 }
